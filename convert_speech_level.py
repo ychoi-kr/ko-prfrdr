@@ -1,4 +1,3 @@
-
 def convert(sentence, level):
     tt = list()
 
