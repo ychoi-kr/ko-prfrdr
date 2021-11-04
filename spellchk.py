@@ -57,7 +57,9 @@ def check(rules, line):
     for rule in rules:
         for case in rule['cases']:
             bad, good = case[0], case[1]
-            bad_stripped = bad.lstrip('~').rstrip('(다)')
+            bad_stripped = bad.lstrip('~')
+            if bad_stripped.endswith('(다)'):
+                bad_stripped = bad_stripped[:-3]
             if bad_stripped in line:
                 loc = line.find(bad_stripped)
                 skip = False
