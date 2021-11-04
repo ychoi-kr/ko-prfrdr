@@ -110,17 +110,7 @@ def carret_loc(s, loc):
     return loc
 
 def korean(s):
-    assert isinstance(s, str)
-    if len(s) == 1:
-        return '가' < s < '힣'
-    elif len(s) > 1:
-        for ch in s:
-            if korean(ch):
-                break
-        else:
-            return False
-        return True
-    
+    return len(list(filter(lambda x: '가' < x < '힣', s))) > 0
 
 def message(kind, name, bad, good, desc):
     if bad.startswith(". "):  # do not use lstrip() because it works differently
