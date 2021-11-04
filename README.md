@@ -20,7 +20,7 @@ ROC 곡선은 이상적인 모델에서는 이처럼 원점에서 수직으로 �
 사용법은 아래처럼 하셔도 되고,
 
 ```
-python c:\utils\spellchk.py -f Mastering_PyTorch_편집본_20211104.docx
+python c:\utils\spellchk.py -f "Mastering_PyTorch_편집본_20211104.docx"
 ```
 
 파이썬 스크립트가 자동 실행 가능한 환경에서는 다음과 같이 할 수 있고,
