@@ -14,13 +14,18 @@ def debug(k, v):
 
 def main(infile):
     debug('infile', infile)
-    text = read_manuscript(infile)
+    
+    try:
+        text = read_manuscript(infile)
+    except PermissionError:
+        print(f"Failed!!! Please close {infile} and retry...", file=sys.stderr)
+        sys.exit()
     
     path = os.path.join(
         os.path.dirname(os.path.realpath(__file__)), "ko_spelling_rules.json"
     )
     with open(path) as json_file:
-        rules = json.load(json_file)
+        rules = ruletable(json.load(json_file))
     
     global warnings_counter
     warnings_counter = Counter()
@@ -34,6 +39,19 @@ def main(infile):
     
     display_summary()
 
+def ruletable(obj):
+    table = []
+    for rule in obj:
+        caselist = []
+        for rc in rule['cases']:
+            if len(rc[0]) > 4 and rc[0][:4] in ['~은/는', '~이/가', '~을/를']:
+                caselist.append(('~' + rc[0][1] + rc[0][4:], rc[1]))
+                caselist.append(('~' + rc[0][3] + rc[0][4:], rc[1]))
+            else:
+                caselist.append((rc[0], rc[1]))
+        table.append((rule['kind'], rule['name'], rule['desc'], caselist, rule['exception']))
+    return table
+
 def read_manuscript(infile):
     if infile.endswith('.docx'):
         text = docx2txt.process(infile)
@@ -45,44 +63,64 @@ def read_manuscript(infile):
 
 def check(rules, line):
 
-    # avoid false positive on rule 1.8
-    korean_sentence = False
-    for c in line:
-        if korean(c):
-            korean_sentence = True
-            break
-    if not korean_sentence:
+    # avoid false positive on rule108
+    if not korean(line):
         return None
     
     for rule in rules:
-        for case in rule['cases']:
-            bad, good = case[0], case[1]
-            bad_stripped = bad.lstrip('~')
-            if bad_stripped.endswith('(다)'):
-                bad_stripped = bad_stripped[:-3]
-            if bad_stripped in line:
-                loc = line.find(bad_stripped)
+        kind, name, desc, cases, exceptions = rule
+        for cs in cases:
+            bad, good = cs[0], cs[1]
+            
+            bad_root = bad
+            if bad.startswith('~'):
+                bad_root = bad.lstrip('~')
+            if bad.endswith(')') and korean(bad.rstrip(')').rsplit('(', 1)[1]):
+                bad_root = bad_root.rsplit('(', 1)[0]
+            
+            debug('line', line)
+            debug('bad_root', bad_root)
+            
+            if bad_root in line:
+                loc = line.find(bad_root)
                 skip = False
-                for exception in rule['exception']:
-                    offset = exception.find(bad_stripped)
-                    if line[loc - offset:].startswith(exception):
-                        skip = True
-                if not skip:
-                    loc = calculate_loc(line, loc)
-                    print('* ' + line)
-                    print('  ' + ' ' * loc + '^')
-                    message(rule['kind'], rule['name'], bad.replace('(다)', '다'), good.replace('(다)', '다'), rule['desc'])
+                for ex in exceptions:
+                    beg, end = 0, -1
+                    sz = 10
+                    if loc > sz:
+                        beg = loc - sz
+                    if len(line) - loc > 10:
+                        end = loc + sz
+                    window = line[beg:end]
                     
-                    warnings_counter[rule['name']] += 1
+                    if ex in window:
+                        skip = True
+                    
+                if not skip:
+                    cl = carret_loc(line, loc)
+                    print('* ' + line)
+                    print('  ' + ' ' * cl + '^')
+                    message(kind, name, bad, good, desc)
+                    warnings_counter[name] += 1
 
-def calculate_loc(s, loc):
+def carret_loc(s, loc):
     for c in s[:loc]:
         if korean(c):
             loc += 1
     return loc
 
-def korean(c):
-    return '가' < c < '힣'
+def korean(s):
+    assert isinstance(s, str)
+    if len(s) == 1:
+        return '가' < s < '힣'
+    elif len(s) > 1:
+        for ch in s:
+            if korean(ch):
+                break
+        else:
+            return False
+        return True
+    
 
 def message(kind, name, bad, good, desc):
     if bad.startswith(". "):  # do not use lstrip() because it works differently
@@ -98,6 +136,7 @@ def display_summary():
 
 def latest():
     return max(glob.glob('*.docx'), key=os.path.getctime)
+
 
 if __name__ == '__main__':
     global _dbg_
