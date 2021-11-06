@@ -15,11 +15,19 @@ ROC 곡선은 이상적인 모델에서는 이처럼 원점에서 수직으로 �
 
 ## spellchk.py
 
-원고(docx 파일)에서 <위키북스 글쓰기 지침>을 준수하는지 자동으로 검사하는 파이썬 스크립트입니다.
+원고(docx 파일)에서 규칙을 준수하는지 자동으로 검사하는 파이썬 스크립트입니다.
+
+규칙:
+
+- 맞춤법: [ko_spelling_rules.json](ko_spelling_rules.json)
+- 띄어쓰기: [ko_spacing_rules.json](ko_spacing_rules.json)
+- 외래어 표기법: [ko_foreign_word_rules.json](ko_foreign_word_rules.json)
+- 위키북스 글쓰기 지침: [wikibook_style_guide.json](wikibook_style_guide.json)
 
 사용법은 아래처럼 하셔도 되고,
 
 ```
+cd <원고가 있는 폴더>
 python c:\utils\spellchk.py -f "Mastering_PyTorch_편집본_20211104.docx"
 ```
 
@@ -35,9 +43,9 @@ spellchk -f Mastering_PyTorch_편집본_20211104.docx
 spellchk
 ```
 
-파일이 열려 있으면 안 되므로 워드 파일을 닫고 실행하셔야 합니다.
+파일이 열려 있으면 안 되므로 워드 파일을 닫거나 읽기 전용으로 바꾼 후 실행하셔야 합니다.
 
-실행 결과는 다음과 같이 나옵니다.
+실행 결과는 다음과 비슷하게 나옵니다.
 
 ```
 * 초보자가 전문가로 성장하기 위해 활용할 수 있는 자원은 무한히 많다.
