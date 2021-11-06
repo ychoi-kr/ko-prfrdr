@@ -16,32 +16,46 @@ def debug(k, v):
 def main(infile, rulefile):
     debug('infile', infile)
     
+    _rules = loadrules(rulefile)
+    
     try:
         text = read_manuscript(infile)
     except PermissionError:
         print(f"Failed!!! Please close {infile} and retry...", file=sys.stderr)
         sys.exit()
     
-    rules = []
-    for rf in rulefile:
-        path = os.path.join(
-            os.path.dirname(os.path.realpath(__file__)), rf
-        )
-        try:
-            with open(path) as json_file:
-                rules = rules + ruletable(json.load(json_file))
-        except json.decoder.JSONDecodeError as err:
-            sys.exit(f'Unable to decode {rf}\n{err}')
-    
     global warnings_counter
     warnings_counter = Counter()
     
     for paragraph in text.splitlines(True):
         for line in re.split(r'(?<=[.?]) ', paragraph):
-            check(rules, line)
+            check(_rules, line)
     
     display_summary()
 
+def loadrules(rulefile):
+    allrules = []
+    for filename in rulefile:
+        path = os.path.join(
+            os.path.dirname(os.path.realpath(__file__)), filename
+        )
+        
+        try:
+            fileobj = open(path, "rt")
+            pyobj = decodejson(fileobj, filename)
+        except UnicodeDecodeError as ude:
+            fileobj = open(path, "rt", encoding='utf8')
+            pyobj = decodejson(fileobj, filename)
+        else:
+            allrules += ruletable(pyobj)
+    
+    return allrules
+
+def decodejson(fileobj, filename):
+    try:
+        return json.load(fileobj)
+    except json.decoder.JSONDecodeError as jde:
+        sys.exit(f'Unable to decode {filename}\n{jde}')
 
 def ruletable(obj):
     table = []
@@ -75,6 +89,9 @@ def check(rules, line):
         kind, name, desc, cases, exceptions = rule
         for cs in cases:
             bad, good = cs[0], cs[1]
+            
+            if bad == '?':  # possible charset problem
+                continue
             
             bad_root = bad
             if bad.startswith('~'):
@@ -129,7 +146,11 @@ def display_summary():
         print(f'{ele} ==> count: {warnings_counter[ele]}')
 
 def latest():
-    return max(glob.glob('*.docx'), key=os.path.getctime)
+    ext = 'docx'
+    try:
+        return max(glob.glob(f'*.{ext}'), key=os.path.getctime)
+    except:
+        sys.exit(f"Failed!!! Cannot find {ext} file.")
 
 
 if __name__ == '__main__':
