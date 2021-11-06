@@ -12,7 +12,7 @@ def debug(k, v):
         print(f'#DEBUG# {k}: {v}')
         input()
 
-def main(infile):
+def main(infile, rulefile):
     debug('infile', infile)
     
     try:
@@ -21,21 +21,22 @@ def main(infile):
         print(f"Failed!!! Please close {infile} and retry...", file=sys.stderr)
         sys.exit()
     
-    path = os.path.join(
-        os.path.dirname(os.path.realpath(__file__)), "ko_spelling_rules.json"
-    )
-    with open(path) as json_file:
-        rules = ruletable(json.load(json_file))
+    rules = []
+    for rf in rulefile:
+        path = os.path.join(
+            os.path.dirname(os.path.realpath(__file__)), rf
+        )
+        try:
+            with open(path) as json_file:
+                rules = rules + ruletable(json.load(json_file))
+        except json.decoder.JSONDecodeError as err:
+            sys.exit(f'Unable to decode {rf}\n{err}')
     
     global warnings_counter
     warnings_counter = Counter()
     
-    for paragraph in text.split('\n'):
-        lines = paragraph.split(". ")
-        if len(lines) > 1:
-            for line in lines[:-1]:
-                check(rules, line + '.')
-        check(rules, lines[-1])
+    for line in text.splitlines(True):
+        check(rules, line)
     
     display_summary()
 
@@ -134,6 +135,7 @@ if __name__ == '__main__':
     
     parser = argparse.ArgumentParser()
     parser.add_argument("-f", "--filename", help="filename", default=latest(), type=str)
+    parser.add_argument("-r", "--rulefile", nargs='+', default=['ko_spelling_rules.json', 'ko_spacing_rules.json', 'ko_foreign_word_rules.json', 'wikibook_style_guide.json'])
     args = parser.parse_args()
     
-    main(args.filename)
+    main(args.filename, args.rulefile)
