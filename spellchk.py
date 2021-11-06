@@ -1,6 +1,7 @@
 import os
 import glob
 import sys
+import re
 import json
 import argparse
 from collections import Counter
@@ -35,10 +36,12 @@ def main(infile, rulefile):
     global warnings_counter
     warnings_counter = Counter()
     
-    for line in text.splitlines(True):
-        check(rules, line)
+    for paragraph in text.splitlines(True):
+        for line in re.split(r'(?<=[.?]) ', paragraph):
+            check(rules, line)
     
     display_summary()
+
 
 def ruletable(obj):
     table = []
