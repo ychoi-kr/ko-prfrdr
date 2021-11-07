@@ -49,15 +49,16 @@ def loadrules(rulefile):
             os.path.dirname(os.path.realpath(__file__)), filename
         )
         
-        print(f"Loading rule {filename}...")
         try:
+            print(f"Loading rule file: {filename}...")
             fileobj = open(path, "rt")
             pyobj = decodejson(fileobj, filename)
         except UnicodeDecodeError as ude:
+            print(f"Retrying to load rule file in UTF-8: {filename}...")
             fileobj = open(path, "rt", encoding='utf8')
             pyobj = decodejson(fileobj, filename)
-        else:
-            allrules += ruletable(pyobj)
+        
+        allrules += ruletable(pyobj)
     
     return allrules
 
@@ -120,9 +121,6 @@ def check(rules, line):
                 bad_root = bad.lstrip('~')
             if bad.endswith(')') and korean(bad.rstrip(')').rsplit('(', 1)[1]):
                 bad_root = bad_root.rsplit('(', 1)[0]
-            
-            debug('line', line)
-            debug('bad_root', bad_root)
             
             if bad_root in line:
                 loc = line.find(bad_root)
