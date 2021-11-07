@@ -71,7 +71,7 @@ rule224_생략해야 하는 표현 ==> count: 17
 실행 결과를 파일로 저장하려면 리다이렉션을 이용하면 됩니다.
 
 ```
-spellchk > report
+chk_manuscript > report
 ```
 
 위와 같이 하면 `report` 파일에 텍스트로 저장되고, 메모장으로 열 수 있습니다.
