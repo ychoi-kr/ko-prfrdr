@@ -605,8 +605,10 @@ def _read(path, encoding="utf-8", comment=";;;"):
             line = decode_utf8(line, encoding)
             if not line or (comment and line.startswith(comment)):
                 continue
-            yield line
-    raise StopIteration
+            try:
+                yield line
+            except StopIteration:
+                return
 
 
 class Lexicon(lazydict):
