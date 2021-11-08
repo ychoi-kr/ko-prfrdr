@@ -1,0 +1,4 @@
+[submodule "patternlib"]
+	path = patternlib
+	url = git@github.com:clips/pattern.git
+	branch = python3
