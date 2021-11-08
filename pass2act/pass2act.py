@@ -1,6 +1,6 @@
 import spacy
 import pattern.en as en
-from wordinv import nouninv
+from .wordinv import nouninv
 
 #nlp = spacy.load('en')
 nlp = spacy.load("en_core_web_sm")
