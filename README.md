@@ -107,6 +107,46 @@ ROC 곡선은 이상적인 모델에서는 이처럼 원점에서 수직으로 �
 텍스트를 입력받아서 하십시오체로 바꿔줍니다.
 
 
+## p2a.py
+
+영어 수동태 문장을 능동태로 변환합니다.
+
+아래 저장소에서 코드를 가져온 뒤 오류가 발생하는 부분만 수정했습니다.
+- https://github.com/DanManN/pass2act
+- https://github.com/clips/pattern
+
+요구사항:
+
+사용하려면 [spacy](https://pypi.org/project/spacy/)를 설치해야 합니다.
+
+`pip install spacy`
+
+사용법:
+
+`p2a`를 실행한 뒤 수동태 문장을 입력하면 능동태 문장이 출력되며, `q`를 입력하면 종료합니다.
+
+```
+$ p2a
+
+The book is written by myself.
+Myself wrote the book.
+
+A policy of whitewashing and cover-up has been pursed by the CIA director and his close advisors.
+The CIA director and his close advisors has pursed a policy of whitewashing and cover-up.
+
+q
+```
+
+능동태의 주어에 해당하는 절이 있어야 변환 가능합니다.
+
+```
+Mistakes were made.
+Mistakes were made.
+
+Mistakes were made by us.
+We made mistakes.
+```
+
 ## spellchk.py
 
 원고의 맞춤법, 띄어쓰기, 외래어 표기법을 검사합니다.
