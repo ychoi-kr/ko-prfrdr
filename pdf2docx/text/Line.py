@@ -15,13 +15,16 @@ Data structure of line in text block referring to this
 '''
 
 from fitz import Point
-from collections import Iterable
 from .TextSpan import TextSpan
 from ..common.Element import Element
 from ..common.share import TextDirection
 from .Spans import Spans
 from ..image.ImageSpan import ImageSpan
 
+try:
+    from collections.abc import Iterable
+except:
+    from collections import Iterable
 
 class Line(Element):
     '''Object representing a line in text block.'''
