@@ -4,11 +4,11 @@ import sys
 import re
 import json
 import argparse
-import pathlib
+import platform
+from pathlib import Path
 from collections import Counter
 
 import docx2txt
-
 
 def debug(k, v):
     if _dbg_:
@@ -20,11 +20,16 @@ def main(infile, rulefile):
     global _dbg_
     _dbg_ = False
     
-    debug('infile', infile)
+    _rules = loadrules(rulefile)
+    
     if not infile:
         infile = latest_docx()
+    elif Path(infile).stem == '.pdf' and not pdfsupport():
+            sys.exit('Failed!!! PDF support is not enabled.')
     
-    _rules = loadrules(rulefile)
+    if Path(infile).suffix == '.pdf':
+        if pdftotext(infile):
+            infile = Path(infile).stem + '.txt'
     
     try:
         text = read_manuscript(infile)
@@ -40,6 +45,21 @@ def main(infile, rulefile):
             check(_rules, line)
     
     display_summary()
+
+
+def pdfsupport():
+    if platform.system() == 'Windows':
+        # I decided to reuse "pdftotext.exe" from Xpdf tools (http://www.xpdfreader.com/about.html)
+        # which is already installed on my PC.
+        # Python package equivalents are too hard to set up on Windows.
+        # https://github.com/jalan/pdftotext/issues/16#issuecomment-399963100
+        
+        # check if pdftotext.exe works
+        if os.system('pdftotext -v > NUL') == 0:
+            return True
+        else:
+            # not implemented
+            return False
 
 
 def loadrules(rulefile):
@@ -85,8 +105,7 @@ def ruletable(obj):
 
 
 def read_manuscript(infile):
-    ext = pathlib.Path(infile).suffix
-    debug('ext', ext)
+    ext = Path(infile).suffix
     if ext == ".docx":
         print(f'Loading docx file: {infile}...')
         text = docx2txt.process(infile)
@@ -98,8 +117,22 @@ def read_manuscript(infile):
             print(f'Retrying to load text file in UTF-8: {infile}...')
             text = open(infile, encoding='utf8').read()
     else:
-        sys.exit('Unable to parse file!')
+        sys.exit(f'Failed!!! Unable to parse file: {infile}')
     return text
+
+
+def pdftotext(filename):
+    if platform.system() == 'Windows':
+        print(f'Converting {filename} to txt...')
+        cmd = f'pdftotext "{filename}" > NUL'
+        rc = os.system(cmd)
+        if rc == 0:
+            return True
+        else:
+            return False
+    else:
+        # not implemented
+        return False
 
 
 def check(rules, line):
@@ -171,11 +204,18 @@ def display_summary():
 
 
 def latest_docx():
-    ext = 'docx'
+    exts = [".txt", ".docx"]
+    if pdfsupport():
+        exts.append(".pdf")
+    
+    files = []
+    for ext in exts:
+        files.extend(glob.glob('*' + ext))
+    
     try:
-        return max(glob.glob(f'*.{ext}'), key=os.path.getctime)
+        return max(files, key=os.path.getctime)
     except:
-        sys.exit(f"Failed!!! Cannot find {ext} file.")
+        sys.exit(f"Failed!!! Cannot find file in {'|'.join(exts)}.")
 
 
 if __name__ == '__main__':
@@ -183,7 +223,8 @@ if __name__ == '__main__':
     parser.add_argument("-f", "--filename", help="filename", type=str)
     parser.add_argument("-r", "--rulefile", nargs='+',
                         default=['ko_spelling_rules.json', 'ko_spacing_rules.json', 'foreign_sound_rules.json',
-                                 'en_ko_style_correction.json', 'jp_ko_style_correction.json', 'wikibook_style_guide.json'])
+                                 'en_ko_style_correction.json', 'jp_ko_style_correction.json',
+                                 'wikibook_style_guide.json', 'simple_style.json'])
     args = parser.parse_args()
     
     main(args.filename, args.rulefile)
