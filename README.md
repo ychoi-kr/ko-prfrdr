@@ -10,6 +10,7 @@
 - 영한 번역투: [en_ko_style_correction.json](en_ko_style_correction.json)
 - 일한 번역투: [jp_ko_style_correction.json](jp_ko_style_correction.json)
 - 위키북스 글쓰기 지침: [wikibook_style_guide.json](wikibook_style_guide.json)
+- 간결한 글쓰기: [simple_style.json](simple_style.json)
 
 
 요구사항:
