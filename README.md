@@ -11,7 +11,14 @@
 - 일한 번역투: [jp_ko_style_correction.json](jp_ko_style_correction.json)
 - 위키북스 글쓰기 지침: [wikibook_style_guide.json](wikibook_style_guide.json)
 
-사용법은 아래처럼 해도 되고,
+
+요구사항:
+
+`pip install docx2txt`
+
+사용법:
+
+아래처럼 해도 되고,
 
 ```
 cd <원고가 있는 폴더>
@@ -147,6 +154,34 @@ Mistakes were made by us.
 We made mistakes.
 ```
 
+
+## pdf_merge.py
+
+같은 이름으로 시작하는 PDF 파일들을 하나로 합칩니다.
+
+
+## searchable.py
+
+스캔해서 만들어진 PDF 파일로부터 검색 가능한 PDF 파일을 생성합니다. 아직 인식이 잘 안 됩니다.
+
+요구사항:
+
+1. Tesseract 셋업
+
+    Windows 환경인 경우([https://joyhong.tistory.com/79](https://joyhong.tistory.com/79) 참고):
+
+    a. https://github.com/UB-Mannheim/tesseract/wiki 설치
+    b. PATH 환경변수에 경로(예: `C:\Program Files\Tesseract-OCR`)를 등록
+    c. kor.traineddata를 다운로드해 `tessdata` 폴더에 넣기
+    d. 명령 프롬프트에서 작동 시험
+
+2. `pip install pytesseract numpy opencv-python PyPDF2`
+
+이슈:
+
+- 글자 사이에 불필요한 공백이 들어가서 검색 기능을 활용하는 데 지장 있음.
+
+
 ## spellchk.py
 
 원고의 맞춤법, 띄어쓰기, 외래어 표기법을 검사합니다.
@@ -180,3 +215,27 @@ Bibhuti Bhushan Jha                                1
 budget                                             1
 CNN                                                2
 ```
+
+## youtube_playlist.py
+
+
+
+요구사항:
+
+1. `pip install selenium`
+2. 브라우저 종류 및 버전에 맞는 드라이버를 다운로드
+    - 크롬: https://chromedriver.chromium.org/downloads
+
+사용법:
+
+```
+youtube_playlist_csv <재생목록 ID>
+```
+
+예: [https://www.youtube.com/playlist?list=PLJQKWHLhBrxI43w0DU4uQrhWv4Pm1OFlx](https://www.youtube.com/playlist?list=PLJQKWHLhBrxI43w0DU4uQrhWv4Pm1OFlx)의 영상 목록을 가져오고 싶다면 아래 명령을 실행.
+
+`youtube_playlist_csv PLJQKWHLhBrxI43w0DU4uQrhWv4Pm1OFlx`
+
+이슈:
+
+`>`를 써서 리다이렉션으로 CSV 파일을 만들 경우 명령 프롬프트 창을 닫아야 엑셀에서 편집 가능
