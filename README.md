@@ -29,10 +29,10 @@ python c:\utils\chk_manuscript.py -f "Mastering_PyTorch_편집본_20211104.docx"
 파이썬 스크립트가 자동 실행 가능한 환경에서는 다음과 같이 할 수 있고,
 
 ```
-chk_manuscript -f Mastering_PyTorch_편집본_20211104.docx
+chk_manuscript "Mastering_PyTorch_편집본_20211104.docx"
 ```
 
-`-f` 옵션을 생략하면 최신 파일을 찾습니다. 따라서 다음과 같이 실행하면 됩니다.
+파일명을 생략하면 최신 파일을 찾습니다. 따라서 다음과 같이 실행하면 됩니다.
 
 ```
 chk_manuscript

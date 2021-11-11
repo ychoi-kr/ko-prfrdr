@@ -220,7 +220,7 @@ def latest_docx():
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("-f", "--filename", help="filename", type=str)
+    parser.add_argument("filename", nargs="?", type=str)
     parser.add_argument("-r", "--rulefile", nargs='+',
                         default=['ko_spelling_rules.json', 'ko_spacing_rules.json', 'foreign_sound_rules.json',
                                  'en_ko_style_correction.json', 'jp_ko_style_correction.json',

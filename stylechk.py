@@ -3,7 +3,7 @@ import argparse
 import chk_manuscript
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-f", "--filename", help="filename", type=str)
+parser.add_argument("filename", nargs="?", type=str)
 parser.add_argument("-r", "--rulefile", nargs='+', 
                     default=['en_ko_style_correction.json', 'jp_ko_style_correction.json',
                              'wikibook_style_guide.json', 'simple_style.json'])
