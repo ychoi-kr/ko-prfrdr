@@ -15,7 +15,10 @@
 
 요구사항:
 
-`pip install docx2txt`
+- `pip install docx2txt`
+- PDF 파일을 검사하려면 [Xpdf tools](http://www.xpdfreader.com/about.html) 필요
+- HWP 파일을 검사하려면 `pip install pyhwp`
+
 
 사용법:
 
@@ -161,20 +164,31 @@ We made mistakes.
 같은 이름으로 시작하는 PDF 파일들을 하나로 합칩니다.
 
 
+## pdf2docx.py
+
+PDF 문서를 docx로 변환하는 [pdf2docx](https://github.com/dothinking/pdf2docx)를 호출합니다.
+
+요구사항:
+
+`pip install pdf2docx`
+
+사용법:
+
+`pdf2docx <파일명>`
+
+
 ## searchable.py
 
-스캔해서 만들어진 PDF 파일로부터 검색 가능한 PDF 파일을 생성합니다. 아직 인식이 잘 안 됩니다.
+스캔해서 만들어진 PDF 파일로부터 검색 가능한 PDF 파일을 생성합니다. 한글 인식이 잘 안 됩니다.
 
 요구사항:
 
 1. Tesseract 셋업
 
-    Windows 환경인 경우([https://joyhong.tistory.com/79](https://joyhong.tistory.com/79) 참고):
-
-    a. https://github.com/UB-Mannheim/tesseract/wiki 설치
+    a. Tesseract 설치(Windows인 경우 [https://github.com/UB-Mannheim/tesseract/wiki](https://github.com/UB-Mannheim/tesseract/wiki)에서 다운로드)
     b. PATH 환경변수에 경로(예: `C:\Program Files\Tesseract-OCR`)를 등록
-    c. kor.traineddata를 다운로드해 `tessdata` 폴더에 넣기
-    d. 명령 프롬프트에서 작동 시험
+    c. [https://github.com/tesseract-ocr/](https://github.com/tesseract-ocr/)의 tessdata, tessdata_fast, tessdata_best 중 한 곳에서 kor.traineddata를 다운로드해, Tesseract 경로 아래의 `tessdata` 폴더에 넣기
+    d. 명령 프롬프트에서 작동하는지 확인([https://joyhong.tistory.com/79](https://joyhong.tistory.com/79) 참고)
 
 2. `pip install pytesseract numpy opencv-python PyPDF2`
 
