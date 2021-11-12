@@ -185,9 +185,9 @@ PDF 문서를 docx로 변환하는 [pdf2docx](https://github.com/dothinking/pdf2
 
 1. Tesseract 셋업
 
-    a. Tesseract 설치(Windows인 경우 [https://github.com/UB-Mannheim/tesseract/wiki](https://github.com/UB-Mannheim/tesseract/wiki)에서 다운로드)
-    b. PATH 환경변수에 경로(예: `C:\Program Files\Tesseract-OCR`)를 등록
-    c. [https://github.com/tesseract-ocr/](https://github.com/tesseract-ocr/)의 tessdata, tessdata_fast, tessdata_best 중 한 곳에서 kor.traineddata를 다운로드해, Tesseract 경로 아래의 `tessdata` 폴더에 넣기
+    a. Tesseract 설치(Windows인 경우 [https://github.com/UB-Mannheim/tesseract/wiki](https://github.com/UB-Mannheim/tesseract/wiki)에서 다운로드)  
+    b. PATH 환경변수에 경로(예: `C:\Program Files\Tesseract-OCR`)를 등록  
+    c. [https://github.com/tesseract-ocr/](https://github.com/tesseract-ocr/)의 tessdata, tessdata_fast, tessdata_best 중 한 곳에서 kor.traineddata를 다운로드해, Tesseract 경로 아래의 `tessdata` 폴더에 넣기  
     d. 명령 프롬프트에서 작동하는지 확인([https://joyhong.tistory.com/79](https://joyhong.tistory.com/79) 참고)
 
 2. `pip install pytesseract numpy opencv-python PyPDF2`
@@ -211,6 +211,12 @@ PDF 문서를 docx로 변환하는 [pdf2docx](https://github.com/dothinking/pdf2
 
 원고에서 `국문(영문)` 형식으로 병기한 부분을 찾아서 영문 용어 목록을 출력합니다.
 
+요구사항:
+
+`pip install docx2txt`
+
+사용법:
+
 ```
 $termchk
 TERM                                               COUNT
@@ -231,9 +237,8 @@ budget                                             1
 CNN                                                2
 ```
 
+
 ## youtube_playlist.py
-
-
 
 요구사항:
 
