@@ -26,7 +26,7 @@
 
 ```
 cd <원고가 있는 폴더>
-python c:\utils\chk_manuscript.py -f "Mastering_PyTorch_편집본_20211104.docx"
+python c:\utils\chk_manuscript.py "Mastering_PyTorch_편집본_20211104.docx"
 ```
 
 파이썬 스크립트가 자동 실행 가능한 환경에서는 다음과 같이 할 수 있고,
