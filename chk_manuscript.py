@@ -24,12 +24,23 @@ def main(infile, rulefile):
     
     if not infile:
         infile = latest_docx()
-    elif Path(infile).stem == '.pdf' and not pdfsupport():
-            sys.exit('Failed!!! PDF support is not enabled.')
     
-    if Path(infile).suffix == '.pdf':
+    ext = Path(infile).suffix
+    
+    if ext == '.pdf':
+        if not pdfsupport():
+            sys.exit('Failed!!! PDF support is not enabled.')
         if pdftotext(infile):
             infile = Path(infile).stem + '.txt'
+    elif ext == '.hwp':
+        if not hwpsupport():
+            sys.exit('Failed!!! HWP support is not enabled.')
+        if hwptotext(infile):
+            infile = Path(infile).stem + '.txt'
+    elif ext in ['.docx', '.txt']:
+        pass
+    else:
+        sys.exit(f'Failed!!! {ext} is not supported')
     
     try:
         text = read_manuscript(infile)
@@ -60,6 +71,13 @@ def pdfsupport():
         else:
             # not implemented
             return False
+
+
+def hwpsupport():
+    if os.system('hwp5txt -h > NUL') == 0:
+        return True
+    else:
+        return False
 
 
 def loadrules(rulefile):
@@ -122,16 +140,25 @@ def read_manuscript(infile):
 
 
 def pdftotext(filename):
+    print(f'Converting {filename} to txt...')
     if platform.system() == 'Windows':
-        print(f'Converting {filename} to txt...')
         cmd = f'pdftotext "{filename}" > NUL'
-        rc = os.system(cmd)
-        if rc == 0:
-            return True
-        else:
-            return False
     else:
-        # not implemented
+        cmd = f'pdftotext "{filename}" > /dev/null'
+    
+    if os.system(cmd) == 0:
+        return True
+    else:
+        return False
+
+
+def hwptotext(filename):
+    print(f'Converting {filename} to txt...')
+    cmd = f'hwp5txt "{filename}" > {Path(filename).stem + ".txt"}'
+    rc = os.system(cmd)
+    if rc == 0:
+        return True
+    else:
         return False
 
 
@@ -204,7 +231,7 @@ def display_summary():
 
 
 def latest_docx():
-    exts = [".txt", ".docx"]
+    exts = [".txt", ".docx", ".pdf", ".hwp"]
     if pdfsupport():
         exts.append(".pdf")
     
