@@ -1,3 +1,10 @@
+## 공통
+
+요구사항:
+
+- 파이썬 3 설치
+
+
 ## chk_manuscript.py
 
 원고(docx 파일)에서 규칙을 준수하는지 자동으로 검사합니다.
@@ -15,9 +22,12 @@
 
 요구사항:
 
-- `pip install docx2txt`
+- `pip3 install docx2txt` 또는 `pip install docx2txt`
 - PDF 파일을 검사하려면 [Xpdf tools](http://www.xpdfreader.com/about.html) 필요
-- HWP 파일을 검사하려면 `pip install pyhwp`
+- HWP 파일을 검사하려면
+    - `pip3 install pyhwp` 또는 `pip install pyhwp`
+    - `hwp5txt`를 실행할 수 있게 PATH 환경변수에 경로를 등록
+        - 맥 환경은 https://blog.naver.com/yoonsweety/221451960610 참고
 
 
 사용법:
