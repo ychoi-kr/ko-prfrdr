@@ -74,7 +74,9 @@ def pdfsupport():
 
 
 def hwpsupport():
-    if os.system('hwp5txt -h > NUL') == 0:
+    if platform.system() == 'Windows' and os.system('hwp5txt -h > NUL') == 0:
+        return True
+    elif os.system('hwp5txt -h > /dev/null') == 0:
         return True
     else:
         return False
@@ -152,9 +154,10 @@ def pdftotext(filename):
         return False
 
 
-def hwptotext(filename):
-    print(f'Converting {filename} to txt...')
-    cmd = f'hwp5txt "{filename}" > {Path(filename).stem + ".txt"}'
+def hwptotext(infile):
+    print(f'Converting {infile} to txt...')
+    outfile = Path(infile).stem + ".txt"
+    cmd = f'hwp5txt "{infile}" > "{outfile}"'
     rc = os.system(cmd)
     if rc == 0:
         return True
