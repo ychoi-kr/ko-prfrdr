@@ -27,9 +27,8 @@ def convert(sentence, level):
                 tt.append((col[src_idx], col[dst_idx]))
    
     for src, dst in tt:
-        sentence = sentence.replace(src + '.', dst + '.')
-        sentence = sentence.replace(src + '!', dst + '!')
-        sentence = sentence.replace(src + '?', dst + '?')
+        for sb in " ,.!?":
+            sentence = sentence.replace(src + sb, dst + sb)
 
     return sentence
 
