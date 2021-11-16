@@ -89,14 +89,9 @@ def loadrules(rulefile):
             os.path.dirname(os.path.realpath(__file__)), filename
         )
         
-        try:
-            print(f"Loading rule file: {filename}...")
-            fileobj = open(path, "rt")
-            pyobj = decodejson(fileobj, filename)
-        except UnicodeDecodeError as ude:
-            print(f"Retrying to load rule file in UTF-8: {filename}...")
-            fileobj = open(path, "rt", encoding='utf8')
-            pyobj = decodejson(fileobj, filename)
+        print(f"Loading rule file: {filename}...")
+        fileobj = open(path, "rt", encoding='utf8')
+        pyobj = decodejson(fileobj, filename)
         
         allrules += ruletable(pyobj)
     
