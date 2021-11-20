@@ -247,25 +247,3 @@ budget                                             1
 CNN                                                2
 ```
 
-
-## youtube_playlist.py
-
-요구사항:
-
-1. `pip install selenium`
-2. 브라우저 종류 및 버전에 맞는 드라이버를 다운로드
-    - 크롬: https://chromedriver.chromium.org/downloads
-
-사용법:
-
-```
-youtube_playlist_csv <재생목록 ID>
-```
-
-예: [https://www.youtube.com/playlist?list=PLJQKWHLhBrxI43w0DU4uQrhWv4Pm1OFlx](https://www.youtube.com/playlist?list=PLJQKWHLhBrxI43w0DU4uQrhWv4Pm1OFlx)의 영상 목록을 가져오고 싶다면 아래 명령을 실행.
-
-`youtube_playlist_csv PLJQKWHLhBrxI43w0DU4uQrhWv4Pm1OFlx`
-
-이슈:
-
-`>`를 써서 리다이렉션으로 CSV 파일을 만들 경우 명령 프롬프트 창을 닫아야 엑셀에서 편집 가능
