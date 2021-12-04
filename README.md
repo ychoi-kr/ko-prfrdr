@@ -9,7 +9,7 @@
 
 원고(docx 파일)에서 규칙을 준수하는지 자동으로 검사합니다.
 
-규칙:
+관련 파일:
 
 - 맞춤법: [ko_spelling_rules.json](ko_spelling_rules.json)
 - 띄어쓰기: [ko_spacing_rules.json](ko_spacing_rules.json)
@@ -18,17 +18,18 @@
 - 일한 번역투: [jp_ko_style_correction.json](jp_ko_style_correction.json)
 - 위키북스 글쓰기 지침: [wikibook_style_guide.json](wikibook_style_guide.json)
 - 간결한 글쓰기: [simple_style.json](simple_style.json)
-
+- 사전: [dic.txt](dic.txt)
 
 요구사항:
 
-- `pip3 install docx2txt` 또는 `pip install docx2txt`
+- `pip3 install docx2txt`
 - PDF 파일을 검사하려면 [Xpdf tools](http://www.xpdfreader.com/about.html) 필요
 - HWP 파일을 검사하려면
-    - `pip3 install pyhwp` 또는 `pip install pyhwp`
+    - `pip3 install pyhwp`
     - `hwp5txt`를 실행할 수 있게 PATH 환경변수에 경로를 등록
         - 맥 환경은 https://blog.naver.com/yoonsweety/221451960610 참고
-
+- 품사 검사 기능을 이용하려면
+    - `pip3 install --force-reinstall git+git://github.com/sk8erchoi/KoNLPy.git`
 
 사용법:
 
@@ -36,7 +37,7 @@
 
 ```
 cd <원고가 있는 폴더>
-python c:\utils\chk_manuscript.py "Mastering_PyTorch_편집본_20211104.docx"
+python3 c:\utils\chk_manuscript.py "Mastering_PyTorch_편집본_20211104.docx"
 ```
 
 파이썬 스크립트가 자동 실행 가능한 환경에서는 다음과 같이 할 수 있고,
@@ -89,13 +90,10 @@ rule222_각각의 ==> count: 4
 rule224_생략해야 하는 표현 ==> count: 17
 ```
 
-실행 결과를 파일로 저장하려면 리다이렉션을 이용하면 됩니다.
+팁:
 
-```
-chk_manuscript > report
-```
-
-위와 같이 하면 `report` 파일에 텍스트로 저장되고, 메모장으로 열 수 있습니다.
+- 실행 결과를 파일로 저장하려면 리다이렉션을 이용하면 됩니다. 예를 들어, `python3 chk_manuscript.py > report`를 실행하면 `report` 파일에 텍스트로 저장되고, 메모장으로 열 수 있습니다.
+- 워드 파일을 편집 중일 때 다른 프로그램에서 동시에 열 수 없지만, 다른 컴퓨터에서 OneDrive로 동기화된 파일을 열 수는 있습니다. 따라서 컴퓨터가 두 대 있다면 한 대로는 `python3 chk_manuscript.py | more`로 확인하면서 다른 컴퓨터로 워드 파일을 편집하는 식으로 작업할 수 있습니다.
 
 
 ## hae.py
