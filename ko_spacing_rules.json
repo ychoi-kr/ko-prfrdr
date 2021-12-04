@@ -88,7 +88,8 @@
       ["들어 내(다)", "들어내(다)"]
     ],
     "exception": [
-      "예를 들어"
+      "예를 들어",
+      "만들어"
     ]
   },
   {
@@ -186,10 +187,9 @@
     "name": "0079972b_만",
     "desc": "https://wikidocs.net/79972",
     "cases": [
-      ["~만해지(다)", "~만 해지(다)"]
+      ["<Noun>만해지(다)", "()만 해지(다)"]
     ],
     "exception": [
-      "완만해지"
     ]
   },
   {
@@ -364,6 +364,7 @@
     "name": "0080788a_-상(上)",
     "desc": "https://wikidocs.net/80788",
     "cases": [
+      ["구조 상", "구조상"],
       ["관계 상", "관계상"],
       ["미관 상", "미관상"],
       ["사실 상", "사실상"],
@@ -612,6 +613,19 @@
   },
   {
     "kind": "띄어쓰기",
+    "name": "0109301a_이때",
+    "desc": "https://wikidocs.net/109301",
+    "cases": [
+      ["그 때", "그때"],
+      ["이 때", "이때"],
+      ["그후", "그 후"],
+      ["그 다음", "그다음"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "띄어쓰기",
     "name": "0073567a_다시 한번",
     "desc": "https://wikidocs.net/73567",
     "cases": [
@@ -763,6 +777,19 @@
   },
   {
     "kind": "띄어쓰기",
+    "name": "0105111a_조사(은/는, 와/과)",
+    "desc": "https://wikidocs.net/105111",
+    "cases": [
+      ["<Noun> 은 ", "()은 "],
+      ["<Noun> 는 ", "()는 "],
+      ["<Noun> 와 ", "()와 "],
+      ["<Noun> 과 ", "()과 "]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "띄어쓰기",
     "name": "0080679a_'있다'/'없다'를 앞말과 붙여 써야 하는 것",
     "desc": "https://wikidocs.net/80679",
     "cases": [
@@ -888,6 +915,46 @@
       ["넉넉치 않(다)", "넉넉지 않(다)"],
       ["충분지 않(다)", "충분치 않(다)"],
       ["전달도록", "전달토록"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "qna97252_우리말",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=97252",
+    "cases": [
+      ["우리 말", "우리말"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "qna81555_여러 가지",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=81555",
+    "cases": [
+      ["여러가지", "여러 가지"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "0109302a_그 외",
+    "desc": "https://wikidocs.net/109302",
+    "cases": [
+      ["그외", "그 외"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "0109302b_그중",
+    "desc": "https://wikidocs.net/109302",
+    "cases": [
+      ["그 중", "그중"]
     ],
     "exception": [
     ]

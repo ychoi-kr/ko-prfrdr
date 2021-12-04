@@ -49,5 +49,16 @@
     ],
     "exception": [
     ]
+  },
+  {
+    "kind": "맞춤법",
+    "name": "0147076a_즉",
+    "desc": "https://wikidocs.net/147076",
+    "cases": [
+      ["([^., ]+) 즉[,]? ", "(), 즉 "]
+    ],
+    "exception": [
+    ]
   }
+
 ]

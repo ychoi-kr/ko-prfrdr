@@ -12,6 +12,17 @@ from collections import Counter
 
 import docx2txt
 
+TAG_PACKAGE = 'Komoran'
+try:
+    from konlpy.tag import Komoran
+    global t
+    dicpath = os.path.join(
+        os.path.dirname(os.path.realpath(__file__)), 'dic.txt'
+    )
+    t = Komoran(userdic=dicpath)
+except:
+    pass
+
 def debug(k, v):
     if _dbg_:
         print(f'#DEBUG# {k}: {v}')
@@ -39,7 +50,7 @@ def main(infile, rulefile):
             sys.exit('Failed!!! HWP support is not enabled.')
         if hwptotext(infile):
             infile = Path(infile).stem + '.txt'
-    elif ext in ['.docx', '.txt']:
+    elif ext in ['.docx', '.txt', '']:
         pass
     else:
         sys.exit(f'Failed!!! {ext} is not supported')
@@ -163,7 +174,7 @@ def hwptotext(infile):
 
 
 def check(rules, line):
-
+    debug('line', line)
     # avoid false positive on rule108
     if not korean(line):
         return None
@@ -172,16 +183,46 @@ def check(rules, line):
         kind, name, desc, cases, exceptions = rule
         for cs in cases:
             bad, good = cs[0], cs[1]
+            mode = None
             
-            if bad == '?':  # possible charset problem
+            # possible charset problem
+            if bad == '?':  
                 continue
+
+            # regex match
+            elif any(map(lambda x: x in '[]\+?', bad)):
+                m = re.search(bad, line)
+                if m:
+                    bad = bad_root = m.group()
+                    for g in m.groups():
+                        good = good.replace('()', g)
+                else:
+                    continue
             
-            bad_root = bad
-            if bad.startswith('~'):
-                bad_root = bad.lstrip('~')
-            if bad.endswith(')') and korean(bad.rstrip(')').rsplit('(', 1)[1]):
-                bad_root = bad_root.rsplit('(', 1)[0]
-            
+            else: 
+                bad_root = bad
+                if bad.endswith(')') and korean(bad.rstrip(')').rsplit('(', 1)[1]):
+                    bad_root = bad.rsplit('(', 1)[0]
+
+                # Part of Speech match
+                if '<Noun>' in bad_root and TAG_PACKAGE in globals():
+                    #debug('bad', bad)
+                    nouns = t.nouns(line)
+                    debug('nouns', nouns)
+                    for n in nouns:
+                        candidate = bad_root.replace('<Noun>', n)
+                        if candidate in line:
+                            bad = bad_root = candidate
+                            good = good.replace('()', n)
+                            #debug('good', good)
+                            break 
+    
+                # Plaintext match
+                else:
+                    if bad_root.startswith('~'):
+                         bad_root = bad_root.lstrip('~')
+    
+            # common
             if bad_root in line:
                 loc = line.find(bad_root)
                 skip = False

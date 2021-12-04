@@ -1,0 +1,3 @@
+Python	NNP
+PHP	NNP
+파라미터	NNG
