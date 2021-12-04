@@ -29,7 +29,7 @@
     - `hwp5txt`를 실행할 수 있게 PATH 환경변수에 경로를 등록
         - 맥 환경은 https://blog.naver.com/yoonsweety/221451960610 참고
 - 품사 검사 기능을 이용하려면
-    - `pip3 install --force-reinstall git+git://github.com/sk8erchoi/KoNLPy.git`
+    - `pip3 install --force-reinstall git+git://github.com/sk8erchoi/konlpy.git`
 
 사용법:
 
