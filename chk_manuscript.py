@@ -10,6 +10,8 @@ import platform
 from pathlib import Path
 from collections import Counter
 
+from kosound import hasfinalconsonant
+
 import docx2txt
 
 TAG_PACKAGE = 'Komoran'
@@ -194,21 +196,33 @@ def check(rules, line):
         for cs in cases:
             bad, good = cs[0], cs[1]
             mode = None
-            
+             
             # possible charset problem
             if bad == '?':  
                 continue
-
+             
             # regex match
             elif any(map(lambda x: x in '[]\+?', bad)):
+                debug('bad', bad)
                 m = re.search(bad, line)
+                debug('m', m)
                 if m:
+                    debug('m.groups()', m.groups())
+                    if (
+                        'without_final_consonant' in bad
+                        and hasfinalconsonant(m.group('without_final_consonant')[-1])
+                    ) or (
+                        'with_final_consonant' in bad
+                        and not hasfinalconsonant(m.group('with_final_consonant')[-1])
+                    ):
+                        continue
+                    
                     bad = bad_root = m.group()
                     for g in m.groups():
-                        good = good.replace('()', g)
+                        good = good.replace('()', g, 1)
                 else:
                     continue
-            
+             
             else: 
                 bad_root = bad
                 if bad.endswith(')') and korean(bad.rstrip(')').rsplit('(', 1)[1]):

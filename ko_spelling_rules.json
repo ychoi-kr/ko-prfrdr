@@ -114,6 +114,22 @@
     ],
     "exception": [
     ]
+  },
+  {
+    "kind": "맞춤법",
+    "name": "qa077433_-은/는, -이/가, -을/를, -와/과",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=77433",
+    "cases": [
+      ["(?P<without_final_consonant>[^ ]*?[가-히])([(][^(]+?[)])은", "()()는"],
+      ["(?P<with_final_consonant>[^ ]*?[각-힣])([(][^(]+?[)])는", "()()은"],
+      ["(?P<without_final_consonant>[^ ]*?[가-히])([(][^(]+?[)])이 ", "()()가 "],
+      ["(?P<with_final_consonant>[^ ]*?[각-힣])([(][^(]+?[)])가", "()()이"],
+      ["(?P<without_final_consonant>[^ ]*?[가-히])([(][^(]+?[)])을", "()()를"],
+      ["(?P<with_final_consonant>[^ ]*?[각-힣])([(][^(]+?[)])를", "()()을"],
+      ["(?P<without_final_consonant>[^ ]*?[가-히])([(][^(]+?[)])과", "()()와"],
+      ["(?P<with_final_consonant>[^ ]*?[각-힣])([(][^(]+?[)])와", "()()과"]
+    ],
+    "exception": [
+    ]
   }
-
 ]
