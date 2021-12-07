@@ -13,6 +13,7 @@ from collections import Counter
 import docx2txt
 
 TAG_PACKAGE = 'Komoran'
+print(f'Trying to import KoNLPy...')
 try:
     from konlpy.tag import Komoran
     global t
@@ -64,11 +65,13 @@ def main(infile, rulefile):
     global warnings_counter
     warnings_counter = Counter()
     
-    for paragraph in text.splitlines(True):
-        for line in re.split(r'(?<=[.?]) ', paragraph):
-            check(_rules, line)
-    
-    display_summary()
+    try:
+        for paragraph in text.splitlines(True):
+            for line in re.split(r'(?<=[.?]) ', paragraph):
+                check(_rules, line)
+        display_summary()
+    except BrokenPipeError:  # when user hits 'q' during using pipe
+        pass  
 
 
 def pdfsupport():
@@ -205,17 +208,41 @@ def check(rules, line):
                     bad_root = bad.rsplit('(', 1)[0]
 
                 # Part of Speech match
-                if '<Noun>' in bad_root and TAG_PACKAGE in globals():
-                    #debug('bad', bad)
-                    nouns = t.nouns(line)
-                    debug('nouns', nouns)
-                    for n in nouns:
-                        candidate = bad_root.replace('<Noun>', n)
-                        if candidate in line:
-                            bad = bad_root = candidate
-                            good = good.replace('()', n)
-                            #debug('good', good)
-                            break 
+                if TAG_PACKAGE in globals():
+                    if any(list(filter(lambda x: x in bad_root, ['NNG', 'VV', 'JKO']))):
+                        debug('t.pos(line)', t.pos(line))
+                        debug('bad', bad)
+                        _bad = bad
+                        _bad_root = bad_root
+                        _good = good
+                        for a in re.findall('<\w+>', bad_root):
+                            for b in [m for m, p in t.pos(line) if f'<{p}>' == a]:
+                                _bad = _bad.replace(a, b, 1)
+                                _bad_root = _bad_root.replace(a, b, 1)
+                                _good = _good.replace(a, b, 1)
+                                if _bad_root in line:
+                                    bad = _bad
+                                    debug('bad', bad)
+                                    bad_root = _bad_root
+                                    debug('bad_root', bad_root)
+                                    good = _good
+                                    debug('good', good)
+                            else:
+                                continue
+                            break
+                            
+                    elif '<Noun>' in bad_root:
+                        nouns = t.nouns(line)
+                        #debug('nouns', nouns)
+                        for n in nouns:
+                            candidate = bad_root.replace('<Noun>', n)
+                            #debug('candidate', candidate)
+                            if candidate in line:
+                                bad = bad_root = candidate
+                                #debug('bad', bad)
+                                good = good.replace('()', n)
+                                #debug('good', good)
+                                break 
     
                 # Plaintext match
                 else:
