@@ -75,18 +75,14 @@ def main(infile, rulefile):
 
 
 def pdfsupport():
-    if platform.system() == 'Windows':
-        # I decided to reuse "pdftotext.exe" from Xpdf tools (http://www.xpdfreader.com/about.html)
-        # which is already installed on my PC.
-        # Python package equivalents are too hard to set up on Windows.
-        # https://github.com/jalan/pdftotext/issues/16#issuecomment-399963100
-        
-        # check if pdftotext.exe works
-        if os.system('pdftotext -v > NUL') == 0:
-            return True
-        else:
-            # not implemented
-            return False
+    # I decided to reuse "pdftotext.exe" from Xpdf tools (http://www.xpdfreader.com/about.html)
+    # which is already installed on my PC.
+    # Python package equivalents are too hard to set up on Windows.
+    # https://github.com/jalan/pdftotext/issues/16#issuecomment-399963100
+
+    cmd = 'pdftotext -v > /dev/null'
+    wincmd = 'pdftotext -v > NUL'
+    return runcmd(cmd, wincmd=wincmd)
 
 
 def hwpsupport():
@@ -152,23 +148,34 @@ def read_manuscript(infile):
     return text
 
 
-def pdftotext(filename):
-    print(f'Converting {filename} to txt...')
-    if platform.system() == 'Windows':
-        cmd = f'pdftotext "{filename}" > NUL'
-    else:
-        cmd = f'pdftotext "{filename}" > /dev/null'
-    
-    if os.system(cmd) == 0:
-        return True
-    else:
-        return False
+def pdftotext(infile):
+    print(f'Converting {infile} to txt...')
+    cmd = 'pdftotext "{infile}" > /dev/null'
+    wincmd = 'pdftotext "{infile}" > NUL'
+    return runcmd(cmd, wincmd=wincmd, infile=infile)
 
 
 def hwptotext(infile):
     print(f'Converting {infile} to txt...')
-    outfile = Path(infile).stem + ".txt"
-    cmd = f'hwp5txt "{infile}" > "{outfile}"'
+    cmd = 'hwp5txt "{infile}" > "{outfile}"'
+    return runcmd(cmd, infile=infile)
+
+
+def runcmd(cmd, wincmd=None, infile=None):
+    d = {}
+
+    if infile:
+        d['infile'] = infile
+        d['outfile'] = Path(infile).stem + ".txt"
+
+    if platform.system() == 'Windows':
+        d['cmd'] = wincmd if wincmd else cmd
+    else:
+        d['cmd'] = cmd
+
+    cmd = cmd.format(**d)
+    debug('cmd', cmd)
+
     rc = os.system(cmd)
     if rc == 0:
         return True
