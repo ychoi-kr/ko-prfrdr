@@ -6,11 +6,11 @@ import sys
 import re
 import json
 import argparse
-import platform
 from pathlib import Path
 from collections import Counter
 
 from kosound import hasfinalconsonant
+import fileconverter as c
 
 import docx2txt
 
@@ -44,14 +44,14 @@ def main(infile, rulefile):
     ext = Path(infile).suffix
     
     if ext == '.pdf':
-        if not pdfsupport():
+        if not c.pdfsupport():
             sys.exit('Failed!!! PDF support is not enabled.')
-        if pdftotext(infile):
+        if c.pdftotext(infile):
             infile = Path(infile).stem + '.txt'
     elif ext == '.hwp':
-        if not hwpsupport():
+        if not c.hwpsupport():
             sys.exit('Failed!!! HWP support is not enabled.')
-        if hwptotext(infile):
+        if c.hwptotext(infile):
             infile = Path(infile).stem + '.txt'
     elif ext in ['.docx', '.txt', '']:
         pass
@@ -74,26 +74,6 @@ def main(infile, rulefile):
         display_summary()
     except BrokenPipeError:  # when user hits 'q' during using pipe
         pass  
-
-
-def pdfsupport():
-    # I decided to reuse "pdftotext.exe" from Xpdf tools (http://www.xpdfreader.com/about.html)
-    # which is already installed on my PC.
-    # Python package equivalents are too hard to set up on Windows.
-    # https://github.com/jalan/pdftotext/issues/16#issuecomment-399963100
-
-    cmd = 'pdftotext -v > /dev/null'
-    wincmd = 'pdftotext -v > NUL'
-    return runcmd(cmd, wincmd=wincmd)
-
-
-def hwpsupport():
-    if platform.system() == 'Windows' and os.system('hwp5txt -h > NUL') == 0:
-        return True
-    elif os.system('hwp5txt -h > /dev/null') == 0:
-        return True
-    else:
-        return False
 
 
 def loadrules(rulefile):
@@ -148,41 +128,6 @@ def read_manuscript(infile):
     else:
         sys.exit(f'Failed!!! Unable to parse file: {infile}')
     return text
-
-
-def pdftotext(infile):
-    print(f'Converting {infile} to txt...')
-    cmd = 'pdftotext "{infile}" > /dev/null'
-    wincmd = 'pdftotext "{infile}" > NUL'
-    return runcmd(cmd, wincmd=wincmd, infile=infile)
-
-
-def hwptotext(infile):
-    print(f'Converting {infile} to txt...')
-    cmd = 'hwp5txt "{infile}" > "{outfile}"'
-    return runcmd(cmd, infile=infile)
-
-
-def runcmd(cmd, wincmd=None, infile=None):
-    d = {}
-
-    if infile:
-        d['infile'] = infile
-        d['outfile'] = Path(infile).stem + ".txt"
-
-    if platform.system() == 'Windows':
-        d['cmd'] = wincmd if wincmd else cmd
-    else:
-        d['cmd'] = cmd
-
-    cmd = cmd.format(**d)
-    debug('cmd', cmd)
-
-    rc = os.system(cmd)
-    if rc == 0:
-        return True
-    else:
-        return False
 
 
 def check(rules, line):
