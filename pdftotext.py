@@ -9,30 +9,64 @@ from pathlib import Path
 from pikepdf import Pdf
 
 
+WIDTH_LIMIT = 700
+MINIMUM_HEIGHT = 600
+SUPPRESS_OUTPUT = True
+
 def main(pdf_file, header, footer, password):
-    y = header
-    W = 700
-    height = page_height(pdf_file, password)
-    options_to_remove_header_and_footer = f'-y {header} -H {height - header - footer} -W {W}' if height else ''
-    user_password_option = f'-upw {password}' if password else ''
-    cmd = f"pdftotext {options_to_remove_header_and_footer} {user_password_option} -nopgbrk {pdf_file} -"
-    s = os.popen(cmd).read()
-    s = re.sub(r"(.*?[^.:][^‐/])\n+([a-z0-9(]|" + nnp() + ')', r'\1 \2', s)
-    s = re.sub(r"(.*?[^.:])[‐/]\n+(\w)", r'\1\2', s)
+    quiet = '-q' if SUPPRESS_OUTPUT else ''
+
+    if password:
+        user_password = f'-upw "{password}"'
+        pdf = Pdf.open(pdf_file, password=password)
+    else:
+        user_password = ''
+        pdf = Pdf.open(pdf_file)
+    
     with open(Path(pdf_file).stem + ".txt", 'wt') as f:
-        f.write(s)
+        for n in range(len(pdf.pages)):
+            pagenum = f'-f {n + 1} -l {n + 1}'
+    
+            # check every page's dimension because all pages are not same always
+            p = pdf.pages[n]
+            width, height = int(p.trimbox[2]), int(p.trimbox[3])
+    
+            # horizontal dimensions
+            area_per_side = []
+            if width < WIDTH_LIMIT:  # single-sided
+                area_per_side.append(f'-x 0 -W {width}')
+            else:  #double-sided
+                area_per_side.append(f'-x 0 -W {width // 2}')
+                area_per_side.append(f'-x {width // 2} -W {width // 2}')
+    
+            for area in area_per_side:
+                # vertical dimensions
+                if height > MINIMUM_HEIGHT:
+                    area += f' -y {header} -H {height - header - footer}'
+                else:
+                    area += f' -y 0 -H {height}'
+                
+                # extract text
+                cmd = f'pdftotext {pagenum} {area} {user_password} {quiet} -nopgbrk "{pdf_file}"  -'
+                #print(cmd)
+                s = os.popen(cmd).read()
+                s = re.sub(r"(.*?[^.:][^‐/])\n+([a-z0-9(]|" + nnp() + ')', r'\1 \2', s)
+                s = re.sub(r"(.*?[^.:])[‐/]\n+(\w)", r'\1\2', s)
+                f.write(s)
 
 
-def page_height(filename, password):
+def page_info(filename, password):
     try:
         if password:
             pdf = Pdf.open(filename, password=password)
         else:
             pdf = Pdf.open(filename)
-        tb = pdf.pages[0].TrimBox
-        print('width:', tb[2])
-        print('height:', tb[3])
-        return int(tb[3])
+        ret = {}
+        ret['pagenum'] = len(pdf.pages)
+        b = pdf.pages[pagenum].trimbox
+        ret['width'] = int(b[2])
+        ret['height'] = int(b[3])
+        return ret
     except:
         print('Cannot get page height. Fallback.')
         return None
