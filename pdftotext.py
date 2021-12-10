@@ -17,10 +17,10 @@ def main(pdf_file, header, footer, password):
     user_password_option = f'-upw {password}' if password else ''
     cmd = f"pdftotext {options_to_remove_header_and_footer} {user_password_option} -nopgbrk {pdf_file} -"
     s = os.popen(cmd).read()
+    s = re.sub(r"(.*?[^.:][^‐/])\n+([a-z0-9(]|" + nnp() + ')', r'\1 \2', s)
+    s = re.sub(r"(.*?[^.:])[‐/]\n+(\w)", r'\1\2', s)
     with open(Path(pdf_file).stem + ".txt", 'wt') as f:
-        f.write(
-            re.sub(r"(.*?[^.:])[‐]?\n+([a-z0-9(]|" + nnp() + ')', r'\1 \2', s)
-        )
+        f.write(s)
 
 
 def page_height(filename, password):
@@ -29,8 +29,10 @@ def page_height(filename, password):
             pdf = Pdf.open(filename, password=password)
         else:
             pdf = Pdf.open(filename)
-        firstpage = pdf.pages[0]
-        return int(firstpage.MediaBox[3])
+        tb = pdf.pages[0].TrimBox
+        print('width:', tb[2])
+        print('height:', tb[3])
+        return int(tb[3])
     except:
         print('Cannot get page height. Fallback.')
         return None
@@ -49,8 +51,8 @@ def nnp():
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("pdf_file", type=str)
-    parser.add_argument("--header", default=70, type=int) 
-    parser.add_argument("--footer", default=50, type=int) 
+    parser.add_argument("--header", default=50, type=int) 
+    parser.add_argument("--footer", default=60, type=int) 
     parser.add_argument("--password", type=str) 
     args = parser.parse_args()
     main(args.pdf_file, args.header, args.footer, args.password)
