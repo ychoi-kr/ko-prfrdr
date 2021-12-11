@@ -266,7 +266,7 @@ def display_summary():
 
 def latest_docx():
     exts = [".txt", ".docx", ".pdf", ".hwp"]
-    if pdfsupport():
+    if c.pdfsupport():
         exts.append(".pdf")
     
     files = []
