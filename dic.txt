@@ -1,5 +1,8 @@
+Amazon	NNP
 Google	NNP
+Linux	NNP
 MySQL	NNP
 Python	NNP
 PHP	NNP
+REST	NNP
 파라미터	NNG
