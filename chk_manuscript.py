@@ -265,10 +265,7 @@ def display_summary():
 
 
 def latest_docx():
-    exts = [".txt", ".docx", ".pdf", ".hwp"]
-    if c.pdfsupport():
-        exts.append(".pdf")
-    
+    exts = [".txt", ".docx", ".pdf", ".hwp", '']
     files = []
     for ext in exts:
         files.extend(glob.glob('*' + ext))
