@@ -147,7 +147,7 @@ def check(rules, line):
                 continue
              
             # regex match
-            elif any(map(lambda x: x in '[]\+?', bad)):
+            elif any(map(lambda x: x in '[]\+?|', bad)):
                 _debug('bad', bad)
                 m = re.search(bad, line)
                 if m:
