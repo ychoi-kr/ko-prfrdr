@@ -26,15 +26,15 @@ try:
 except:
     pass
 
-def debug(k, v):
+def _debug(k, v):
     if _dbg_:
         print(f'#DEBUG# {k}: {v}')
-        input()
+        #input()
 
 
-def main(infile, rulefile):
+def main(infile, rulefile, debug=False):
     global _dbg_
-    _dbg_ = False
+    _dbg_ = debug
     
     _rules = loadrules(rulefile)
     
@@ -131,11 +131,11 @@ def read_manuscript(infile):
 
 
 def check(rules, line):
-    debug('line', line)
     # avoid false positive on rule108
     if not korean(line):
         return None
     
+    _debug('line', line)
     for rule in rules:
         kind, name, desc, cases, exceptions = rule
         for cs in cases:
@@ -148,11 +148,9 @@ def check(rules, line):
              
             # regex match
             elif any(map(lambda x: x in '[]\+?', bad)):
-                debug('bad', bad)
+                _debug('bad', bad)
                 m = re.search(bad, line)
-                debug('m', m)
                 if m:
-                    debug('m.groups()', m.groups())
                     if (
                         'without_final_consonant' in bad
                         and hasfinalconsonant(m.group('without_final_consonant')[-1])
@@ -176,8 +174,6 @@ def check(rules, line):
                 # Part of Speech match
                 if TAG_PACKAGE in globals():
                     if any(list(filter(lambda x: x in bad_root, ['NNG', 'VV', 'JKO']))):
-                        debug('t.pos(line)', t.pos(line))
-                        debug('bad', bad)
                         _bad = bad
                         _bad_root = bad_root
                         _good = good
@@ -188,26 +184,20 @@ def check(rules, line):
                                 _good = _good.replace(a, b, 1)
                                 if _bad_root in line:
                                     bad = _bad
-                                    debug('bad', bad)
                                     bad_root = _bad_root
-                                    debug('bad_root', bad_root)
                                     good = _good
-                                    debug('good', good)
                             else:
                                 continue
                             break
                             
                     elif '<Noun>' in bad_root:
+                        _debug('bad_root', bad_root)
                         nouns = t.nouns(line)
-                        #debug('nouns', nouns)
                         for n in nouns:
                             candidate = bad_root.replace('<Noun>', n)
-                            #debug('candidate', candidate)
                             if candidate in line:
                                 bad = bad_root = candidate
-                                #debug('bad', bad)
                                 good = good.replace('()', n)
-                                #debug('good', good)
                                 break 
     
                 # Plaintext match
@@ -283,6 +273,7 @@ if __name__ == '__main__':
                         default=['ko_spelling_rules.json', 'ko_spacing_rules.json', 'foreign_sound_rules.json',
                                  'en_ko_style_correction.json', 'jp_ko_style_correction.json',
                                  'wikibook_style_guide.json', 'simple_style.json'])
+    parser.add_argument("--debug", action="store_true")
     args = parser.parse_args()
     
-    main(args.filename, args.rulefile)
+    main(args.filename, args.rulefile, args.debug)
