@@ -18,17 +18,22 @@ TAG_PACKAGE = 'Komoran'
 print(f'Trying to import KoNLPy...')
 try:
     from konlpy.tag import Komoran
-    global t
+    from konlpy.tag import Okt
+    global komoran
     dicpath = os.path.join(
         os.path.dirname(os.path.realpath(__file__)), 'dic.txt'
     )
-    t = Komoran(userdic=dicpath)
+    komoran = Komoran(userdic=dicpath)
+    global okt
+    okt = Okt()
 except:
     pass
 
-def _debug(k, v):
+def _debug(k, v=None):
     if _dbg_:
-        print(f'#DEBUG# {k}: {v}')
+        print(f"#DEBUG# {k}", end='')
+        if v:
+            print(f": {v}")
         #input()
 
 
@@ -104,9 +109,9 @@ def ruletable(obj):
     for rule in obj:
         caselist = []
         for rc in rule['cases']:
-            if len(rc[0]) > 4 and rc[0][:4] in ['~은/는', '~이/가', '~을/를']:
-                caselist.append(('~' + rc[0][1] + rc[0][4:], rc[1]))
-                caselist.append(('~' + rc[0][3] + rc[0][4:], rc[1]))
+            if len(rc[0]) > 4 and rc[0][:4] in ['~은/는', '~이/가', '~을/를', '~와/과']:
+                caselist.append(('~' + rc[0][1] + rc[0][4:], '~' + rc[1][1] + rc[1][4:]))
+                caselist.append(('~' + rc[0][3] + rc[0][4:], '~' + rc[1][3] + rc[1][4:]))
             else:
                 caselist.append((rc[0], rc[1]))
         table.append((rule['kind'], rule['name'], rule['desc'], caselist, rule['exception']))
@@ -136,18 +141,22 @@ def check(rules, line):
         return None
     
     _debug('line', line)
+
+    def parse(sentence):
+        return ' '.join([''.join(komoran.morphs(eojeol)) for eojeol in sentence.split()])
+
     for rule in rules:
         kind, name, desc, cases, exceptions = rule
         for cs in cases:
             bad, good = cs[0], cs[1]
             mode = None
              
-            # possible charset problem
             if bad == '?':  
+                _debug("possible charset problem")
                 continue
              
-            # regex match
             elif any(map(lambda x: x in '[]\+?|', bad)):
+                _debug("regex match")
                 _debug('bad', bad)
                 m = re.search(bad, line)
                 if m:
@@ -172,41 +181,66 @@ def check(rules, line):
                     bad_root = bad.rsplit('(', 1)[0]
 
                 # Part of Speech match
-                if TAG_PACKAGE in globals():
-                    if any(list(filter(lambda x: x in bad_root, ['NNG', 'VV', 'JKO']))):
-                        _bad = bad
-                        _bad_root = bad_root
-                        _good = good
-                        for a in re.findall('<\w+>', bad_root):
-                            for b in [m for m, p in t.pos(line) if f'<{p}>' == a]:
-                                _bad = _bad.replace(a, b, 1)
-                                _bad_root = _bad_root.replace(a, b, 1)
-                                _good = _good.replace(a, b, 1)
-                                if _bad_root in line:
-                                    bad = _bad
-                                    bad_root = _bad_root
-                                    good = _good
-                            else:
-                                continue
-                            break
+                if 'okt' in globals() and ('<Verb>' in bad_root or '<Josa>' in bad_root):
+                    _debug('Okt POS exists in bad_root', bad_root)
+                    _debug('okt.pos(line)', okt.pos(line))
+                    _bad = bad
+                    _bad_root = bad_root
+                    _good = good
+                    for a in re.findall('<\w+>', bad_root):
+                        for b in [m for m, p in okt.pos(line) if f'<{p}>' == a]:
+                            _bad = _bad.replace(a, b, 1)
+                            _bad_root = _bad_root.replace(a, b, 1)
+                            _debug('_bad_root', _bad_root)
+                            _good = _good.replace(a, b, 1)
                             
-                    elif '<Noun>' in bad_root:
-                        _debug('bad_root', bad_root)
-                        nouns = t.nouns(line)
+                            _debug('parse(line)', parse(line)) 
+                            if parse(_bad_root) in parse(line):
+                                bad = _bad
+                                bad_root = _bad_root
+                                good = _good
+                        else:
+                            continue
+                        break
+                elif 'komoran' in globals() and re.search(r"<\w+>", bad_root):
+                    _debug('komoran.pos(line)', komoran.pos(line))
+                    if '<Noun>' in bad_root:
+                        _debug('<Noun> exists in bad_root', bad_root)
+                        nouns = komoran.nouns(line)
                         for n in nouns:
                             candidate = bad_root.replace('<Noun>', n)
                             if candidate in line:
                                 bad = bad_root = candidate
                                 good = good.replace('()', n)
-                                break 
-    
+                                break
+                    else:
+                        _debug("POS tag other than <Noun> exists in bad_root", bad_root)
+                        _bad = bad
+                        _bad_root = bad_root
+                        _good = good
+                        for a in re.findall('<\w+>', bad_root):
+                            for b in [m for m, p in komoran.pos(line) if f'<{p}>' == a]:
+                                _bad = _bad.replace(a, b, 1)
+                                _bad_root = _bad_root.replace(a, b, 1)
+                                _debug('_bad_root', _bad_root)
+                                _good = _good.replace(a, b, 1)
+                                
+                                _debug('parse(line)', parse(line)) 
+                                if parse(_bad_root) in parse(line):
+                                    bad = _bad
+                                    bad_root = _bad_root
+                                    good = _good
+                            else:
+                                continue
+                            break 
+                 
                 # Plaintext match
                 else:
                     if bad_root.startswith('~'):
                          bad_root = bad_root.lstrip('~')
     
             # common
-            if bad_root in line:
+            if bad_root in line or parse(bad_root) in parse(line):
                 loc = line.find(bad_root)
                 skip = False
                 for ex in exceptions:
