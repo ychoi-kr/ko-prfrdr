@@ -18,12 +18,13 @@ TAG_PACKAGE = 'Komoran'
 print(f'Trying to import KoNLPy...')
 try:
     from konlpy.tag import Komoran
-    from konlpy.tag import Okt
     global komoran
     dicpath = os.path.join(
         os.path.dirname(os.path.realpath(__file__)), 'dic.txt'
     )
     komoran = Komoran(userdic=dicpath)
+
+    from konlpy.tag import Okt
     global okt
     okt = Okt()
 except:
@@ -110,8 +111,14 @@ def ruletable(obj):
         caselist = []
         for rc in rule['cases']:
             if len(rc[0]) > 4 and rc[0][:4] in ['~은/는', '~이/가', '~을/를', '~와/과']:
-                caselist.append(('~' + rc[0][1] + rc[0][4:], '~' + rc[1][1] + rc[1][4:]))
-                caselist.append(('~' + rc[0][3] + rc[0][4:], '~' + rc[1][3] + rc[1][4:]))
+                try:
+                    caselist.append(('~' + rc[0][1] + rc[0][4:], '~' + rc[1][1] + rc[1][4:]))
+                except:
+                    caselist.append(('~' + rc[0][1] + rc[0][4:], rc[1]))
+                try: 
+                    caselist.append(('~' + rc[0][3] + rc[0][4:], '~' + rc[1][3] + rc[1][4:]))
+                except:
+                    caselist.append(('~' + rc[0][3] + rc[0][4:], rc[1]))
             else:
                 caselist.append((rc[0], rc[1]))
         table.append((rule['kind'], rule['name'], rule['desc'], caselist, rule['exception']))
@@ -142,9 +149,6 @@ def check(rules, line):
     
     _debug('line', line)
 
-    def parse(sentence):
-        return ' '.join([''.join(komoran.morphs(eojeol)) for eojeol in sentence.split()])
-
     for rule in rules:
         kind, name, desc, cases, exceptions = rule
         for cs in cases:
@@ -152,11 +156,13 @@ def check(rules, line):
             mode = None
              
             if bad == '?':  
-                _debug("possible charset problem")
+                mode = "Error"
+                _debug('mode', mode)
                 continue
-             
+                 
             elif any(map(lambda x: x in '[]\+?|', bad)):
-                _debug("regex match")
+                mode = "regex"
+                _debug('mode', mode)
                 _debug('bad', bad)
                 m = re.search(bad, line)
                 if m:
@@ -174,15 +180,16 @@ def check(rules, line):
                         good = good.replace('()', g, 1)
                 else:
                     continue
-             
+                 
             else: 
                 bad_root = bad
                 if bad.endswith(')') and korean(bad.rstrip(')').rsplit('(', 1)[1]):
                     bad_root = bad.rsplit('(', 1)[0]
-
+                 
                 # Part of Speech match
                 if 'okt' in globals() and ('<Verb>' in bad_root or '<Josa>' in bad_root):
-                    _debug('Okt POS exists in bad_root', bad_root)
+                    mode = 'Okt'
+                    _debug('mode', mode)
                     _debug('okt.pos(line)', okt.pos(line))
                     _bad = bad
                     _bad_root = bad_root
@@ -194,17 +201,21 @@ def check(rules, line):
                             _debug('_bad_root', _bad_root)
                             _good = _good.replace(a, b, 1)
                             
-                            _debug('parse(line)', parse(line)) 
-                            if parse(_bad_root) in parse(line):
+                            if _bad_root in line:
                                 bad = _bad
                                 bad_root = _bad_root
                                 good = _good
                         else:
                             continue
                         break
+
+                # below looks very expensive. may need some optimization.
                 elif 'komoran' in globals() and re.search(r"<\w+>", bad_root):
+                    str_morphs = ' '.join([''.join(komoran.morphs(eojeol)) for eojeol in line.split()])
                     _debug('komoran.pos(line)', komoran.pos(line))
                     if '<Noun>' in bad_root:
+                        mode = 'Komoran_Noun'
+                        _debug('mode', mode)
                         _debug('<Noun> exists in bad_root', bad_root)
                         nouns = komoran.nouns(line)
                         for n in nouns:
@@ -214,7 +225,8 @@ def check(rules, line):
                                 good = good.replace('()', n)
                                 break
                     else:
-                        _debug("POS tag other than <Noun> exists in bad_root", bad_root)
+                        mode = 'Komoran_POS'
+                        _debug('mode', mode)
                         _bad = bad
                         _bad_root = bad_root
                         _good = good
@@ -225,8 +237,8 @@ def check(rules, line):
                                 _debug('_bad_root', _bad_root)
                                 _good = _good.replace(a, b, 1)
                                 
-                                _debug('parse(line)', parse(line)) 
-                                if parse(_bad_root) in parse(line):
+                                _debug('str_morphs', str_morphs) 
+                                if ''.join(komoran.morphs(_bad_root)) in str_morphs:
                                     bad = _bad
                                     bad_root = _bad_root
                                     good = _good
@@ -236,11 +248,15 @@ def check(rules, line):
                  
                 # Plaintext match
                 else:
+                    mode = 'Plaintext'
+                    _debug('mode', mode)
                     if bad_root.startswith('~'):
                          bad_root = bad_root.lstrip('~')
-    
+                 
             # common
-            if bad_root in line or parse(bad_root) in parse(line):
+            if (mode in ['Plaintext', 'regex', 'Okt'] and bad_root in line) or (
+                mode.startswith('Komoran') and ''.join(komoran.morphs(bad_root)) in str_morphs
+            ):
                 loc = line.find(bad_root)
                 skip = False
                 for ex in exceptions:
