@@ -147,7 +147,7 @@ def check(rules, line):
     if not korean(line):
         return None
     
-    _debug('line', line)
+    #_debug('line', line)
 
     for rule in rules:
         kind, name, desc, cases, exceptions = rule
@@ -157,13 +157,13 @@ def check(rules, line):
              
             if bad == '?':  
                 mode = "Error"
-                _debug('mode', mode)
+                #_debug('mode', mode)
                 continue
                  
             elif any(map(lambda x: x in '[]\+?|', bad)):
                 mode = "regex"
-                _debug('mode', mode)
-                _debug('bad', bad)
+                #_debug('mode', mode)
+                #_debug('bad', bad)
                 m = re.search(bad, line)
                 if m:
                     if (
@@ -189,8 +189,8 @@ def check(rules, line):
                 # Part of Speech match
                 if 'okt' in globals() and ('<Verb>' in bad_root or '<Josa>' in bad_root):
                     mode = 'Okt'
-                    _debug('mode', mode)
-                    _debug('okt.pos(line)', okt.pos(line))
+                    #_debug('mode', mode)
+                    #_debug('okt.pos(line)', okt.pos(line))
                     _bad = bad
                     _bad_root = bad_root
                     _good = good
@@ -198,7 +198,7 @@ def check(rules, line):
                         for b in [m for m, p in okt.pos(line) if f'<{p}>' == a]:
                             _bad = _bad.replace(a, b, 1)
                             _bad_root = _bad_root.replace(a, b, 1)
-                            _debug('_bad_root', _bad_root)
+                            #_debug('_bad_root', _bad_root)
                             _good = _good.replace(a, b, 1)
                             
                             if _bad_root in line:
@@ -211,13 +211,16 @@ def check(rules, line):
 
                 # below looks very expensive. may need some optimization.
                 elif 'komoran' in globals() and re.search(r"<\w+>", bad_root):
+                    # remove errornous characters before using tagger
+                    line = re.sub(r'[^\w\s!"#$%&\'()*+,-./:;<=>?@\[\\\]^_`{|}~]', '', line)
+                    _debug('line', line)
                     morphs_line = ' '.join([''.join(komoran.morphs(eojeol)) for eojeol in line.split()])
                     if '<Noun>' in bad_root:
                         mode = 'Komoran_Noun'
-                        _debug('mode', mode)
-                        _debug('<Noun> exists in bad_root', bad_root)
+                        #_debug('mode', mode)
+                        #_debug('<Noun> exists in bad_root', bad_root)
                         nouns = komoran.nouns(line)
-                        _debug('nouns', nouns)
+                        #_debug('nouns', nouns)
                         for n in nouns:
                             candidate = bad_root.replace('<Noun>', n)
                             if candidate in line:
@@ -226,10 +229,10 @@ def check(rules, line):
                                 good = good.replace('()', n)
                                 break
                     else:
-                        _debug('komoran.pos(line)', komoran.pos(line))
+                        #_debug('komoran.pos(line)', komoran.pos(line))
                         mode = 'Komoran_POS'
-                        _debug('mode', mode)
-                        _debug('bad', bad)
+                        #_debug('mode', mode)
+                        #_debug('bad', bad)
                         _bad = bad
                         _bad_root = bad_root
                         _good = good
@@ -237,12 +240,12 @@ def check(rules, line):
                             for b in [m for m, p in komoran.pos(line) if f'<{p}>' == a]:
                                 _bad = _bad.replace(a, b, 1)
                                 _bad_root = _bad_root.replace(a, b, 1)
-                                _debug('_bad_root', _bad_root)
+                                #_debug('_bad_root', _bad_root)
                                 _good = _good.replace(a, b, 1)
                                 
-                                _debug('morphs_line', morphs_line) 
+                                #_debug('morphs_line', morphs_line) 
                                 morphs_bad_root = ''.join(komoran.morphs(_bad_root))
-                                _debug('morphs_bad_root', morphs_bad_root)
+                                #_debug('morphs_bad_root', morphs_bad_root)
                                 if _bad_root in line or morphs_bad_root in morphs_line:
                                     bad_root = _bad_root
                                     bad = kostr.join(komoran.morphs(_bad))
