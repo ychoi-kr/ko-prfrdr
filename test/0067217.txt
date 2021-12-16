@@ -1,0 +1,5 @@
+Error cases:
+d1: 확장자가 *.js인 것은 JavaScript 화일입니다.
+
+Good cases:
+FP: make_blobs( )로 생성한 데이터의 시각화일 경우 None 입력
