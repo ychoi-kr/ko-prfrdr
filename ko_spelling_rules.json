@@ -130,6 +130,16 @@
   },
   {
     "kind": "맞춤법",
+    "name": "qa039532_생각건데",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=39532",
+    "cases": [
+      ["생각컨데", "생각건데"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "맞춤법",
     "name": "qa077433_-은/는, -이/가, -을/를, -와/과",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=77433",
     "cases": [
@@ -141,6 +151,19 @@
       ["(?P<with_final_consonant>[^ ]*?[각-힣])([(][^(]+?[)])를", "()()을"],
       ["(?P<without_final_consonant>[^ ]*?[가-히])([(][^(]+?[)])과", "()()와"],
       ["(?P<with_final_consonant>[^ ]*?[각-힣])([(][^(]+?[)])와", "()()과"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "맞춤법",
+    "name": "qa101696_자유롭게, 생각게, 거센소리",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=101696",
+    "cases": [
+      ["자유케", "자유롭게"],
+      ["생각케", "생각게"],
+      ["아뭏든", "아무튼"],
+      ["하옇든(지)", "하여튼"]
     ],
     "exception": [
     ]
