@@ -10,11 +10,11 @@ from pathlib import Path
 from collections import Counter
 
 from kosound import hasfinalconsonant
+import kostr
 import fileconverter as c
 
 import docx2txt
 
-TAG_PACKAGE = 'Komoran'
 print(f'Trying to import KoNLPy...')
 try:
     from konlpy.tag import Komoran
@@ -211,22 +211,25 @@ def check(rules, line):
 
                 # below looks very expensive. may need some optimization.
                 elif 'komoran' in globals() and re.search(r"<\w+>", bad_root):
-                    str_morphs = ' '.join([''.join(komoran.morphs(eojeol)) for eojeol in line.split()])
-                    _debug('komoran.pos(line)', komoran.pos(line))
+                    morphs_line = ' '.join([''.join(komoran.morphs(eojeol)) for eojeol in line.split()])
                     if '<Noun>' in bad_root:
                         mode = 'Komoran_Noun'
                         _debug('mode', mode)
                         _debug('<Noun> exists in bad_root', bad_root)
                         nouns = komoran.nouns(line)
+                        _debug('nouns', nouns)
                         for n in nouns:
                             candidate = bad_root.replace('<Noun>', n)
                             if candidate in line:
                                 bad = bad_root = candidate
+                                good = good.replace('<Noun>', n)
                                 good = good.replace('()', n)
                                 break
                     else:
+                        _debug('komoran.pos(line)', komoran.pos(line))
                         mode = 'Komoran_POS'
                         _debug('mode', mode)
+                        _debug('bad', bad)
                         _bad = bad
                         _bad_root = bad_root
                         _good = good
@@ -237,11 +240,13 @@ def check(rules, line):
                                 _debug('_bad_root', _bad_root)
                                 _good = _good.replace(a, b, 1)
                                 
-                                _debug('str_morphs', str_morphs) 
-                                if ''.join(komoran.morphs(_bad_root)) in str_morphs:
-                                    bad = _bad
+                                _debug('morphs_line', morphs_line) 
+                                morphs_bad_root = ''.join(komoran.morphs(_bad_root))
+                                _debug('morphs_bad_root', morphs_bad_root)
+                                if _bad_root in line or morphs_bad_root in morphs_line:
                                     bad_root = _bad_root
-                                    good = _good
+                                    bad = kostr.join(komoran.morphs(_bad))
+                                    good = ' '.join([kostr.join(komoran.morphs(eojeol)) for eojeol in _good.split()])
                             else:
                                 continue
                             break 
@@ -249,13 +254,13 @@ def check(rules, line):
                 # Plaintext match
                 else:
                     mode = 'Plaintext'
-                    _debug('mode', mode)
+                    #_debug('mode', mode)
                     if bad_root.startswith('~'):
                          bad_root = bad_root.lstrip('~')
                  
             # common
-            if (mode in ['Plaintext', 'regex', 'Okt'] and bad_root in line) or (
-                mode.startswith('Komoran') and ''.join(komoran.morphs(bad_root)) in str_morphs
+            if bad_root in line or (
+                mode.startswith('Komoran') and ''.join(komoran.morphs(bad_root)) in morphs_line
             ):
                 loc = line.find(bad_root)
                 skip = False
