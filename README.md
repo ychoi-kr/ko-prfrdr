@@ -204,7 +204,7 @@ PDF에서 텍스트를 추출하는 `pdftotext.exe`를 좀 더 편리하게 사�
 
 요구 사항:
 
-- [공통 요구사항](#common_reqirements)을 충족
+- [공통 요구사항](#common_requirements)을 충족
 - Xpdf 명령행 도구를 [설치](https://wikidocs.net/154110)
 - [pikepdf](https://github.com/pikepdf/pikepdf)를 설치
 
