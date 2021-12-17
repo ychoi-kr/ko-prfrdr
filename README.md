@@ -193,7 +193,7 @@ PDF 문서를 docx로 변환하는 [pdf2docx](https://github.com/dothinking/pdf2
 
 ## pdftotext.py
 
-PDF에서 텍스트를 추출하는 `pdftotext.exe`를 좀 더 편리하게 사용할 수 있게 해주는 스크립트입니다.
+PDF에서 텍스트를 추출하는 [pdftotext](https://www.xpdfreader.com/about.html)를 좀 더 편리하게 사용할 수 있게 해주는 스크립트입니다.
 
 주요 기능:
 
