@@ -1,5 +1,6 @@
 ## 공통
 
+<a name="common_requirements"></a>
 요구사항:
 
 - 파이썬 3 설치
@@ -23,7 +24,7 @@
 요구사항:
 
 - `pip3 install docx2txt`
-- PDF 파일을 검사하려면 [Xpdf tools](http://www.xpdfreader.com/about.html) 필요
+- PDF 파일을 검사하려면 [Xpdf](http://www.xpdfreader.com/about.html) 명령행 도구를 [설치](https://wikidocs.net/154110)
 - HWP 파일을 검사하려면
     - `pip3 install pyhwp`
     - `hwp5txt`를 실행할 수 있게 PATH 환경변수에 경로를 등록
@@ -192,6 +193,8 @@ PDF 문서를 docx로 변환하는 [pdf2docx](https://github.com/dothinking/pdf2
 
 ## pdftotext.py
 
+PDF에서 텍스트를 추출하는 [pdftotext](https://www.xpdfreader.com/about.html)를 좀 더 편리하게 사용할 수 있게 해주는 스크립트입니다.
+
 주요 기능:
 
 - 페이지 번호 부분을 제외한 본문 영역의 텍스트를 추출
@@ -199,34 +202,34 @@ PDF 문서를 docx로 변환하는 [pdf2docx](https://github.com/dothinking/pdf2
 - 암호화된 파일 열기(사용자 암호를 입력해야 함)
 - 페이지별 사이즈가 다르거나 양면으로 된 파일에서도 내용 추출
 
-(아직) 안 되는 것:
-
-- 국어, 일어 줄바꿈 삭제
-- 페이지 번호가 옆쪽에 있는 것
-- 페이지 내에 다단으로 편집된 것
-
-
 요구 사항:
 
-- [pikepdf](https://github.com/pikepdf/pikepdf)
-- [Xpdf command line tools](https://www.xpdfreader.com/download.html)
-
+- [공통 요구사항](#common_requirements)을 충족
+- Xpdf 명령행 도구를 [설치](https://wikidocs.net/154110)
+- [pikepdf](https://github.com/pikepdf/pikepdf)를 설치
 
 사용법:
+
+아래 명령을 실행하면 PDF와 같은 이름의 txt 파일이 생성됩니다.
 
 ```
 python pdftotext.py [옵션] "<PDF 파일명>"
 ```
 
-옵션:
-
 - `--password "<패스워드>"`: 사용자 패스워드가 걸린 파일을 풀 때 이 옵션을 사용합니다.
 - `--header <숫자>`: 머리말 여백의 높이를 지정합니다(기본값은 50). 본문 위쪽이 잘리거나 머리말이 제외되지 않은 경우 이 옵션을 조정합니다.
 - `--footer <숫자>`: 꼬리말 여백의 높이를 지정합니다(기본값은 60). 본문 아래쪽이 잘리거나 꼬리말이 제외되지 않은 경우 이 옵션을 조정합니다.
 
-실행하면 PDF와 같은 이름으로 txt 파일이 생성됩니다.
+이슈:
 
-잘 안 될 경우 영문자만으로 이뤄진 간단한 파일명으로 PDF 파일을 복사해서 시도해보시기 바랍니다.
+- 국어 문장의 줄바꿈을 삭제할 때 무조건 공백을 추가하게 되어 있음
+- 페이지 번호가 옆쪽에 있는 것
+- 페이지 내에 다단으로 편집된 것을 인식하지 못함
+
+팁:
+
+- 잘 안 될 경우 영문자만으로 이뤄진 간단한 파일명으로 PDF 파일을 복사해서 시도해보시기 바랍니다.
+- 이 스크립트 없이 `pdftotext.exe`만으로도 텍스트를 추출할 수 있습니다.
 
 
 ## searchable.py
