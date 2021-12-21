@@ -398,6 +398,7 @@
       ["그라데이션", "그러데이션"],
       ["**dup**디렉토리", "디렉터리"],
       ["디지탈", "디지털"],
+      ["로얄티", "로열티"],
       ["**dup**솔루션", "설루션"],
       ["토탈", "토털"],
       ["포탈", "포털"]
@@ -630,6 +631,16 @@
     "desc": "https://wikidocs.net/153177",
     "cases": [
       ["스마트 컨트랙", "‘스마트 콘트랙트’ 또는 ‘스마트 계약’"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
+    "name": "qa122235_'identity'의 표기",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=122235",
+    "cases": [
+      ["아이덴터티", "아이덴티티"]
     ],
     "exception": [
     ]
