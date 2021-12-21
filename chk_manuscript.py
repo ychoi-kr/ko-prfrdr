@@ -148,6 +148,7 @@ def check(rules, line):
         return None
     
     #_debug('line', line)
+    _debug('komoran.pos(line)', komoran.pos(line))
 
     for rule in rules:
         kind, name, desc, cases, exceptions = rule
@@ -213,7 +214,7 @@ def check(rules, line):
                 elif 'komoran' in globals() and re.search(r"<\w+>", bad_root):
                     # remove errornous characters before using tagger
                     line = re.sub(r'[^\w\s!"#$%&\'()*+,-./:;<=>?@\[\\\]^_`{|}~]', '', line)
-                    _debug('line', line)
+                    #_debug('line', line)
                     morphs_line = ' '.join([''.join(komoran.morphs(eojeol)) for eojeol in line.split()])
                     if '<Noun>' in bad_root:
                         mode = 'Komoran_Noun'
@@ -248,8 +249,14 @@ def check(rules, line):
                                 #_debug('morphs_bad_root', morphs_bad_root)
                                 if _bad_root in line or morphs_bad_root in morphs_line:
                                     bad_root = _bad_root
-                                    bad = kostr.join(komoran.morphs(_bad))
+                                    _debug('_bad_root', _bad_root)
+                                    _debug('bad_root', bad_root)
+                                    _debug('_bad', _bad)
+                                    #bad = kostr.join(komoran.morphs(_bad))
+                                    bad = ' '.join([kostr.join(komoran.morphs(eojeol)) for eojeol in _bad.split()])
+                                    _debug('bad', bad)
                                     good = ' '.join([kostr.join(komoran.morphs(eojeol)) for eojeol in _good.split()])
+                                    _debug('good', good)
                             else:
                                 continue
                             break 
