@@ -245,9 +245,8 @@ def check(rules, line):
                                 _good = _good.replace(a, b, 1)
                                 
                                 #_debug('morphs_line', morphs_line) 
-                                morphs_bad_root = ''.join(komoran.morphs(_bad_root))
-                                #_debug('morphs_bad_root', morphs_bad_root)
-                                if _bad_root in line or morphs_bad_root in morphs_line:
+                                if _bad_root in line or bad_root in morphs_line:
+                                    _debug('morphs_line', morphs_line)
                                     bad_root = _bad_root
                                     _debug('_bad_root', _bad_root)
                                     _debug('bad_root', bad_root)
