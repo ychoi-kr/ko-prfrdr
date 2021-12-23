@@ -4,3 +4,4 @@ Bad cases:
 
 Good cases:
 FP: OS별
+FP: YOLOv2와 YOLOv3을 별도로 테스트해보면
