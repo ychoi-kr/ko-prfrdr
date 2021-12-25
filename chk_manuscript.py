@@ -160,6 +160,9 @@ def check(rules, line):
                 mode = "Error"
                 #_debug('mode', mode)
                 continue
+
+            elif bad.startswith('ignored:'):
+                continue
                  
             elif any(map(lambda x: x in '[]\+?|', bad)):
                 mode = "regex"
