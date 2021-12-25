@@ -1,0 +1,5 @@
+Bad cases:
+실행을 한다
+
+Good cases:
+FP1: Gensim을 한글로 젠심으로 표기하기도 하지만, 이 책에서는 Gensim으로 쓰기로 한다.
