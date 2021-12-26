@@ -44,6 +44,3 @@ def haera(sentence):
 def hae(sentence):
     return convert(sentence, 'hae')
 
-
-if __name__ == '__main__':
-    main()
