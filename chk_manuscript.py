@@ -338,7 +338,7 @@ if __name__ == '__main__':
     parser.add_argument("filename", nargs="?", type=str)
     parser.add_argument("-r", "--rulefile", nargs='+',
                         default=['ko_spelling_rules.json', 'ko_spacing_rules.json', 'foreign_sound_rules.json',
-                                 'en_ko_style_correction.json', 'jp_ko_style_correction.json',
+                                 'en_ko_style_correction.json', 'ja_ko_style_correction.json',
                                  'wikibook_style_guide.json', 'simple_style.json'])
     parser.add_argument("--debug", action="store_true")
     args = parser.parse_args()
