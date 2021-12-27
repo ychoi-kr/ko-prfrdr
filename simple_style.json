@@ -10,5 +10,40 @@
     ],
     "exception": [
     ]
+  },
+  {
+    "kind": "",
+    "name": "jade270a_관형격 조사 '의' 삼가기",
+    "desc": "https://bookeditorjade.tistory.com/270",
+    "cases": [
+      ["우리의 <Noun>", "우리 ()"],
+      ["일부의 <Noun>", "일부 ()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "",
+    "name": "jade270b_관형격 조사 '의' 삼가기",
+    "desc": "https://bookeditorjade.tistory.com/270",
+    "cases": [
+      ["(머신러닝|분석|학습)의 방법(\\w?)", "() 방법()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "",
+    "name": "gyar0162_-는가",
+    "desc": "https://brunch.co.kr/@gyaree/162",
+    "cases": [
+      ["([가-힣]+)는가를", "()는지"],
+      ["([가-힣]+)는가[이]?다\\b", "()는지다"],
+      ["([가-힣]+)는가라는", "()느냐는"],
+      ["([^것]+)인가를", "()인지"],
+      ["([가-힣]+[ ]?)(할|을|해낼)[ ]?것인가(는|를|에)", "()()지()"]
+    ],
+    "exception": [
+    ]
   }
 ]
