@@ -3,6 +3,7 @@ import os
 
 
 def latest_file(exts=[".txt", ".docx", ".pdf", ".hwp", '']):
+    assert type(exts) is list
     files = []
     for ext in exts:
         files.extend(glob.glob('*' + ext))

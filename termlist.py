@@ -72,7 +72,7 @@ if __name__ == '__main__':
     _dbg_ = True
     
     parser = argparse.ArgumentParser()
-    parser.add_argument("-f", "--filename", help="filename", default=fileutil.latest_file('.docx'), type=str)
+    parser.add_argument("-f", "--filename", help="filename", default=fileutil.latest_file(['.docx']), type=str)
     args = parser.parse_args()
     
     main(args.filename)
