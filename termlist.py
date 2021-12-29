@@ -1,9 +1,9 @@
-import os
-import glob
 import sys
 import re
 import argparse
 from collections import Counter
+
+import fileutil
 
 import docx2txt
 
@@ -66,20 +66,13 @@ def display_summary():
         cnt = term_counter[t]
         print(f'{t: <{width}} {cnt}')
 
-def latest():
-    ext = 'docx'
-    try:
-        return max(glob.glob(f'*.{ext}'), key=os.path.getctime)
-    except:
-        sys.exit(f"Failed!!! Cannot find {ext} file.")
-
 
 if __name__ == '__main__':
     global _dbg_
     _dbg_ = True
     
     parser = argparse.ArgumentParser()
-    parser.add_argument("-f", "--filename", help="filename", default=latest(), type=str)
+    parser.add_argument("-f", "--filename", help="filename", default=fileutil.latest_file('.docx'), type=str)
     args = parser.parse_args()
     
     main(args.filename)

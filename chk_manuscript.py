@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import os
-import glob
 import sys
 import re
 import json
@@ -12,6 +11,7 @@ from collections import Counter
 from kosound import hasfinalconsonant
 import kostr
 import fileconverter as c
+import fileutil
 
 import docx2txt
 
@@ -45,7 +45,7 @@ def main(infile, rulefile, debug=False):
     _rules = loadrules(rulefile)
     
     if not infile:
-        infile = latest_docx()
+        infile = fileutil.latest_file()
     
     ext = Path(infile).suffix
     
@@ -148,7 +148,7 @@ def check(rules, line):
         return None
     
     #_debug('line', line)
-    _debug('komoran.pos(line)', komoran.pos(line))
+    #_debug('komoran.pos(line)', komoran.pos(line))
 
     for rule in rules:
         kind, name, desc, cases, exceptions = rule
@@ -319,18 +319,6 @@ def display_summary():
     print('=== Summary ===')
     for ele in sorted(warnings_counter):
         print(f'{ele} ==> count: {warnings_counter[ele]}')
-
-
-def latest_docx():
-    exts = [".txt", ".docx", ".pdf", ".hwp", '']
-    files = []
-    for ext in exts:
-        files.extend(glob.glob('*' + ext))
-    
-    try:
-        return max(files, key=os.path.getctime)
-    except:
-        sys.exit(f"Failed!!! Cannot find file in {'|'.join(exts)}.")
 
 
 if __name__ == '__main__':
