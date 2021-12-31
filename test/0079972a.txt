@@ -2,6 +2,6 @@ Error Case:
 어떤 의미에서 보면 그 정도의 데이터 만으로 위와 같은 결과가 나온 것은 운이 좋았던 편이라고 할 수 있을 것이다.
 국민청원에 어떤 내용이 있었는지 더 구체적으로 알고 싶다면 단어의 빈도를 세는 것 만으로는 부족하다.
 
-Check false positive:
-이 정도면 어느 정도 만족스럽다고 할 수 있다.
-n이 2인 bi-gram에서는 'The future', 'future depends', 'depends on', 'on what', ...와 같이 토큰이 만들어진다.
+Good cases:
+FP1: 이 정도면 어느 정도 만족스럽다고 할 수 있다.
+FP2: n이 2인 bi-gram에서는 'The future', 'future depends', 'depends on', 'on what', ...와 같이 토큰이 만들어진다.

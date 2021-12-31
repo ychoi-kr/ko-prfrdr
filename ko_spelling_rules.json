@@ -192,6 +192,26 @@
   },
   {
     "kind": "맞춤법",
+    "name": "0079918_쉼표, 반점",
+    "desc": "https://wikidocs.net/79918",
+    "cases": [
+      ["\\b(그리고|그러나|그런데|그러므로),", "()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "맞춤법",
+    "name": "0075024_마침표",
+    "desc": "https://wikidocs.net/75024",
+    "cases": [
+      ["(\\w*[겠는니본준았었였이있하한했]다)[\\s:]", "()."]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "맞춤법",
     "name": "0079919_가운뎃점, 빗금 - 사전에 등록된 단어는 가운뎃점 없이 붙여 쓴다",
     "desc": "https://wikidocs.net/79919",
     "cases": [
@@ -206,6 +226,26 @@
       ["\\b전[,·./]후", "전후"],
       ["\\b직[,·./]간접", "직간접"],
       ["\\b한[,·./]중", "한중"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "맞춤법",
+    "name": "qa012047_그러고 나서",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?&mn_id=&qna_seq=12047",
+    "cases": [
+      ["그리고 나서", "그러고 나서"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "맞춤법",
+    "name": "qa199307_금세",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=199307",
+    "cases": [
+      ["\\b금새\\b", "금세"]
     ],
     "exception": [
     ]
