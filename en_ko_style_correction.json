@@ -1,11 +1,15 @@
 [
   {
     "kind": "번역투",
-    "name": "0067481a_영어 번역투 순화 - 현재진행형",
-    "desc": "'be+~ing(현재진행형)' 구문을 그대로 번역한 '~고 있다'는 표현은 '~한다'로 순화. https://wikidocs.net/67481",
+    "name": "0067481a_영어 번역투 순화 - 'be+~ing(현재진행형)' 구문",
+    "desc": "https://wikidocs.net/67481#a",
     "cases": [
-      ["연구하고 있습니다", "연구합니다"],
-      ["연구하고 있다", "연구한다"]
+      ["\\b(KW_NAS)하고 있습니다", "()합니다"],
+      ["\\b(KW_NAS)하고 있다(\\w+)", "()한다()"],
+      ["\\b(KW_NAS)하고 있(고|는데)", "()하()"],
+      ["\\b(KW_NAS)하고 있어[서]?\\b", "()해서"],
+      ["\\b(KW_NAS)하고 있으(며|면[서]?|므로)", "()하()"],
+      ["\\b(KW_NAS)하고 있음을", "()함을"]
     ],
     "exception": [
     ]
@@ -13,9 +17,10 @@
   {
     "kind": "번역투",
     "name": "0067481b_영어 번역투 순화 - 어색한 피동 표현",
-    "desc": "https://wikidocs.net/67481",
+    "desc": "https://wikidocs.net/67481#b",
     "cases": [
-      ["조선은 태조 이성계에 의해 건국되었다", "조선은 태조 이성계가 건국했다"]
+      ["(\\w+[은는]) (\\w+[ ]?\\w+[KL_NFC])에 의해 (KW_NATA)되었다", "() ()가 ()했다"],
+      ["(\\w+[은는]) (\\w+[ ]?\\w+[KL_WFC])에 의해 (KW_NATA)되었다", "() ()이 ()했다"]
     ],
     "exception": [
     ]
@@ -32,22 +37,38 @@
   },
   {
     "kind": "번역투",
-    "name": "0067481d_영어 번역투 순화 - 수동태",
-    "desc": "https://wikidocs.net/67481",
+    "name": "0067481d_영어 번역투 순화 - have",
+    "desc": "https://wikidocs.net/67481#d",
     "cases": [
-      ["시민에 의하여", "시민에게"],
-      ["결정이 ~에 의해 만들어지다", "~가 결정하다"],
-      ["노력이 기울여지(다)", "노력이 들어가(다)"]
+      ["(KW_NPS)를 가져(\\w*)", "()가 있어()"],
+      ["(KW_NPS)를 (가진|갖는)\\b", "()가 있는"],
+      ["(KW_NPS)를 갖는다(\\w*)", "()가 있다()"]
     ],
     "exception": [
     ]
   },
   {
     "kind": "번역투",
-    "name": "0067481e_영어 번역투 순화 - 굴절",
+    "name": "0067481f_영어 번역투 순화 - 수동태",
     "desc": "https://wikidocs.net/67481",
     "cases": [
-      ["새로운 아이디어들과 방법들", "여러 가지 남다른 생각과 방법"]
+      ["\\b(KW_NPS)에 의[하해][여서]? ((KW_VPH)[히혔]\\w+)", "()에게 ()"],
+      ["\\b(KW_NAO)[들]?[은을이] 그들의 (KW_NPR)[을를] 위하는 (KW_NPSV)[들]?에 의해 만들어졌(\\w+)", "()을 () 대신 ()가 했()"],
+      ["\\b(KW_NAO)[들]?[은을이] 그들의 (KW_NPR)[을를] 위하는 (KW_NPSF)[들]?에 의해 만들어졌(\\w+)", "()을 () 대신 ()이 했()"],
+      ["노력이 기울여졌(\\w+)", "노력이 들어갔(다)"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "번역투",
+    "name": "0067481g_영어 번역투 순화 - 굴절",
+    "desc": "https://wikidocs.net/67481",
+    "cases": [
+      ["(?<=데는 )(\\w+) (\\w+[KL_NFC])들과 (\\w+[KL_NFC])들이 (있\\w+)", "() ()와 ()가 ()"],
+      ["(?<=데는 )(\\w+) (\\w+[KL_NFC])들과 (\\w+[KL_WFC])들이 (있\\w+)", "() ()와 ()이 ()"],
+      ["(?<=데는 )(\\w+) (\\w+[KL_WFC])들과 (\\w+[KL_NFC])들이 (있\\w+)", "() ()과 ()가 ()"],
+      ["(?<=데는 )(\\w+) (\\w+[KL_WFC])들과 (\\w+[KL_WFC])들이 (있\\w+)", "() ()과 ()이 ()"]
     ],
     "exception": [
     ]
@@ -58,7 +79,7 @@
     "desc": "https://wikidocs.net/67481",
     "cases": [
       ["주점의 2층에서의 살림", "주점의 2층에서 시작한 살림"],
-      ["그 사람으로부터", "그 사람에게서"],
+      ["\\b([그 ]*)(KW_NPS)으로부터 (\\w+[을를] [듣들받빼]\\w+)", "()()에게서 ()"],
       ["긴장으로부터의 해방", "긴장에서 벗어나는 것"],
       ["기회를 통해", "기회에"],
       ["폭격에 의해", "폭격으로"]
@@ -78,6 +99,68 @@
     ],
     "exception": [
       "근본적으로 개선"
+    ]
+  },
+  {
+    "kind": "번역투",
+    "name": "hanbit03_흔한 번역투 TOP 12 - 3. '의' 남용",
+    "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
+    "cases": [
+      ["(갓뚜기|삼[성전]|삼성전자|신한은행|오뚜기|애플|테슬라|하이닉스|현대|KB[ ]?국민은행|LG|)의 (KW_NPJA)", "() ()"],
+      ["(KW_ADJ) (KW_NPSV)의 경우에[는]?", "() ()는"],
+      ["(KW_ADJ) (KW_NPSF)의 경우에[는]?", "() ()은"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "번역투",
+    "name": "hanbit05_흔한 번역투 TOP 12 - 5. '~에 관하여', '~에 대하여'",
+    "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
+    "cases": [
+      ["(\\w+)에 대한 (\\w+법[을를]) (\\w+[보본]\\w+)", "() () ()"] 
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "번역투",
+    "name": "hanbit06_흔한 번역투 TOP 12 - 6. '~하는 중이다'",
+    "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
+    "cases": [
+      ["(\\w+)[을를] (KW_NAT)하는 (\\w+[을를]) (KW_NAT)(하는 중이다)", "() () () ()한다"] 
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "번역투",
+    "name": "hanbit08_흔한 번역투 TOP 12 - 8. '~로부터'",
+    "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
+    "cases": [
+      ["(\\w+?)[으]?로부터 (\\w+)([ ]?)(KW_NM) (떨어\\w+)", "()에서 ()()() ()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "번역투",
+    "name": "hanbit09_흔한 번역투 TOP 12 - 9. '~를 통해'(through)",
+    "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
+    "cases": [
+      ["(KW_NAT)+[을를] 통해 (\\w+에 \\w+[하한했되된됐]\\w*)", "()해 ()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "번역투",
+    "name": "hanbit10_흔한 번역투 TOP 12 - 10. '~에 있어'(for)",
+    "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
+    "cases": [
+      ["(\\w+[을를] \\w+는[ ]?데)[에]? 있어 (\\w+[ ]?\\w+[은는])", "() ()"]
+    ],
+    "exception": [
     ]
   }
 ]
