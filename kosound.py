@@ -1,9 +1,8 @@
 import re
 
-
-FIRSTC = [c for c in "ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ"]
-VOWEL = [c for c in "ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ"]
-FINALC = [''] + [c for c in "ㄱㄲㄳㄴㄵㄶㄷㄹㄺㄻㄼㄽㄾㄿㅀㅁㅂㅄㅅㅆㅇㅈㅊㅋㅌㅍㅎ"]
+FIRST_CONSONANTS = "ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ"
+VOWELS = "ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ"
+FINAL_CONSONANTS = "ㄱㄲㄳㄴㄵㄶㄷㄹㄺㄻㄼㄽㄾㄿㅀㅁㅂㅄㅅㅆㅇㅈㅊㅋㅌㅍㅎ"
 
 
 def splitsound(s):
@@ -12,9 +11,11 @@ def splitsound(s):
     for c in chars:
         if re.match('[가-힣]', c):
             v = ord(c) - 0xAC00
-            ret += FIRSTC[v // (28 * 21)]
-            ret += VOWEL[v // 28 % 21]
-            ret += FINALC[v % 28]
+            ret += FIRST_CONSONANTS[v // (28 * 21)]
+            ret += VOWELS[v // 28 % 21]
+            #ret += FINALC[v % 28]
+            ret += ([''] + [c for c in FINAL_CONSONANTS])[v % 28]
+
         else:
             ret += c
     return ret
