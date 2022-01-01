@@ -138,7 +138,7 @@
     "name": "hanbit08_흔한 번역투 TOP 12 - 8. '~로부터'",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
-      ["(\\w+?)[으]?로부터 (\\w+)([ ]?)(KW_NM) (떨어\\w+)", "()에서 ()()() ()"]
+      ["(\\w+?)[으]?로부터 (\\w+)([ ]?)(KW_NMA) (떨어\\w+)", "()에서 ()()() ()"]
     ],
     "exception": [
     ]

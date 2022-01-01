@@ -79,7 +79,7 @@ KW_NMK = "그램|미터|킬로그램|킬로미터"
 KW_NMS = "g|m|kg|km"
 
 # noun: measure
-KW_NM = "|".join([KW_NMK, KW_NMS])
+KW_NMA = "|".join([KW_NMK, KW_NMS])
 
 # adjective
 KW_ADP = "너희|내|우리|저희"
