@@ -10,6 +10,8 @@ from collections import Counter
 
 from kosound import hasfinalconsonant
 import kostr
+import koletter
+import koword
 import fileconverter as c
 import fileutil
 
@@ -168,6 +170,14 @@ def check(rules, line):
                 mode = "regex"
                 #_debug('mode', mode)
                 #_debug('bad', bad)
+
+                for x in dir(koletter): 
+                    if x.startswith('KL_'):
+                        bad = bad.replace(x, getattr(koletter, x))
+                for x in dir(koword): 
+                    if x.startswith('KW_'):
+                        bad = bad.replace(x, getattr(koword, x))
+
                 m = re.search(bad, line)
                 if m:
                     if (
