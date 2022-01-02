@@ -103,6 +103,28 @@
   },
   {
     "kind": "번역투",
+    "name": "hanbit00_흔한 번역 투 TOP 12",
+    "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
+    "cases": [
+      ["(\\w+[은는]) (\\d+)개의 (KW_NLD)[을를] 키운다", "() (3) (2)마리를 키운다"] 
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "번역투",
+    "name": "hanbit01_흔한 번역 투 TOP 12 - 대명사 남발",
+    "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
+    "cases": [
+      ["(\\w+[은는]) (\\w+[을를]) 좋아해서 (\\w+에) 그는 (\\w+에서 \\w+를) ([샀했]습니다[.])", "(1) (2) 좋아합니다. 그래서 ((1)) ..."],
+      ["(\\w+[은는]) (\\w+[을를]) 좋아해서 (\\w+에) 그는 (\\w+에서 \\w+를) ([샀했]다[.])", "(1) (2) 좋아한다. 그래서 ((1)) ..."] ,
+      ["(그.{,10}[은는]) (\\w+[을를].{,10})해서 그는 (.{,15}?)(KW_NAOA)[을를] [하한했]\\w+", "(1) (2)해서 (3) ..."] 
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "번역투",
     "name": "hanbit03_흔한 번역투 TOP 12 - 3. '의' 남용",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
@@ -135,10 +157,21 @@
   },
   {
     "kind": "번역투",
+    "name": "hanbit07_흔한 번역투 TOP 12 - 7. '~을/를 가지다, 가지고 있다'",
+    "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
+    "cases": [
+      ["(KW_NPRF)을 (KW_NNKA) [가갖]\\w+ (있\\w+)", "()이 () ()"],
+      ["(KW_NPRV)를 (KW_NNKA) [가갖]\\w+ (있\\w+)", "()가 () ()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "번역투",
     "name": "hanbit08_흔한 번역투 TOP 12 - 8. '~로부터'",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
-      ["(\\w+?)[으]?로부터 (\\w+)([ ]?)(KW_NMA) (떨어\\w+)", "()에서 ()()() ()"]
+      ["(\\w+?)[으]?로부터 (\\w+)([ ]?)(KW_NUDA) (떨어\\w+)", "()에서 ()()() ()"]
     ],
     "exception": [
     ]
@@ -159,6 +192,56 @@
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
       ["(\\w+[을를] \\w+는[ ]?데)[에]? 있어 (\\w+[ ]?\\w+[은는])", "() ()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "번역투",
+    "name": "ysyn0900_당신의 문제: 인칭대명사의 의미와 용법의 차이",
+    "desc": "https://play.google.com/books/reader?id=gX1RCwAAQBAJ&pg=GBS.PT135&hl=ko", 
+    "cases": [
+      ["당신이 (\\w*[ ]?\\w+에)", "()"],
+      ["당신의 (\\w*[ ]?\\w+은)", "()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "번역투",
+    "name": "ysyn1401_간결한 피동사",
+    "desc": "https://play.google.com/books/reader?id=gX1RCwAAQBAJ&pg=GBS.PT211&hl=ko",
+    "cases": [
+      ["(\\w+가 \\w+)보다(.*?)[더]?[ ]?(많은|큰) 영향을 (받\\w+)", "...보다(2)더 영향을 (4)"],
+      ["(\\w+가 \\w+)보다(.*?)[더]?[ ]?(적은|작은) 영향을 (받\\w+)", "...보다(2)영향을 덜 (4)"],
+      ["(\\w+[을를] \\w+다고) 여겨\\w*[,]?", "() 생각해"], 
+      ["(KW_NPSV)가 (\\w*)로 (KW_NATA)되었(\\w+)", "()를 ()로 ()했()"], 
+      ["(KW_NPSV)가 (.{,10}을 .{,10}는 .{,10})로 (KW_NATA)되었(\\w+)", "(1)를 ...로 (3)했(4)"] 
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "번역투",
+    "name": "ysyn1402_간결한 피동사",
+    "desc": "https://play.google.com/books/reader?id=gX1RCwAAQBAJ&pg=GBS.PT215&hl=ko",
+    "cases": [
+      ["(\\w*털)을 (\\w*[ ]?)잃게 되다", "()이 ()빠지다"],
+      ["(\\w*털)을 (\\w*[ ]?)잃게 된다", "()이 ()빠진다"],
+      ["피부가 붉게 드러나게 되다", "시뻘겋게 피가 스미고 껍질이 벗겨지다"],
+      ["피부가 붉게 드러나게 된다", "시뻘겋게 피가 스미고 껍질이 벗겨진다"],
+      ["\\b(KW_NSTA)[되된][는]? 상태가 된다", "()된다"],
+      ["\\b(KW_NSTA)한 상태가 된다", "()해진다"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "번역투",
+    "name": "ysyn1403_간결한 피동사",
+    "desc": "https://play.google.com/books/reader?id=gX1RCwAAQBAJ&pg=GBS.PT215&hl=ko",
+    "cases": [
+      ["\\b공간을 갖는다", "공간이 주어진다"]
     ],
     "exception": [
     ]
