@@ -72,6 +72,9 @@ KW_NPSF = "|".join([KW_NPEF, KW_NPNF, KW_NPJF, KW_NPRF, KW_NPAF])
 KW_NPSV = "|".join([KW_NPEV, KW_NPNV, KW_NPJV, KW_NPRV, KW_NPAV])
 KW_NPSN = "|".join([KW_NPSF, KW_NPSV])
 
+# noun: animal
+KW_NANM = "개|고양이|돼지|소|오리|말"
+
 # noun: measure in Korean
 KW_NMK = "그램|미터|킬로그램|킬로미터"
 
