@@ -149,6 +149,8 @@ def check(rules, line):
     if not korean(line):
         return None
     
+    lineprinted = False
+
     #_debug('line', line)
     #_debug('komoran.pos(line)', komoran.pos(line))
 
@@ -192,7 +194,7 @@ def check(rules, line):
                     bad = bad_root = m.group()
                     for i, g in enumerate(m.groups(), start=1):
                         good = good.replace('()', g, 1)
-                        good = good.replace(f'({i})', g, 1)
+                        good = good.replace(f'({i})', g)
                 else:
                     continue
                  
@@ -301,7 +303,11 @@ def check(rules, line):
                     
                 if not skip:
                     cl = carret_loc(line, loc)
-                    print('* ' + line)
+
+                    if not lineprinted:
+                        print('* ' + line)
+                        lineprinted = True
+
                     print('  ' + ' ' * cl + '^')
                     message(kind, name, bad, good, desc)
                     warnings_counter[name] += 1
@@ -321,9 +327,10 @@ def korean(s):
 def message(kind, name, bad, good, desc):
     if bad.startswith(". "):  # do not use lstrip() because it works differently
         bad = bad[2:]
-    guide = " → ".join(filter(None, [bad, good]))
+    arr = '\n   →  ' if len(bad) > 20 else ' →  '
+    guide = arr.join(filter(None, [bad, good]))
     ref = " : ".join(filter(None, [name, desc]))
-    print(f'  => {guide}\t ({ref})\n\n')
+    print(f'   => {guide}\t ({ref})\n')
 
 
 def display_summary():
