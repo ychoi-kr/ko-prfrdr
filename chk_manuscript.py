@@ -190,8 +190,9 @@ def check(rules, line):
                         continue
                     
                     bad = bad_root = m.group()
-                    for g in m.groups():
+                    for i, g in enumerate(m.groups(), start=1):
                         good = good.replace('()', g, 1)
+                        good = good.replace(f'({i})', g, 1)
                 else:
                     continue
                  
