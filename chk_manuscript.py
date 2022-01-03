@@ -171,14 +171,15 @@ def check(rules, line):
             elif any(map(lambda x: x in '[]\+?|', bad)):
                 mode = "regex"
                 #_debug('mode', mode)
-                #_debug('bad', bad)
 
                 for x in dir(koletter): 
                     if x.startswith('KL_'):
                         bad = bad.replace(x, getattr(koletter, x))
                 for x in dir(koword): 
                     if x.startswith('KW_'):
-                        bad = bad.replace(x, getattr(koword, x))
+                        bad = bad.replace(f'({x})', f'({getattr(koword, x)})')
+
+                _debug('bad', bad)
 
                 m = re.search(bad, line)
                 if m:
@@ -193,6 +194,8 @@ def check(rules, line):
                     
                     bad = bad_root = m.group()
                     for i, g in enumerate(m.groups(), start=1):
+                        if _dbg_:
+                            good = good.replace('()', f'{i}:()', 1)
                         good = good.replace('()', g, 1)
                         good = good.replace(f'({i})', g)
                 else:
