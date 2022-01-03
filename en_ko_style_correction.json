@@ -160,8 +160,8 @@
     "name": "hanbit07_흔한 번역투 TOP 12 - 7. '~을/를 가지다, 가지고 있다'",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
-      ["(KW_NPRF)을 (KW_NNKA) [가갖]\\w+ (있\\w+)", "()이 () ()"],
-      ["(KW_NPRV)를 (KW_NNKA) [가갖]\\w+ (있\\w+)", "()가 () ()"]
+      ["(KW_NPRf)을 (KW_NNK) [가갖]\\w+ (있\\w+)", "()이 () ()"],
+      ["(KW_NPRv)를 (KW_NNK) [가갖]\\w+ (있\\w+)", "()가 () ()"]
     ],
     "exception": [
     ]
@@ -171,7 +171,7 @@
     "name": "hanbit08_흔한 번역투 TOP 12 - 8. '~로부터'",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
-      ["(\\w+?)[으]?로부터 (\\w+)([ ]?)(KW_NUDA) (떨어\\w+)", "()에서 ()()() ()"]
+      ["(\\w+?)[으]?로부터 (\\w+)([ ]?)(KW_NUD) (떨어\\w+)", "()에서 ()()() ()"]
     ],
     "exception": [
     ]
@@ -242,6 +242,18 @@
     "desc": "https://play.google.com/books/reader?id=gX1RCwAAQBAJ&pg=GBS.PT215&hl=ko",
     "cases": [
       ["\\b공간을 갖는다", "공간이 주어진다"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "번역 투",
+    "name": "mk291554_일상생활 속 나도 모르게 남용하는 '번역 투'",
+    "desc": "https://www.mk.co.kr/news/society/view/2016/04/291554/",
+    "cases": [
+      ["\\b(\\w+)해지기 위해", "()해지려고"],
+      ["(\\w*[KL_NFC])에 대해 (KW_AVM) (이야기하지)", "()를 () ()"],
+      ["(\\w*[KL_WFC])에 대해 (KW_AVM) (이야기하지)", "()을 () ()"]
     ],
     "exception": [
     ]
