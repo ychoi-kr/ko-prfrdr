@@ -9,7 +9,7 @@ def offset(c):
 
 def join(seq):
     def join_two(a, b):
-        if re.match('[가-히]', a[-1]) and not kosound.hasfinalconsonant(a[-1]) and b in kosound.consonant:
+        if re.match('[가-히]', a[-1]) and not kosound.hasfinalconsonant(a[-1]) and b in kosound.CONSONANTS:
             return ''.join([a[:-1], chr(ord(a[-1]) + offset(b))])
         else:
             return ''.join([a, b])
