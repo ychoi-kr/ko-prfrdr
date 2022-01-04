@@ -642,7 +642,7 @@
     "name": "0153177a_smart contract",
     "desc": "https://wikidocs.net/153177",
     "cases": [
-      ["스마트 컨트랙", "‘스마트 콘트랙트’ 또는 ‘스마트 계약’"]
+      ["스마트 컨트랙(도|부터|은|을|이[\\w]*|에[\\w+]*|조차|처럼|\\b])", "‘스마트 콘트랙트()"]
     ],
     "exception": [
     ]
@@ -1026,6 +1026,17 @@
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=32126",
     "cases": [
       ["스크린샷", "스크린숏"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
+    "name": "qa235435_태블릿",
+    "desc": "https://m.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=235435",
+    "cases": [
+      ["타블렛", "태블릿"],
+      ["테블릿", "태블릿"]
     ],
     "exception": [
     ]
