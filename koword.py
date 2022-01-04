@@ -4,69 +4,100 @@ import kostr
 def concat(*s):
     return "|".join(s).strip('|')
 
+# R: root(어근)
+KW_Sh = '깔끔|매끈|복잡|착|지저분'   # -하다, -해서, -한, -하다
+KW_Sg = '야물' # -거리다, -거려서, -거리는, -거린다
+KW_S = concat(KW_Sh, KW_Sg)
 
-# S: Stem(어간) (dropped variable final consonant) 
-# can be modified to predicate(좋다), AVC(좋아서), AVM(좋게), adjective(좋은)
-KW_Sa = '나ㅃ|바ㅃ'  # 나쁘다, 나빠서, 나쁘게, 나쁜
-KW_Sb = '귀여|해로'  # 귀엽다, 귀여워서, 귀엽게, 귀여운
-KW_Sd = '다' # 달다, 달아서, 달게, 단
-KW_Se = '예ㅃ'  # 예쁘다, 예뻐서, 예쁘게, 예쁜
-KW_Sg = '착'  # 착하다, 착해서, 착하게, 착한
-KW_Sj = '낮|높|좋' # 낮다, 낮아서, 낮게, 낮은
-KW_Sl = '섣부' # 섣부르다, 섣불러서, 섣불리, 섣부른
-KW_Sn= '낯서' # 낯설다, 낯설어서, 낯설게, 낯선
-KW_Ss = '나'  # 낫다, 나아서, 낫게, 나은 
-KW_Sx = 'ㅆ|ㅋ' # 쓰다, 써서, 쓰게, 쓴
+# A: Adjective (removed 'ㅂ' which will be dropped during conjugatation)  형용사(활용 시 탈락되는 'ㅂ'을 미리 제거함)
+# can be conjugated to                    VS,             AS,         AVC,          AVM,        ASN
+KW_Aa = '나ㅃ|바ㅃ'                     # 나ㅃ+ㅏ지다,    나ㅃ+ㅡ+다, 나ㅃ+ㅏ서,    나ㅃ+ㅡ+게, 나ㅃ+ㅡ+ㄴ
+KW_Ab = '귀여|더|무서|쉬|차가|춥|해로'  # 귀여+워지다,    귀여+ㅂ+다, 귀여+워서,    귀여+ㅂ+게, 귀여+운
+KW_Ad = '다'                            # 다+ㄹ+라지다,   다+ㄹ+다,   다+ㄹ+아서,   다+ㄹ+게,   다+ㄴ
+KW_Ae = '예ㅃ'                          # 예ㅃ+ㅓ지다,    예ㅃ+ㅡ+다, 예ㅃ+ㅓ서,    예ㅃ+ㅡ+게, 예ㅃ+ㅡ+ㄴ
+KW_Aj = '괜찮|낮|높|좋'                 # 낮+아지다,      낮+다,      낮+아서,      낮+게,      낮+은
+KW_Al = '섣부'                          # x,              섣부+르다,  섣부+ㄹ+러서, 섣부+ㄹ+리, 섣부+른
+KW_Am = '맛있'                          # 맛있+어지다,    맛있+다,    맛있+어서,    맛있+게,    맛있+는
+KW_An = '낯서'                          # 낯서+ㄹ+어지다, 낯서+ㄹ+다, 낯서+ㄹ+어서, 낯서+ㄹ+게, 낯서+ㄴ
+KW_Ao = '넓'                            # 넓+어지다,      넓+다,      넓+어서,      넓+게,      넓+ㅡ+ㄴ
+KW_As = '나'                            # 나+아지다,      나+ㅅ+다,   나+아서,      나+ㅅ+게,   나+은 
+KW_Aw = '고'                            # 고+와지다,      고+ㅂ+다,   고+와서,      고+ㅂ+게,   고+은
+KW_Ax = 'ㅆ|ㅋ'                         # ㅆ+ㅓ+지다,     ㅆ+ㅡ+다,   ㅆ+ㅓ+서,     ㅆ+ㅡ+게,   ㅆ+ㅡ+ㄴ
+KW_Ay = '못ㄷ'                          # 못ㄷ+ㅙ+지다,   못ㄷ+ㅚ+다, 못ㄷ+ㅙ+서,   못ㄷ+ㅚ+게, 못ㄷ+ㅚㄴ
+
+# Adjective - Status
+KW_AS = '|'.join(sorted(
+        [kostr.concat(w, '해') for w in KW_Sh.split('|')]  # 착+해(지다)      
+        + [kostr.concat(w, 'ㅏ') for w in KW_Aa.split('|')]  # 나ㅃ+ㅏ(지다) 
+        + [kostr.concat(w, '워') for w in KW_Ab.split('|')]  # 귀여+워(지다)    
+        + [kostr.concat(w, 'ㄹ라') for w in KW_Ad.split('|')]  # 다+ㄹ+라(지다)   
+        + [kostr.concat(w, 'ㅓ') for w in KW_Ae.split('|')]  # 예ㅃ+ㅓ(지다)    
+        + [kostr.concat(w, '아') for w in KW_Aj.split('|')]    # 낮+아(지다)      
+        + [kostr.concat(w, '어') for w in KW_Am.split('|')]  # 맛있+어(지다) 
+        + [kostr.concat(w, 'ㄹ어') for w in KW_An.split('|')]  # 낯서+ㄹ+어(지다) 
+        + [kostr.concat(w, '어') for w in KW_Ao.split('|')]  # 넓+어(지다) 
+        + [kostr.concat(w, '아') for w in KW_As.split('|')]  # 나+아(지다)      
+        + [kostr.concat(w, '와') for w in KW_Aw.split('|')]  # 고+와(지다)      
+        + [kostr.concat(w, 'ㅓ') for w in KW_Ax.split('|')]  # ㅆ+ㅓ+(지다)     
+        + [kostr.concat(w, 'ㅙ') for w in KW_Ay.split('|')]  # 못ㄷ+ㅙ+(지다)   
+        ))
+
+
+# Adjective - Status - modifies Noun (형용사의 관형사형)
+KW_ASN = '|'.join(
+    sorted(
+        [kostr.concat(w, '한') for w in KW_Sh.split('|')]
+        + [kostr.concat(w, 'ㅡ', 'ㄴ') for w in KW_Aa.split('|')]
+        + [kostr.concat(w, '운') for w in KW_Ab.split('|')]
+        + [kostr.concat(w, 'ㄴ') for w in KW_Ad.split('|')]
+        + [kostr.concat(w, 'ㅡ', 'ㄴ') for w in KW_Ae.split('|')]
+        + [kostr.concat(w, '은') for w in KW_Aj.split('|')]
+        + [kostr.concat(w, '른') for w in KW_Al.split('|')]
+        + [kostr.concat(w, '는') for w in KW_Am.split('|')]
+        + [kostr.concat(w, 'ㄴ') for w in KW_An.split('|')]
+        + [kostr.concat(w, '은') for w in KW_As.split('|')]
+        + [kostr.concat(w, '은') for w in KW_Aw.split('|')]
+        + [kostr.concat(w, 'ㅡ', 'ㄴ') for w in KW_Ax.split('|')]
+        + [kostr.concat(w, 'ㅚ', 'ㄴ') for w in KW_Ay.split('|')]
+    )
+)
 
 # AdVerb - Cause (이유를 나타내는 부사)
 KW_AVC = '|'.join(sorted(
-        [kostr.concat(w, 'ㅏ', '서') for w in KW_Sa.split('|')]
-        + [kostr.concat(w, '워', '서') for w in KW_Sb.split('|')]
-        + [kostr.concat(w, 'ㄹ', '아서') for w in KW_Sd.split('|')]
-        + [kostr.concat(w, 'ㅓ', '서') for w in KW_Se.split('|')]
-        + [kostr.concat(w, '해서') for w in KW_Sg.split('|')]
-        + [kostr.concat(w, '아서') for w in KW_Sj.split('|')]
-        + [kostr.concat(w, 'ㄹ', '러서') for w in KW_Sl.split('|')]
-        + [kostr.concat(w, 'ㄹ', '어서') for w in KW_Sn.split('|')]
-        + [kostr.concat(w, '아서') for w in KW_Ss.split('|')]
-        + [kostr.concat(w, 'ㅓ', '서') for w in KW_Sx.split('|')]
+        [kostr.concat(w, '해서') for w in KW_Sh.split('|')]
+        + [kostr.concat(w, 'ㅏ', '서') for w in KW_Aa.split('|')]
+        + [kostr.concat(w, '워서') for w in KW_Ab.split('|')]
+        + [kostr.concat(w, 'ㄹ아서') for w in KW_Ad.split('|')]
+        + [kostr.concat(w, 'ㅓ', '서') for w in KW_Ae.split('|')]
+        + [kostr.concat(w, '아서') for w in KW_Aj.split('|')]
+        + [kostr.concat(w, 'ㄹ러서') for w in KW_Al.split('|')]
+        + [kostr.concat(w, 'ㄹ어서') for w in KW_An.split('|')]
+        + [kostr.concat(w, '아서') for w in KW_As.split('|')]
+        + [kostr.concat(w, '와서') for w in KW_Aw.split('|')]
+        + [kostr.concat(w, 'ㅓ', '서') for w in KW_Ax.split('|')]
+        + [kostr.concat(w, 'ㅙ', '서') for w in KW_Ay.split('|')]
         ))
 
 # Adverb - Manner (태도, 방법을 나타내는 부사)
 KW_AVM = '|'.join(
     sorted(
         ['함부로']
-        + [kostr.concat(w, 'ㅡ', '게') for w in KW_Sa.split('|')]
-        + [kostr.concat(w, 'ㅂ', '게') for w in KW_Sb.split('|')]
-        + [kostr.concat(w, 'ㄹ', '게') for w in KW_Sd.split('|')]
-        + [kostr.concat(w, 'ㅡ', '게') for w in KW_Se.split('|')]
-        + [kostr.concat(w, '하', '게') for w in KW_Sg.split('|')]
-        + [kostr.concat(w, '게') for w in KW_Sj.split('|')]
-        + [kostr.concat(w, 'ㄹ', '리') for w in KW_Sl.split('|')]
-        + [kostr.concat(w, 'ㄹ', '게') for w in KW_Sn.split('|')]
-        + [kostr.concat(w, 'ㅅ', '게') for w in KW_Ss.split('|')]
-        + [kostr.concat(w, 'ㅡ', '게') for w in KW_Sx.split('|')]
+        + [kostr.concat(w, '하게') for w in KW_Sh.split('|')]
+        + [kostr.concat(w, 'ㅡ', '게') for w in KW_Aa.split('|')]
+        + [kostr.concat(w, 'ㅂ게') for w in KW_Ab.split('|')]
+        + [kostr.concat(w, 'ㄹ게') for w in KW_Ad.split('|')]
+        + [kostr.concat(w, 'ㅡ', '게') for w in KW_Ae.split('|')]
+        + [kostr.concat(w, '게') for w in KW_Aj.split('|')]
+        + [kostr.concat(w, 'ㄹ리') for w in KW_Al.split('|')]
+        + [kostr.concat(w, 'ㄹ게') for w in KW_An.split('|')]
+        + [kostr.concat(w, 'ㅅ게') for w in KW_As.split('|')]
+        + [kostr.concat(w, 'ㅂ게') for w in KW_Aw.split('|')]
+        + [kostr.concat(w, 'ㅡ', '게') for w in KW_Ax.split('|')]
+        + [kostr.concat(w, 'ㅚ', '게') for w in KW_Ay.split('|')]
     )
 )
 
 KW_AV = concat(KW_AVC, KW_AVM)
-
-# Adjective (형용사)
-KW_ADJ = '|'.join(
-    sorted(
-        [kostr.concat(w, 'ㅡ', 'ㄴ') for w in KW_Sa.split('|')]
-        + [kostr.concat(w, '운') for w in KW_Sb.split('|')]
-        + [kostr.concat(w, 'ㄴ') for w in KW_Sd.split('|')]
-        + [kostr.concat(w, 'ㅡ', 'ㄴ') for w in KW_Se.split('|')]
-        + [kostr.concat(w, '한') for w in KW_Sg.split('|')]
-        + [kostr.concat(w, '은') for w in KW_Sj.split('|')]
-        + [kostr.concat(w, '른') for w in KW_Sl.split('|')]
-        + [kostr.concat(w, 'ㄴ') for w in KW_Sn.split('|')]
-        + [kostr.concat(w, 'ㅡ', 'ㄴ') for w in KW_Sx.split('|')]
-        + [kostr.concat(w, '은') for w in KW_Ss.split('|')]
-    )
-)
-
 # https://jojal-jojalkorean.tumblr.com/post/623900718717452288/korean-grammar-final-ending%EC%96%B4%EB%A7%90-%EC%96%B4%EB%AF%B8
 # Eomi - Final - Statement
 KW_EFS = "다\\b|습니다|이다"
@@ -155,29 +186,29 @@ KW_JV = "고|라고|보다|에게|에로|에서|와|으로서|으로써"
 ### activity nouns (which can be followed by both '~하다(hada)' and '~을/를 하다')
 
 # NAO: activity nouns (original Korean)
-KW_NAOf = "[가증]감|곱|[건입]국|[연체]결|[총포]괄|[담배]당|[노입출]력|[수제훈]련|[기수]록|[개선]발|[구작형]성|[연학]습|[지]원|[반운투]영|[사이적포활]용|[교훈]육|수[출]?입|[결설수한]정|선언|선정|제창|수출|선택|[동수실연]행|[면입]학|포함|[결취]합|[구실재]현|"  # f: has final consonant
-KW_NAOv = "참가|[연]구|제기|[고]려|치료|처리|연마|[공기]부|[반발조]사|[개배증해]설|[기참]여|[논합]의|[성]취|[배설]치"  # v: ends with vowel (does not have final consonant)
+KW_NAOf = "생각|[가증]감|가공|곱|[건입]국|[연체]결|[총포]괄|가늠|[담배]당|가동|[노입출]력|개발|[수제훈]련|[기수]록|설명|고민|[개선]발|[개배증해]설|[구생작형]성|[연학]습|예약|[지]원|[반운투]영|[긴중필]요|[사이적포활]용|[교훈]육|[도수]입|[수]?출입|발전|[결설수측한]정|선언|선정|[도장부탈]착|제창|수출|예측|선택|[동수실연]행|[면입]학|포함|[결취]합|[구실재표]현"  # f: has final consonant
+KW_NAOv = "[인추참평]가|[제탈]거|[공소]개|[연]구|제기|이야기|[고]려|치료|처리|연마|[공기]부|[반발조]사|[기참]여|소요|[논합]의|대체|[성]취|[배설]치|\\w+화"  # v: ends with vowel (does not have final consonant)
 KW_NAO = concat(KW_NAOf, KW_NAOv)
 
 # NAF: activity noun derived from foreign language
-KW_NAFf = "게임|로깅|모니터링"
-KW_NAFv = "마사지"
+KW_NAFf = "다운로딩|게임|로깅|모니터링|필터링|릴리스|업로딩|인덱싱|컴파일|로그인|로그아웃"
+KW_NAFv = "마사지|다운로드|업로드|업데이트|트리거"
 KW_NAF = concat(KW_NAFf, KW_NAFv)
 
 # NAT: all activity nouns
-KW_NATf = concat(KW_NAOf, KW_NAFf)
-KW_NATv = concat(KW_NAOv, KW_NAFv)
-KW_NAT = concat(KW_NATf, KW_NATv)
+KW_NAf = concat(KW_NAOf, KW_NAFf)
+KW_NAv = concat(KW_NAOv, KW_NAFv)
+KW_NA = concat(KW_NAf, KW_NAv)
 
 # NST: status nouns
-KW_NSTf = "건강|긴장|동일|둔감|민감|병약|불성실|성실|함몰"
-KW_NSTv = "상이"
-KW_NST = concat(KW_NSTf, KW_NSTv)
+KW_NSf = "가능|깔끔|건강|곤란|긴장|동일|둔감|부지런|민감|병약|불성실|성실|함몰"
+KW_NSv = "상이|평화"
+KW_NS = concat(KW_NSf, KW_NSv)
 
 # NAS: activity nouns + status nouns
-KW_NASf = concat(KW_NATf, KW_NSTf)
-KW_NASv = concat(KW_NATv, KW_NSTv)
-KW_NAS = concat(KW_NASf, KW_NASv)
+#KW_NASf = concat(KW_NATf, KW_NSTf)
+#KW_NASv = concat(KW_NATv, KW_NSTv)
+#KW_NAS = concat(KW_NASf, KW_NASv)
 
 # ND: Nouns - Dependant
 KW_ND = "밖|뿐"
@@ -252,8 +283,8 @@ KW_NNK = concat(KW_NNKf, KW_NNKv)
 KW_NN = concat(KW_NNC, KW_NND, KW_NNK)   
 
 # NUS: Nouns - Units - Stuff 
-KW_NUSF = "그릇|달|명|방울|벌|시간|쪽"
-KW_NUSV = "가지|마리|박스|봉지|채|페이지|회"
+KW_NUSF = "그릇|달|명|방울|벌|쪽"
+KW_NUSV = "가지|개|마리|박스|봉지|채|페이지|회"
 KW_NUS = concat(KW_NUSF, KW_NUSV)
 
 # NUT: Nouns - Units - Time
@@ -303,27 +334,40 @@ KW_NLI = concat(KW_NLIF, KW_NLIV)
 KW_PRP = "너희|내|우리|저희"
 KW_PRN = KW_PRP
 
+# Verb - from Adjective - status Change - idea
+KW_VACi = [kostr.concat(s, '지') for s in KW_AS.split('|')]
+
+# Verb - from Adjective - status Change - progress
+KW_VACn = [kostr.concat(s, '진') for s in KW_AS.split('|')]
+
+# Verb - from Adjective - status Changed - past
+KW_VACp = [kostr.concat(s, '졌') for s in KW_AS.split('|')]
+
 # verb: roots of verb -- these are not nouns
 KW_VRB = "걸|갈|나누|넣|말|박|빼|졸|숨|재"
 
 # verb: transive
-KW_VTG = "[당숨]"  # ~기다(gida)
-KW_VTL = "[되][돌살]|[쳐]올|[내때]"  # ~리다(lida)
-KW_VTI = "[드]높|[보죽]|되뇌" # ~이다(ida)
-KW_VTP = "[보]살피다"  # ~피다(pida)
-KW_VTC = "[내망외]"  # ~치다(chida)
-KW_VTX = "[낮늦]"  # ~추다(chuda)
-KW_VTW = "[치채]"  # ~우다(wuda)
-KW_VTD = "[받쳐]들다|[내]밀다|[박빨쪼찍]다" # ~다(da)
+KW_VTc = "[내망외]"  # ~치다(chida)
+KW_VTd = "[받쳐]들|[내]밀|[박빨쪼찍]|허물" # ~다(da)
+KW_VTg = "[당숨]"  # ~기다(gida)
+KW_VTh = "가까이"  # ~하다(hada)
+KW_VTi = "[드]높|[보죽죽]|되뇌" # ~이다(ida)
+KW_VTl = "[되][돌살]|[쳐]올|[내때]"  # ~리다(lida)
+KW_VTp = "[보]살피다"  # ~피다(pida)
+KW_VTx = "[낮늦]"  # ~추다(chuda)
+KW_VTw = "[치채]"  # ~우다(wuda)
+
+KW_VT = concat(KW_VTc, KW_VTd, KW_VTg, KW_VTh, KW_VTi, KW_VTl, KW_VTp, KW_VTx, KW_VTw)
 
 # verb: intransive
-KW_VII = "숨죽이다"  # ~이다(ida)
-KW_VID = "[살죽]다"  # ~다(da)
+KW_VIe = "숨|죽"  # ~다, 었다, ~어서
+KW_VIy = "숨죽ㅇ|생ㄱ|쓰러ㅈ|해ㅈ"  # ~ㅣ다, ㅕㅆ다, ~ㅕ서
+KW_VIa = "살"  # ~다, ~았다
+KW_VIs = "잘나"  # ~다, ~ㅆ다
 
 # verb: passive
-KW_VPL = "갈리다"  # ends with '~리다(lida)'
-KW_VPI = "쓰이다"  # ends with '~이다(ida)'
-KW_VPH = "먹|붙잡|잡"  # ends with '~히다(hida)'
-
+KW_VPl = "갈리다"  # ends with '~리다(lida)'
+KW_VPi = "쓰이다"  # ends with '~이다(ida)'
+KW_VPh = "먹|붙잡|잡"  # ends with '~히다(hida)'
 
 
