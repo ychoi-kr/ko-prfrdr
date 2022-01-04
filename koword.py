@@ -111,7 +111,7 @@ KW_EDV = "도록|게\\b"
 KW_ED = concat(KW_EDN, KW_EDA, KW_EDV)
 
 # Eomi - Ending(어말 어미)
-KW_EF = concat(KW_EF, KW_EC, KW_ED)
+KW_E = concat(KW_EF, KW_EC, KW_ED)
 
 # Eomi - Pre-final(선어말어미)
 KW_PF = "시|었|더|겠"
@@ -155,7 +155,7 @@ KW_JV = "고|라고|보다|에게|에로|에서|와|으로서|으로써"
 ### activity nouns (which can be followed by both '~하다(hada)' and '~을/를 하다')
 
 # NAO: activity nouns (original Korean)
-KW_NAOf = "[가증]감|곱|[건입]국|[연체]결|[총포]괄|[담배]당|[노입출]력|[수제훈]련|[기수]록|[개선]발|[구작형]성|[연학]습|[지]원|[반운투]영|[이적포활]용|[교훈]육|수[출]?입|[결설수한]정|선언|선정|제창|수출|선택|[동수실연]행|[면입]학|포함|[결취]합|[구실재]현|"  # f: has final consonant
+KW_NAOf = "[가증]감|곱|[건입]국|[연체]결|[총포]괄|[담배]당|[노입출]력|[수제훈]련|[기수]록|[개선]발|[구작형]성|[연학]습|[지]원|[반운투]영|[사이적포활]용|[교훈]육|수[출]?입|[결설수한]정|선언|선정|제창|수출|선택|[동수실연]행|[면입]학|포함|[결취]합|[구실재]현|"  # f: has final consonant
 KW_NAOv = "참가|[연]구|제기|[고]려|치료|처리|연마|[공기]부|[반발조]사|[개배증해]설|[기참]여|[논합]의|[성]취|[배설]치"  # v: ends with vowel (does not have final consonant)
 KW_NAO = concat(KW_NAOf, KW_NAOv)
 
