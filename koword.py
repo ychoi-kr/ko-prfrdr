@@ -5,7 +5,7 @@ def concat(*s):
     return "|".join(s).strip('|')
 
 # R: root(어근)
-KW_Sh = '깔끔|매끈|복잡|착|지저분'   # -하다, -해서, -한, -하다
+KW_Sh = '깔끔|매끈|복잡|비슷|착|지저분'   # -하다, -해서, -한, -하다
 KW_Sg = '야물' # -거리다, -거려서, -거리는, -거린다
 KW_S = concat(KW_Sh, KW_Sg)
 
@@ -187,7 +187,7 @@ KW_JV = "고|라고|보다|에게|에로|에서|와|으로서|으로써"
 
 # NAO: activity nouns (original Korean)
 KW_NAOf = "생각|[가증]감|가공|곱|[건입]국|[연체]결|[총포]괄|가늠|[담배]당|가동|[노입출]력|개발|[수제훈]련|[기수]록|설명|고민|[개선]발|[개배증해]설|[구생작형]성|[연학]습|예약|[지]원|[반운투]영|[긴중필]요|[사이적포활]용|[교훈]육|[도수]입|[수]?출입|발전|[결설수측한]정|선언|선정|[도장부탈]착|제창|수출|예측|선택|[동수실연]행|[면입]학|포함|[결취]합|[구실재표]현"  # f: has final consonant
-KW_NAOv = "[인추참평]가|[제탈]거|[공소]개|[연]구|제기|이야기|[고]려|치료|처리|연마|[공기]부|[반발조]사|[기참]여|소요|[논합]의|대체|[성]취|[배설]치|\\w+화"  # v: ends with vowel (does not have final consonant)
+KW_NAOv = "[인추참평]가|[제탈]거|[공소]개|[연]구|[상연제]기|이야기|[고]려|치료|[관수처]리|연마|[공기]부|[반발조]사|[기참]여|소요|[논합]의|대체|[성]취|[배설]치|\\w+화"  # v: ends with vowel (does not have final consonant)
 KW_NAO = concat(KW_NAOf, KW_NAOv)
 
 # NAF: activity noun derived from foreign language
@@ -282,42 +282,48 @@ KW_NNK = concat(KW_NNKf, KW_NNKv)
 
 KW_NN = concat(KW_NNC, KW_NND, KW_NNK)   
 
-# NUS: Nouns - Units - Stuff 
-KW_NUSF = "그릇|달|명|방울|벌|쪽"
-KW_NUSV = "가지|개|마리|박스|봉지|채|페이지|회"
-KW_NUS = concat(KW_NUSF, KW_NUSV)
-
-# NUT: Nouns - Units - Time
-KW_NUTF = "분|시간|일|달|개월|년|세기"
-KW_NUTV = "밀리초|초"
-KW_NUT = concat(KW_NUTF, KW_NUTV)
-
 # NUD: Nouns - Units - Distance
-KW_NUDF = "광년"
-KW_NUDV = "미터|킬로미터"
-KW_NUD = concat(KW_NUDF, KW_NUDV)
-
-# NU: nouns - Units - Weight
-KW_NUWF = "그램|킬로그램|평"
-KW_NUWV = "밀리리터|데시리터|리터|킬로리터|파운드"
-KW_NUW = concat(KW_NUWF, KW_NUWV)
+KW_NUDf = "광년"
+KW_NUDv = "미터|리|킬로미터"
+KW_NUD = concat(KW_NUDf, KW_NUDv)
 
 # NUG: Nouns - Units - weiGht in symbol
-KW_NUGF = "[mk]?g" 
-KW_NUGV = "[k]?[LlMm]"
-KW_NUG = concat(KW_NUGF, KW_NUGV)
+KW_NUGf = "[mk]?g" 
+KW_NUGv = "[k]?[LlMm]"
+KW_NUG = concat(KW_NUGf, KW_NUGv)
+
+# NUM: Nouns - Units - Multiplication
+KW_NUM = "배"
 
 # NU: Nouns - Units - aRea
-KW_NURF = "평"
-KW_NURV = "제곱미터|평방미터"
-KW_NUR = concat(KW_NURF, KW_NURV)
+KW_NURf = "평"
+KW_NURv = "제곱미터|평방미터"
+KW_NUR = concat(KW_NURf, KW_NURv)
+
+# NUS: Nouns - Units - Stuff 
+KW_NUSf = "그릇|달|명|방울|벌|쪽"
+KW_NUSv = "가지|개|마리|박스|봉지|채|페이지|회"
+KW_NUSd = "대" # should be handled carefully: '세 대(three device)' vs '3세대(third generation)' 
+KW_NUS = concat(
+    KW_NUSf, KW_NUSv#, KW_NUSd
+)
+
+# NUT: Nouns - Units - Time
+KW_NUTf = "분|시간|일|달|개월|년"
+KW_NUTv = "밀리초|세기|세대|초"
+KW_NUT = concat(KW_NUTf, KW_NUTv)
 
 # NUV: Nouns - Units - Volume
-KW_NUVF = ""
-KW_NUVV = "세제곱미터"
-KW_NUV = concat(KW_NUVF, KW_NUVV)
+KW_NUVf = ""
+KW_NUVv = "세제곱미터"
+KW_NUV = concat(KW_NUVf, KW_NUVv)
 
-KW_NU = concat(KW_NUS, KW_NUT, KW_NUD, KW_NUW, KW_NUG, KW_NUR, KW_NUV)
+# NU: nouns - Units - Weight
+KW_NUWf = "그램|킬로그램|평"
+KW_NUWv = "밀리리터|데시리터|리터|킬로리터|파운드"
+KW_NUW = concat(KW_NUWf, KW_NUWv)
+
+KW_NU = concat(KW_NUD, KW_NUG, KW_NUM, KW_NUR, KW_NUS, KW_NUT, KW_NUV, KW_NUW)
 
 # NL: nouns - animaL - Domestic
 KW_NLDF = "말" 
