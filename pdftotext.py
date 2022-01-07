@@ -50,7 +50,10 @@ def main(pdf_file, header, footer, password):
                 cmd = f'pdftotext {pagenum} {area} {user_password} {quiet} -nopgbrk "{pdf_file}"  -'
                 #print(cmd)
                 s = os.popen(cmd).read()
-                s = re.sub(r"(.*?[^.:][^‐/])\n+([a-z0-9가-힣(]|" + nnp() + ')', r'\1 \2', s)
+
+                if re.match("[가-힣]", s):
+                    s = re.sub(r"(.*?[^.:][^‐/])\n+([a-z0-9가-힣(]|" + nnp() + ')', r'\1 \2', s)
+
                 s = re.sub(r"(.*?[^.:])[ ‐/]\n+(\w)", r'\1\2', s)
                 f.write(s)
 
