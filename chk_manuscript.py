@@ -207,9 +207,9 @@ def check(rules, line):
                     bad_root = bad.rsplit('(', 1)[0]
                  
                 # Part of Speech match
-                if 'okt' in globals() and ('<Verb>' in bad_root or '<Josa>' in bad_root):
+                if 'okt' in globals() and any(x in bad_root for x in ['<Adjective>', '<Adverb>', '<Verb>', '<Josa>']):
                     mode = 'Okt'
-                    #_debug('mode', mode)
+                    _debug('mode', mode)
                     #_debug('okt.pos(line)', okt.pos(line))
                     _bad = bad
                     _bad_root = bad_root
@@ -222,6 +222,7 @@ def check(rules, line):
                             _good = _good.replace(a, b, 1)
                             
                             if _bad_root in line:
+                                _debug('okt.pos(line)', okt.pos(line))
                                 bad = _bad
                                 bad_root = _bad_root
                                 good = _good
@@ -237,13 +238,14 @@ def check(rules, line):
                     morphs_line = ' '.join([''.join(komoran.morphs(eojeol)) for eojeol in line.split()])
                     if '<Noun>' in bad_root:
                         mode = 'Komoran_Noun'
-                        #_debug('mode', mode)
-                        #_debug('<Noun> exists in bad_root', bad_root)
+                        _debug('mode', mode)
+                        _debug('<Noun> exists in bad_root', bad_root)
                         nouns = komoran.nouns(line)
                         #_debug('nouns', nouns)
                         for n in nouns:
                             candidate = bad_root.replace('<Noun>', n)
                             if candidate in line:
+                                _debug('komoran.pos(line)', komoran.pos(line))
                                 bad = bad_root = candidate
                                 good = good.replace('<Noun>', n)
                                 good = good.replace('()', n)
