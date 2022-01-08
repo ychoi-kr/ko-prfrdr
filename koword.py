@@ -15,11 +15,13 @@ KW_Aa = '나ㅃ|바ㅃ'                     # 나ㅃ+ㅏ지다,    나ㅃ+ㅡ+�
 KW_Ab = '귀여|더|무서|쉬|차가|춥|해로'  # 귀여+워지다,    귀여+ㅂ+다, 귀여+워서,    귀여+ㅂ+게, 귀여+운
 KW_Ad = '다'                            # 다+ㄹ+라지다,   다+ㄹ+다,   다+ㄹ+아서,   다+ㄹ+게,   다+ㄴ
 KW_Ae = '예ㅃ'                          # 예ㅃ+ㅓ지다,    예ㅃ+ㅡ+다, 예ㅃ+ㅓ서,    예ㅃ+ㅡ+게, 예ㅃ+ㅡ+ㄴ
+KW_Ai = '붉'                            # 붉+어지다,      붉+다,      붉+아서,      붉+게,      붉+은
 KW_Aj = '괜찮|낮|높|좋'                 # 낮+아지다,      낮+다,      낮+아서,      낮+게,      낮+은
 KW_Al = '섣부'                          # x,              섣부+르다,  섣부+ㄹ+러서, 섣부+ㄹ+리, 섣부+른
 KW_Am = '맛있'                          # 맛있+어지다,    맛있+다,    맛있+어서,    맛있+게,    맛있+는
 KW_An = '낯서'                          # 낯서+ㄹ+어지다, 낯서+ㄹ+다, 낯서+ㄹ+어서, 낯서+ㄹ+게, 낯서+ㄴ
 KW_Ao = '넓'                            # 넓+어지다,      넓+다,      넓+어서,      넓+게,      넓+ㅡ+ㄴ
+KW_Ap = '희'                            # 희+어지다,      희+다,      희+어서,      희+게,      희+ㄴ
 KW_As = '나'                            # 나+아지다,      나+ㅅ+다,   나+아서,      나+ㅅ+게,   나+은 
 KW_Aw = '고'                            # 고+와지다,      고+ㅂ+다,   고+와서,      고+ㅂ+게,   고+은
 KW_Ax = 'ㅆ|ㅋ'                         # ㅆ+ㅓ+지다,     ㅆ+ㅡ+다,   ㅆ+ㅓ+서,     ㅆ+ㅡ+게,   ㅆ+ㅡ+ㄴ
@@ -30,12 +32,14 @@ KW_AS = '|'.join(sorted(
         [kostr.concat(w, '해') for w in KW_Sh.split('|')]  # 착+해(지다)      
         + [kostr.concat(w, 'ㅏ') for w in KW_Aa.split('|')]  # 나ㅃ+ㅏ(지다) 
         + [kostr.concat(w, '워') for w in KW_Ab.split('|')]  # 귀여+워(지다)    
-        + [kostr.concat(w, 'ㄹ라') for w in KW_Ad.split('|')]  # 다+ㄹ+라(지다)   
+        + [kostr.concat(w, 'ㄹ', '라') for w in KW_Ad.split('|')]  # 다+ㄹ+라(지다)   
         + [kostr.concat(w, 'ㅓ') for w in KW_Ae.split('|')]  # 예ㅃ+ㅓ(지다)    
+        + [kostr.concat(w, '어') for w in KW_Ai.split('|')]    # 붉+어(지다)      
         + [kostr.concat(w, '아') for w in KW_Aj.split('|')]    # 낮+아(지다)      
         + [kostr.concat(w, '어') for w in KW_Am.split('|')]  # 맛있+어(지다) 
-        + [kostr.concat(w, 'ㄹ어') for w in KW_An.split('|')]  # 낯서+ㄹ+어(지다) 
+        + [kostr.concat(w, 'ㄹ', '어') for w in KW_An.split('|')]  # 낯서+ㄹ+어(지다) 
         + [kostr.concat(w, '어') for w in KW_Ao.split('|')]  # 넓+어(지다) 
+        + [kostr.concat(w, '어') for w in KW_Ap.split('|')]  # 희+어(지다) 
         + [kostr.concat(w, '아') for w in KW_As.split('|')]  # 나+아(지다)      
         + [kostr.concat(w, '와') for w in KW_Aw.split('|')]  # 고+와(지다)      
         + [kostr.concat(w, 'ㅓ') for w in KW_Ax.split('|')]  # ㅆ+ㅓ+(지다)     
@@ -51,10 +55,13 @@ KW_ASN = '|'.join(
         + [kostr.concat(w, '운') for w in KW_Ab.split('|')]
         + [kostr.concat(w, 'ㄴ') for w in KW_Ad.split('|')]
         + [kostr.concat(w, 'ㅡ', 'ㄴ') for w in KW_Ae.split('|')]
+        + [kostr.concat(w, '은') for w in KW_Ai.split('|')]
         + [kostr.concat(w, '은') for w in KW_Aj.split('|')]
         + [kostr.concat(w, '른') for w in KW_Al.split('|')]
         + [kostr.concat(w, '는') for w in KW_Am.split('|')]
         + [kostr.concat(w, 'ㄴ') for w in KW_An.split('|')]
+        + [kostr.concat(w, '은') for w in KW_Ao.split('|')]
+        + [kostr.concat(w, 'ㄴ') for w in KW_Ap.split('|')]
         + [kostr.concat(w, '은') for w in KW_As.split('|')]
         + [kostr.concat(w, '은') for w in KW_Aw.split('|')]
         + [kostr.concat(w, 'ㅡ', 'ㄴ') for w in KW_Ax.split('|')]
@@ -69,9 +76,12 @@ KW_AVC = '|'.join(sorted(
         + [kostr.concat(w, '워서') for w in KW_Ab.split('|')]
         + [kostr.concat(w, 'ㄹ아서') for w in KW_Ad.split('|')]
         + [kostr.concat(w, 'ㅓ', '서') for w in KW_Ae.split('|')]
+        + [kostr.concat(w, '어서') for w in KW_Ai.split('|')]
         + [kostr.concat(w, '아서') for w in KW_Aj.split('|')]
         + [kostr.concat(w, 'ㄹ러서') for w in KW_Al.split('|')]
         + [kostr.concat(w, 'ㄹ어서') for w in KW_An.split('|')]
+        + [kostr.concat(w, '어서') for w in KW_Ao.split('|')]
+        + [kostr.concat(w, '어서') for w in KW_Ap.split('|')]
         + [kostr.concat(w, '아서') for w in KW_As.split('|')]
         + [kostr.concat(w, '와서') for w in KW_Aw.split('|')]
         + [kostr.concat(w, 'ㅓ', '서') for w in KW_Ax.split('|')]
@@ -87,9 +97,12 @@ KW_AVM = '|'.join(
         + [kostr.concat(w, 'ㅂ게') for w in KW_Ab.split('|')]
         + [kostr.concat(w, 'ㄹ게') for w in KW_Ad.split('|')]
         + [kostr.concat(w, 'ㅡ', '게') for w in KW_Ae.split('|')]
+        + [kostr.concat(w, '게') for w in KW_Ai.split('|')]
         + [kostr.concat(w, '게') for w in KW_Aj.split('|')]
         + [kostr.concat(w, 'ㄹ리') for w in KW_Al.split('|')]
         + [kostr.concat(w, 'ㄹ게') for w in KW_An.split('|')]
+        + [kostr.concat(w, '게') for w in KW_Ao.split('|')]
+        + [kostr.concat(w, '게') for w in KW_Ap.split('|')]
         + [kostr.concat(w, 'ㅅ게') for w in KW_As.split('|')]
         + [kostr.concat(w, 'ㅂ게') for w in KW_Aw.split('|')]
         + [kostr.concat(w, 'ㅡ', '게') for w in KW_Ax.split('|')]
