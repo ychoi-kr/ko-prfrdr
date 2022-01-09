@@ -204,8 +204,8 @@ KW_NAOv = "[인추참평]가|[제탈]거|[공소]개|[연]구|[상연제]기|이
 KW_NAO = concat(KW_NAOf, KW_NAOv)
 
 # NAF: activity noun derived from foreign language
-KW_NAFf = "다운로딩|게임|로깅|모니터링|필터링|릴리스|업로딩|인덱싱|컴파일|로그인|로그아웃"
-KW_NAFv = "마사지|다운로드|업로드|업데이트|트리거"
+KW_NAFf = "게임|다운로딩|로그아웃|로그인|로깅|모니터링|[업]?로딩|인덱싱|컴파일|필터링"
+KW_NAFv = "다운로드|릴리스|마사지|[업]?로드|업데이트|트리거|플레이"
 KW_NAF = concat(KW_NAFf, KW_NAFv)
 
 # NAT: all activity nouns
