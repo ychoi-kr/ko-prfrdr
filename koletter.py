@@ -37,9 +37,9 @@ KL_WFL = ''.join([chr(ord(c) + 8) for c in KL_NFC])
 # letters with final nieun
 KL_WFN = ''.join([chr(ord(c) + 4) for c in KL_NFC])
 
-# letters without final lieul
-KL_NFL = ''.join(sorted(set(KL_ALL) - set(KL_WFL)))
+# letters with final consonant but 'ㄹ'(lieul)
+KL_NFL = ''.join(sorted(set(KL_WFC) - set(KL_WFL)))
 
-# letters without final nieun
-KL_NFN = ''.join(sorted(set(KL_ALL) - set(KL_WFN)))
+# letters with final consonant but 'ㄴ'(nieun)
+KL_NFN = ''.join(sorted(set(KL_WFC) - set(KL_WFN)))
 

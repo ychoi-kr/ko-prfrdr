@@ -1,0 +1,4 @@
+Bad cases
+
+Good cases
+FP1: 다음으로 모델 훈련 로그가 포함해야 할 지표를 정의한다.

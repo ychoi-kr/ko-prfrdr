@@ -38,6 +38,7 @@
     "name": "0092100b_-율",
     "desc": "https://wikidocs.net/92100#b",
     "cases": [
+      ["(\\w*[KL_NFC])률", "()율"],
       ["(\\w*[KL_WFN])률", "()율"]
     ],
     "exception": [
