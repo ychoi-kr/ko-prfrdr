@@ -669,10 +669,10 @@
   },
   {
     "kind": "외래어",
-    "name": "_자주 틀리는 외래어 표기(교과서 표기 감수 지침 시안, 2007)", 
+    "name": "frgn2007_자주 틀리는 외래어 표기(교과서 표기 감수 지침 시안, 2007)", 
     "desc": "https://korean.go.kr/common/download.do;front=DF078E574CA2776BC68484C412A6020C?file_path=reportData&c_file_name=46a12cbb-5997-4e16-9d7b-d96f58b995c4_0.pdf&o_file_name=%EA%B5%90%EA%B3%BC%EC%84%9C%20%ED%91%9C%EA%B8%B0%20%EA%B0%90%EC%88%98%20%EC%A7%80%EC%B9%A8%20%EC%8B%9C%EC%95%88.pdf",
     "cases": [
-      ["까스", "가스"],
+      ["\\b까스", "가스"],
       ["\\b까운", "가운"],
       ["카톨릭", "가톨릭"],
       ["갠지즈", "갠지스"],
