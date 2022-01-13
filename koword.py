@@ -208,7 +208,7 @@ KW_NAFf = "게임|다운로딩|로그아웃|로그인|로깅|모니터링|[업]?
 KW_NAFv = "다운로드|릴리스|마사지|[업]?로드|업데이트|트리거|플레이"
 KW_NAF = concat(KW_NAFf, KW_NAFv)
 
-# NAT: all activity nouns
+# NA: all activity nouns
 KW_NAf = concat(KW_NAOf, KW_NAFf)
 KW_NAv = concat(KW_NAOv, KW_NAFv)
 KW_NA = concat(KW_NAf, KW_NAv)
@@ -219,8 +219,8 @@ KW_NSv = "상이|평화"
 KW_NS = concat(KW_NSf, KW_NSv)
 
 # NAS: activity nouns + status nouns
-#KW_NASf = concat(KW_NATf, KW_NSTf)
-#KW_NASv = concat(KW_NATv, KW_NSTv)
+#KW_NASf = concat(KW_NAf, KW_NSTf)
+#KW_NASv = concat(KW_NAv, KW_NSTv)
 #KW_NAS = concat(KW_NASf, KW_NASv)
 
 # ND: Nouns - Dependant
@@ -249,12 +249,12 @@ KW_NPRv = "[식친]구|처남|자녀|아내|아주머니|[어할]머니|아줌�
 
 # NPA: nouns - person by Activity
 KW_NPAf = "군인|경찰|동호인|애[견묘]인|[증행]인"
-KW_NPAv = "감독자|감시자|강[연의]자|관[계련찰]자|글쓴이|당[사직]자|반[려역]자|발[제표]자|수집가|아마추어|엮은이|애호가|응시자|[원]작자|지은이|프로|협력자"
+KW_NPAv = "감독자|감시자|강[연의]자|관[계련찰]자|글쓴이|당[사직]자|반[려역]자|발[제표]자|수집가|아마추어|엮은이|애호가|응시자|[원]작자|지은이|팬|프로|협력자"
 
 # NPS: nouns - person
-KW_NPSf = concat(KW_NPEf, KW_NPNf, KW_NPJf, KW_NPRf, KW_NPAf)
-KW_NPSv = concat(KW_NPEv, KW_NPNv, KW_NPJv, KW_NPRv, KW_NPAv)
-KW_NPS = concat(KW_NPSf, KW_NPSv)
+KW_NPf = concat(KW_NPEf, KW_NPNf, KW_NPJf, KW_NPRf, KW_NPAf)
+KW_NPv = concat(KW_NPEv, KW_NPNv, KW_NPJv, KW_NPRv, KW_NPAv)
+KW_NP = concat(KW_NPf, KW_NPv)
 
 # NNC: Nouns - Number - derived from Chinese
 KW_NNCf = "일|삼|육|칠|팔"
