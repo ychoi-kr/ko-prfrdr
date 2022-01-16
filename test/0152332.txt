@@ -1,0 +1,4 @@
+Bad cases:
+
+Good cases:
+FP1: 대상이 한국어 문서이므로 CountVectorizer에 한글 형태소 분석기를 붙여준다.
