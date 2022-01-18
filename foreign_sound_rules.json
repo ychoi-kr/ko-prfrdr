@@ -367,7 +367,6 @@
     "name": "itko0044_국제 음성 기호 - 모음",
     "desc": "[ɔ] → ‘오’",
     "cases": [
-      ["블럭", "블록"]
     ],
     "exception": [
     ]
@@ -659,6 +658,16 @@
   },
   {
     "kind": "외래어",
+    "name": "qa081761_'block'의 표기",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=81761",
+    "cases": [
+      ["블럭", "블록"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
     "name": "_전통적으로 [ɔ]로 발음되던 단어가 현대 미국 영어에서 [ɑ]로 발음되는 것은 '오'로 표기",
     "desc": "https://www.korean.go.kr/common/download.do;front=269FFA9413BA95DE16B808C52C1A7EA8?file_path=bookData&c_file_name=8037e387-7421-4d56-b726-c58f9c6c0700_0.pdf&o_file_name=%EC%96%B4%EB%AC%B8%EA%B7%9C%EB%B2%94-04-11.pdf&downGubun=bookDataView&book_seq=48",
     "cases": [
@@ -785,7 +794,6 @@
       ["브로찌", "브로치"],
       ["블라디보스톡", "블라디보스토크"],
       ["블라인더", "블라인드"],
-      ["블럭", "블록"],
       ["블럭바스터", "블록버스터"],
       ["비젼", "비전"],
       ["비지니스", "비즈니스"],
@@ -976,7 +984,7 @@
       ["팩키지", "패키지"],
       ["판토마임", "팬터마임"],
       ["팜프렛", "팸플릿"],
-      ["파마", "퍼머"],
+      ["ignored:파마", "퍼머"],
       ["훼리", "페리"],
       ["페스티발", "페스티벌"],
       ["팻트", "페트"],
