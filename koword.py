@@ -284,6 +284,7 @@ KW_NNKf = '|'.join(
 ).strip('|')
 
 KW_NNKv = '|'.join(
+    ["스무"] +
     [
         x + y
         for x in [''] + "열|스물|서른|마흔|쉰|예순|일흔|여든|아흔".split('|')
