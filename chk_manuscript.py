@@ -12,7 +12,7 @@ from kosound import hasfinalconsonant
 import kostr
 import koletter
 import koword
-import fileconverter as c
+import fileconverter as fc
 import fileutil
 
 import docx2txt
@@ -52,14 +52,14 @@ def main(infile, rulefile, debug=False):
     ext = Path(infile).suffix
     
     if ext == '.pdf':
-        if not c.pdfsupport():
+        if not fc.pdfsupport():
             sys.exit('Failed!!! PDF support is not enabled.')
-        if c.pdftotext(infile):
+        if fc.pdftotext(infile):
             infile = Path(infile).stem + '.txt'
     elif ext == '.hwp':
-        if not c.hwpsupport():
+        if not fc.hwpsupport():
             sys.exit('Failed!!! HWP support is not enabled.')
-        if c.hwptotext(infile):
+        if fc.hwptotext(infile):
             infile = Path(infile).stem + '.txt'
     elif ext in ['.docx', '.txt', '']:
         pass
