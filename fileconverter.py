@@ -53,3 +53,23 @@ def runcmd(cmd, wincmd=None, infile=None):
     else:
         return False
 
+
+def convert(filename):
+    ext = Path(filename).suffix
+    
+    if ext == '.pdf':
+        if not pdfsupport():
+            sys.exit('Failed!!! PDF support is not enabled.')
+        if pdftotext(filename):
+            result = Path(filename).stem + '.txt'
+    elif ext == '.hwp':
+        if not hwpsupport():
+            sys.exit('Failed!!! HWP support is not enabled.')
+        if hwptotext(filename):
+            result = Path(filename).stem + '.txt'
+    elif ext in ['.docx', '.txt', '']:
+        result = filename
+    else:
+        sys.exit(f'Failed!!! {ext} is not supported')
+
+    return result

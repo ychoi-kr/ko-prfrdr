@@ -49,27 +49,12 @@ def main(infile, rulefile, debug=False):
     if not infile:
         infile = fileutil.latest_file()
     
-    ext = Path(infile).suffix
-    
-    if ext == '.pdf':
-        if not fc.pdfsupport():
-            sys.exit('Failed!!! PDF support is not enabled.')
-        if fc.pdftotext(infile):
-            infile = Path(infile).stem + '.txt'
-    elif ext == '.hwp':
-        if not fc.hwpsupport():
-            sys.exit('Failed!!! HWP support is not enabled.')
-        if fc.hwptotext(infile):
-            infile = Path(infile).stem + '.txt'
-    elif ext in ['.docx', '.txt', '']:
-        pass
-    else:
-        sys.exit(f'Failed!!! {ext} is not supported')
+    filetoread = fc.convert(infile)
     
     try:
-        text = read_manuscript(infile)
+        text = read_manuscript(filetoread)
     except PermissionError:
-        print(f"Failed!!! Please close {infile} and retry...", file=sys.stderr)
+        print(f"Failed!!! Please close {filetoread} and retry...", file=sys.stderr)
         sys.exit()
     
     global warnings_counter
