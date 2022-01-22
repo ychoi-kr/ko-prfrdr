@@ -4,15 +4,18 @@ import argparse
 from collections import Counter
 
 import fileutil
+import fileconverter as fc
 
 import docx2txt
 
 
 def main(infile):
+    filetoread = fc.convert(infile)
+
     try:
-        text = read_manuscript(infile)
+        text = read_manuscript(filetoread)
     except PermissionError:
-        print(f"Failed!!! Please close {infile} and retry...", file=sys.stderr)
+        print(f"Failed!!! Please close {filetoread} and retry...", file=sys.stderr)
         sys.exit()
     
     global term_counter, width
@@ -30,11 +33,11 @@ def debug(k, v):
         print(f'#DEBUG# {k}: {v}')
         input()
 
-def read_manuscript(infile):
-    if infile.endswith('.docx'):
-        text = docx2txt.process(infile)
-    elif infile.endswith('.txt'):
-        text = open(textfile).read()
+def read_manuscript(filename):
+    if filename.endswith('.docx'):
+        text = docx2txt.process(filename)
+    elif filename.endswith('.txt'):
+        text = open(filename).read()
     else:
         sys.exit('Unable to parse file!')
     return text
@@ -72,7 +75,8 @@ if __name__ == '__main__':
     _dbg_ = True
     
     parser = argparse.ArgumentParser()
-    parser.add_argument("-f", "--filename", help="filename", default=fileutil.latest_file(['.docx']), type=str)
+    parser.add_argument("filename", nargs="?", type=str)
+    #parser.add_argument("-f", "--filename", help="filename", default=fileutil.latest_file(['.docx']), type=str)
     args = parser.parse_args()
     
     main(args.filename)
