@@ -188,6 +188,23 @@ We made mistakes.
 
 같은 이름으로 시작하는 PDF 파일들을 하나로 합칩니다.
 
+요구사항:
+
+`pip install PyPDF2`
+
+사용법:
+
+```
+python pdf_merge.py [directory] bookname`
+```
+
+`directory` 인자로 지정한 이름(기본값: `merged`)의 서브디렉터리가 만들어지고 그곳에 병합된 PDF 파일이 만들어집니다.
+
+예:
+
+```
+python d:\GitHub\sk8erchoi\ko-prfrdr\pdf_merge.py "Mastering PyTorch_최종인쇄용_0125"
+```
 
 ## pdf2docx.py
 
