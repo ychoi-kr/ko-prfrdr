@@ -144,22 +144,36 @@ ROC 곡선은 이상적인 모델에서는 이처럼 원점에서 수직으로 �
 
 ## mvfig.py
 
-`fig_list.tsv`의 각 행에 대하여, 첫 번째 열의 이름을 두 번째 열의 이름으로 바꿉니다. 확장자는 첫 번째 열의 것을 따릅니다.
+그림 파일들의 파일명을 일괄 변경합니다.
+
+변경 전 파일명과 변경 후 파일명을 나열하는 Tab-Separated Values 파일인 `fig_list.tsv`를 작성해야 합니다.
 
 예:
 
 ```
-$ ls *.png
-image1.png
-
 $ cat fig_list.tsv
-image1.png	그림 1.1 개인, 기관, 외국인 주식투자 수익률 비교
+image1	그림 1.1 개인, 기관, 외국인 주식투자 수익률 비교
+image2	그림 1.2 개인투자자 1인당 보유 종목 수
+```
+
+`fig_list.tsv`의 각 행에 대하여, 첫 번째 열의 이름을 두 번째 열의 이름으로 바꿉니다. 확장자는 기존 파일의 것이 유지됩니다.
+
+실행 예:
+
+```
+$ ls 
+fig_list.tsv    image1.png    image2.jpg    mvfig.py
 
 $ python mvfig.py
 
-$ ls *.png
-'그림 1.1 개인, 기관, 외국인 주식투자 수익률 비교.png'
+$ ls
+fig_list.tsv    '그림 1.1 개인, 기관, 외국인 주식투자 수익률 비교.png'    '그림 1.2 개인투자자 1인당 보유 종목 수.jpg'    mvfig.py
 ```
+
+팁:
+
+- [Word(.docx) 파일에 삽입된 그림을 일괄 추출하는 방법](https://wikidocs.net/160542)
+
 
 ## openall.py
 
