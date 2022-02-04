@@ -5,6 +5,9 @@
 
 - 파이썬 3 설치
 
+팁:
+
+- [윈도우 CMD에서 파이썬 활용 팁](https://wikidocs.net/124333)
 
 ## chk_manuscript.py
 
@@ -97,6 +100,18 @@ rule224_생략해야 하는 표현 ==> count: 17
 - 워드 파일을 편집 중일 때 다른 프로그램에서 동시에 열 수 없지만, 다른 컴퓨터에서 OneDrive로 동기화된 파일을 열 수는 있습니다. 따라서 컴퓨터가 두 대 있다면 한 대로는 `python3 chk_manuscript.py | more`로 확인하면서 다른 컴퓨터로 워드 파일을 편집하는 식으로 작업할 수 있습니다.
 - `chk_manuscript.py`로 모든 검사를 한 번에 해도 되지만, `spellchk.py`로 맞춤법을 검사해서 수정한 후 `stylechk.py`로 문체를 검사하면 더 좋습니다.
 
+## fakemt.py
+
+[OmegaT FakeMT Plugin](https://github.com/briacp/omegat-plugin-fake-mt) 서버입니다.
+요청 받은 텍스트를 구글 번역으로 보낸 후 결과를 받아서 해라체로 바꿔 응답합니다.
+[OmegaT가 설치](https://wikidocs.net/67103)되어 있어야 하고 [OmegaT FakeMT 플러그인도 설치 및 설정](https://wikidocs.net/157584)해야 합니다.
+
+실행:
+
+```
+python3 mt.py
+```
+
 ## hae.py
 
 텍스트를 입력받아서 해체로 바꿔줍니다.
@@ -125,18 +140,6 @@ ROC 곡선은 이상적인 모델에서는 이처럼 원점에서 수직으로 �
 ## hasipsio.py
 
 텍스트를 입력받아서 하십시오체로 바꿔줍니다.
-
-## mt.py
-
-[OmegaT FakeMT Plugin](https://github.com/briacp/omegat-plugin-fake-mt) 서버입니다.
-요청 받은 텍스트를 구글 번역으로 보낸 후 결과를 받아서 해라체로 바꿔 응답합니다.
-[OmegaT가 설치](https://wikidocs.net/67103)되어 있어야 하고 [OmegaT FakeMT 플러그인도 설치 및 설정](https://wikidocs.net/157584)해야 합니다.
-
-실행:
-
-```
-python3 mt.py
-```
 
 ## openall.py
 
