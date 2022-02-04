@@ -144,20 +144,20 @@ ROC 곡선은 이상적인 모델에서는 이처럼 원점에서 수직으로 �
 
 ## mvfig.py
 
-`fig_list.csv`의 각 행에 대하여, 첫 번째 열의 이름을 두 번째 열의 이름으로 바꿉니다. 확장자는 첫 번째 열의 것을 따릅니다.
+`fig_list.tsv`의 각 행에 대하여, 첫 번째 열의 이름을 두 번째 열의 이름으로 바꿉니다. 확장자는 첫 번째 열의 것을 따릅니다.
 
 예:
 
 ```
-$ ls
+$ ls *.png
 image1.png
 
-$ head fig_list.csv
+$ cat fig_list.tsv
 image1.png	그림 1.1 개인, 기관, 외국인 주식투자 수익률 비교
 
 $ python mvfig.py
 
-$ ls
+$ ls *.png
 '그림 1.1 개인, 기관, 외국인 주식투자 수익률 비교.png'
 ```
 
