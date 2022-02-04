@@ -109,7 +109,7 @@ rule224_생략해야 하는 표현 ==> count: 17
 실행:
 
 ```
-python3 mt.py
+python3 fakemt.py
 ```
 
 ## hae.py
