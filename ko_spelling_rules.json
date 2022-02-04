@@ -28,7 +28,7 @@
     "name": "0092100a_-률",
     "desc": "https://wikidocs.net/92100#a",
     "cases": [
-      ["(\\w*[감강검격경곡공광극금급능늠달담당덕돌동득등락량립망명맹목발방법병불상석섬성속송숙생습승식심실악약양엄역용웅육율익임일입작장적전절정족종쟁증직착참창청축출충책칠칭통폭필학함합항형행확획흡])율", "()률"]
+      ["(\\w*[감강검격경곡공광극금급능늠달담당덕돌동득등락량립망명맹목발방법병불상석섬성속송숙생습승식심실악약양엄역용웅육율익임일입작장적절정족종쟁증직착참창청축출충책칠칭통폭필학함합항형행확획흡])율", "()률"]
     ],
     "exception": [
     ]
@@ -127,6 +127,16 @@
   },
   {
     "kind": "맞춤법",
+    "name": "news8954_개수",
+    "desc": "https://news.korean.go.kr/index.jsp?control=page&part=view&idx=8954",
+    "cases": [
+      ["갯수", "개수"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "맞춤법",
     "name": "0156008b_안 되다",
     "desc": "https://wikidocs.net/156008#b",
     "cases": [
@@ -176,12 +186,17 @@
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=77433",
     "cases": [
       ["(?P<without_final_consonant>[^ ]*?[가-히])([(][^(]+?[)])은", "()()는"],
+      ["(\\w*)(price)은", "()()는"],
       ["(?P<with_final_consonant>[^ ]*?[각-힣])([(][^(]+?[)])는", "()()은"],
       ["(?P<without_final_consonant>[^ ]*?[가-히])([(][^(]+?[)])이 ", "()()가 "],
+      ["(\\w*)(price)이 ", "()()가 "],
       ["(?P<with_final_consonant>[^ ]*?[각-힣])([(][^(]+?[)])가", "()()이"],
       ["(?P<without_final_consonant>[^ ]*?[가-히])([(][^(]+?[)])을", "()()를"],
+      ["(\\w*)(price)을", "()()를"],
+      ["(?P<with_final_consonant>[^ ]*?[각-힣])를", "()을"],
       ["(?P<with_final_consonant>[^ ]*?[각-힣])([(][^(]+?[)])를", "()()을"],
       ["(?P<without_final_consonant>[^ ]*?[가-히])([(][^(]+?[)])과", "()()와"],
+      ["(\\w*)(price)과", "()()와"],
       ["(?P<with_final_consonant>[^ ]*?[각-힣])([(][^(]+?[)])와", "()()과"]
     ],
     "exception": [
@@ -306,6 +321,16 @@
     "desc": "https://wikidocs.net/84944",
     "cases": [
       ["(\\w+의) 동작[ ]?(원리\\w*)", "() 작동 ()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "맞춤법",
+    "name": "qa116117_불리우다 → 불리다",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=116117",
+    "cases": [
+      ["(\\w+고) 불리우는", "() 불리는"]
     ],
     "exception": [
     ]

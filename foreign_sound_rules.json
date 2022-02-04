@@ -1048,5 +1048,15 @@
     ],
     "exception": [
     ]
+  },
+  {
+    "kind": "외래어",
+    "name": "qa002014_포맷",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?&mn_id=84&qna_seq=2014",
+    "cases": [
+      ["포멧", "포맷"]
+    ],
+    "exception": [
+    ]
   }
 ]
