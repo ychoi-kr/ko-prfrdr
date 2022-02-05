@@ -257,16 +257,17 @@ KW_NPv = concat(KW_NPEv, KW_NPNv, KW_NPJv, KW_NPRv, KW_NPAv)
 KW_NP = concat(KW_NPf, KW_NPv)
 
 # NNC: Nouns - Number - derived from Chinese
-KW_NNCf = "일|삼|육|칠|팔"
-KW_NNCv = "이|사|오|구"
-KW_NNC = concat(KW_NNCf, KW_NNCv)
+#KW_NNCf = "일|삼|육|칠|팔"
+#KW_NNCv = "이|사|오|구"
+#KW_NNC = concat(KW_NNCf, KW_NNCv)
+KW_NNC = "[일이삼사오육칠팔구십백천만]*[일이삼사오육칠팔구십백천만억조경]"
 
 ## NND: Nouns - Number - positional value in Decimal system
-KW_NNDf = "[십백천만억경]"
+KW_NNDf = "십|백|천|만|억|경"
 KW_NNDv = "조"
 KW_NND = concat(KW_NNDf, KW_NNDv)
 
-## NNM: Nouns - Number - Arabic
+## NNA: Nouns - Number - Arabic
 KW_NNA = "[1-9]?[0-9,]*"
 
 ## NNM: Nouns - Number - Mixed
@@ -275,26 +276,33 @@ KW_NNMv = KW_NNA + KW_NNDv
 KW_NNM = concat(KW_NNMf, KW_NNMv)
 
 # NNK: nouns - Number - pure Korean
-KW_NNKf = '|'.join(
-    [
-        x + y
-        for x in [''] + "열|스물|서른|마흔|쉰|예순|일흔|여든|아흔".split('|')
-        for y in [''] + "한|둘|석|셋|넉|넷|다섯|댓|여섯|일곱|여덟|아홉".split('|')
-    ]
-).strip('|')
+#KW_NNKf = '|'.join(
+#    [
+#        x + y
+#        for x in [''] + "열|스물|서른|마흔|쉰|예순|일흔|여든|아흔".split('|')
+#        for y in [''] + "한|둘|석|셋|넉|넷|다섯|댓|여섯|일곱|여덟|아홉".split('|')
+#    ]
+#).strip('|')
+#
+#KW_NNKv = '|'.join(
+#    ["스무"] +
+#    [
+#        x + y
+#        for x in [''] + "열|스물|서른|마흔|쉰|예순|일흔|여든|아흔".split('|')
+#        for y in "하나|두|세|네".split('|')
+#    ]
+#).strip('|')
+#
+#KW_NNK = concat(KW_NNKf, KW_NNKv)
 
-KW_NNKv = '|'.join(
-    ["스무"] +
-    [
-        x + y
-        for x in [''] + "열|스물|서른|마흔|쉰|예순|일흔|여든|아흔".split('|')
-        for y in "하나|두|세|네".split('|')
-    ]
-).strip('|')
-
-KW_NNK = concat(KW_NNKf, KW_NNKv)
+KW_NNK = "[열스서마쉰예일여아백]?[한두세네섯댓곱덟홉]"
 
 KW_NN = concat(KW_NNC, KW_NND, KW_NNK)   
+
+# NUC: Nouns - Units - Currency
+KW_NUCf = "루블|엔|원|위안"
+KW_NUCv = "달러|리라|유로|페소"
+KW_NUC = concat(KW_NUCf, KW_NUCv)
 
 # NUD: Nouns - Units - Distance
 KW_NUDf = "광년"
