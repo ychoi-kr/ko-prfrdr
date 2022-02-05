@@ -7,6 +7,7 @@ import json
 import argparse
 from pathlib import Path
 from collections import Counter
+import zipfile
 
 from kosound import hasfinalconsonant
 import kostr
@@ -116,7 +117,12 @@ def read_manuscript(infile):
     ext = Path(infile).suffix
     if ext == ".docx":
         print(f'Loading docx file: {infile}...')
-        text = docx2txt.process(infile)
+        try:
+            text = docx2txt.process(infile)
+        except zipfile.BadZipFile:
+            print('Failed to load file! Please try agian after sync completed')
+            sys.exit(1)
+
     elif ext in ['.txt', '.md']:
         try:
             print(f'Loading text file: {infile}...')
@@ -150,7 +156,7 @@ def check(rules, line):
                 #_debug('mode', mode)
                 continue
 
-            elif bad.startswith('ignored:'):
+            elif re.match('^(ignored|dup)[:]', bad):
                 continue
                  
             elif any(map(lambda x: x in '[]\+?|', bad)):
