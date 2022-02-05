@@ -100,6 +100,17 @@ rule224_생략해야 하는 표현 ==> count: 17
 - 워드 파일을 편집 중일 때 다른 프로그램에서 동시에 열 수 없지만, 다른 컴퓨터에서 OneDrive로 동기화된 파일을 열 수는 있습니다. 따라서 컴퓨터가 두 대 있다면 한 대로는 `python3 chk_manuscript.py | more`로 확인하면서 다른 컴퓨터로 워드 파일을 편집하는 식으로 작업할 수 있습니다.
 - `chk_manuscript.py`로 모든 검사를 한 번에 해도 되지만, `spellchk.py`로 맞춤법을 검사해서 수정한 후 `stylechk.py`로 문체를 검사하면 더 좋습니다.
 
+
+## doc2docx.py
+
+현재 작업 디렉터리에 있는 모든 doc 파일에 대하여 docx 포맷의 사본을 만듭니다.
+
+사용법:
+
+```
+python doc2docx.py
+```
+
 ## fakemt.py
 
 [OmegaT FakeMT Plugin](https://github.com/briacp/omegat-plugin-fake-mt) 서버입니다.
