@@ -904,6 +904,16 @@
   },
   {
     "kind": "띄어쓰기",
+    "name": "0160575a_끼",
+    "desc": "https://wikidocs.net/160575#a",
+    "cases": [
+      ["\\b(한|두|네|다섯|여섯)(끼\\w*)", "() ()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "띄어쓰기",
     "name": "0067215a_데",
     "desc": "https://wikidocs.net/67215#a",
     "cases": [
