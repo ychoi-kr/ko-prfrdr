@@ -34,7 +34,7 @@ except:
     pass
 
 def _debug(k, v=None):
-    if _dbg_:
+    if '_dbg_' in globals() and _dbg_ == True :
         print(f"#DEBUG# {k}", end='')
         if v:
             print(f": {v}")
@@ -55,8 +55,7 @@ def main(infile, rulefile, debug=False):
     try:
         text = read_manuscript(filetoread)
     except PermissionError:
-        print(f"Failed!!! Please close {filetoread} and retry...", file=sys.stderr)
-        sys.exit()
+        sys.exit(f"Failed!!! Please close {filetoread} and retry...")
     
     global warnings_counter
     warnings_counter = Counter()
@@ -64,7 +63,8 @@ def main(infile, rulefile, debug=False):
     try:
         for paragraph in text.splitlines(True):
             for line in re.split(r'(?<=[.?]) ', paragraph):
-                check(_rules, line)
+                corrections = check(_rules, line)
+                display_corrections(line, corrections)
         display_summary()
     except BrokenPipeError:  # when user hits 'q' during using pipe
         pass  
@@ -123,7 +123,7 @@ def read_manuscript(infile):
             print('Failed to load file! Please try agian after sync completed')
             sys.exit(1)
 
-    elif ext in ['.txt', '.md']:
+    elif ext in ['.txt', '.md', '.yaml']:
         try:
             print(f'Loading text file: {infile}...')
             text = open(infile).read()
@@ -136,11 +136,12 @@ def read_manuscript(infile):
 
 
 def check(rules, line):
+
     # avoid false positive on rule108
     if not korean(line):
         return None
-    
-    lineprinted = False
+
+    result = []
 
     #_debug('line', line)
     #_debug('komoran.pos(line)', komoran.pos(line))
@@ -185,7 +186,7 @@ def check(rules, line):
                     
                     bad = bad_root = m.group()
                     for i, g in enumerate(m.groups(), start=1):
-                        if _dbg_:
+                        if '_dbg_' in globals() and _dbg_:
                             good = good.replace('()', f'{i}:()', 1)
                         good = good.replace('()', g, 1)
                         good = good.replace(f'({i})', g)
@@ -257,7 +258,7 @@ def check(rules, line):
                                 _good = _good.replace(a, b, 1)
                                 
                                 #_debug('morphs_line', morphs_line) 
-                                if _bad_root in line or bad_root in morphs_line:
+                                if _bad_root in line or _bad_root in morphs_line:
                                     _debug('morphs_line', morphs_line)
                                     bad_root = _bad_root
                                     _debug('_bad_root', _bad_root)
@@ -298,15 +299,27 @@ def check(rules, line):
                         skip = True
                     
                 if not skip:
-                    cl = carret_loc(line, loc)
+                    if 'warnings_counter' in globals():
+                        warnings_counter[name] += 1
 
-                    if not lineprinted:
-                        print('* ' + line)
-                        lineprinted = True
+                    result.append((loc, kind, name, bad, good, desc))
 
-                    print('  ' + ' ' * cl + '^')
-                    message(kind, name, bad, good, desc)
-                    warnings_counter[name] += 1
+    return result
+
+
+def display_corrections(line, corrections):
+    if line.strip() in ['true cases:', 'false cases:']:
+        print(line.strip())
+    elif corrections:
+        bullet = ''  # '*'
+        space = ''  # ' '
+        offset = len(bullet) + len(space)
+        print(bullet + space + line)
+        for cor in corrections:
+            loc, kind, name, bad, good, desc = cor
+            cl = carret_loc(line, loc)
+            print(' ' * offset + ' ' * cl + '^')
+            message(kind, name, bad, good, desc)
 
 
 def carret_loc(s, loc):

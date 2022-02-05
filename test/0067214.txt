@@ -1,7 +1,0 @@
-Bad cases:
-에포크 별 손실
-카테고리 별 쇼핑하기
-
-Good cases:
-FP: OS별
-FP: YOLOv2와 YOLOv3을 별도로 테스트해보면

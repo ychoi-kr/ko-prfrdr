@@ -1,4 +1,0 @@
-Error Case:
-
-Good cases:
-FP1: 페이지 템플릿을 제공하는 구실만 한다는

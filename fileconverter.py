@@ -1,4 +1,5 @@
 import os
+import sys
 import platform
 from pathlib import Path
 
@@ -67,7 +68,7 @@ def convert(filename):
             sys.exit('Failed!!! HWP support is not enabled.')
         if hwptotext(filename):
             result = Path(filename).stem + '.txt'
-    elif ext in ['.docx', '.txt', '']:
+    elif ext in ['.docx', '.txt', '.yaml', '']:
         result = filename
     else:
         sys.exit(f'Failed!!! {ext} is not supported')
