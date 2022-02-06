@@ -4,3 +4,4 @@ true cases:
   - Staging Area라는 용어를 써도 상관 없다.
   - 다시 말해서 접속하는 데 사용한 SSH 계정과 커밋에 저장되는 사용자는 아무 상관없다.
 
+false cases:
