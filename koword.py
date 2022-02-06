@@ -233,6 +233,9 @@ KW_JU = "만"
 # particle (Josa) - adVerb
 KW_JV = "고|라고|보다|에게|에로|에서|와|으로서|으로써"
 
+# Josa
+KW_J = concat(KW_JA, KW_JF, KW_JG, KW_JK, KW_JL, KW_JM, KW_JO, KW_JS, KW_JT, KW_JU, KW_JV)
+
 
 ### activity nouns (can be verb with '-하다/-되다' or used in form of '~을/를 하다')
 
