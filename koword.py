@@ -4,6 +4,10 @@ import kostr
 def concat(*s):
     return "|".join(s).strip('|')
 
+# English Words - Nouns
+EW_Nf = "(\\w*)(ice|ocks|old|uy)"  # f: has final consonant in Korean
+EW_Nv = "(\\w*)(all|ell)"  # v: ends with vowel (does not have final consonant) in Korean
+
 # R: root(어근)
 KW_Sh = '깔끔|매끈|복잡|비슷|착|지저분'   # -하다, -해서, -한, -하다
 KW_Sg = '야물' # -거리다, -거려서, -거리는, -거린다
@@ -27,7 +31,10 @@ KW_Ap = '희'                            # 희+어지다,      희+다,      희
 KW_Ar = '이로|평화로'                   # 이로+와지다,    이로+ㅂ+다, 이로+와서,    이로+ㅂ+게, 이로+ㅂ+지, 이로+운
 KW_As = '나'                            # 나+아지다,      나+ㅅ+다,   나+아서,      나+ㅅ+게,   나+ㅅ+지,   나+은 
 KW_Aw = '고'                            # 고+와지다,      고+ㅂ+다,   고+와서,      고+ㅂ+게,   고+ㅂ+지,   고+은
-KW_Ax = 'ㅆ|ㅋ'                         # ㅆ+ㅓ+지다,     ㅆ+ㅡ+다,   ㅆ+ㅓ+서,     ㅆ+ㅡ+게,   ㅆ+ㅡ+지,   ㅆ+ㅡ+ㄴ
+
+# '쓰다(bitter)' is not included because it is ambiguous with '쓰다(write)'
+KW_Ax = 'ㅋ'                            # ㅋ+ㅓ+지다,     ㅋ+ㅡ+다,   ㅋ+ㅓ+서,     ㅋ+ㅡ+게,   ㅋ+ㅡ+지,   ㅋ+ㅡ+ㄴ
+
 KW_Ay = '못ㄷ'                          # 못ㄷ+ㅙ+지다,   못ㄷ+ㅚ+다, 못ㄷ+ㅙ+서,   못ㄷ+ㅚ+게, 못ㄷ+ㅚ+지, 못ㄷ+ㅚㄴ
 
 # Adjective - Status
@@ -48,7 +55,7 @@ KW_AS = '|'.join(sorted(
         + [kostr.concat(w, '와') for w in KW_Ar.split('|')]  # 이로+와(지다)      
         + [kostr.concat(w, '아') for w in KW_As.split('|')]  # 나+아(지다)      
         + [kostr.concat(w, '와') for w in KW_Aw.split('|')]  # 고+와(지다)      
-        + [kostr.concat(w, 'ㅓ') for w in KW_Ax.split('|')]  # ㅆ+ㅓ+(지다)     
+        + [kostr.concat(w, 'ㅓ') for w in KW_Ax.split('|')]  # ㅋ+ㅓ+(지다)     
         + [kostr.concat(w, 'ㅙ') for w in KW_Ay.split('|')]  # 못ㄷ+ㅙ+(지다)   
         ))
 
@@ -73,7 +80,7 @@ KW_ASN = '|'.join(
         + [kostr.concat(w, '운') for w in KW_Aw.split('|')]
         + [kostr.concat(w, '은') for w in KW_As.split('|')]
         + [kostr.concat(w, '은') for w in KW_Aw.split('|')]
-        + [kostr.concat(w, 'ㅡ', 'ㄴ') for w in KW_Ax.split('|')]
+        + [kostr.concat(w, 'ㅡ', 'ㄴ') for w in KW_Ax.split('|')]  # ㅋ+ㅡ+ㄴ
         + [kostr.concat(w, 'ㅚ', 'ㄴ') for w in KW_Ay.split('|')]
     )
 )
@@ -96,7 +103,7 @@ KW_AVC = '|'.join(sorted(
         + [kostr.concat(w, '와서') for w in KW_Ar.split('|')]
         + [kostr.concat(w, '아서') for w in KW_As.split('|')]
         + [kostr.concat(w, '와서') for w in KW_Aw.split('|')]
-        + [kostr.concat(w, 'ㅓ', '서') for w in KW_Ax.split('|')]
+        + [kostr.concat(w, 'ㅓ', '서') for w in KW_Ax.split('|')]  # ㅋ+ㅓ+서
         + [kostr.concat(w, 'ㅙ', '서') for w in KW_Ay.split('|')]
         ))
 
@@ -120,7 +127,7 @@ KW_AVM = '|'.join(
         + [kostr.concat(w, 'ㅂ', '게') for w in KW_Ar.split('|')]
         + [kostr.concat(w, 'ㅅ', '게') for w in KW_As.split('|')]
         + [kostr.concat(w, 'ㅂ', '게') for w in KW_Aw.split('|')]
-        + [kostr.concat(w, 'ㅡ', '게') for w in KW_Ax.split('|')]
+        + [kostr.concat(w, 'ㅡ', '게') for w in KW_Ax.split('|')]  # ㅋ+ㅡ+게
         + [kostr.concat(w, 'ㅚ', '게') for w in KW_Ay.split('|')]
     )
 )
@@ -144,7 +151,7 @@ KW_AVN = '|'.join(
         + [kostr.concat(w, 'ㅂ', '지') for w in KW_Ar.split('|')]
         + [kostr.concat(w, 'ㅅ', '지') for w in KW_As.split('|')]
         + [kostr.concat(w, 'ㅂ', '지') for w in KW_Aw.split('|')]
-        + [kostr.concat(w, 'ㅡ', '지') for w in KW_Ax.split('|')]
+        + [kostr.concat(w, 'ㅡ', '지') for w in KW_Ax.split('|')]  # ㅋ+ㅡ+지
         + [kostr.concat(w, 'ㅚ', '지') for w in KW_Ay.split('|')]
     )
 )
@@ -240,8 +247,8 @@ KW_J = concat(KW_JA, KW_JF, KW_JG, KW_JK, KW_JL, KW_JM, KW_JO, KW_JS, KW_JT, KW_
 ### activity nouns (can be verb with '-하다/-되다' or used in form of '~을/를 하다')
 
 # NAO: Nouns - Activity (Original Korean)
-KW_NAOf = "생각|[가증]감|가공|곱|[건입]국|[연체]결|[총포]괄|가늠|[담배]당|가동|[노입출]력|[수제훈]련|[기수]록|[발변설연작제조증]명|함몰|고민|[개선]발|체벌|[손향]상|[개배연증해]설|[구생작완형]성|[연학]습|[예해]약|오염|[반운투]영|[사이적통포활]용|[교훈]육|[지]원|[도수]입|[수]?출입|시작|긴장|발전|[결설수측한]정|선언|선정|[도장부탈]착|제창|[수연인창]출|예측|[간선채]택|[동수실연]행|[면입]학|포함|[결취]합|[구실재표]현"  # f: has final consonant
-KW_NAOv = "[인추참평]가|[제탈]거|[공소]개|[연촉]구|[상연제]기|이야기|시도|[고]려|치료|[관수처]리|연마|[공기]부|[반발조]사|[감축]소|[감준회]수|[기참]여|[긴소중필]요|[논합]의|폐지|대체|[성]취|[납배설]치|\\w+화|이해"  # v: ends with vowel (does not have final consonant)
+KW_NAOf = "생각|[가증]감|가공|곱|[건입]국|[연체]결|[총포]괄|가늠|[담배]당|가동|[노입출]력|[수제훈]련|[기수]록|[발변설연작제조증]명|함몰|고민|[개선]발|체벌|[손향]상|[개배연증해]설|[구생작완형]성|[연학]습|[예해]약|오염|[반운투]영|[사이적통포활]용|[교훈]육|[지]원|[도수]입|[수]?출입|시작|긴장|발전|[결설수측한]정|선언|선정|[도장부탈]착|제창|[수연인창]출|예측|[간선채]택|[동수실연]행|[면입]학|포함|[결취]합|[구실재표]현"
+KW_NAOv = "[인추참평]가|[제탈]거|[공소]개|[연촉]구|[상연제]기|이야기|시도|[고]려|치료|[관수처]리|연마|[공기]부|[반발조]사|[감축]소|[감준회]수|[기참]여|[긴소중필]요|[논합]의|폐지|대체|[성]취|[납배설]치|\\w+화|이해"
 KW_NAO = concat(KW_NAOf, KW_NAOv)
 
 # NAF: Nouns - Activity - derived from Foreign language
