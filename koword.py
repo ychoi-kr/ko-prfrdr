@@ -12,9 +12,11 @@ def conjugate(roots, *postfix):
         result.append(concat(*args))
     return result
 
-
 ##############
 # Korean Words
+
+## Nouns - Status
+KW_NS = "근면|성실|부실|부족|부패|수요|중대|중요|필요"
 
 ## Adjective - Status
 KW_AS = '|'.join(sorted(
@@ -36,11 +38,45 @@ KW_AS = '|'.join(sorted(
         + conjugate(KR_Aw, '와')        # 고+와(지다), ...
         + conjugate(KR_Ax, 'ㅓ')        # ㅋ+ㅓ+(지다), ...
         + conjugate(KR_Ay, 'ㅙ')        # 못ㄷ+ㅙ+(지다), ...
+        + conjugate(KR_S, '해')         # 긴요+한
+        + conjugate(KW_NS, '해')        # 필요+한
         ))
 
 
-## Adjective - Status - modifies Noun (형용사의 관형사형)
-KW_ASN = '|'.join(
+
+
+### Pre-nouns(관형사)
+#### VT - No-tense
+KW_PVTN = '|'.join(
+    sorted(
+        conjugate(KR_VTg, '던')
+        + conjugate(KR_VTh, '던')
+        + conjugate(KR_VTi, '던')
+        + conjugate(KR_VTl, 'ㄹ', '던')
+        + conjugate(KR_VTm, 'ㄹ', '던')
+        + conjugate(KR_VTn, 'ㄹ', '던')
+        + conjugate(KR_VTy, 'ㅜ', '던')
+    )
+)
+
+#### VT - Past
+KW_PVTP = '|'.join(
+    sorted(
+        conjugate(KR_VTg, '았던')
+        + conjugate(KR_VTh, '었던')
+        + conjugate(KR_VTi, '았던')
+        + conjugate(KR_VTl, 'ㄹ', '았던')
+        + conjugate(KR_VTm, 'ㄹ', '었던')
+        + conjugate(KR_VTn, 'ㄹ', '았던')
+        + conjugate(KR_VTy, 'ㅜ', '었던')
+        + conjugate(KR_VTy, 'ㅝ', 'ㅆ', '던')
+    )
+)
+
+KW_PVT = joinseq(KW_PVTN, KW_PVTP)
+
+#### Adjective - No tense
+KW_PAN = '|'.join(
     sorted(
         conjugate(KR_Aa, 'ㅡ', 'ㄴ')    # 나ㅃ+ㅡ+ㄴ
         + conjugate(KR_Ab, '운')
@@ -61,11 +97,44 @@ KW_ASN = '|'.join(
         + conjugate(KR_Aw, '운')
         + conjugate(KR_Ax, 'ㅡ', 'ㄴ')
         + conjugate(KR_Ay, 'ㅚ', 'ㄴ') 
+        + conjugate(KR_S, '한')
+        + conjugate(KW_NS, '한')
     )
 )
 
-## AdVerb - Cause (이유를 나타내는 부사)
-KW_AVC = '|'.join(sorted(
+#### Adjective - Past
+KW_PAP = '|'.join(
+    sorted(
+        conjugate(KR_Aa, 'ㅏ', 'ㅆ', '던')
+        + conjugate(KR_Ab, '웠던')
+        + conjugate(KR_Ac, '았던')
+        + conjugate(KR_Ad, 'ㄹ', '았던')
+        + conjugate(KR_Ae, 'ㅓ', 'ㅆ', '던')
+        + conjugate(KR_Af, 'ㄹ', '랐던')
+        + conjugate(KR_Ah, '했던')
+        + conjugate(KR_Ai, '었던')
+        + conjugate(KR_Aj, '았던')
+        + conjugate(KR_Al, 'ㄹ', '렀던')
+        + conjugate(KR_Am, '었던')
+        + conjugate(KR_An, 'ㄹ', '었던')
+        + conjugate(KR_Ao, '었던')
+        + conjugate(KR_Ap, '었던')
+        + conjugate(KR_Ar, '웠던')
+        + conjugate(KR_As, '았던') 
+        + conjugate(KR_Aw, '왔던')
+        + conjugate(KR_Ax, 'ㅓ', 'ㅆ', '던')
+        + conjugate(KR_Ay, 'ㅚ', '었던') 
+        + conjugate(KR_Ay, 'ㅙ', 'ㅆ', '던') 
+        + conjugate(KR_S, '했던')
+        + conjugate(KW_NS, '했던')
+    )
+)
+
+KW_PA = joinseq(KW_PAN, KW_PAP)
+
+## Busa(adverB)
+### Cause(이유)
+KW_BC = '|'.join(sorted(
         ['일부러']
         + conjugate(KR_Aa, 'ㅏ', '서')
         + conjugate(KR_Ab, '워서')
@@ -87,8 +156,8 @@ KW_AVC = '|'.join(sorted(
         + conjugate(KR_Ay, 'ㅙ', '서')
         ))
 
-## Adverb - Manner (태도, 방법을 나타내는 부사)
-KW_AVM = '|'.join(
+### Manner(태도, 방법)
+KW_BM = '|'.join(
     sorted(
         ['함부로']
         + conjugate(KR_Aa, 'ㅡ', '게')
@@ -112,8 +181,8 @@ KW_AVM = '|'.join(
     )
 )
 
-## Adverb - Negative 
-KW_AVN = '|'.join(
+### Negative 
+KW_BN = '|'.join(
     sorted(
         conjugate(KR_Ah, '하지')
         + conjugate(KR_Aa, 'ㅡ', '지')
@@ -135,7 +204,7 @@ KW_AVN = '|'.join(
         + conjugate(KR_Ay, 'ㅚ', '지')
     )
 )
-KW_AV = joinseq(KW_AVC, KW_AVM, KW_AVN)
+KW_B = joinseq(KW_BC, KW_BM, KW_BN)
 
 ## Forein Words
 

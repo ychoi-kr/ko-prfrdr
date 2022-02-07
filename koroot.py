@@ -31,21 +31,39 @@ KR_Ay = '못ㄷ'                          # 못ㄷ+ㅙ+지다,   못ㄷ+ㅚ+다,
 
 ## roots of verb
 
-### Transive
-KR_VTc = "[내망외]"  # ~치다(chida)
-KR_VTd = "걸|갈|나누|내밀|넣|들|말|밀|박|빨|받들|빼|재|쳐들|쪼|찍|허물"  # ~다(da)
-KR_VTg = "[당숨]"  # ~기다(gida)
-KR_VTh = "가까이"  # ~하다(hada)
-KR_VTi = "[드]높|보|되뇌|죽" # ~이다(ida)
-KR_VTl = "[되][돌살]|[쳐]올|[내때]"  # ~리다(lida)
-KR_VTp = "[보]살"  # ~피다(pida)
-KR_VTx = "[낮늦]"  # ~추다(chuda)
-KR_VTw = "[치채]"  # ~우다(wuda)
-KR_VT = joinseq(KR_VTc, KR_VTd, KR_VTg, KR_VTh, KR_VTi, KR_VTl, KR_VTp, KR_VTx, KR_VTw)
+### Both(intransives can conjugate to transive)
+#                                   # intransive                    transive
+#                                   # no-tense  past      present   no-tense     past         intension
+KR_VCg = "숨"                       # 숨+다     숨+었+다  숨+는+다  숨+ㄱ+ㅣ+다  숨+ㄱ+였+다  숨+ㄱ+ㅣ+ㄹ
+KR_VCi = "먹|죽"                    # 먹+다     먹+었+다  먹+는+다  먹+이+다     먹+여+ㅆ+다  먹+일
+KR_VCl = "살"                       # 살+다     살+았+다  산+다     살+리+다     살+렸+다     살+릴
 
 ### Intransive
-KR_VIe = "숨|야물|여물|죽"  # ~다, 었다, ~어서
-KR_VIy = "숨죽ㅇ|생ㄱ|쓰러ㅈ|해ㅈ"  # ~ㅣ다, ㅕㅆ다, ~ㅕ서
-KR_VIa = "살|졸"  # ~다, ~았다
-KR_VIs = "잘나"  # ~다, ~ㅆ다
-KR_VPh = "먹|붙잡|잡"  # ends with '~히다(hida)'
+#                                   # no-tense    past           present
+KR_VIa = "가"                       # 가+다       가+ㅆ+다       가+ㄴ+다
+KR_VIe = "야물|여물"                # 여무+ㄹ+다  여무+ㄹ+었+다  여무+ㄴ+다
+KR_VIy = "숨죽ㅇ|생ㄱ|쓰러ㅈ|해ㅈ"  # 생ㄱ+ㅣ+다  생ㄱ+ㅕ+ㅆ+다  생ㄱ+ㅣ+ㄴ+다
+KR_VIl = "조"                       # 조+ㄹ+다    조+ㄹ+았+다    조+ㄴ+다
+KR_VIs = "잘나"                     # 잘나+다     잘나+ㅆ+다
+
+### Transive
+#                                   # active                            passive
+#                                   # no-tense   present    past        no-tense      present          past            
+KR_VTg = "박|붙잡|잡"               # +다        +는+다     +았+다      +히+다        +힌+다           +혔+다        
+KR_VTh = "먹|읽"                    # +다        +는+다     +었+다      +ㅎ+ㅣ+다     +ㅎ+ㅣ+ㄴ+다     +ㅎ+ㅕ+ㅆ+다
+KR_VTi = "보"                       # +다        +ㄴ+다     +았+다      +ㅇ+ㅣ+다     +ㅇ+ㅣ+ㄴ+다     +ㅇ+ㅕ+ㅆ+다
+KR_VTl = "가" # grind               # +ㄹ+다     +ㄴ+다     +ㄹ+았+다   +ㄹ+ㄹ+ㅣ+다  +ㄹ+ㄹ+ㅣ+ㄴ+다  +ㄹ+ㄹ+ㅕ+ㅆ+다 
+KR_VTm = "거|드|미"                 # +ㄹ+다     +ㄴ+다     +ㄹ+었+다   +ㄹ+ㄹ+ㅣ+다  +ㄹ+ㄹ+ㅣ+ㄴ+다  +ㄹ+ㄹ+ㅕ+ㅆ+다  
+KR_VTn = "빠" # wash                # +ㄹ+다     +ㄴ+다     +ㄹ+았+다   +ㄹ+ㄹ+ㅣ+다  +ㄹ+ㄹ+ㅣ+ㄴ+다  +ㄹ+ㄹ+ㅕ+ㅆ+다  
+KR_VTy = "나ㄴ"                     # +ㅜ+다     +ㅜ+ㄴ+다  +ㅝ+ㅆ+다   +ㅟ+다        +ㅟ+ㄴ+다        +ㅟ+었+다      
+
+### Active
+KR_VAd = "내밀|넣|말|받들|빼|재|쳐들|쪼|찍|허물"  # ~다(da)
+KR_VAh = "가까이"                   # 가까이+하+다  가까이+했+다  가까이+한+다 x
+KR_VAi = "내ㅊ|당ㄱ|[되]?[돌살]ㄹ|망ㅊ|숨ㄱ|외ㅊ|[드]높|되뇌|죽|[보]살ㅍ" # ~ㅣ다(ida)
+KR_VAl = "[되][돌살]|[쳐]올|[내때]"  # ~리다(lida)
+KR_VAu = "ㅊ|낮ㅊ|늦ㅊ"             # +ㅜ+다     +ㅜ+ㄴ+다  +ㅝ+ㅆ+다        
+KR_VAw = "[치채]"  # ~우다(wuda)
+
+### Status
+KR_S = "긴요|섬세|장대|장렬|졸렬|중요|진부|참신"
