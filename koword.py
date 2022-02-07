@@ -16,7 +16,9 @@ def conjugate(roots, *postfix):
 # Korean Words
 
 ## Nouns - Status
-KW_NS = "근면|성실|부실|부족|부패|수요|중대|중요|필요"
+KW_NSf = "가능|근면|깔끔|건강|곤란|동일|둔감|부지런|민감|병약|[불]?성실|부실|부족|[부]?적절"
+KW_NSv = "부패|상이|수요|중대|중요|필요"
+KW_NS = joinseq(KW_NSf, KW_NSv)
 
 ## Adjective - Status
 KW_AS = '|'.join(sorted(
@@ -38,7 +40,6 @@ KW_AS = '|'.join(sorted(
         + conjugate(KR_Aw, '와')        # 고+와(지다), ...
         + conjugate(KR_Ax, 'ㅓ')        # ㅋ+ㅓ+(지다), ...
         + conjugate(KR_Ay, 'ㅙ')        # 못ㄷ+ㅙ+(지다), ...
-        + conjugate(KR_S, '해')         # 긴요+한
         + conjugate(KW_NS, '해')        # 필요+한
         ))
 
@@ -97,7 +98,6 @@ KW_PAN = '|'.join(
         + conjugate(KR_Aw, '운')
         + conjugate(KR_Ax, 'ㅡ', 'ㄴ')
         + conjugate(KR_Ay, 'ㅚ', 'ㄴ') 
-        + conjugate(KR_S, '한')
         + conjugate(KW_NS, '한')
     )
 )
@@ -125,7 +125,6 @@ KW_PAP = '|'.join(
         + conjugate(KR_Ax, 'ㅓ', 'ㅆ', '던')
         + conjugate(KR_Ay, 'ㅚ', '었던') 
         + conjugate(KR_Ay, 'ㅙ', 'ㅆ', '던') 
-        + conjugate(KR_S, '했던')
         + conjugate(KW_NS, '했던')
     )
 )
@@ -226,11 +225,6 @@ KW_NAF = joinseq(KW_NAFf, KW_NAFv)
 KW_NAf = joinseq(KW_NAOf, KW_NAFf)
 KW_NAv = joinseq(KW_NAOv, KW_NAFv)
 KW_NA = joinseq(KW_NAf, KW_NAv)
-
-## Nouns - STatus (can be adjective with '-하다')
-KW_NSf = "가능|깔끔|건강|곤란|동일|둔감|부지런|민감|병약|[불]?성실|[부]?적절"
-KW_NSv = "상이"
-KW_NS = joinseq(KW_NSf, KW_NSv)
 
 ## Nouns (Activity + Status)
 #KW_NASf = joinseq(KW_NAf, KW_NSTf)
