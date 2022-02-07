@@ -12,6 +12,8 @@ import zipfile
 from kosound import hasfinalconsonant
 import kostr
 import koletter
+import koeomi
+import kojosa
 import koword
 import fileconverter as fc
 import fileutil
@@ -165,10 +167,16 @@ def check(rules, line):
                 #_debug('mode', mode)
 
                 for x in dir(koletter): 
-                    if x.startswith('KL_'):
+                    if x.startswith('KL'):
                         bad = bad.replace(x, getattr(koletter, x))
+                for x in dir(koeomi): 
+                    if x.startswith('KE'):
+                        bad = bad.replace(f'({x})', f'({getattr(koeomi, x)})')
+                for x in dir(kojosa): 
+                    if x.startswith('KJ'):
+                        bad = bad.replace(f'({x})', f'({getattr(kojosa, x)})')
                 for x in dir(koword): 
-                    if x.startswith('KW_'):
+                    if x.startswith('KW'):
                         bad = bad.replace(f'({x})', f'({getattr(koword, x)})')
 
                 _debug('bad', bad)
