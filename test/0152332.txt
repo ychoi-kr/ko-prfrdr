@@ -1,5 +1,0 @@
-Bad cases:
-해당 반복문 실행을 건너뛰고 그다음 반복문을 시도 할 것이다.
-
-Good cases:
-FP1: 대상이 한국어 문서이므로 CountVectorizer에 한글 형태소 분석기를 붙여준다.

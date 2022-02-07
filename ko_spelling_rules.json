@@ -185,6 +185,16 @@
   },
   {
     "kind": "맞춤법",
+    "name": "qa036862_떼려야 뗄 수 없는",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=36862",
+    "cases": [
+      ["(뗄래|떼레|뗄레)야(?=[ ]?뗄[ ]?수[ ]?없\\w*)","떼려야"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "맞춤법",
     "name": "0156340c_‘뒤’와 뒷말을 띄어 써야 하는 것",
     "desc": "https://wikidocs.net/156340#c",
     "cases": [
