@@ -1,19 +1,21 @@
-from koroot import *
-from kojosa import *
-from koeomi import *
+import kostem as ks
 from utils import joinseq
 from kostr import concat
 
 
-def conjugate(roots, *postfix):
+"""Korean Words"""
+
+# Conjugation
+KC_D = "[되된돼됐]"
+KC_H = "[하한할해했]"
+
+def conjugate(stems, *postfix):
     result = []
-    for rt in roots.split('|'):
+    for rt in stems.split('|'):
         args = [rt] + list(postfix)
         result.append(concat(*args))
     return result
 
-##############
-# Korean Words
 
 ## Nouns - Status
 KW_NSf = "가능|근면|깔끔|건강|곤란|동일|둔감|부지런|민감|병약|[불]?성실|부실|부족|[부]?적절"
@@ -22,25 +24,25 @@ KW_NS = joinseq(KW_NSf, KW_NSv)
 
 ## Adjective - Status
 KW_AS = '|'.join(sorted(
-        conjugate(KR_Aa, 'ㅏ')          # 나ㅃ+ㅏ(지다), 바ㅃ+ㅏ(지다), ...
-        + conjugate(KR_Ab, '워')        # 귀여+워(지다), ...
-        + conjugate(KR_Ac, '아')        # 맑+아(지다), ...
-        + conjugate(KR_Ad, 'ㄹ', '아')  # 다+ㄹ+아(지다)(be sweety), ...
-        + conjugate(KR_Ae, 'ㅓ')        # 예ㅃ+ㅓ(지다), ...
-        + conjugate(KR_Af, 'ㄹ', '라')  # 다+ㄹ+라(지다)(be differentiated), ...
-        + conjugate(KR_Ah, '해')        # 착+해(지다), ...
-        + conjugate(KR_Ai, '어')        # 붉+어(지다), ...
-        + conjugate(KR_Aj, '아')        # 낮+아(지다), ...
-        + conjugate(KR_Am, '어')        # 맛있+어(지다), ...
-        + conjugate(KR_An, 'ㄹ', '어')  # 머+ㄹ+어(지다), ...
-        + conjugate(KR_Ao, '어')        # 넓+어(지다), ...
-        + conjugate(KR_Ap, '어')        # 희+어(지다), ...
-        + conjugate(KR_Ar, '와')        # 이로+와(지다), ...
-        + conjugate(KR_As, '아')        # 나+아(지다), ...
-        + conjugate(KR_Aw, '와')        # 고+와(지다), ...
-        + conjugate(KR_Ax, 'ㅓ')        # ㅋ+ㅓ+(지다), ...
-        + conjugate(KR_Ay, 'ㅙ')        # 못ㄷ+ㅙ+(지다), ...
-        + conjugate(KW_NS, '해')        # 필요+한
+        conjugate(ks.KS_Aa, 'ㅏ')          # 나ㅃ+ㅏ(지다), 바ㅃ+ㅏ(지다), ...
+        + conjugate(ks.KS_Ab, '워')        # 귀여+워(지다), ...
+        + conjugate(ks.KS_Ac, '아')        # 맑+아(지다), ...
+        + conjugate(ks.KS_Ad, 'ㄹ', '아')  # 다+ㄹ+아(지다)(be sweety), ...
+        + conjugate(ks.KS_Ae, 'ㅓ')        # 예ㅃ+ㅓ(지다), ...
+        + conjugate(ks.KS_Af, 'ㄹ', '라')  # 다+ㄹ+라(지다)(be differentiated), ...
+        + conjugate(ks.KS_Ah, '해')        # 착+해(지다), ...
+        + conjugate(ks.KS_Ai, '어')        # 붉+어(지다), ...
+        + conjugate(ks.KS_Aj, '아')        # 낮+아(지다), ...
+        + conjugate(ks.KS_Am, '어')        # 맛있+어(지다), ...
+        + conjugate(ks.KS_An, 'ㄹ', '어')  # 머+ㄹ+어(지다), ...
+        + conjugate(ks.KS_Ao, '어')        # 넓+어(지다), ...
+        + conjugate(ks.KS_Ap, '어')        # 희+어(지다), ...
+        + conjugate(ks.KS_Ar, '와')        # 이로+와(지다), ...
+        + conjugate(ks.KS_As, '아')        # 나+아(지다), ...
+        + conjugate(ks.KS_Aw, '와')        # 고+와(지다), ...
+        + conjugate(ks.KS_Ax, 'ㅓ')        # ㅋ+ㅓ(지다), ...
+        + conjugate(ks.KS_Ay, 'ㅙ')        # 못ㄷ+ㅙ(지다), ...
+        + conjugate(KW_NS, '해')        # 필요+해(지다), ...
         ))
 
 
@@ -50,27 +52,27 @@ KW_AS = '|'.join(sorted(
 #### VT - No-tense
 KW_PVTN = '|'.join(
     sorted(
-        conjugate(KR_VTg, '던')
-        + conjugate(KR_VTh, '던')
-        + conjugate(KR_VTi, '던')
-        + conjugate(KR_VTl, 'ㄹ', '던')
-        + conjugate(KR_VTm, 'ㄹ', '던')
-        + conjugate(KR_VTn, 'ㄹ', '던')
-        + conjugate(KR_VTy, 'ㅜ', '던')
+        conjugate(ks.KS_VTg, '던')
+        + conjugate(ks.KS_VTh, '던')
+        + conjugate(ks.KS_VTi, '던')
+        + conjugate(ks.KS_VTl, 'ㄹ', '던')
+        + conjugate(ks.KS_VTm, 'ㄹ', '던')
+        + conjugate(ks.KS_VTn, 'ㄹ', '던')
+        + conjugate(ks.KS_VTy, 'ㅜ', '던')
     )
 )
 
 #### VT - Past
 KW_PVTP = '|'.join(
     sorted(
-        conjugate(KR_VTg, '았던')
-        + conjugate(KR_VTh, '었던')
-        + conjugate(KR_VTi, '았던')
-        + conjugate(KR_VTl, 'ㄹ', '았던')
-        + conjugate(KR_VTm, 'ㄹ', '었던')
-        + conjugate(KR_VTn, 'ㄹ', '았던')
-        + conjugate(KR_VTy, 'ㅜ', '었던')
-        + conjugate(KR_VTy, 'ㅝ', 'ㅆ', '던')
+        conjugate(ks.KS_VTg, '았던')
+        + conjugate(ks.KS_VTh, '었던')
+        + conjugate(ks.KS_VTi, '았던')
+        + conjugate(ks.KS_VTl, 'ㄹ', '았던')
+        + conjugate(ks.KS_VTm, 'ㄹ', '었던')
+        + conjugate(ks.KS_VTn, 'ㄹ', '았던')
+        + conjugate(ks.KS_VTy, 'ㅜ', '었던')
+        + conjugate(ks.KS_VTy, 'ㅝ', 'ㅆ', '던')
     )
 )
 
@@ -79,25 +81,25 @@ KW_PVT = joinseq(KW_PVTN, KW_PVTP)
 #### Adjective - No tense
 KW_PAN = '|'.join(
     sorted(
-        conjugate(KR_Aa, 'ㅡ', 'ㄴ')    # 나ㅃ+ㅡ+ㄴ
-        + conjugate(KR_Ab, '운')
-        + conjugate(KR_Ac, '은')
-        + conjugate(KR_Ad, 'ㄴ')
-        + conjugate(KR_Ae, 'ㅡ', 'ㄴ')
-        + conjugate(KR_Af, '른')
-        + conjugate(KR_Ah, '한')
-        + conjugate(KR_Ai, '은')
-        + conjugate(KR_Aj, '은')
-        + conjugate(KR_Al, '른')
-        + conjugate(KR_Am, '는')
-        + conjugate(KR_An, 'ㄴ')
-        + conjugate(KR_Ao, '은')
-        + conjugate(KR_Ap, 'ㄴ')
-        + conjugate(KR_Ar, '운')
-        + conjugate(KR_As, '은') 
-        + conjugate(KR_Aw, '운')
-        + conjugate(KR_Ax, 'ㅡ', 'ㄴ')
-        + conjugate(KR_Ay, 'ㅚ', 'ㄴ') 
+        conjugate(ks.KS_Aa, 'ㅡ', 'ㄴ')    # 나ㅃ+ㅡ+ㄴ
+        + conjugate(ks.KS_Ab, '운')
+        + conjugate(ks.KS_Ac, '은')
+        + conjugate(ks.KS_Ad, 'ㄴ')
+        + conjugate(ks.KS_Ae, 'ㅡ', 'ㄴ')
+        + conjugate(ks.KS_Af, '른')
+        + conjugate(ks.KS_Ah, '한')
+        + conjugate(ks.KS_Ai, '은')
+        + conjugate(ks.KS_Aj, '은')
+        + conjugate(ks.KS_Al, '른')
+        + conjugate(ks.KS_Am, '는')
+        + conjugate(ks.KS_An, 'ㄴ')
+        + conjugate(ks.KS_Ao, '은')
+        + conjugate(ks.KS_Ap, 'ㄴ')
+        + conjugate(ks.KS_Ar, '운')
+        + conjugate(ks.KS_As, '은') 
+        + conjugate(ks.KS_Aw, '운')
+        + conjugate(ks.KS_Ax, 'ㅡ', 'ㄴ')
+        + conjugate(ks.KS_Ay, 'ㅚ', 'ㄴ') 
         + conjugate(KW_NS, '한')
     )
 )
@@ -105,26 +107,26 @@ KW_PAN = '|'.join(
 #### Adjective - Past
 KW_PAP = '|'.join(
     sorted(
-        conjugate(KR_Aa, 'ㅏ', 'ㅆ', '던')
-        + conjugate(KR_Ab, '웠던')
-        + conjugate(KR_Ac, '았던')
-        + conjugate(KR_Ad, 'ㄹ', '았던')
-        + conjugate(KR_Ae, 'ㅓ', 'ㅆ', '던')
-        + conjugate(KR_Af, 'ㄹ', '랐던')
-        + conjugate(KR_Ah, '했던')
-        + conjugate(KR_Ai, '었던')
-        + conjugate(KR_Aj, '았던')
-        + conjugate(KR_Al, 'ㄹ', '렀던')
-        + conjugate(KR_Am, '었던')
-        + conjugate(KR_An, 'ㄹ', '었던')
-        + conjugate(KR_Ao, '었던')
-        + conjugate(KR_Ap, '었던')
-        + conjugate(KR_Ar, '웠던')
-        + conjugate(KR_As, '았던') 
-        + conjugate(KR_Aw, '왔던')
-        + conjugate(KR_Ax, 'ㅓ', 'ㅆ', '던')
-        + conjugate(KR_Ay, 'ㅚ', '었던') 
-        + conjugate(KR_Ay, 'ㅙ', 'ㅆ', '던') 
+        conjugate(ks.KS_Aa, 'ㅏ', 'ㅆ', '던')
+        + conjugate(ks.KS_Ab, '웠던')
+        + conjugate(ks.KS_Ac, '았던')
+        + conjugate(ks.KS_Ad, 'ㄹ', '았던')
+        + conjugate(ks.KS_Ae, 'ㅓ', 'ㅆ', '던')
+        + conjugate(ks.KS_Af, 'ㄹ', '랐던')
+        + conjugate(ks.KS_Ah, '했던')
+        + conjugate(ks.KS_Ai, '었던')
+        + conjugate(ks.KS_Aj, '았던')
+        + conjugate(ks.KS_Al, 'ㄹ', '렀던')
+        + conjugate(ks.KS_Am, '었던')
+        + conjugate(ks.KS_An, 'ㄹ', '었던')
+        + conjugate(ks.KS_Ao, '었던')
+        + conjugate(ks.KS_Ap, '었던')
+        + conjugate(ks.KS_Ar, '웠던')
+        + conjugate(ks.KS_As, '았던') 
+        + conjugate(ks.KS_Aw, '왔던')
+        + conjugate(ks.KS_Ax, 'ㅓ', 'ㅆ', '던')
+        + conjugate(ks.KS_Ay, 'ㅚ', '었던') 
+        + conjugate(ks.KS_Ay, 'ㅙ', 'ㅆ', '던') 
         + conjugate(KW_NS, '했던')
     )
 )
@@ -135,72 +137,72 @@ KW_PA = joinseq(KW_PAN, KW_PAP)
 ### Cause(이유)
 KW_BC = '|'.join(sorted(
         ['일부러']
-        + conjugate(KR_Aa, 'ㅏ', '서')
-        + conjugate(KR_Ab, '워서')
-        + conjugate(KR_Ac, '아서')
-        + conjugate(KR_Ad, 'ㄹ', '아서')
-        + conjugate(KR_Ae, 'ㅓ', '서')
-        + conjugate(KR_Af, 'ㄹ', '라서')
-        + conjugate(KR_Ah, '해서')
-        + conjugate(KR_Ai, '어서')
-        + conjugate(KR_Aj, '아서')
-        + conjugate(KR_Al, 'ㄹ', '러서')
-        + conjugate(KR_An, 'ㄹ', '어서')
-        + conjugate(KR_Ao, '어서')
-        + conjugate(KR_Ap, '어서')
-        + conjugate(KR_Ar, '와서')
-        + conjugate(KR_As, '아서')
-        + conjugate(KR_Aw, '와서')
-        + conjugate(KR_Ax, 'ㅓ', '서')
-        + conjugate(KR_Ay, 'ㅙ', '서')
+        + conjugate(ks.KS_Aa, 'ㅏ', '서')
+        + conjugate(ks.KS_Ab, '워서')
+        + conjugate(ks.KS_Ac, '아서')
+        + conjugate(ks.KS_Ad, 'ㄹ', '아서')
+        + conjugate(ks.KS_Ae, 'ㅓ', '서')
+        + conjugate(ks.KS_Af, 'ㄹ', '라서')
+        + conjugate(ks.KS_Ah, '해서')
+        + conjugate(ks.KS_Ai, '어서')
+        + conjugate(ks.KS_Aj, '아서')
+        + conjugate(ks.KS_Al, 'ㄹ', '러서')
+        + conjugate(ks.KS_An, 'ㄹ', '어서')
+        + conjugate(ks.KS_Ao, '어서')
+        + conjugate(ks.KS_Ap, '어서')
+        + conjugate(ks.KS_Ar, '와서')
+        + conjugate(ks.KS_As, '아서')
+        + conjugate(ks.KS_Aw, '와서')
+        + conjugate(ks.KS_Ax, 'ㅓ', '서')
+        + conjugate(ks.KS_Ay, 'ㅙ', '서')
         ))
 
 ### Manner(태도, 방법)
 KW_BM = '|'.join(
     sorted(
         ['함부로']
-        + conjugate(KR_Aa, 'ㅡ', '게')
-        + conjugate(KR_Ab, 'ㅂ', '게')
-        + conjugate(KR_Ac, '게')
-        + conjugate(KR_Ad, 'ㄹ', '게')
-        + conjugate(KR_Ae, 'ㅡ', '게')
-        + conjugate(KR_Af, '르게')
-        + conjugate(KR_Ah, '하게')
-        + conjugate(KR_Ai, '게')
-        + conjugate(KR_Aj, '게')
-        + conjugate(KR_Al, '르게')
-        + conjugate(KR_An, 'ㄹ', '게')
-        + conjugate(KR_Ao, '게')
-        + conjugate(KR_Ap, '게')
-        + conjugate(KR_Ar, 'ㅂ', '게')
-        + conjugate(KR_As, 'ㅅ', '게')
-        + conjugate(KR_Aw, 'ㅂ', '게')
-        + conjugate(KR_Ax, 'ㅡ', '게')
-        + conjugate(KR_Ay, 'ㅚ', '게')
+        + conjugate(ks.KS_Aa, 'ㅡ', '게')
+        + conjugate(ks.KS_Ab, 'ㅂ', '게')
+        + conjugate(ks.KS_Ac, '게')
+        + conjugate(ks.KS_Ad, 'ㄹ', '게')
+        + conjugate(ks.KS_Ae, 'ㅡ', '게')
+        + conjugate(ks.KS_Af, '르게')
+        + conjugate(ks.KS_Ah, '하게')
+        + conjugate(ks.KS_Ai, '게')
+        + conjugate(ks.KS_Aj, '게')
+        + conjugate(ks.KS_Al, '르게')
+        + conjugate(ks.KS_An, 'ㄹ', '게')
+        + conjugate(ks.KS_Ao, '게')
+        + conjugate(ks.KS_Ap, '게')
+        + conjugate(ks.KS_Ar, 'ㅂ', '게')
+        + conjugate(ks.KS_As, 'ㅅ', '게')
+        + conjugate(ks.KS_Aw, 'ㅂ', '게')
+        + conjugate(ks.KS_Ax, 'ㅡ', '게')
+        + conjugate(ks.KS_Ay, 'ㅚ', '게')
     )
 )
 
 ### Negative 
 KW_BN = '|'.join(
     sorted(
-        conjugate(KR_Ah, '하지')
-        + conjugate(KR_Aa, 'ㅡ', '지')
-        + conjugate(KR_Ab, 'ㅂ', '지')
-        + conjugate(KR_Ac, '지')
-        + conjugate(KR_Ad, 'ㄹ', '지')
-        + conjugate(KR_Ae, 'ㅡ', '지')
-        + conjugate(KR_Af, '르지')
-        + conjugate(KR_Ai, '지')
-        + conjugate(KR_Aj, '지')
-        + conjugate(KR_Al, '르지')
-        + conjugate(KR_An, 'ㄹ', '지')
-        + conjugate(KR_Ao, '지')
-        + conjugate(KR_Ap, '지')
-        + conjugate(KR_Ar, 'ㅂ', '지')
-        + conjugate(KR_As, 'ㅅ', '지')
-        + conjugate(KR_Aw, 'ㅂ', '지')
-        + conjugate(KR_Ax, 'ㅡ', '지')
-        + conjugate(KR_Ay, 'ㅚ', '지')
+        conjugate(ks.KS_Ah, '하지')
+        + conjugate(ks.KS_Aa, 'ㅡ', '지')
+        + conjugate(ks.KS_Ab, 'ㅂ', '지')
+        + conjugate(ks.KS_Ac, '지')
+        + conjugate(ks.KS_Ad, 'ㄹ', '지')
+        + conjugate(ks.KS_Ae, 'ㅡ', '지')
+        + conjugate(ks.KS_Af, '르지')
+        + conjugate(ks.KS_Ai, '지')
+        + conjugate(ks.KS_Aj, '지')
+        + conjugate(ks.KS_Al, '르지')
+        + conjugate(ks.KS_An, 'ㄹ', '지')
+        + conjugate(ks.KS_Ao, '지')
+        + conjugate(ks.KS_Ap, '지')
+        + conjugate(ks.KS_Ar, 'ㅂ', '지')
+        + conjugate(ks.KS_As, 'ㅅ', '지')
+        + conjugate(ks.KS_Aw, 'ㅂ', '지')
+        + conjugate(ks.KS_Ax, 'ㅡ', '지')
+        + conjugate(ks.KS_Ay, 'ㅚ', '지')
     )
 )
 KW_B = joinseq(KW_BC, KW_BM, KW_BN)
@@ -217,8 +219,8 @@ KW_NAOv = "[인추참평]가|[제탈]거|[공소]개|[연촉]구|[상연제]기|
 KW_NAO = joinseq(KW_NAOf, KW_NAOv)
 
 ### derived from Foreign language
-KW_NAFf = "게임|다운로딩|로그아웃|로그인|로깅|모니터링|[업]?로딩|인덱싱|컴파일|필터링"
-KW_NAFv = "다운로드|릴리스|마사지|[업]?로드|업데이트|트리거|플레이"
+KW_NAFf = "게임|로그아웃|로그인|로깅|모니터링|로딩|인덱싱|컴파일|필터링"
+KW_NAFv = "다운로드|릴리스|마사지|업로드|업데이트|테스트|트리거|팔로우|폴로|플레이"
 KW_NAF = joinseq(KW_NAFf, KW_NAFv)
 
 ### all
