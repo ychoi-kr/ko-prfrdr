@@ -33,11 +33,13 @@ KS_Ay = '못ㄷ'                          # +ㅙ+지다,   +ㅚ+다,  +ㅙ+서, 
 ## roots of verb
 
 ### Both(intransives can conjugate to transive)
-#                                   # intransive                    transive
-#                                   # no-tense  past      present   no-tense     past         intension
-KS_VCg = "숨"                       # 숨+다     숨+었+다  숨+는+다  숨+ㄱ+ㅣ+다  숨+ㄱ+였+다  숨+ㄱ+ㅣ+ㄹ
-KS_VCi = "먹|죽"                    # 먹+다     먹+었+다  먹+는+다  먹+이+다     먹+여+ㅆ+다  먹+일
-KS_VCl = "살"                       # 살+다     살+았+다  산+다     살+리+다     살+렸+다     살+릴
+#                                   # intransive                        transive                             
+#                                   # no-tense  past         present    no-tense     past         intension
+KS_VCg = "숨"                       # 숨+다     숨+었+다     숨+는+다   숨+ㄱ+ㅣ+다  숨+ㄱ+였+다  숨+ㄱ+ㅣ+ㄹ
+KS_VCi = "먹|죽"                    # 먹+다     먹+었+다     먹+는+다   먹+이+다     먹+여+ㅆ+다  먹+일
+KS_VCj = "속"                       # 속+다     속+았+다     속+는+다   속+이+다     속+였+다     속+일
+KS_VCl = "사" # '살'                # 사+ㄹ+다  사+ㄹ+았+다  사+ㄴ+다   사+ㄹ+리+다  사+ㄹ+렸+다  사+ㄹ+릴
+KS_VCr = "주" # '줄'                # 주+ㄹ+다  주+ㄹ+었+다  주+ㄴ+다   주+ㄹ+이+다  주+ㄹ+였+다  주+ㄹ+일
 
 ### Intransive
 #                                   # no-tense    past           present
