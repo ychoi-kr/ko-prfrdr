@@ -338,7 +338,7 @@
     "name": "qa012047_그러고 나서",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?&mn_id=&qna_seq=12047",
     "cases": [
-      ["그리고 나서", "그러고 나서"]
+      ["그리고[ ]?(나서\\w*)", "그러고 ()"]
     ],
     "exception": [
     ]

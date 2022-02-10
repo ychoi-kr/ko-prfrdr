@@ -176,7 +176,7 @@ def check(rules, line):
                     if x.startswith('KJ'):
                         bad = bad.replace(f'({x})', f'({getattr(kojosa, x)})')
                 for x in dir(koword): 
-                    if x.startswith('KW') or x.startswith('KC'):
+                    if x.startswith('KW') or 'KC' in x:
                         bad = bad.replace(f'({x})', f'({getattr(koword, x)})')
 
                 _debug('bad', bad)

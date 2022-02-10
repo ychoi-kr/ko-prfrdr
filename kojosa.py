@@ -1,7 +1,7 @@
 from utils import joinseq
 
 ########################
-# Korean Josa (particle)
+# Korean Josa (postposition or particle)
 
 ## Additive
 KJ_A = "도\\b"

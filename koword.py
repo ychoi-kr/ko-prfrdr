@@ -7,7 +7,7 @@ from kostr import concat
 
 # Conjugation
 KC_D = "[되된돼됐]"
-KC_H = "[하한할해했]"
+KC_H = "[하한합할해했]"
 
 def conjugate(stems, *postfix):
     result = []
