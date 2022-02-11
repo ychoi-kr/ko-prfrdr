@@ -1338,6 +1338,18 @@
   },
   {
     "kind": "맞춤법",
+    "name": "qa025033_하십시오",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=25033",
+    "cases": [
+      [
+        "(\\w*십시)요[.]",
+        "()오."
+      ]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "qa036862_떼려야 뗄 수 없는",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=36862",
     "cases": [
