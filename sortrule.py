@@ -1,10 +1,17 @@
 import json
+from pathlib import Path
+import sys
 
 
-if __name__ == '__main__':
-    j = json.load(open('ko_spacing_rules.json'))
+def sortrule(filename):
+    infilename = filename
+    j = json.load(open(infilename))
     j.sort(key=lambda x: x["desc"])
     
-    with open('ko_spacing_rules2.json', 'w') as f:
+    outfilename = Path(filename).stem + '2' + Path(filename).suffix
+    with open(outfilename, 'w') as f:
         f.write(json.dumps(j, ensure_ascii=False, indent=2, separators=(',', ': ')))
+
+if __name__ == '__main__':
+    sortrule(sys.argv[1])
 
