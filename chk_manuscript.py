@@ -167,7 +167,7 @@ def check(rules, line):
                 #_debug('mode', mode)
 
                 for x in dir(koletter): 
-                    if x.startswith('KL'):
+                    if 'KL' in x:
                         bad = bad.replace(x, getattr(koletter, x))
                 for x in dir(koeomi): 
                     if x.startswith('KE'):

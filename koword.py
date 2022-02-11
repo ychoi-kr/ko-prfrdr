@@ -43,9 +43,31 @@ KW_AS = '|'.join(sorted(
         + conjugate(ks.KS_Ax, 'ㅓ')        # ㅋ+ㅓ(지다), ...
         + conjugate(ks.KS_Ay, 'ㅙ')        # 못ㄷ+ㅙ(지다), ...
         + conjugate(KW_NS, '해')        # 필요+해(지다), ...
-        ))
+    )
+)
 
-
+KW_ASN = '|'.join(sorted(
+        conjugate(ks.KS_Aa, 'ㅡ', 'ㄴ')          # 나ㅃ+ㅡ+ㄴ
+        + conjugate(ks.KS_Ab, '운')              # 귀여+운
+        + conjugate(ks.KS_Ac, '은')              # 맑+은
+        + conjugate(ks.KS_Ad, 'ㄴ')              # 다+ㄴ(sweet)
+        + conjugate(ks.KS_Ae, 'ㅡ', 'ㄴ')        # 예ㅃ+ㅡ+ㄴ
+        + conjugate(ks.KS_Af, 'ㄹ', 'ㅡ', 'ㄴ')  # 다+ㄹ+ㅡ+ㄴ(different)
+        + conjugate(ks.KS_Ah, '한')              # 착+한
+        + conjugate(ks.KS_Ai, '은')              # 붉+은
+        + conjugate(ks.KS_Aj, '은')              # 낮+은
+        + conjugate(ks.KS_Am, '는')              # 맛있+는
+        + conjugate(ks.KS_An, 'ㄴ')              # 머+ㄴ
+        + conjugate(ks.KS_Ao, '은')              # 넓+은
+        + conjugate(ks.KS_Ap, 'ㄴ')              # 희+ㄴ
+        + conjugate(ks.KS_Ar, '운')              # 이로+운
+        + conjugate(ks.KS_As, '은')              # 나+은
+        + conjugate(ks.KS_Aw, '운')              # 고+운
+        + conjugate(ks.KS_Ax, 'ㅡ', 'ㄴ')        # ㅋ+ㅡ+ㄴ
+        + conjugate(ks.KS_Ay, 'ㅚ', 'ㄴ')        # 못ㄷ+ㅚ+ㄴ
+        + conjugate(KW_NS, '한')                 # 필요+한
+    )
+)
 
 
 ### Pre-nouns(관형사)
@@ -157,6 +179,9 @@ KW_BC = '|'.join(sorted(
         + conjugate(ks.KS_Ay, 'ㅙ', '서')
         ))
 
+### Degree (정도)
+KW_BD = '더|훨씬'
+
 ### Manner(태도, 방법)
 KW_BM = '|'.join(
     sorted(
@@ -209,17 +234,17 @@ KW_B = joinseq(KW_BC, KW_BM, KW_BN)
 
 ## Forein Words
 
-KW_Ff = "(\\w*)(ice|ocks|old|uy)"  # f: has final consonant in Korean
-KW_Fv = "(\\w*)(all|ell)"  # v: ends with vowel (does not have final consonant) in Korean
+KW_Ff = "(\\w*)(all|ell|earn|one)"  # f: has final consonant in Korean
+KW_Fv = "(\\w*)(ice|ocks|old|uy)"  # v: ends with vowel (does not have final consonant) in Korean
 
 ## Nouns - Activity (can be verb with '-하다/-되다' or used in form of '~을/를 하다')
 ### Original Korean
-KW_NAOf = "생각|[가증]감|가공|곱|[건입]국|[연체]결|[총포]괄|가늠|[담배]당|가동|[노입출]력|[수제훈]련|[기수]록|[발변설연작제조증]명|함몰|고민|[개선]발|체벌|[손향]상|[개배연증해]설|[구생작완형]성|[연학]습|[예해]약|오염|[반운투]영|[사이적통포활]용|[교훈]육|[지]원|[도수]입|[수]?출입|시작|긴장|발전|[결설수측한]정|선언|선정|[도장부탈]착|제창|[수연인창]출|예측|[간선채]택|[동수실연]행|[면입]학|포함|[결취]합|[구실재표]현"
-KW_NAOv = "[인추참평]가|[제탈]거|[공소]개|[연촉]구|[상연제]기|이야기|시도|[고]려|치료|[관수처]리|연마|[공기]부|[반발조]사|[감축]소|[감준회]수|[기참]여|[긴소중필]요|[논합]의|폐지|대체|[성]취|[납배설]치|\\w+화|이해"
+KW_NAOf = "생각|[가증]감|가공|곱|[건입]국|[연체]결|[총포]괄|가늠|[담배]당|가동|[노입출]력|[수제훈]련|[기수]록|[발변설연작제조증]명|함몰|고민|[개선]발|체벌|[손향]상|[개배연증해]설|[구생작완형]성|[연학]습|[예해]약|오염|[반운투]영|[사이적통포활]용|[교훈]육|[지]원|[도수]입|[수]?출입|시작|긴장|발전|[결설수측한]정|선언|선정|[도장부탈]착|제창|[도수연인창]출|예측|[간선채]택|[동수실연]행|[면입]학|포함|[결취]합|[구실재표]현"
+KW_NAOv = "[인추참평]가|[제탈]거|[공소]개|[연촉]구|[상연제]기|이야기|시도|[고]려|[완치]료|[관수처]리|연마|[공기]부|[반발조]사|[감축]소|[감준회]수|[기참]여|[긴소중필]요|[논합]의|폐지|대체|[성]취|[납배설]치|\\w+화|이해"
 KW_NAO = joinseq(KW_NAOf, KW_NAOv)
 
 ### derived from Foreign language
-KW_NAFf = "게임|로그아웃|로그인|로깅|모니터링|로딩|인덱싱|컴파일|필터링"
+KW_NAFf = "게임|로그아웃|로그인|로깅|모니터링|로딩|인덱싱|컴파일|클릭|튜닝|필터링"
 KW_NAFv = "다운로드|릴리스|마사지|업로드|업데이트|테스트|트리거|팔로우|폴로|플레이"
 KW_NAF = joinseq(KW_NAFf, KW_NAFv)
 
@@ -282,7 +307,9 @@ KW_NNDv = "조"
 KW_NND = joinseq(KW_NNDf, KW_NNDv)
 
 ### Arabic
-KW_NNA = "[1-9]?[0-9,]*"
+KW_NNAf = "[1-9]*[0-9,.]*[136780]"
+KW_NNAv = "[1-9]*[0-9,.]*[2459]"
+KW_NNA = "[1-9]?[0-9,.]+"
 
 ### Mixed
 KW_NNMf = KW_NNA + KW_NNDf
