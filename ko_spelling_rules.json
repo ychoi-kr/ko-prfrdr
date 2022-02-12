@@ -1342,8 +1342,8 @@
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=25033",
     "cases": [
       [
-        "(\\w*십시)요[.]",
-        "()오."
+        "(\\w*십시)요",
+        "()오"
       ]
     ],
     "exception": []

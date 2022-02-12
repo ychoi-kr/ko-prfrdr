@@ -13,6 +13,18 @@
   },
   {
     "kind": "띄어쓰기",
+    "name": "qa103407_-명(名)",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=103407",
+    "cases": [
+      [
+        "\\b(디렉터리|메서드|물품|변수|서비스|수도|클래스|패키지|포장|폴더|함수|회사) 명",
+        "()명"
+      ]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
     "name": "qa184692_전(全)",
     "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=184692",
     "cases": [
@@ -54,6 +66,18 @@
     "cases": [
       [
         "(게임)(회사)",
+        "() ()"
+      ]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "qa2768_등",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=2768",
+    "cases": [
+      [
+        "([A-Z-a-z_]+)(등\\w*)",
         "() ()"
       ]
     ],
@@ -442,12 +466,20 @@
     "desc": "https://wikidocs.net/105111",
     "cases": [
       [
-        "([A-Za-z0-9]+[^\\w\\d\\s]?|\\w+[가감값건것곳구국그기도드딩락림명물별본분성소숏스아언열원장적점지질청체크터태텔학형]|\\w+까지|\\에서) ([이]?[었였]?다|입니다)[.]",
+        "([A-Za-z0-9]+[^\\w\\d\\s]?|\\w+[가감값건것격곳구국그기도드딩락림명물별본분성소숏스아언열원장적점정지질청체크터태텔학형]|\\w+까지|\\에서) ([이]?[었였]?다|입니다)[.]",
         "()()."
       ],
       [
-        "(\\w+) ([가과는도에은와인일]|처럼|에서[는]?|[으]로|[이]?라[고면])\\s",
+        "(\\w+) ([가과는도에은와인일의]|처럼|에서[는]?|[으]로|[이]?기|[이]?라[고면])\\s",
         "()()"
+      ],
+      [
+        "([가-힣A-Za-z0-9.]+) (가|이|[으]?로) (KW_NA)(\\w*)",
+        "()() ()()"
+      ],
+      [
+        "([A-Za-z][A-Za-z0-9_(]*[)]) (가|이|[으]?로) (KW_NA)(\\w*)",
+        "()() ()()"
       ],
       [
         "(\\w+) (KJ_O) (KW_NAO)(\\w*)",
@@ -480,6 +512,10 @@
       [
         "(크기가) (\\d+) (인 것\\w+)",
         "() ()()"
+      ],
+      [
+        "(\\[[A-Za-z0-9]+,[ ]?[A-Za-z0-9]+,.*\\]) (과)",
+        "()()"
       ]
     ],
     "exception": []
@@ -562,7 +598,7 @@
     "desc": "https://wikidocs.net/107672",
     "cases": [
       [
-        "재 (교육|부팅|사용|설치|수용|시작|시험|작년|편성|흡수)",
+        "재 (교육|부팅|사용|설치|수용|시작|시험|작년|정렬|편성|학습|흡수)",
         "재()"
       ]
     ],
@@ -637,12 +673,16 @@
     "desc": "https://wikidocs.net/112010",
     "cases": [
       [
-        "~개 마다",
-        "~개마다"
+        "(KW_NUS) 마다",
+        "()마다"
       ],
       [
-        "할 때 마다",
-        "할 때마다"
+        "\\b(\\w*[는한할])[ ]?([시때]) 마다\\b",
+        "() ()마다"
+      ],
+      [
+        "\\b(KW_NA)([ ]?시) 마다\\b",
+        "()()마다"
       ]
     ],
     "exception": []
@@ -850,7 +890,7 @@
     "desc": "https://wikidocs.net/152332#a",
     "cases": [
       [
-        "\\b(KW_NA) (하고자|하다|하도록|하는[ ]?[데]?|하려[고는]|하[시]?면|하였\\w*|하지|한|한다|할|함[을]|해보\\w*|해[서]|했\\w*)\\b",
+        "\\b(KW_NA) (하고자|하겠\\w*|하다|하도록|하는[ ]?[데]?|하려[고는]|하[시]?면|하였\\w*|하지|한|한다|할|함[을]|합니다|해보\\w*|해[서]|했\\w*)\\b",
         "()()"
       ],
       [
@@ -1016,6 +1056,10 @@
       [
         "이해가 안되다",
         "이해가 안 되다"
+      ],
+      [
+        "(\\w*해서는) 안([되된될돼]\\w*)",
+        "() 안 ()"
       ]
     ],
     "exception": []
@@ -1423,36 +1467,16 @@
     "desc": "https://wikidocs.net/71780",
     "cases": [
       [
-        "~할 수록",
-        "~할수록"
+        "\\b(KW_ASL) 수록\\b",
+        "()수록"
       ],
       [
-        "넣을 수록",
-        "넣을수록"
+        "\\b(높)은 수록\\b",
+        "()을수록"
       ],
       [
-        "높을 수록",
-        "높을수록"
-      ],
-      [
-        "많아질 수록",
-        "많아질수록"
-      ],
-      [
-        "많을 수록",
-        "많을수록"
-      ],
-      [
-        "않을 수록",
-        "않을수록"
-      ],
-      [
-        "좁을 수록",
-        "좁을수록"
-      ],
-      [
-        "커질 수록",
-        "커질수록"
+        "\\b([가-힣]*[아어와워커해]질) 수록",
+        "()수록"
       ]
     ],
     "exception": []
@@ -1465,6 +1489,18 @@
       [
         "다시 한 번",
         "다시 한번"
+      ]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "0073567a_-드리다",
+    "desc": "https://wikidocs.net/73568",
+    "cases": [
+      [
+        "(감사|말씀|설명) (드[려렸리린릴]\\w*)",
+        "()()"
       ]
     ],
     "exception": []
@@ -2313,6 +2349,10 @@
     "desc": "https://wikidocs.net/90403",
     "cases": [
       [
+        "([A-Za-z]+)(간\\w*)",
+        "() ()"
+      ],
+      [
         "발행사간",
         "발행사 간"
       ],
@@ -2347,6 +2387,26 @@
       [
         "(졸업)한후",
         "()한 후"
+      ]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "0090767_수(數)",
+    "desc": "https://wikidocs.net/90767",
+    "cases": [
+      [
+        "\\b(소|의석|인원|장절|재적|출석|투표) 수",
+        "()수"
+      ],
+      [
+        "\\b([머자])리[ ]?수",
+        "()릿수"
+      ],
+      [
+        "(가구|개체|답변|이용자|조회|추천|코어|회원)수",
+        "() 수"
       ]
     ],
     "exception": []
@@ -2558,8 +2618,8 @@
         "()보다 ()"
       ],
       [
-        "(\\w+[^것개기]) 보다[ ]?(\\w+[이가])[ ]?(KW_ASN)",
-        "()보다 () ()"
+        "(\\w+[^것개기]) (보다[는]?)[ ]?(\\w+[이가])",
+        "()() ()"
       ],
       [
         "(\\w+) 보다[ ]?(KW_BD)[ ]?(KW_ASN)",
@@ -2634,15 +2694,31 @@
   },
   {
     "kind": "띄어쓰기",
+    "name": "0093276_시(時)",
+    "desc": "https://wikidocs.net/94354",
+    "cases": [
+      [
+        "\\b([미]?지참|발생|[비수]행)(시\\w*)",
+        "() ()"
+      ],
+      [
+        "\\b([비평]상|유사|필요) (시\\w*)",
+        "()()"
+      ]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
     "name": "qa134499_사이",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=134499",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=134499",
     "cases": [
       [
         "([가-힣]+)사이\\b",
         "() 사이"
       ],
       [
-        "(KW_NNA)사이",
+        "\\b(KW_NNA)사이",
         "() 사이"
       ]
     ],
@@ -2651,7 +2727,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa144059_흉내 내다",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=144059",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=144059",
     "cases": [
       [
         "(흉내)([내낼냈]\\w+)",
@@ -2663,10 +2739,22 @@
   {
     "kind": "띄어쓰기",
     "name": "qa153090_명사와 명사",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=153090",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=153090",
     "cases": [
       [
-        "([A-Za-z()])(기반|변수|설정|클래스|함수)",
+        "([A-Za-z0-9_]+)(KW_NA)",
+        "() ()"
+      ],
+      [
+        "([A-Za-z0-9_]+)(값|기반|방식|변수|설정|인자|인잣값|클래스)",
+        "() ()"
+      ],
+      [
+        "([A-Za-z]+[A-Za-z0-9_(]*[)]?)(결과|함수)",
+        "() ()"
+      ],
+      [
+        "(디렉터리|파일|폴더)(구조|내용|이름|형식)",
         "() ()"
       ]
     ],
@@ -2675,7 +2763,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa177648_이렇다 할",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=177648",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=177648",
     "cases": [
       [
         "이렇다할",
@@ -2687,7 +2775,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa190536_하다 보면",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=190536",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=190536",
     "cases": [
       [
         "(\\w*하다)(보면)",
@@ -2699,11 +2787,23 @@
   {
     "kind": "띄어쓰기",
     "name": "qa190403_그런가이다",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=190403",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=190403",
     "cases": [
       [
         "(그런가|그런지|그러냐|그럴까)[?]? ([이]?[었였]?다)\\b",
         "()()"
+      ]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "qa7881_외",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=7881",
+    "cases": [
+      [
+        "\\b(\\w*값|[A-Za-z0-9_])(외\\w*)",
+        "() ()"
       ]
     ],
     "exception": []

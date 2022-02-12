@@ -46,6 +46,28 @@ KW_AS = '|'.join(sorted(
     )
 )
 
+KW_ASL = '|'.join(sorted(
+        conjugate(ks.KS_Aa, 'ㅡ', 'ㄹ')          # 나ㅃ+ㅡ+ㄹ
+        + conjugate(ks.KS_Ab, '울')              # 귀여+울
+        + conjugate(ks.KS_Ac, '을')              # 맑+을
+        + conjugate(ks.KS_Ad, 'ㄹ')              # 다+ㄹ(sweet)
+        + conjugate(ks.KS_Ae, 'ㅡ', 'ㄹ')        # 예ㅃ+ㅡ+ㄹ
+        + conjugate(ks.KS_Af, 'ㄹ', 'ㅡ', 'ㄹ')  # 다+ㄹ+ㅡ+ㄹ(different)
+        + conjugate(ks.KS_Ah, '할')              # 착+할
+        + conjugate(ks.KS_Ai, '을')              # 붉+을
+        + conjugate(ks.KS_Aj, '을')              # 낮+을
+        + conjugate(ks.KS_Am, '을')              # 맛있+을
+        + conjugate(ks.KS_An, 'ㄹ')              # 머+ㄹ
+        + conjugate(ks.KS_Ao, '을')              # 넓+을
+        + conjugate(ks.KS_Ap, 'ㄹ')              # 희+ㄹ
+        + conjugate(ks.KS_Ar, '울')              # 이로+울
+        + conjugate(ks.KS_As, '을')              # 나+을
+        + conjugate(ks.KS_Aw, '울')              # 고+울
+        + conjugate(ks.KS_Ax, 'ㅡ', 'ㄹ')        # ㅋ+ㅡ+ㄹ
+        + conjugate(ks.KS_Ay, 'ㅚ', 'ㄹ')        # 못ㄷ+ㅚ+ㄹ
+        + conjugate(KW_NS, '할')                 # 필요+할
+    )
+)
 KW_ASN = '|'.join(sorted(
         conjugate(ks.KS_Aa, 'ㅡ', 'ㄴ')          # 나ㅃ+ㅡ+ㄴ
         + conjugate(ks.KS_Ab, '운')              # 귀여+운
@@ -238,9 +260,9 @@ KW_Ff = "(\\w*)(all|ell|earn|one)"  # f: has final consonant in Korean
 KW_Fv = "(\\w*)(ice|ocks|old|uy)"  # v: ends with vowel (does not have final consonant) in Korean
 
 ## Nouns - Activity (can be verb with '-하다/-되다' or used in form of '~을/를 하다')
-### Original Korean
-KW_NAOf = "생각|[가증]감|가공|곱|[건입]국|[연체]결|[총포]괄|가늠|[담배]당|가동|[노입출]력|[수제훈]련|[기수]록|[발변설연작제조증]명|함몰|고민|[개선]발|체벌|[손향]상|[개배연증해]설|[구생작완형]성|[연학]습|[예해]약|오염|[반운투]영|[사이적통포활]용|[교훈]육|[지]원|[도수]입|[수]?출입|시작|긴장|발전|[결설수측한]정|선언|선정|[도장부탈]착|제창|[도수연인창]출|예측|[간선채]택|[동수실연]행|[면입]학|포함|[결취]합|[구실재표]현"
-KW_NAOv = "[인추참평]가|[제탈]거|[공소]개|[연촉]구|[상연제]기|이야기|시도|[고]려|[완치]료|[관수처]리|연마|[공기]부|[반발조]사|[감축]소|[감준회]수|[기참]여|[긴소중필]요|[논합]의|폐지|대체|[성]취|[납배설]치|\\w+화|이해"
+### Original (Korean + Hanja)
+KW_NAOf = "생각|[가증]감|가공|곱|[건입]국|[연체]결|[총포]괄|가늠|[담배]당|가동|[노입출]력|[수제훈]련|[기수]록|[발변설연작제조증]명|함몰|고민|[개선]발|체벌|[손향]상|개선|발생|[개배연증해]설|[구생작완형]성|[연학]습|[예해]약|오염|[반운투]영|[사이적통포활]용|[교훈]육|[지]원|[도수]입|[수]?출입|시작|긴장|발전|[결설수측한]정|선언|선정|[도장부탈]착|제창|[도수연인창추]출|예측|[간선채]택|[면입]학|분할|포함|[결취]합|[구실재표]현|[동수실연진]행"
+KW_NAOv = "[인증추참평]가|[제탈]거|[공소]개|[연촉]구|[상연제]기|이야기|시도|[고]려|[완치]료|[관수처]리|마무리|연마|소모|[공기]부|[반발조]사|[감축]소|[감준회]수|[기참]여|[긴소중필]요|[논유합]의|폐지|대체|[성]취|[납배설]치|저하|\\w+화|이해"
 KW_NAO = joinseq(KW_NAOf, KW_NAOv)
 
 ### derived from Foreign language
@@ -307,9 +329,9 @@ KW_NNDv = "조"
 KW_NND = joinseq(KW_NNDf, KW_NNDv)
 
 ### Arabic
-KW_NNAf = "[1-9]*[0-9,.]*[136780]"
-KW_NNAv = "[1-9]*[0-9,.]*[2459]"
-KW_NNA = "[1-9]?[0-9,.]+"
+KW_NNAf = "[0-9]*[0-9,.]*[136780]"
+KW_NNAv = "[0-9]*[0-9,.]*[2459]"
+KW_NNA = "[0-9]?[0-9,.]+"
 
 ### Mixed
 KW_NNMf = KW_NNA + KW_NNDf
