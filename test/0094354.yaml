@@ -1,0 +1,6 @@
+true cases:
+  - 오류 발생시 조치
+
+false cases:
+  - condition이 만족하지 않으면 AssertionError 예외를 발생시킵니다.
+

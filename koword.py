@@ -5,7 +5,7 @@ from kostr import concat
 
 """Korean Words"""
 
-# Conjugation
+# Korean Conjucation (strings can be used for Conjugation)
 KC_D = "[되된돼됐]"
 KC_H = "[하한합할해했]"
 
@@ -17,13 +17,21 @@ def conjugate(stems, *postfix):
     return result
 
 
+# Korean Words
+
+def monosyllables(psv):
+    return '|'.join([s for s in psv.split('|') if len(s) == 1])
+
 ## Nouns - Status
 KW_NSf = "가능|근면|깔끔|건강|곤란|동일|둔감|부지런|민감|병약|[불]?성실|부실|부족|[부]?적절"
 KW_NSv = "부패|상이|수요|중대|중요|필요"
 KW_NS = joinseq(KW_NSf, KW_NSv)
 
+
 ## Adjective - Status
-KW_AS = '|'.join(sorted(
+
+### these are Already words as themselves(ie. '달아') and also can be conjugated further (ie. '달아요')
+KW_ASA = '|'.join(sorted(
         conjugate(ks.KS_Aa, 'ㅏ')          # 나ㅃ+ㅏ(지다), 바ㅃ+ㅏ(지다), ...
         + conjugate(ks.KS_Ab, '워')        # 귀여+워(지다), ...
         + conjugate(ks.KS_Ac, '아')        # 맑+아(지다), ...
@@ -40,12 +48,12 @@ KW_AS = '|'.join(sorted(
         + conjugate(ks.KS_Ar, '와')        # 이로+와(지다), ...
         + conjugate(ks.KS_As, '아')        # 나+아(지다), ...
         + conjugate(ks.KS_Aw, '와')        # 고+와(지다), ...
-        + conjugate(ks.KS_Ax, 'ㅓ')        # ㅋ+ㅓ(지다), ...
         + conjugate(ks.KS_Ay, 'ㅙ')        # 못ㄷ+ㅙ(지다), ...
         + conjugate(KW_NS, '해')        # 필요+해(지다), ...
     )
 )
 
+### ends with Lieul ('ㄹ')
 KW_ASL = '|'.join(sorted(
         conjugate(ks.KS_Aa, 'ㅡ', 'ㄹ')          # 나ㅃ+ㅡ+ㄹ
         + conjugate(ks.KS_Ab, '울')              # 귀여+울
@@ -63,11 +71,12 @@ KW_ASL = '|'.join(sorted(
         + conjugate(ks.KS_Ar, '울')              # 이로+울
         + conjugate(ks.KS_As, '을')              # 나+을
         + conjugate(ks.KS_Aw, '울')              # 고+울
-        + conjugate(ks.KS_Ax, 'ㅡ', 'ㄹ')        # ㅋ+ㅡ+ㄹ
         + conjugate(ks.KS_Ay, 'ㅚ', 'ㄹ')        # 못ㄷ+ㅚ+ㄹ
         + conjugate(KW_NS, '할')                 # 필요+할
     )
 )
+
+### ends with Nien ('ㄴ')
 KW_ASN = '|'.join(sorted(
         conjugate(ks.KS_Aa, 'ㅡ', 'ㄴ')          # 나ㅃ+ㅡ+ㄴ
         + conjugate(ks.KS_Ab, '운')              # 귀여+운
@@ -85,12 +94,14 @@ KW_ASN = '|'.join(sorted(
         + conjugate(ks.KS_Ar, '운')              # 이로+운
         + conjugate(ks.KS_As, '은')              # 나+은
         + conjugate(ks.KS_Aw, '운')              # 고+운
-        + conjugate(ks.KS_Ax, 'ㅡ', 'ㄴ')        # ㅋ+ㅡ+ㄴ
         + conjugate(ks.KS_Ay, 'ㅚ', 'ㄴ')        # 못ㄷ+ㅚ+ㄴ
         + conjugate(KW_NS, '한')                 # 필요+한
     )
 )
 
+KW_AS = joinseq(KW_ASA, KW_ASL, KW_ASN)
+KW_A = joinseq(KW_AS)
+KW_A1 = monosyllables(KW_A)
 
 ### Pre-nouns(관형사)
 #### VT - No-tense
@@ -142,7 +153,6 @@ KW_PAN = '|'.join(
         + conjugate(ks.KS_Ar, '운')
         + conjugate(ks.KS_As, '은') 
         + conjugate(ks.KS_Aw, '운')
-        + conjugate(ks.KS_Ax, 'ㅡ', 'ㄴ')
         + conjugate(ks.KS_Ay, 'ㅚ', 'ㄴ') 
         + conjugate(KW_NS, '한')
     )
@@ -168,7 +178,6 @@ KW_PAP = '|'.join(
         + conjugate(ks.KS_Ar, '웠던')
         + conjugate(ks.KS_As, '았던') 
         + conjugate(ks.KS_Aw, '왔던')
-        + conjugate(ks.KS_Ax, 'ㅓ', 'ㅆ', '던')
         + conjugate(ks.KS_Ay, 'ㅚ', '었던') 
         + conjugate(ks.KS_Ay, 'ㅙ', 'ㅆ', '던') 
         + conjugate(KW_NS, '했던')
@@ -197,7 +206,6 @@ KW_BC = '|'.join(sorted(
         + conjugate(ks.KS_Ar, '와서')
         + conjugate(ks.KS_As, '아서')
         + conjugate(ks.KS_Aw, '와서')
-        + conjugate(ks.KS_Ax, 'ㅓ', '서')
         + conjugate(ks.KS_Ay, 'ㅙ', '서')
         ))
 
@@ -224,7 +232,6 @@ KW_BM = '|'.join(
         + conjugate(ks.KS_Ar, 'ㅂ', '게')
         + conjugate(ks.KS_As, 'ㅅ', '게')
         + conjugate(ks.KS_Aw, 'ㅂ', '게')
-        + conjugate(ks.KS_Ax, 'ㅡ', '게')
         + conjugate(ks.KS_Ay, 'ㅚ', '게')
     )
 )
@@ -248,11 +255,11 @@ KW_BN = '|'.join(
         + conjugate(ks.KS_Ar, 'ㅂ', '지')
         + conjugate(ks.KS_As, 'ㅅ', '지')
         + conjugate(ks.KS_Aw, 'ㅂ', '지')
-        + conjugate(ks.KS_Ax, 'ㅡ', '지')
         + conjugate(ks.KS_Ay, 'ㅚ', '지')
     )
 )
-KW_B = joinseq(KW_BC, KW_BM, KW_BN)
+KW_B = joinseq(KW_BD, KW_BM, KW_BN)
+KW_B1 = monosyllables(KW_B)
 
 ## Forein Words
 
@@ -266,7 +273,7 @@ KW_NAOv = "[인증추참평]가|[제탈]거|[공소]개|[연촉]구|[상연제]�
 KW_NAO = joinseq(KW_NAOf, KW_NAOv)
 
 ### derived from Foreign language
-KW_NAFf = "게임|로그아웃|로그인|로깅|모니터링|로딩|인덱싱|컴파일|클릭|튜닝|필터링"
+KW_NAFf = "게임|로그아웃|로그인|로깅|모니터링|로딩|인덱싱|샘플링|컴파일|클릭|튜닝|필터링"
 KW_NAFv = "다운로드|릴리스|마사지|업로드|업데이트|테스트|트리거|팔로우|폴로|플레이"
 KW_NAF = joinseq(KW_NAFf, KW_NAFv)
 
@@ -417,11 +424,20 @@ KW_P = joinseq(KW_PP)
 ## Verb
 ### from Adjective
 ### Change of status
-KW_VACi = conjugate(KW_AS, '지')  # idea (ex: 나빠+지(다))
-KW_VACn = conjugate(KW_AS, '진')  # progress (ex: 나빠+진(다))
-KW_VACp = conjugate(KW_AS, '졌')  # past (ex: 나빠+졌(다))
+KW_VACi = conjugate(KW_ASA, '지')  # idea (ex: 나빠+지(다))
+KW_VACn = conjugate(KW_ASA, '진')  # progress (ex: 나빠+진(다))
+KW_VACp = conjugate(KW_ASA, '졌')  # past (ex: 나빠+졌(다))
 
 ### Passive
 KW_VPl = "갈리다"  # ends with '~리다(lida)'
 KW_VPi = "쓰이다"  # ends with '~이다(ida)'
 
+KW_VIn = '|'.join(
+    sorted(
+        conjugate(ks.KS_VIa, 'ㄴ', '다')
+        + conjugate(ks.KS_VIe, 'ㄴ', '다')
+        + conjugate(ks.KS_VIy, 'ㄴ', '다')
+        + conjugate(ks.KS_VIl, 'ㄴ', '다')
+        + conjugate(ks.KS_VIl, 'ㄴ', '다')
+    )
+)
