@@ -1,0 +1,6 @@
+true cases:
+  - 두 개 일 수도
+
+false cases:
+  - 여기서 하나의 행(row)은 일 단위 데이터입니다.
+
