@@ -111,6 +111,13 @@ rule224_생략해야 하는 표현 ==> count: 17
 python doc2docx.py
 ```
 
+## exfigs.py
+
+`.docx` 파일에 삽입된 그림 파일을 추출합니다. 아래 문서에 설명한 작업을 자동화한 것입니다.
+
+- [Word(.docx) 파일에 삽입된 그림을 일괄 추출하는 방법](https://wikidocs.net/160542)
+
+
 ## fakemt.py
 
 [OmegaT FakeMT Plugin](https://github.com/briacp/omegat-plugin-fake-mt) 서버입니다.
@@ -181,14 +188,16 @@ $ ls
 fig_list.tsv    '그림 1.1 개인, 기관, 외국인 주식투자 수익률 비교.png'    '그림 1.2 개인투자자 1인당 보유 종목 수.jpg'    mvfig.py
 ```
 
-팁:
-
-- [Word(.docx) 파일에 삽입된 그림을 일괄 추출하는 방법](https://wikidocs.net/160542)
-
 
 ## openall.py
 
-현재 위치의 `docx` 파일을 모두 엽니다.
+현재 위치의 `docx` 파일을 모두 엽니다. Windows 전용입니다.
+
+요구사항:
+
+```
+pip install pywin32
+```
 
 
 ## p2a.py
