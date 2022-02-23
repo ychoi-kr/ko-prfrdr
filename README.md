@@ -99,7 +99,7 @@ rule224_생략해야 하는 표현 ==> count: 17
 - 실행 결과를 파일로 저장하려면 리다이렉션을 이용하면 됩니다. 예를 들어, `python3 chk_manuscript.py > report`를 실행하면 `report` 파일에 텍스트로 저장되고, 메모장으로 열 수 있습니다.
 - 워드 파일을 편집 중일 때 다른 프로그램에서 동시에 열 수 없지만, 다른 컴퓨터에서 OneDrive로 동기화된 파일을 열 수는 있습니다. 따라서 컴퓨터가 두 대 있다면 한 대로는 `python3 chk_manuscript.py | more`로 확인하면서 다른 컴퓨터로 워드 파일을 편집하는 식으로 작업할 수 있습니다.
 - `chk_manuscript.py`로 모든 검사를 한 번에 해도 되지만, `spellchk.py`로 맞춤법을 검사해서 수정한 후 `stylechk.py`로 문체를 검사하면 더 좋습니다.
-- `find` 명령으로 여러 개의 파일을 검사할 수 있습니다. 예: `$ find . -type f -exec python ~/ko-prfrdr/spellchk.py '{}' \;`
+- [find 명령으로 여러 개의 파일을 검사](https://wikidocs.net/162133)
 
 ## doc2docx.py
 
