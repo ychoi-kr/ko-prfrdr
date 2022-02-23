@@ -12,14 +12,17 @@ gt = google_translator()
 @app.route('/translate', methods=['GET'])
 def translate():
     arg = request.args.to_dict()
-    result = convert_speech_level.haera(
-        gt.translate(
-            lang_src=arg['source'], lang_tgt=arg['target'], text=arg['text']
-        )
-    )
-    result = re.sub(r'</ (\w\d+)> ', r'</\g<1>>', result)
-    result = re.sub(r'<S0> 그림 (\d+)-(\d+)[.] ', r'<s0>그림 \g<1>.\g<2>', result)
-    
+
+    src = arg['text']
+    src = re.sub(r'</?\w\d+>', '', src)
+
+    trg = gt.translate(lang_src=arg['source'], lang_tgt=arg['target'], text=src)
+    trg = re.sub(r'그림 (\d+)-(\d+)[.]?', r'그림 \g<1>.\g<2>', trg) \
+    .replace('컨볼 루션', '콘볼루션') \
+    .replace('컨볼루션', '컨볼루션') \
+    .replace('피쳐', '피처')
+
+    result = convert_speech_level.haera(src + '\n' + trg)
     return {"translation": result }
 
 if __name__ == "__main__":
