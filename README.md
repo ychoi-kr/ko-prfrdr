@@ -323,14 +323,10 @@ python pdftotext.py [옵션] "<PDF 파일명>"
 
 요구사항:
 
-1. Tesseract 셋업
 
-    a. Tesseract 설치(Windows인 경우 [https://github.com/UB-Mannheim/tesseract/wiki](https://github.com/UB-Mannheim/tesseract/wiki)에서 다운로드)  
-    b. PATH 환경변수에 경로(예: `C:\Program Files\Tesseract-OCR`)를 등록  
-    c. [https://github.com/tesseract-ocr/](https://github.com/tesseract-ocr/)의 tessdata, tessdata_fast, tessdata_best 중 한 곳에서 kor.traineddata를 다운로드해, Tesseract 경로 아래의 `tessdata` 폴더에 넣기  
-    d. 명령 프롬프트에서 작동하는지 확인([https://joyhong.tistory.com/79](https://joyhong.tistory.com/79) 참고)
-
-2. `pip install pytesseract numpy opencv-python PyPDF2`
+1. [Xpdf 명령행 도구 설치](https://wikidocs.net/154110)
+2. [Tesseract 셋업](https://wikidocs.net/162293)
+3. `pip install pytesseract numpy opencv-python PyPDF2 pdf2image`
 
 이슈:
 
