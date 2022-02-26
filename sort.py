@@ -1,15 +1,27 @@
 import argparse
 
 
-def sort(infilename, outfilename):
-    with open(infilename, "rt", encoding="utf8") as infile:
-        content = infile.readlines()
+def readfile(filename, encoding):
+    with open(filename, "rt", encoding=encoding) as infile:
+        return infile.readlines()
+
+def writefile(filename, content, encoding):
+    with open(filename, "wt", encoding=encoding) as outfile:
+        outfile.writelines(content)
+
+def main(filename):
+    try:
+        encoding = "utf8"
+        content = readfile(filename, encoding=encoding)
+    except UnicodeDecodeError:
+        encoding = None
+        content = readfile(filename, encoding=encoding)
         
-    with open(outfilename, "wt", encoding="utf8") as outfile:
-        outfile.writelines(sorted(content))
+    writefile(filename, sorted(content), encoding)
+
     
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("filename")
     args = parser.parse_args()
-    sort(args.filename, args.filename)
+    main(args.filename)
