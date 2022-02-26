@@ -333,6 +333,27 @@ python pdftotext.py [옵션] "<PDF 파일명>"
 - 글자 사이에 불필요한 공백이 들어가서 검색 기능을 활용하는 데 지장 있음.
 
 
+## sort.py
+
+텍스트 파일의 행을 오름차순으로 정렬합니다.
+
+```
+>type glossary.txt
+banana  바나나
+orange  오렌지
+apple   사과
+
+>sort.py glossary.txt
+
+>type glossary.txt
+apple   사과
+banana  바나나
+orange  오렌지
+
+>
+```
+
+
 ## spellchk.py
 
 원고의 맞춤법, 띄어쓰기, 외래어 표기법을 검사합니다.
