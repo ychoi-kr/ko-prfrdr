@@ -17,7 +17,7 @@ def main(filename):
         encoding = None
         content = readfile(filename, encoding=encoding)
         
-    writefile(filename, sorted(content), encoding)
+    writefile(filename, sorted(content, key=str.casefold), encoding)
 
     
 if __name__ == "__main__":
