@@ -1242,7 +1242,7 @@
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?&mn_id=&qna_seq=103124",
     "cases": [
       [
-        "\\b갖을 수 (있\\w+)",
+        "\\b갖을 수 ([없있]\\w+)",
         "가질 수 ()"
       ]
     ],
