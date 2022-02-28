@@ -3,4 +3,5 @@ true cases:
 
 false cases:
   - condition이 만족하지 않으면 AssertionError 예외를 발생시킵니다.
+  - 처리시간이 많이 걸리고 이미지를 저장하는 파일 크기도 커진다.
 
