@@ -18,9 +18,9 @@ def translate():
 
     trg = gt.translate(lang_src=arg['source'], lang_tgt=arg['target'], text=src)
     trg = re.sub(r'그림 (\d+)-(\d+)[.]?', r'그림 \g<1>.\g<2>', trg) \
-    .replace('컨볼 루션', '콘볼루션') \
-    .replace('컨볼루션', '컨볼루션') \
-    .replace('피쳐', '피처')
+        .replace('컨볼 루션', '콘볼루션').replace('컨볼루션', '컨볼루션') \
+        .replace('피쳐', '피처') \
+        .replace('하여 ', '해 ')
 
     result = convert_speech_level.haera(src + '\n' + trg)
     return {"translation": result }
