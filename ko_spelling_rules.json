@@ -1238,6 +1238,18 @@
   },
   {
     "kind": "맞춤법",
+    "name": "qa103124_가질 수 있다",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?&mn_id=&qna_seq=103124",
+    "cases": [
+      [
+        "\\b갖을 수 (있\\w+)",
+        "가질 수 ()"
+      ]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "qa012047_그러고 나서",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?&mn_id=&qna_seq=12047",
     "cases": [
