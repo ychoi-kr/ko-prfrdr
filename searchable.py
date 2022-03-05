@@ -1,5 +1,6 @@
 import argparse
 import os
+import sys
 import platform
 import pathlib
 import tempfile
@@ -42,7 +43,7 @@ def main(filename, lang):
 def pdfsupport():
     if platform.system() == 'Windows':
         # check if pdfimages.exe works
-        if os.system('pdfimages -v > NUL') == 0:
+        if os.system('pdfimages -v > NUL') == 99:
             return True
         else:
             # not implemented
