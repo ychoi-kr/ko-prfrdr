@@ -5,3 +5,4 @@ true cases:
 
 false cases:
   - 대상이 한국어 문서이므로 CountVectorizer에 한글 형태소 분석기를 붙여준다.
+  - 미니 배치 처리 한 번당 얼마나 많은 분량의 데이터를 취할 것인가
