@@ -317,6 +317,18 @@ python pdftotext.py [옵션] "<PDF 파일명>"
 - 이 스크립트 없이 `pdftotext.exe`만으로도 텍스트를 추출할 수 있습니다.
 
 
+## pyko.py
+
+중국어 병음(Pinyin)을 입력하면 [한국어 표기](https://ko.wikipedia.org/wiki/중국어의_한글_표기)로 바꿔줍니다.
+
+사용법:
+
+```
+$ python pyko.py
+Zhōngguó
+중궈
+```
+
 ## searchable.py
 
 스캔해서 만들어진 PDF 파일로부터 검색 가능한 PDF 파일을 생성합니다. 한글 인식이 잘 안 됩니다.
