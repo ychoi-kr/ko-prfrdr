@@ -348,6 +348,7 @@ def message(kind, name, bad, good, desc):
     guide = arr.join(filter(None, [bad, good]))
     ref = " : ".join(filter(None, [name, desc]))
     print(f'   => {guide}\t ({ref})\n')
+    sys.stdout.flush()
 
 
 def display_summary():
