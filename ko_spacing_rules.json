@@ -2268,8 +2268,24 @@
   },
   {
     "kind": "띄어쓰기",
-    "name": "0084935a_-할지라도",
-    "desc": "https://wikidocs.net/84935",
+    "name": "0084935a_-할지",
+    "desc": "https://wikidocs.net/84935#a",
+    "cases": [
+      [
+        "(KW_NAO)[ ]?할 (지[를]?) (KW_NAO)(\\w+)",
+        "()할() ()()"
+      ],
+      [
+        "(\\w+[겼났았었였렸쳤했]을) (지[도]?)",
+        "() ()"
+      ]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "0084935b_-할지라도",
+    "desc": "https://wikidocs.net/84935#b",
     "cases": [
       [
         "(\\w+)할 지라도",

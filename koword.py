@@ -64,6 +64,7 @@ KW_ASL = '|'.join(sorted(
         + conjugate(ks.KS_Ah, '할')              # 착+할
         + conjugate(ks.KS_Ai, '을')              # 붉+을
         + conjugate(ks.KS_Aj, '을')              # 낮+을
+        + conjugate(ks.KS_Ak, '를')              # 모+를
         + conjugate(ks.KS_Am, '을')              # 맛있+을
         + conjugate(ks.KS_An, 'ㄹ')              # 머+ㄹ
         + conjugate(ks.KS_Ao, '을')              # 넓+을
@@ -87,6 +88,7 @@ KW_ASN = '|'.join(sorted(
         + conjugate(ks.KS_Ah, '한')              # 착+한
         + conjugate(ks.KS_Ai, '은')              # 붉+은
         + conjugate(ks.KS_Aj, '은')              # 낮+은
+        + conjugate(ks.KS_Ak, '는')              # 모+르는
         + conjugate(ks.KS_Am, '는')              # 맛있+는
         + conjugate(ks.KS_An, 'ㄴ')              # 머+ㄴ
         + conjugate(ks.KS_Ao, '은')              # 넓+은
@@ -145,6 +147,7 @@ KW_PAN = '|'.join(
         + conjugate(ks.KS_Ah, '한')
         + conjugate(ks.KS_Ai, '은')
         + conjugate(ks.KS_Aj, '은')
+        + conjugate(ks.KS_Ak, '르는')
         + conjugate(ks.KS_Al, '른')
         + conjugate(ks.KS_Am, '는')
         + conjugate(ks.KS_An, 'ㄴ')
@@ -170,6 +173,7 @@ KW_PAP = '|'.join(
         + conjugate(ks.KS_Ah, '했던')
         + conjugate(ks.KS_Ai, '었던')
         + conjugate(ks.KS_Aj, '았던')
+        + conjugate(ks.KS_Ak, 'ㄹ', '랐던')
         + conjugate(ks.KS_Al, 'ㄹ', '렀던')
         + conjugate(ks.KS_Am, '었던')
         + conjugate(ks.KS_An, 'ㄹ', '었던')
@@ -199,6 +203,7 @@ KW_BC = '|'.join(sorted(
         + conjugate(ks.KS_Ah, '해서')
         + conjugate(ks.KS_Ai, '어서')
         + conjugate(ks.KS_Aj, '아서')
+        + conjugate(ks.KS_Ak, 'ㄹ', '라서')
         + conjugate(ks.KS_Al, 'ㄹ', '러서')
         + conjugate(ks.KS_An, 'ㄹ', '어서')
         + conjugate(ks.KS_Ao, '어서')
@@ -225,6 +230,7 @@ KW_BM = '|'.join(
         + conjugate(ks.KS_Ah, '하게')
         + conjugate(ks.KS_Ai, '게')
         + conjugate(ks.KS_Aj, '게')
+        + conjugate(ks.KS_Ak, '르게')
         + conjugate(ks.KS_Al, '르게')
         + conjugate(ks.KS_An, 'ㄹ', '게')
         + conjugate(ks.KS_Ao, '게')
@@ -248,6 +254,7 @@ KW_BN = '|'.join(
         + conjugate(ks.KS_Af, '르지')
         + conjugate(ks.KS_Ai, '지')
         + conjugate(ks.KS_Aj, '지')
+        + conjugate(ks.KS_Ak, '르지')
         + conjugate(ks.KS_Al, '르지')
         + conjugate(ks.KS_An, 'ㄹ', '지')
         + conjugate(ks.KS_Ao, '지')
@@ -268,7 +275,7 @@ KW_Fv = "(\\w*)(ice|ocks|old|uy)"  # v: ends with vowel (does not have final con
 
 ## Nouns - Activity (can be verb with '-하다/-되다' or used in form of '~을/를 하다')
 ### Original (Korean + Hanja)
-KW_NAOf = "생각|[가증]감|가공|곱|[건입]국|[연체]결|[총포]괄|가늠|[담배]당|가동|[노입출]력|[수제훈]련|[기수]록|[발변설연작제조증]명|주목|함몰|고민|[개선]발|체벌|반복|[손향]상|개선|발생|[개배연증해]설|[구생작완형]성|[연학]습|[예해]약|오염|[반운투]영|[사이적통포활]용|훈육|[지]원|[도수]입|[수]?출입|시작|긴장|등장|발전|[결설수측한]정|선언|선정|[도장부탈]착|제창|[도수연인창추]출|예측|[간선채]택|[면입]학|분할|포함|[결취]합|[구실재표]현|[동수실연진]행"
+KW_NAOf = "생각|[가증]감|가공|곱|[건입]국|[연체]결|[총포]괄|가늠|[담배]당|가동|[노입출]력|[수제훈]련|[기수]록|[발변설연작제조증]명|주목|함몰|고민|[개선]발|체벌|반복|[손향]상|개선|발생|[개배연증해]설|[구생작완형]성|[연학]습|[예해]약|오염|[반운투]영|[사이적통포활]용|훈육|[지]원|[도수]입|[수]?출입|시작|긴장|등장|발전|[결설수지측한]정|선언|선정|[도장부탈]착|제창|[도수연인창추]출|예측|[간선채]택|[면입]학|분할|포함|[결취]합|[구실재표]현|[동수실연진]행"
 KW_NAOh = "가시화|강화|경량화|공산화|민주화|소형화|시각화|융화|첨예화|최신화|파편화|특[수]?화|현[실행]화"
 KW_NAOv = "[인증추참평]가|[제탈]거|[공소]개|[연촉]구|[상연제]기|이야기|시도|[고]려|[완치]료|[관수처]리|마무리|연마|소모|[공기]부|[반발조]사|[감축]소|[감준회]수|[기참]여|[긴소중필]요|[논유합]의|폐지|대체|[성]취|[납배설]치|저하|이해|" + KW_NAOh 
 KW_NAO = joinseq(KW_NAOf, KW_NAOv)
