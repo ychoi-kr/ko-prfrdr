@@ -3,38 +3,61 @@ from utils import joinseq
 ########################
 # Korean Josa (postposition or particle)
 
-## Additive
-KJ_A = "도\\b"
+## Case(격 조사)
 
-## possesive ("oF")
-KJ_F = "의\\b"
+### As
+KJ_CA = "으로서"
 
-## Giving
-KJ_G = "께|에게|한테"
+### Compare
+KJ_CC = "보다\\b"
 
-## LinKing
-KJ_K = "와\\b|과\\b|이랑|랑\\b|하고|고\\b"
+### possesive ("oF")
+KJ_CF = "의\\b"
 
-## Location
-KJ_L = "에\\b|에서|부터|으로|로\\b|에\\b|까지"
+### Giving
+KJ_CG = "께|에게|한테"
 
-# Plural (More than one)
-KJ_M = "들"
+### LinKing
+KJ_CK = "와\\b|과\\b|이랑|랑\\b|하고|고\\b"
 
-# Object
-KJ_O = "을\\b|를\\b"
+### location
+KJ_CL = "에\\b|에게\\b|에서"
 
-# Subject
-KJ_S = "이\\b|가\\b"
+### Made of
+KJ_CM = "로\\b|으로\\b|으로써"
 
-# Topic marker
-KJ_T = "은\\b|는\\b"
+### Object
+KJ_CO = "을\\b|를\\b"
 
-# Unique
-KJ_U = "만"
+### Quote
+KJ_CQ = "라고|고\\b"
 
-# adVerb
-KJ_V = "고|라고|보다|에게|에로|에서|와|으로서|으로써"
+### Subject
+KJ_CS = "이\\b|가\\b"
 
-# Josa
-KJ = joinseq(KJ_A, KJ_F, KJ_G, KJ_K, KJ_L, KJ_M, KJ_O, KJ_S, KJ_T, KJ_U, KJ_V)
+### toward
+KJ_CT = "로\\b|에로\\b|으로\\b"
+
+KJ_C = joinseq(KJ_CA, KJ_CC, KJ_CF, KJ_CG, KJ_CK, KJ_CL, KJ_CM, KJ_CO, KJ_CQ, KJ_CS, KJ_CT)
+
+## Information(보조사)
+
+### Additive
+KJ_IA = "도\\b"
+
+### Contrast
+KJ_IC = "은\\b|는\\b"
+
+### Plural (More than one)
+KJ_IM = "들"
+
+### Range
+KJ_IR = "부터|까지"
+
+### Unique
+KJ_IU = "만"
+
+KJ_I = joinseq(KJ_IA, KJ_IC, KJ_IM, KJ_IR, KJ_IU)
+
+KJ = joinseq(KJ_C, KJ_I)
+
