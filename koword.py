@@ -352,7 +352,7 @@ KW_NNMv = KW_NNA + KW_NNDv
 KW_NNM = joinseq(KW_NNMf, KW_NNMv)
 
 ### pure Korean
-KW_NNK = "[열스서마쉰예일여아백]?[한두세네섯댓곱덟홉]"
+KW_NNK = "[다여일아열스서마쉰예백]?[한두세네섯댓곱덟홉]"
 
 ### all
 KW_NN = joinseq(KW_NNC, KW_NND, KW_NNK)   
