@@ -56,6 +56,7 @@ def runcmd(cmd, wincmd=None, infile=None):
 
 
 def convert(filename):
+    result = None
     ext = Path(filename).suffix
     
     if ext == '.pdf':
