@@ -34,7 +34,10 @@ def concat(*seq):
         else:
             return ''.join([a, b])
 
-    return reduce(concat_two, seq)
+    if len(seq) == 2 and seq[1] == '':
+        return seq[0]
+    else:
+        return reduce(concat_two, seq)
 
 
 if __name__ == '__main__':

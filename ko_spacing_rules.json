@@ -281,7 +281,7 @@
   },
   {
     "kind": "띄어쓰기",
-    "name": "urml2584_수많은",
+    "name": "twit5859_수많은",
     "desc": "https://twitter.com/urimal365/status/258432299744505859",
     "cases": [
       [
@@ -293,7 +293,7 @@
   },
   {
     "kind": "띄어쓰기",
-    "name": "urml2961_그런 것",
+    "name": "twit2961_그런 것",
     "desc": "https://twitter.com/urimal365/status/296148953202827265",
     "cases": [
       [
@@ -305,7 +305,7 @@
   },
   {
     "kind": "띄어쓰기",
-    "name": "urml3210_될 텐데",
+    "name": "twit3210_될 텐데",
     "desc": "https://twitter.com/urimal365/status/321078665750384641",
     "cases": [
       [
@@ -1768,8 +1768,12 @@
     "desc": "https://wikidocs.net/79973#a",
     "cases": [
       [
-        "\\b([가-힣]*[^둘될를릴볼울을일줄지질칠클할]) 뿐([가-덓덕-힣,]+)",
+        "\\b([가-힣]*[^개둘될를릴볼울을일줄지질칠클할]) 뿐([가-덓덕-힣,]+)",
         "()뿐()"
+      ],
+      [
+        "\\b(KW_NNK)개 (뿐\\w*)",
+        "() 개()"
       ]
     ],
     "exception": []
@@ -2851,6 +2855,18 @@
       [
         "(시간)안(에)\\b",
         "() 안()"
+      ]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "0163792_-사(社)",
+    "desc": "https://wikidocs.net/163792",
+    "cases": [
+      [
+        "\\b(IBM) 사(KJ)",
+        "()사()"
       ]
     ],
     "exception": []

@@ -1234,6 +1234,18 @@
   },
   {
     "kind": "맞춤법",
+    "name": "qa009051_하시오",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=9051",
+    "cases": [
+      [
+        "\\b(KW_VTO)요[.]",
+        "()오."
+      ]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "qa103124_가질 수 있다",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?&mn_id=&qna_seq=103124",
     "cases": [
@@ -1460,6 +1472,18 @@
       [
         "(KW_Ff)와",
         "()()과"
+      ]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "twit9123_이점",
+    "desc": "https://twitter.com/urimal365/status/247516329224069123",
+    "cases": [
+      [
+        "잇점",
+        "이점"
       ]
     ],
     "exception": []
