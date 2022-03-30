@@ -3,5 +3,6 @@ true cases:
   - main()함수
   - 훨씬 더큰 새집
   - 더못 간다.
+  - "print('pred_proba()결과 Shape : {0}'.format(pred_proba.shape))"
 
 false cases:
