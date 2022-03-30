@@ -199,6 +199,11 @@ fig_list.tsv    '그림 1.1 개인, 기관, 외국인 주식투자 수익률 비
 pip install pywin32
 ```
 
+사용법:
+
+- `py openall.py` : 현재 작업 폴더의 `docx` 파일을 모두 엽니다.
+- `py openall.py -R` : 현재 작업 폴더 및 하위 폴더의 `docx` 파일을 모두 엽니다.
+
 
 ## p2a.py
 
