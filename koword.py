@@ -64,7 +64,6 @@ KW_ASL = '|'.join(sorted(
         + conjugate(ks.KS_Ah, '할')              # 착+할
         + conjugate(ks.KS_Ai, '을')              # 붉+을
         + conjugate(ks.KS_Aj, '을')              # 낮+을
-        + conjugate(ks.KS_Ak, '를')              # 모+를
         + conjugate(ks.KS_Am, '을')              # 맛있+을
         + conjugate(ks.KS_An, 'ㄹ')              # 머+ㄹ
         + conjugate(ks.KS_Ao, '을')              # 넓+을
@@ -73,6 +72,7 @@ KW_ASL = '|'.join(sorted(
         + conjugate(ks.KS_As, '을')              # 나+을
         + conjugate(ks.KS_Aw, '울')              # 고+울
         + conjugate(ks.KS_Ay, 'ㅚ', 'ㄹ')        # 못ㄷ+ㅚ+ㄹ
+        + conjugate(ks.KS_VTk, '를')             # 모+를
         + conjugate(KW_NS, '할')                 # 필요+할
     )
 )
@@ -88,7 +88,6 @@ KW_ASN = '|'.join(sorted(
         + conjugate(ks.KS_Ah, '한')              # 착+한
         + conjugate(ks.KS_Ai, '은')              # 붉+은
         + conjugate(ks.KS_Aj, '은')              # 낮+은
-        + conjugate(ks.KS_Ak, '는')              # 모+르는
         + conjugate(ks.KS_Am, '는')              # 맛있+는
         + conjugate(ks.KS_An, 'ㄴ')              # 머+ㄴ
         + conjugate(ks.KS_Ao, '은')              # 넓+은
@@ -97,6 +96,7 @@ KW_ASN = '|'.join(sorted(
         + conjugate(ks.KS_As, '은')              # 나+은
         + conjugate(ks.KS_Aw, '운')              # 고+운
         + conjugate(ks.KS_Ay, 'ㅚ', 'ㄴ')        # 못ㄷ+ㅚ+ㄴ
+        + conjugate(ks.KS_VTk, '는')             # 모+르는
         + conjugate(KW_NS, '한')                 # 필요+한
     )
 )
@@ -147,7 +147,6 @@ KW_PAN = '|'.join(
         + conjugate(ks.KS_Ah, '한')
         + conjugate(ks.KS_Ai, '은')
         + conjugate(ks.KS_Aj, '은')
-        + conjugate(ks.KS_Ak, '르는')
         + conjugate(ks.KS_Al, '른')
         + conjugate(ks.KS_Am, '는')
         + conjugate(ks.KS_An, 'ㄴ')
@@ -157,6 +156,7 @@ KW_PAN = '|'.join(
         + conjugate(ks.KS_As, '은') 
         + conjugate(ks.KS_Aw, '운')
         + conjugate(ks.KS_Ay, 'ㅚ', 'ㄴ') 
+        + conjugate(ks.KS_VTk, '르는')
         + conjugate(KW_NS, '한')
     )
 )
@@ -173,7 +173,6 @@ KW_PAP = '|'.join(
         + conjugate(ks.KS_Ah, '했던')
         + conjugate(ks.KS_Ai, '었던')
         + conjugate(ks.KS_Aj, '았던')
-        + conjugate(ks.KS_Ak, 'ㄹ', '랐던')
         + conjugate(ks.KS_Al, 'ㄹ', '렀던')
         + conjugate(ks.KS_Am, '었던')
         + conjugate(ks.KS_An, 'ㄹ', '었던')
@@ -184,6 +183,7 @@ KW_PAP = '|'.join(
         + conjugate(ks.KS_Aw, '왔던')
         + conjugate(ks.KS_Ay, 'ㅚ', '었던') 
         + conjugate(ks.KS_Ay, 'ㅙ', 'ㅆ', '던') 
+        + conjugate(ks.KS_VTk, 'ㄹ', '랐던')
         + conjugate(KW_NS, '했던')
     )
 )
@@ -203,7 +203,6 @@ KW_BC = '|'.join(sorted(
         + conjugate(ks.KS_Ah, '해서')
         + conjugate(ks.KS_Ai, '어서')
         + conjugate(ks.KS_Aj, '아서')
-        + conjugate(ks.KS_Ak, 'ㄹ', '라서')
         + conjugate(ks.KS_Al, 'ㄹ', '러서')
         + conjugate(ks.KS_An, 'ㄹ', '어서')
         + conjugate(ks.KS_Ao, '어서')
@@ -212,6 +211,7 @@ KW_BC = '|'.join(sorted(
         + conjugate(ks.KS_As, '아서')
         + conjugate(ks.KS_Aw, '와서')
         + conjugate(ks.KS_Ay, 'ㅙ', '서')
+        + conjugate(ks.KS_VTk, 'ㄹ', '라서')
         ))
 
 ### Degree (정도)
@@ -230,7 +230,6 @@ KW_BM = '|'.join(
         + conjugate(ks.KS_Ah, '하게')
         + conjugate(ks.KS_Ai, '게')
         + conjugate(ks.KS_Aj, '게')
-        + conjugate(ks.KS_Ak, '르게')
         + conjugate(ks.KS_Al, '르게')
         + conjugate(ks.KS_An, 'ㄹ', '게')
         + conjugate(ks.KS_Ao, '게')
@@ -239,6 +238,7 @@ KW_BM = '|'.join(
         + conjugate(ks.KS_As, 'ㅅ', '게')
         + conjugate(ks.KS_Aw, 'ㅂ', '게')
         + conjugate(ks.KS_Ay, 'ㅚ', '게')
+        + conjugate(ks.KS_VTk, '르게')
     )
 )
 
@@ -254,7 +254,6 @@ KW_BN = '|'.join(
         + conjugate(ks.KS_Af, '르지')
         + conjugate(ks.KS_Ai, '지')
         + conjugate(ks.KS_Aj, '지')
-        + conjugate(ks.KS_Ak, '르지')
         + conjugate(ks.KS_Al, '르지')
         + conjugate(ks.KS_An, 'ㄹ', '지')
         + conjugate(ks.KS_Ao, '지')
@@ -263,6 +262,7 @@ KW_BN = '|'.join(
         + conjugate(ks.KS_As, 'ㅅ', '지')
         + conjugate(ks.KS_Aw, 'ㅂ', '지')
         + conjugate(ks.KS_Ay, 'ㅚ', '지')
+        + conjugate(ks.KS_VTk, '르지')
     )
 )
 KW_B = joinseq(KW_BD, KW_BM, KW_BN)
@@ -275,8 +275,8 @@ KW_Fv = "(\\w*)(ice|ocks|old|uy)"  # v: ends with vowel (does not have final con
 
 ## Nouns - Activity (can be verb with '-하다/-되다' or used in form of '~을/를 하다')
 ### Original (Korean + Hanja)
-KW_NAOf = "생각|[가증]감|가공|곱|[건입]국|[연체]결|[총포]괄|가늠|[담배]당|가동|[노입출]력|[수제훈]련|[기수]록|[발변설연작제조증]명|주목|함몰|고민|[개선]발|체벌|반복|[손향]상|개선|발생|[개배연증해]설|[구생작완형]성|[연학]습|[예해]약|오염|[반운투]영|[사이적통포활]용|훈육|[지]원|[도수]입|[수]?출입|시작|긴장|등장|발전|[결설수지측한]정|선언|선정|[도장부탈]착|제창|[도수연인창추]출|예측|[간선채]택|[면입]학|분할|포함|[결취]합|[구실재표]현|[동수실연진]행"
-KW_NAOh = "가시화|강화|경량화|공산화|민주화|소형화|시각화|융화|첨예화|초기화|최신화|파편화|특[수]?화|현[실행]화"
+KW_NAOf = "생각|[가증]감|가공|곱|[건입]국|[연체]결|[총포]괄|접근|가늠|[담배할]당|가동|[노입출]력|[수제훈]련|[기수]록|[발변설연작제조증]명|주목|함몰|고민|[개선]발|체벌|[반중]복|[손연향]상|개선|발생|[개배연증해]설|[구생작완형]성|[연학]습|[예해]약|오염|[반운투]영|[사이적통포활]용|훈육|[지]원|[도수]입|[수]?출입|시작|긴장|등장|[발회]전|조절|[결설수지측한]정|선언|선정|[도장부탈]착|제창|[도수연인창추]출|예측|[간선채]택|[면입]학|국한|분할|포함|[결취]합|[구실재표]현|[동수실연진]행"
+KW_NAOh = "가시화|강화|경량화|공산화|민주화|소형화|수치화|세분화|시각화|융화|첨예화|초기화|최신화|파편화|특[수]?화|현[실행]화"
 KW_NAOv = "[인증추참평]가|[제탈]거|[공소]개|[연촉]구|[상연제]기|이야기|시도|[고]려|[완치]료|[관수처]리|마무리|연마|소모|[공기]부|[반발조]사|[감축]소|[감준회]수|제시|[기참]여|[긴소중필]요|[논유합]의|폐지|대체|[성]취|[납배설]치|저하|이해|" + KW_NAOh 
 KW_NAO = joinseq(KW_NAOf, KW_NAOv)
 
@@ -286,7 +286,7 @@ KW_NABv = "강요|오해"
 KW_NAB = joinseq(KW_NABf, KW_NABv)
 
 ### derived from Foreign language
-KW_NAFf = "게임|로그아웃|로그인|로깅|모니터링|로딩|인덱싱|샘플링|컴파일|클릭|튜닝|필터링"
+KW_NAFf = "게임|로그아웃|로그인|로깅|매핑|모니터링|로딩|인덱싱|샘플링|컴파일|클릭|튜닝|필터링"
 KW_NAFv = "다운로드|릴리스|마사지|업로드|업데이트|테스트|트리거|팔로우|폴로|플레이"
 KW_NAF = joinseq(KW_NAFf, KW_NAFv)
 
