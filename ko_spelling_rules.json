@@ -365,12 +365,12 @@
     "desc": "https://wikidocs.net/154321#b",
     "cases": [
       [
-        "아랫(줄|첨자)",
-        "아래 ()"
+        "아[래랫](그림|요건|줄|첨자)(\\w*)",
+        "아래 ()()"
       ],
       [
-        "윗(줄|첨자)",
-        "아래 ()"
+        "\\b[위윗](그림|요건|줄|첨자)(\\w*)",
+        "위 ()()"
       ]
     ],
     "exception": []
@@ -1298,8 +1298,12 @@
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=116117",
     "cases": [
       [
-        "(\\w+고) 불리우는",
+        "(\\w+[고로][도]?) 불리우는",
         "() 불리는"
+      ],
+      [
+        "(\\w+[고로][도]?) 불리운다",
+        "() 불린다"
       ]
     ],
     "exception": []
@@ -1568,6 +1572,18 @@
       [
         "촛점",
         "초점"
+      ]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "pnu10612_쌍둥이",
+    "desc": "http://urimal.cs.pusan.ac.kr/urimAl_new/leArn/spelling/ps/mo/mo.asp?page_num=1&ID=101010612&search_str=",
+    "cases": [
+      [
+        "쌍동이",
+        "쌍둥이"
       ]
     ],
     "exception": []

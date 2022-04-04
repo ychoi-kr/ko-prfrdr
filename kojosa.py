@@ -29,6 +29,9 @@ KJ_CM = "로\\b|으로\\b|으로써"
 ### Object
 KJ_CO = "을\\b|를\\b"
 
+## Predicative
+KJ_CP = "이다"
+
 ### Quote
 KJ_CQ = "라고|고\\b"
 
@@ -38,7 +41,7 @@ KJ_CS = "이\\b|가\\b"
 ### toward
 KJ_CT = "로\\b|에로\\b|으로\\b"
 
-KJ_C = joinseq(KJ_CA, KJ_CC, KJ_CF, KJ_CG, KJ_CK, KJ_CL, KJ_CM, KJ_CO, KJ_CQ, KJ_CS, KJ_CT)
+KJ_C = joinseq(KJ_CA, KJ_CC, KJ_CF, KJ_CG, KJ_CK, KJ_CL, KJ_CM, KJ_CO, KJ_CP, KJ_CQ, KJ_CS, KJ_CT)
 
 ## Information(보조사)
 
