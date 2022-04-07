@@ -5,10 +5,10 @@ import argparse
 
 
 def main(keyword):
-    site = "http://www.yes24.com/"
+    site = "http://www.yes24.com"
     #qry = "domain=BOOK&query=" + "%20%".join(keyword)
     qry = parse.urlencode([("domain", "BOOK"), ("query", ' '.join(keyword))])
-    url = site + "Product/Search?" + qry
+    url = site + "/Product/Search?" + qry
     
     print("Opening", url, "...\n")
 
@@ -37,7 +37,7 @@ def main(keyword):
         print(url)
         print(author, '|', publisher, '|', pubdate)
         print(saleNum)
-        print('\n')
+        print('')
    
    
 if __name__ == '__main__':
