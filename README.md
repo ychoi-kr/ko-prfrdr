@@ -19,9 +19,9 @@
    * indian.py, indiantree.py : 영문으로 표기된 인도어를 한국어로 표기
 
 * 마이크로소프트 워드
-   * [doc2docx.py](#doc2docxpy) : doc 파일을 docx 파일로 일괄 변환
+   * [doc2docx.py](#doc2docxpy) : doc 파일을 docx 파일로 일괄 변환 (Windows 전용)
    * [exfigs.py](#exfigspy) : docx 파일에서 이미지 파일을 일괄 추출
-   * [openall.py](#openallpy) : 현재 경로의 모든 docx 파일을 열기
+   * [openall.py](#openallpy) : 현재 경로의 모든 docx 파일을 열기 (Windows 
    * [termlist.py](#termlistpy) : docx 파일에 국영문 병기된 용어의 목록을 출력
 
 * 파일 관리
@@ -80,7 +80,7 @@
     - `hwp5txt`를 실행할 수 있게 PATH 환경변수에 경로를 등록
         - 맥 환경은 https://blog.naver.com/yoonsweety/221451960610 참고
 - 품사 검사 기능을 이용하려면
-    - `pip3 install --force-reinstall git+git://github.com/sk8erchoi/konlpy.git`
+    - `pip3 install --force-reinstall git+git://github.com/ychoi-kr/konlpy.git`
 
 사용법:
 
