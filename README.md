@@ -411,3 +411,48 @@ budget                                             1
 CNN                                                2
 ```
 
+
+## yes24.py
+
+예스24에서 국내 도서 목록을 검색합니다(e북 제외).
+
+요구사항:
+
+```
+pip install beautifulsoup4
+````
+
+사용법:
+
+```
+$ python yes24.py <키워드>
+```
+
+예:
+
+```
+$ python yes24.py 파이썬 위키북스
+Opening http://www.yes24.com/Product/Search?domain=BOOK&query=%ED%8C%8C%EC%9D%B4%EC%8D%AC+%EC%9C%84%ED%82%A4%EB%B6%81%EC%8A%A4 ...
+
+파이썬을 이용한 딥러닝/강화학습 주식투자
+http://www.yes24.com/Product/Goods/108251432
+퀀티랩 저 | 위키북스 | 2022년 03월
+판매지수 1,776
+
+파이썬 텍스트 마이닝 완벽 가이드
+http://www.yes24.com/Product/Goods/107008224
+박상언, 강주영, 정석찬 저 | 위키북스 | 2022년 02월
+판매지수 2,517
+
+손에 잡히는 퀀트 투자 with 파이썬
+http://www.yes24.com/Product/Goods/107036607
+GIL′s LAB 저 | 위키북스 | 2022년 02월
+판매지수 1,782
+
+일 잘하는 직장인을 위한 엑셀 자동화 with 파이썬
+http://www.yes24.com/Product/Goods/94483920
+최은석 저 | 위키북스 | 2020년 11월
+판매지수 4,113
+
+...
+```
