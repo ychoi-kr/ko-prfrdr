@@ -1,13 +1,60 @@
+출판물 제작 업무를 돕는 명령행 스크립트들입니다.
+
+* [공통 요구사항](#공통)
+
+* 한국어 원고 교정
+   * [chk_manuscript.py](#chk_manuscriptpy) : 맞춤법과 문체 검사
+   * [spellchk.py](#spellchkpy) : 맞춤법 검사
+   * [stylechk.py](#stylechkpy) : 문체 검사
+
+* 한국어 높임법
+   * [hae.py](#haepy) : 해체로 변환
+   * [haera.py](#haerapy) : 해라체로 변환
+   * [haeyo.py](#haeyopy) : 해요체로 변환
+   * [hasipsio.py](#hasipsiopy) : 하십시오체로 변환
+
+* 외래어/외국어
+   * [pyko.py](#pykopy) : 중국어 병음을 한국어로 표기
+   * [p2a.py](#p2apy) : 영어 수동태를 능동태로 변환
+   * indian.py, indiantree.py : 영문으로 표기된 인도어를 한국어로 표기
+
+* 마이크로소프트 워드
+   * [doc2docx.py](#doc2docxpy) : doc 파일을 docx 파일로 일괄 변환
+   * [exfigs.py](#exfigspy) : docx 파일에서 이미지 파일을 일괄 추출
+   * [openall.py](#openallpy) : 현재 경로의 모든 docx 파일을 열기
+   * [termlist.py](#termlistpy) : docx 파일에 국영문 병기된 용어의 목록을 출력
+
+* 파일 관리
+   * [mvfig.py](#mvfigpy) : 그림 파일명 일괄 변경
+
+* PDF
+   * [pdf_merge.py](#pdf_mergepy) : PDF 파일 병합
+   * [pdf2docx.py](#pdf2docxpy) : PDF 파일을 docx 파일로 변환
+   * [pdftotext.py](#pdftotextpy) : PDF 파일을 txt 파일로 변환
+   * [searchable.py](#searchablepy) : 검색 가능한 PDF 파일을 생성
+
+* 웹
+   * [yes24.py](#yes24py) : 예스24 도서 검색
+   * wikidocs_toc.py : 위키독스 책의 목차 추출
+
+* 번역
+   * [fakemt.py](#fakemtpy) : OmegaT용 MT
+
+* 기타
+   * [sort.py](#sortpy) : 입력받은 행들을 오름차순으로 정렬하여 출력
+
+
 ## 공통
 
 <a name="common_requirements"></a>
 요구사항:
 
-- 파이썬 3 설치
+- [파이썬 3 설치](https://wikidocs.net/44)
 
 팁:
 
 - [윈도우 CMD에서 파이썬 활용 팁](https://wikidocs.net/124333)
+
 
 ## chk_manuscript.py
 
