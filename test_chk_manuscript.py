@@ -24,7 +24,7 @@ def make_test_function(name, line):
 
 
 if __name__ == '__main__':
-    rules = loadrules(glob.glob('*.json'))
+    rules = loadrules(' '.join(glob.glob('*.json')))
     for filename in glob.glob('test/*.yaml'):
         with open(filename, 'r') as stream:
             try:

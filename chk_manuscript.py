@@ -35,6 +35,7 @@ try:
 except:
     pass
 
+
 def _debug(k, v=None):
     if '_dbg_' in globals() and _dbg_ == True :
         print(f"#DEBUG# {k}", end='')
@@ -53,7 +54,7 @@ def main(infile, rulefile, debug=False):
         infile = fileutil.latest_file()
     
     filetoread = fc.convert(infile)
-    
+
     try:
         text = read_manuscript(filetoread)
     except PermissionError:
@@ -74,7 +75,7 @@ def main(infile, rulefile, debug=False):
 
 def loadrules(rulefile):
     allrules = []
-    for filename in rulefile:
+    for filename in rulefile.split(' '):
         path = os.path.join(
             os.path.dirname(os.path.realpath(__file__)), filename
         )
@@ -305,7 +306,7 @@ def check(rules, line):
                     
                     if ex in window:
                         skip = True
-                    
+
                 if not skip:
                     if 'warnings_counter' in globals():
                         warnings_counter[name] += 1
@@ -360,10 +361,12 @@ def display_summary():
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("filename", nargs="?", type=str)
-    parser.add_argument("-r", "--rulefile", nargs='+',
-                        default=['ko_spelling_rules.json', 'ko_spacing_rules.json', 'foreign_sound_rules.json',
-                                 'en_ko_style_correction.json', 'ja_ko_style_correction.json',
-                                 'wikibook_style_guide.json', 'simple_style.json'])
+    
+    default_rules = ['ko_spelling_rules.json', 'ko_spacing_rules.json',
+                     'foreign_sound_rules.json', 'en_ko_style_correction.json',
+                     'ja_ko_style_correction.json', 'wikibook_style_guide.json',
+                     'simple_style.json']
+    parser.add_argument("-r", "--rulefile", default=' '.join(default_rules))
     parser.add_argument("--debug", action="store_true")
     args = parser.parse_args()
     
