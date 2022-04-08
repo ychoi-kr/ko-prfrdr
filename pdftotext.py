@@ -5,6 +5,7 @@ import sys
 import re
 import argparse
 from pathlib import Path
+import platform
 
 from pikepdf import Pdf
 
@@ -13,49 +14,64 @@ WIDTH_LIMIT = 700
 MINIMUM_HEIGHT = 600
 SUPPRESS_OUTPUT = True
 
+
 def main(pdf_file, header, footer, password):
-    quiet = '-q' if SUPPRESS_OUTPUT else ''
 
     if password:
-        user_password = f'-upw "{password}"'
+        user_password = f'-upw "{password}" '
         pdf = Pdf.open(pdf_file, password=password)
     else:
         user_password = ''
         pdf = Pdf.open(pdf_file)
-    
-    with open(Path(pdf_file).stem + ".txt", 'wt') as f:
-        for n in range(len(pdf.pages)):
-            pagenum = f'-f {n + 1} -l {n + 1}'
-    
-            # check every page's dimension because all pages are not same always
-            p = pdf.pages[n]
-            width, height = int(p.trimbox[2]), int(p.trimbox[3])
-    
-            # horizontal dimensions
-            area_per_side = []
-            if width < WIDTH_LIMIT:  # single-sided
-                area_per_side.append(f'-x 0 -W {width}')
-            else:  #double-sided
-                area_per_side.append(f'-x 0 -W {width // 2}')
-                area_per_side.append(f'-x {width // 2} -W {width // 2}')
-    
-            for area in area_per_side:
-                # vertical dimensions
-                if height > MINIMUM_HEIGHT:
-                    area += f' -y {header} -H {height - header - footer}'
-                else:
-                    area += f' -y 0 -H {height}'
-                
-                # extract text
-                cmd = f'pdftotext {pagenum} {area} {user_password} {quiet} -nopgbrk "{pdf_file}"  -'
-                #print(cmd)
-                s = os.popen(cmd).read()
 
-                if re.match("[가-힣]", s):
-                    s = re.sub(r"(.*?[^.:][^‐/])\n+([a-z0-9가-힣(]|" + nnp() + ')', r'\1 \2', s)
+    quiet = '-q ' if SUPPRESS_OUTPUT else ''
+    
+    # Windows version of pdftotext.exe provides fewer options
+    if platform.system() == "Windows":
+        cmd = f'pdftotext.exe {user_password}{quiet}"{pdf_file}"'
+        print(cmd)
+        os.popen(cmd).read()
 
-                s = re.sub(r"(.*?[^.:])[ ‐/]\n+(\w)", r'\1\2', s)
-                f.write(s)
+    # In other platforms, we can use full functionalities
+    else:
+        with open(Path(pdf_file).stem + ".txt", 'wt') as f:
+            for n in range(len(pdf.pages)):
+                pagenum = f'-f {n + 1} -l {n + 1} '
+        
+                # check every page's dimension because all pages are not same always
+                p = pdf.pages[n]
+                width, height = int(p.trimbox[2]), int(p.trimbox[3])
+        
+                # horizontal dimensions
+                area_per_side = []
+                if width < WIDTH_LIMIT:  # single-sided
+                    area_per_side.append(f'-x 0 -W {width}')
+                else:  #double-sided
+                    area_per_side.append(f'-x 0 -W {width // 2}')
+                    area_per_side.append(f'-x {width // 2} -W {width // 2}')
+        
+                for area in area_per_side:
+                    # vertical dimensions
+                    if height > MINIMUM_HEIGHT:
+                        area += f' -y {header} -H {height - header - footer}'
+                    else:
+                        area += f' -y 0 -H {height}'
+                    
+                    # extract text
+                    cmd = f'pdftotext {pagenum}'
+                    if area:
+                        cmd += f'{area} '
+                    cmd += user_password + quiet
+                    cmd += ' -nopgbrk'
+                    cmd += f' "{pdf_file}"'
+                    cmd += ' -'  # stdout
+                    print(cmd)
+                    s = os.popen(cmd).read()
+
+                    if re.match("[가-힣]", s):
+                        s = re.sub(r"(.*?[^.:][^‐/])\n+([a-z0-9가-힣(]|" + nnp() + ')', r'\1 \2', s)
+                    s = re.sub(r"(.*?[^.:])[ ‐/]\n+(\w)", r'\1\2', s)
+                    f.write(s)
 
 
 def page_info(filename, password):
@@ -78,7 +94,7 @@ def page_info(filename, password):
 def nnp():
     words = []
     dicpath = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'dic.txt')
-    for l in open(dicpath).readlines():
+    for l in [x for x in open(dicpath).readlines() if '\t' in x]:
         w, pos = l.split('\t')
         if pos.rstrip() == 'NNP':
             words.append(w)
