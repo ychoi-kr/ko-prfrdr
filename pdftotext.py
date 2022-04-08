@@ -15,7 +15,7 @@ MINIMUM_HEIGHT = 590
 SUPPRESS_OUTPUT = True
 
 
-def main(pdf_file, header, footer, password):
+def main(pdf_file, header, footer, password=None, pp=None):
 
     if password:
         user_password = f'-upw "{password}" '
@@ -24,18 +24,28 @@ def main(pdf_file, header, footer, password):
         user_password = ''
         pdf = Pdf.open(pdf_file)
 
+    firstpage = pp[:pp.index('-')]
+    lastpage = pp[pp.index('-') + 1:]
+
     quiet = '-q ' if SUPPRESS_OUTPUT else ''
     
     # Windows version of pdftotext.exe provides fewer options
     if platform.system() == "Windows":
-        cmd = f'pdftotext.exe {user_password}{quiet}"{pdf_file}"'
+        o_firstpage = f'-f {firstpage} ' if firstpage else ''
+        o_lastpage = f'-l {lastpage} ' if lastpage else ''
+        cmd = f'pdftotext.exe {o_firstpage}{o_lastpage}{user_password}{quiet}"{pdf_file}"'
         print(cmd)
         os.popen(cmd).read()
 
     # In other platforms, we can use full functionalities
     else:
+        page_range = range(
+            int(firstpage) - 1 if firstpage else 1,
+            int(lastpage) if lastpage else len(pdf.pages)
+        )
+
         with open(Path(pdf_file).stem + ".txt", 'wt') as f:
-            for n in range(len(pdf.pages)):
+            for n in page_range:
                 pagenum = f'-f {n + 1} -l {n + 1} '
         
                 # check every page's dimension because all pages are not same always
@@ -106,7 +116,8 @@ if __name__ == '__main__':
     parser.add_argument("pdf_file", type=str)
     parser.add_argument("--header", default=50, type=int) 
     parser.add_argument("--footer", default=60, type=int) 
-    parser.add_argument("--password", type=str) 
+    parser.add_argument("--password", type=str)
+    parser.add_argument("--pp", type=str)
     args = parser.parse_args()
-    main(args.pdf_file, args.header, args.footer, args.password)
+    main(args.pdf_file, args.header, args.footer, args.password, args.pp)
 
