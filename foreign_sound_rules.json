@@ -250,6 +250,7 @@
     "name": "itko0033_국제 음성 기호 - 모음",
     "desc": "[e] → ‘에’",
     "cases": [
+      ["인텔리젼스", "인텔리전스"],
       ["트랜드", "트렌드"]
     ],
     "exception": [
@@ -377,6 +378,7 @@
     "name": "itko0046_국제 음성 기호 - 모음",
     "desc": "[o] → ‘오’",
     "cases": [
+	  ["쇼셜", "소셜"]
     ],
     "exception": [
     ]
@@ -1073,6 +1075,16 @@
     "desc": "https://www.asiatoday.co.kr/view.php?key=20190219001112046",
     "cases": [
       ["파라독스", "패러독스"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
+    "name": "tt058427_트랜잭션",
+    "desc": "http://terms.tta.or.kr/dictionary/dictionaryView.do?word_seq=058427-1",
+    "cases": [
+      ["(트렌젝션|트랜젝션)", "트랜잭션"]
     ],
     "exception": [
     ]

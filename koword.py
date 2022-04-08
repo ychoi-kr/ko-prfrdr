@@ -23,8 +23,8 @@ def monosyllables(psv):
     return '|'.join([s for s in psv.split('|') if len(s) == 1])
 
 ## Nouns - Status
-KW_NSf = "가능|근면|깔끔|건강|곤란|동일|둔감|부지런|민감|병약|[불]?성실|부실|부족|[부]?적절|공평"
-KW_NSv = "부패|상이|수요|중대|중요|필요"
+KW_NSf = "둔감|건강|깔끔|가능|근면|곤란|[장졸]렬|동일|민감|병약|참신|[불]?성실|부실|복잡|부족|[부]?적절|공평"
+KW_NSv = "섬세|상이|수요|[장중]대|진부|[긴중필]요|부패"
 KW_NS = joinseq(KW_NSf, KW_NSv)
 
 
