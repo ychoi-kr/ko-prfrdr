@@ -1071,6 +1071,16 @@
   },
   {
     "kind": "외래어",
+    "name": "qa086670_팸플릿",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?&mn_id=84&qna_seq=86670",
+    "cases": [
+      ["팜플렛", "팸플릿"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
     "name": "frgnatd0_패러독스",
     "desc": "https://www.asiatoday.co.kr/view.php?key=20190219001112046",
     "cases": [
