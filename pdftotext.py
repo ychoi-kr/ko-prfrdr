@@ -11,7 +11,7 @@ from pikepdf import Pdf
 
 
 WIDTH_LIMIT = 700
-MINIMUM_HEIGHT = 600
+MINIMUM_HEIGHT = 590
 SUPPRESS_OUTPUT = True
 
 
