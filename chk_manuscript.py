@@ -194,11 +194,24 @@ def check(rules, line):
                         continue
                     
                     bad = bad_root = m.group()
+
+                    # use slicing and buffer approach instead of replace() method
+                    # to process parentheses in patterns properly
+                    strbuf = ''
+                    remain = good
                     for i, g in enumerate(m.groups(), start=1):
                         if '_dbg_' in globals() and _dbg_:
-                            good = good.replace('()', f'{i}:()', 1)
-                        good = good.replace('()', g, 1)
-                        good = good.replace(f'({i})', g)
+                            strbuf += remain[:remain.index('()')] + g
+                            remain = remain[remain.index('()') + len('()'):]
+                        if f'({i})' in remain:
+                            strbuf += remain[:remain.index(f'({i})')] + g
+                            remain = remain[remain.index(f'({i})') + len(f'({i})'):]
+                        elif '()' in remain:
+                            strbuf += remain[:remain.index('()')] + g
+                            remain = remain[remain.index('()') + len('()'):]
+                        else:
+                            pass
+                    good = strbuf
                 else:
                     continue
                  
