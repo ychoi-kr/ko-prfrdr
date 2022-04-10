@@ -8,3 +8,4 @@ REST	NNP
 에포크	NNG
 카테고리 NNG
 파라미터	NNG
+딕셔너리	NNG

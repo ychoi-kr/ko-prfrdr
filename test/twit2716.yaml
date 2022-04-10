@@ -1,0 +1,4 @@
+true cases:
+  - 값의 범위가 0 ~ 1000 까지라면 1000
+
+false cases:
