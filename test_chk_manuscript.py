@@ -17,7 +17,9 @@ def make_test_function(name, line):
             #print(corrections)
             self.assertGreater(len(corrections), 0, name)
         elif re.match(r'\w+_FC\d', name):
-            self.assertEqual(len(check(rules, line)), 0, name)
+            corrections = check(rules, line)
+            #print(corrections)
+            self.assertEqual(len(corrections), 0, name)
         else:
             sys.exit("Something's wrong with test cases!")
     return test

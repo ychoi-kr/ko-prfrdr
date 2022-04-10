@@ -349,9 +349,9 @@ KW_NNDv = "조"
 KW_NND = joinseq(KW_NNDf, KW_NNDv)
 
 ### Arabic
-KW_NNAf = "[0-9]*[0-9,.]*[136780]"
-KW_NNAv = "[0-9]*[0-9,.]*[2459]"
-KW_NNA = "[0-9]?[0-9,.]+"
+KW_NNAf = "[136780]|[0-9]*[0-9,.]*[136780]"
+KW_NNAv = "[2459]|[0-9]*[0-9,.]*[2459]"
+KW_NNA = "[0-9]|[0-9]+[0-9,.]*[0-9]+"
 
 ### Mixed
 KW_NNMf = KW_NNA + KW_NNDf
