@@ -146,8 +146,8 @@ def check(rules, line):
 
     result = []
 
-    #_debug('line', line)
-    #_debug('komoran.pos(line)', komoran.pos(line))
+    _debug('line', line)
+    _debug('komoran.pos(line)', komoran.pos(line))
 
     for rule in rules:
         kind, name, desc, cases, exceptions = rule
@@ -201,8 +201,9 @@ def check(rules, line):
                     remain = good
                     for i, g in enumerate(m.groups(), start=1):
                         if '_dbg_' in globals() and _dbg_:
-                            strbuf += remain[:remain.index('()')] + g
-                            remain = remain[remain.index('()') + len('()'):]
+                            if '()' in remain:
+                                strbuf += remain[:remain.index('()')] + g
+                                remain = remain[remain.index('()') + len('()'):]
                         if f'({i})' in remain:
                             strbuf += remain[:remain.index(f'({i})')] + g
                             remain = remain[remain.index(f'({i})') + len(f'({i})'):]
@@ -211,7 +212,7 @@ def check(rules, line):
                             remain = remain[remain.index('()') + len('()'):]
                         else:
                             pass
-                    good = strbuf
+                    good = strbuf + remain
                 else:
                     continue
                  
@@ -255,7 +256,7 @@ def check(rules, line):
                         _debug('mode', mode)
                         _debug('<Noun> exists in bad_root', bad_root)
                         nouns = komoran.nouns(line)
-                        #_debug('nouns', nouns)
+                        _debug('nouns', nouns)
                         for n in nouns:
                             candidate = bad_root.replace('<Noun>', n)
                             if candidate in line:
@@ -264,6 +265,7 @@ def check(rules, line):
                                 good = good.replace('<Noun>', n)
                                 good = good.replace('()', n)
                                 break
+                        _debug('good', good) 
                     else:
                         #_debug('komoran.pos(line)', komoran.pos(line))
                         mode = 'Komoran_POS'
