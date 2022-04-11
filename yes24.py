@@ -4,9 +4,23 @@ from bs4 import BeautifulSoup
 import argparse
 
 
-def main(keyword):
+def main(keyword, order):
     site = "http://www.yes24.com"
-    qry = parse.urlencode([("domain", "BOOK"), ("query", ' '.join(keyword))])
+
+    basefilter = {"인기도순": "SINDEX_ONLY",
+                  "정확도순": "RELATION",
+                  "신상품순": "RECENT",
+                  "최저가순": "LOW_PRICE",
+                  "최고가순": "HIGH_PRICE",
+                  "평점순": "CONT_NT",
+                  "리뷰순": "REVIEW_CNT"}
+
+    qry = parse.urlencode([
+        ("domain", "BOOK"),
+        ("query", ' '.join(keyword)),
+        ("order", basefilter[order])
+    ])
+
     url = site + "/Product/Search?" + qry
     
     print("Opening", url, "...\n")
@@ -40,9 +54,10 @@ def main(keyword):
    
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
+    parser.add_argument("--order", default="인기도순", choices=["인기도순", "정확도순", "신상품순", "최저가순", "최고가순", "평점순", "리뷰순"])
     parser.add_argument("keyword", nargs="+", type=str)
     args = parser.parse_args()
-    main(args.keyword)
+    main(args.keyword, args.order)
     
 
 
