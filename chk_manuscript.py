@@ -147,7 +147,6 @@ def check(rules, line):
     result = []
 
     _debug('line', line)
-    _debug('komoran.pos(line)', komoran.pos(line))
 
     for rule in rules:
         kind, name, desc, cases, exceptions = rule
