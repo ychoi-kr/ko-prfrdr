@@ -472,7 +472,8 @@ pip install natsort
 사용법:
 
 ```
-python wc.py
+$ python word.py "워드 파일명" # 특정 파일의 페이지 수 출력
+$ python word.py # 현재 폴더 내 모든 워드 파일의 페이지 수 출력
 ```
 
 예:
