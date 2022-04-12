@@ -7,6 +7,8 @@ import argparse
 from pathlib import Path
 import platform
 
+from numconv import roman2arabic
+
 from pikepdf import Pdf
 
 
@@ -26,6 +28,12 @@ def main(pdf_file, header, footer, password=None, pp=None):
 
     firstpage = pp[:pp.index('-')]
     lastpage = pp[pp.index('-') + 1:]
+
+    if re.match("[ivx]+", firstpage):
+        firstpage = roman2arabic(firstpage)
+    if re.match("[ivx]+", lastpage):
+        lastpage = roman2arabic(lastpage)
+
 
     quiet = '-q ' if SUPPRESS_OUTPUT else ''
     
