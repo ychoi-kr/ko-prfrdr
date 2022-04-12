@@ -23,7 +23,7 @@
    * [exfigs.py](#exfigspy) : docx 파일에서 이미지 파일을 일괄 추출
    * [openall.py](#openallpy) : 현재 경로의 모든 docx 파일을 열기 (Windows 전용)
    * [termlist.py](#termlistpy) : docx 파일에 국영문 병기된 용어의 목록을 출력
-   * [wc.py](#wcpy): docx 파일의 단어 수 세기
+   * [pgcnt.py](#wcpy): docx 파일의 페이지 수 세기
 
 * 파일 관리
    * [mvfig.py](#mvfigpy) : 그림 파일명 일괄 변경
@@ -370,6 +370,39 @@ python pdftotext.py [옵션] "<PDF 파일명>"
 - 이 스크립트 없이 `pdftotext.exe`만으로도 텍스트를 추출할 수 있습니다.
 
 
+## pgcnt.py
+
+현재 디렉터리에 있는 docx 문서들의 페이지 수를 셉니다. (Windows 전용)
+
+요구사항:
+
+```
+pip install natsort
+```
+
+사용법:
+
+```
+$ python pgcnt.py "워드 파일명" # 특정 파일의 페이지 수 출력
+$ python pgcnt.py # 현재 폴더 내 모든 워드 파일의 페이지 수 출력
+```
+
+예:
+
+```
+> python pgcnt.py
+1~2장.doc          63      63
+3장.doc    44     107
+4장.doc    32     139
+5장.doc    54     193
+6장.doc    79     272
+7장.doc    35     307
+8장.doc    53     360
+9장.doc    83     443
+10장.doc           77     520
+```
+
+
 ## pyko.py
 
 중국어 병음(Pinyin)을 입력하면 [한국어 표기](https://ko.wikipedia.org/wiki/중국어의_한글_표기)로 바꿔줍니다.
@@ -457,38 +490,6 @@ bias correction                                    1
 Bibhuti Bhushan Jha                                1
 budget                                             1
 CNN                                                2
-```
-
-## wc.py
-
-현재 디렉터리에 있는 docx 문서들의 단어 수를 셉니다. (Windows 전용)
-
-요구사항:
-
-```
-pip install natsort
-```
-
-사용법:
-
-```
-$ python word.py "워드 파일명" # 특정 파일의 페이지 수 출력
-$ python word.py # 현재 폴더 내 모든 워드 파일의 페이지 수 출력
-```
-
-예:
-
-```
-> python wc.py
-1~2장.doc          63      63
-3장.doc    44     107
-4장.doc    32     139
-5장.doc    54     193
-6장.doc    79     272
-7장.doc    35     307
-8장.doc    53     360
-9장.doc    83     443
-10장.doc           77     520
 ```
 
 
