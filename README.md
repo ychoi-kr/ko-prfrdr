@@ -472,10 +472,10 @@ pip install beautifulsoup4
 사용법:
 
 ```
-$ python yes24.py <키워드>
+yes24.py [-h] [--order {인기도순,정확도순,신상품순,최저가순,최고가순,평점순,리뷰순}] keyword [keyword ...]
 ```
 
-예:
+예 1:
 
 ```
 $ python yes24.py 파이썬 위키북스
@@ -500,6 +500,60 @@ GIL′s LAB 저 | 위키북스 | 2022년 02월
 http://www.yes24.com/Product/Goods/94483920
 최은석 저 | 위키북스 | 2020년 11월
 판매지수 4,113
+
+...
+```
+
+예 2:
+
+```
+$ yes24 C++
+Opening http://www.yes24.com/Product/Search?domain=BOOK&query=C%2B%2B&order=SINDEX_ONLY ...
+
+Clean Code 클린 코드
+http://www.yes24.com/Product/Goods/11681152
+로버트 C. 마틴 저/박재호, 이해영 역 | 인사이트(insight) | 2013년 12월
+판매지수 61,812
+
+전지적 독자 시점 4
+http://www.yes24.com/Product/Goods/107874372
+싱숑 원저/슬리피-C 글그림 | 에이템포미디어 | 2022년 02월
+판매지수 24,849
+
+역시 내 청춘 러브코메디는 잘못됐다. 결 1
+http://www.yes24.com/Product/Goods/107847414
+와타리 와타루 저/퐁칸 ⑧ 그림/김장준 역 | 디앤씨미디어(D&C미디어) | 2022년 03월
+판매지수 18,843
+
+혼자 공부하는 C 언어
+http://www.yes24.com/Product/Goods/74269921
+서현우 저 | 한빛미디어 | 2019년 06월
+판매지수 41,073
+
+...
+
+$ yes24 --order 정확도순 C++
+Opening http://www.yes24.com/Product/Search?domain=BOOK&query=C%2B%2B&order=RELATION ...
+
+독하게 시작하는 C 프로그래밍
+http://www.yes24.com/Product/Goods/18732021
+최호성 저 | 루비페이퍼 | 2015년 06월
+판매지수 1,440
+
+코믹 흔해빠진 직업으로 세계최강 8
+http://www.yes24.com/Product/Goods/108603876
+시라코메 료 원저/RoGa 글그림/김장준 역 | 디앤씨미디어(D&C미디어) | 2022년 04월
+판매지수 1,710
+
+방과 후, 이세계 카페에서 커피를 4
+http://www.yes24.com/Product/Goods/108603698
+카자미 도리 저/U스케 그림/이진주 역 | 디앤씨미디어(D&C미디어) | 2022년 04월
+판매지수 1,200
+
+Game Programming in C++
+http://www.yes24.com/Product/Goods/78898401
+산자이 마드하브 저/박주항 역 | 에이콘출판사 | 2019년 09월
+판매지수 1,044
 
 ...
 ```
