@@ -22,8 +22,8 @@
    * [doc2docx.py](#doc2docxpy) : doc 파일을 docx 파일로 일괄 변환 (Windows 전용)
    * [exfigs.py](#exfigspy) : docx 파일에서 이미지 파일을 일괄 추출
    * [openall.py](#openallpy) : 현재 경로의 모든 docx 파일을 열기 (Windows 전용)
+   * [pgcnt.py](#pgcntpy): docx 파일의 페이지 수 세기
    * [termlist.py](#termlistpy) : docx 파일에 국영문 병기된 용어의 목록을 출력
-   * [pgcnt.py](#wcpy): docx 파일의 페이지 수 세기
 
 * 파일 관리
    * [mvfig.py](#mvfigpy) : 그림 파일명 일괄 변경
