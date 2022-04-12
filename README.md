@@ -23,6 +23,7 @@
    * [exfigs.py](#exfigspy) : docx 파일에서 이미지 파일을 일괄 추출
    * [openall.py](#openallpy) : 현재 경로의 모든 docx 파일을 열기 (Windows 전용)
    * [termlist.py](#termlistpy) : docx 파일에 국영문 병기된 용어의 목록을 출력
+   * [wc.py](#wcpy): docx 파일의 단어 수 세기
 
 * 파일 관리
    * [mvfig.py](#mvfigpy) : 그림 파일명 일괄 변경
@@ -456,6 +457,37 @@ bias correction                                    1
 Bibhuti Bhushan Jha                                1
 budget                                             1
 CNN                                                2
+```
+
+## wc.py
+
+현재 디렉터리에 있는 docx 문서들의 단어 수를 셉니다. (Windows 전용)
+
+요구사항:
+
+```
+pip install natsort
+```
+
+사용법:
+
+```
+python wc.py
+```
+
+예:
+
+```
+> python wc.py
+1~2장.doc          63      63
+3장.doc    44     107
+4장.doc    32     139
+5장.doc    54     193
+6장.doc    79     272
+7장.doc    35     307
+8장.doc    53     360
+9장.doc    83     443
+10장.doc           77     520
 ```
 
 
