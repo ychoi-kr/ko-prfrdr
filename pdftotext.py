@@ -26,14 +26,17 @@ def main(pdf_file, header, footer, password=None, pp=None):
         user_password = ''
         pdf = Pdf.open(pdf_file)
 
-    firstpage = pp[:pp.index('-')]
-    lastpage = pp[pp.index('-') + 1:]
-
-    if re.match("[ivx]+", firstpage):
-        firstpage = roman2arabic(firstpage)
-    if re.match("[ivx]+", lastpage):
-        lastpage = roman2arabic(lastpage)
-
+    if pp:
+        firstpage = pp[:pp.index('-')]
+        lastpage = pp[pp.index('-') + 1:]
+    
+        if re.match("[ivx]+", firstpage):
+            firstpage = roman2arabic(firstpage)
+        if re.match("[ivx]+", lastpage):
+            lastpage = roman2arabic(lastpage)
+    else:
+        firstpage = None
+        lastpage = None
 
     quiet = '-q ' if SUPPRESS_OUTPUT else ''
     
