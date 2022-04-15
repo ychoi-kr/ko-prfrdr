@@ -286,7 +286,7 @@ KW_NABv = "강요|오해"
 KW_NAB = joinseq(KW_NABf, KW_NABv)
 
 ### derived from Foreign language
-KW_NAFf = "게임|로그아웃|로그인|로깅|매핑|모니터링|로딩|인덱싱|인코딩|샘플링|컴파일|코딩|클릭|튜닝|필터링"
+KW_NAFf = "게임|로그아웃|로그인|로깅|매핑|모니터링|로딩|인덱싱|인코딩|샘플링|컨트롤|컴파일|코딩|클릭|튜닝|필터링"
 KW_NAFv = "다운로드|릴리스|마사지|업로드|업데이트|테스트|트리거|팔로우|폴로|플레이"
 KW_NAF = joinseq(KW_NAFf, KW_NAFv)
 
@@ -376,7 +376,7 @@ KW_NUDf = "광년"
 KW_NUDv = "미터|리|킬로미터"
 KW_NUD = joinseq(KW_NUDf, KW_NUDv)
 
-### weiGht in symbol
+### unit in symbol
 KW_NUGf = "[mk]?g" 
 KW_NUGv = "[k]?[LlMm]"
 KW_NUG = joinseq(KW_NUGf, KW_NUGv)
@@ -390,7 +390,7 @@ KW_NURv = "제곱미터|평방미터"
 KW_NUR = joinseq(KW_NURf, KW_NURv)
 
 ### Stuff 
-KW_NUSf = "그릇|달|명|방울|벌|장|쪽"
+KW_NUSf = "그릇|달|명|방울|벌|쌍|장|줄|쪽"
 KW_NUSv = "가지|개|마리|박스|봉지|채|페이지|회"
 KW_NUSd = "대" # should be handled carefully: '세 대(three device)' vs '3세대(third generation)' 
 KW_NUS = joinseq(

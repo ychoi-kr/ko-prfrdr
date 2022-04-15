@@ -8,8 +8,11 @@ from utils import joinseq
 ### As
 KJ_CA = "으로서"
 
-### Compare
-KJ_CC = "보다\\b"
+### compare('Boda')
+KJ_CB = "보다\\b"
+
+### metaphor('Cheorum')
+KJ_CC = "처럼"
 
 ### possesive ("oF")
 KJ_CF = "의\\b"
@@ -17,10 +20,13 @@ KJ_CF = "의\\b"
 ### Giving
 KJ_CG = "께|에게|한테"
 
-### LinKing
+## predicative('Ida')
+KJ_CI = "이다"
+
+### linKing
 KJ_CK = "와\\b|과\\b|이랑|랑\\b|하고|고\\b"
 
-### location
+### Location
 KJ_CL = "에\\b|에게\\b|에서"
 
 ### Made of
@@ -28,9 +34,6 @@ KJ_CM = "로\\b|으로\\b|으로써"
 
 ### Object
 KJ_CO = "을\\b|를\\b"
-
-## Predicative
-KJ_CP = "이다"
 
 ### Quote
 KJ_CQ = "라고|고\\b"
@@ -41,7 +44,7 @@ KJ_CS = "이\\b|가\\b"
 ### toward
 KJ_CT = "로\\b|에로\\b|으로\\b"
 
-KJ_C = joinseq(KJ_CA, KJ_CC, KJ_CF, KJ_CG, KJ_CK, KJ_CL, KJ_CM, KJ_CO, KJ_CP, KJ_CQ, KJ_CS, KJ_CT)
+KJ_C = joinseq(KJ_CA, KJ_CB, KJ_CC, KJ_CF, KJ_CG, KJ_CI, KJ_CK, KJ_CL, KJ_CM, KJ_CO, KJ_CQ, KJ_CS, KJ_CT)
 
 ## Information(보조사)
 
