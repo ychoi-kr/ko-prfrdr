@@ -45,7 +45,7 @@
     "desc": "https://wikidocs.net/67208#a",
     "cases": [
       [
-        "(KW_NA) ([되된될됩돼])(\\w*)",
+        "(KW_NA) ([되된될됨됩돼됐])(\\w*)",
         "()()()"
       ]
     ],
@@ -57,8 +57,8 @@
     "desc": "https://wikidocs.net/67208#b",
     "cases": [
       [
-        "도움되다",
-        "도움 되다"
+        "\\b(도움|문제)([되된될됨됩돼됐]\\w*)",
+        "() ()"
       ]
     ],
     "exception": []
@@ -2939,6 +2939,19 @@
   },
   {
     "kind": "띄어쓰기",
+    "name": "qa116469_할 일 / 할 말",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=116469",
+    "cases": [
+      [
+
+        "\\b할([일말]\\w*)",
+        "할 ()"
+      ]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
     "name": "qa117048_-까지 하다",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=117048",
     "cases": [
@@ -2958,6 +2971,18 @@
       [
         "(어처구니) (없\\w*)",
         "()()"
+      ]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "qa133790_가능한 한",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=133790",
+    "cases": [
+      [
+        "가능한한",
+        "가능한 한"
       ]
     ],
     "exception": []
@@ -3097,6 +3122,18 @@
       ]
     ],
     "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "twit1544_눈 깜짝 할 새",
+    "desc": "https://twitter.com/urimal365/status/154470168028917760",
+    "cases": [
+      [
+        "\\b(눈[ ]?깜짝[ ]?할[ ]?새)",
+        "눈 깜짝 할 새"
+      ]
+    ],
+    "exception": ["눈 깜짝 할 새"]
   },
   {
     "kind": "띄어쓰기",
