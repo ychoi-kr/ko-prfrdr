@@ -1040,10 +1040,40 @@
   },
   {
     "kind": "외래어",
+    "name": "qa002014_포맷",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?&mn_id=84&qna_seq=2014",
+    "cases": [
+      ["포멧", "포맷"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
     "name": "qa032126_'screeshot'의 표기",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=32126",
     "cases": [
       ["스크린샷", "스크린숏"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
+    "name": "qa072199_스탠퍼드",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?&mn_id=84&qna_seq=72199",
+    "cases": [
+      ["스탠포드[ ]?대학", "스탠퍼드 대학"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
+    "name": "qa086670_팸플릿",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?&mn_id=84&qna_seq=86670",
+    "cases": [
+      ["팜플렛", "팸플릿"]
     ],
     "exception": [
     ]
@@ -1055,26 +1085,6 @@
     "cases": [
       ["타블렛", "태블릿"],
       ["테블릿", "태블릿"]
-    ],
-    "exception": [
-    ]
-  },
-  {
-    "kind": "외래어",
-    "name": "qa002014_포맷",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?&mn_id=84&qna_seq=2014",
-    "cases": [
-      ["포멧", "포맷"]
-    ],
-    "exception": [
-    ]
-  },
-  {
-    "kind": "외래어",
-    "name": "qa086670_팸플릿",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?&mn_id=84&qna_seq=86670",
-    "cases": [
-      ["팜플렛", "팸플릿"]
     ],
     "exception": [
     ]

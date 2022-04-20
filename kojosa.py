@@ -9,13 +9,13 @@ from utils import joinseq
 KJ_CA = "으로서"
 
 ### compare('Boda')
-KJ_CB = "보다\\b"
+KJ_CB = "보다"
 
 ### metaphor('Cheorum')
 KJ_CC = "처럼"
 
 ### possesive ("oF")
-KJ_CF = "의\\b"
+KJ_CF = "의"
 
 ### Giving
 KJ_CG = "께|에게|한테"
@@ -24,35 +24,35 @@ KJ_CG = "께|에게|한테"
 KJ_CI = "이다"
 
 ### linKing
-KJ_CK = "와\\b|과\\b|이랑|랑\\b|하고|고\\b"
+KJ_CK = "와|과|이랑|랑|하고|고"
 
 ### Location
-KJ_CL = "에\\b|에게\\b|에서"
+KJ_CL = "게|에|에게|에서"
 
 ### Made of
-KJ_CM = "로\\b|으로\\b|으로써"
+KJ_CM = "로|으로|으로써"
 
 ### Object
-KJ_CO = "을\\b|를\\b"
+KJ_CO = "을|를"
 
 ### Quote
-KJ_CQ = "라고|고\\b"
+KJ_CQ = "라고|고"
 
 ### Subject
-KJ_CS = "이\\b|가\\b"
+KJ_CS = "이|가"
 
 ### toward
-KJ_CT = "로\\b|에로\\b|으로\\b"
+KJ_CT = "로|에로|으로"
 
 KJ_C = joinseq(KJ_CA, KJ_CB, KJ_CC, KJ_CF, KJ_CG, KJ_CI, KJ_CK, KJ_CL, KJ_CM, KJ_CO, KJ_CQ, KJ_CS, KJ_CT)
 
 ## Information(보조사)
 
 ### Additive
-KJ_IA = "도\\b"
+KJ_IA = "도"
 
 ### Contrast
-KJ_IC = "은\\b|는\\b"
+KJ_IC = "은|는"
 
 ### Plural (More than one)
 KJ_IM = "들"
