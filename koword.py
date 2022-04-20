@@ -315,7 +315,7 @@ KW_NPNv = "감염자|[고남여병환]자|[동양이]성애자|바보|아기"
 
 ### by Job title or membership
 KW_NPJf = "감독[관]?[님]?|강사님|과장[님]?|교수님|[국군도동시]민|기업인|대[리표]님|대통령[님]?|사원|[사소의회]장[님]?|시인|작[곡사]?가님|직장인|학생|[수해]병|초대 회장|회사원"
-KW_NPJv = "강사|교[사수]|대[리표]|작[곡사]?가"
+KW_NPJv = "강사|교[사수]|대[리표]|작[곡사]?가|전문가"
 KW_NPJ = joinseq(KW_NPJf, KW_NPJv)
 
 ### by ranK
@@ -426,6 +426,9 @@ KW_NLD = joinseq(KW_NLDf, KW_NLDv)
 KW_NLIf = "개미|딱정벌레|지네"
 KW_NLIv = "[꿀]벌|[여]왕벌"
 KW_NLI = joinseq(KW_NLIf, KW_NLIv)
+
+### Thing
+KW_NT = "기계|모듈|자체|장비|컴퓨터|프로그램|함수"
 
 
 ## Pronouns
