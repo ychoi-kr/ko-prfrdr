@@ -198,19 +198,25 @@ def check(rules, line):
                     # to process parentheses in patterns properly
                     strbuf = ''
                     remain = good
-                    for i, g in enumerate(m.groups(), start=1):
+
+                    k = 1
+                    for s in re.findall("(?<=[(])[1-9]*(?=[)])", good):
+                        n = int(s) if len(s) > 0 else k 
+                        k += 1
+
                         if '_dbg_' in globals() and _dbg_:
                             if '()' in remain:
-                                strbuf += remain[:remain.index('()')] + g
+                                strbuf += remain[:remain.index('()')] + m.group(n)
                                 remain = remain[remain.index('()') + len('()'):]
-                        if f'({i})' in remain:
-                            strbuf += remain[:remain.index(f'({i})')] + g
-                            remain = remain[remain.index(f'({i})') + len(f'({i})'):]
+                        if f'({n})' in remain:
+                            strbuf += remain[:remain.index(f'({n})')] + m.group(n)
+                            remain = remain[remain.index(f'({n})') + len(f'({n})'):]
                         elif '()' in remain:
-                            strbuf += remain[:remain.index('()')] + g
+                            strbuf += remain[:remain.index('()')] + m.group(n)
                             remain = remain[remain.index('()') + len('()'):]
                         else:
                             pass
+
                     good = strbuf + remain
                 else:
                     continue
