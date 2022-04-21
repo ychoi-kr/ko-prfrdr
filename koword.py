@@ -287,7 +287,7 @@ KW_NAB = joinseq(KW_NABf, KW_NABv)
 
 ### derived from Foreign language
 KW_NAFf = "게임|로그아웃|로그인|로깅|매핑|모니터링|로딩|인덱싱|인코딩|샘플링|컨트롤|컴파일|코딩|클릭|튜닝|필터링"
-KW_NAFv = "다운로드|릴리스|마사지|업로드|업데이트|테스트|트리거|팔로우|폴로|플레이"
+KW_NAFv = "다운로드|릴리스|마사지|업로드|업데이트|임포트|테스트|트리거|팔로우|폴로|플레이"
 KW_NAF = joinseq(KW_NAFf, KW_NAFv)
 
 ### all
@@ -366,6 +366,17 @@ KW_NN = joinseq(KW_NNC, KW_NND, KW_NNK)
 
 
 ## Nouns - Unit
+
+### Abstract
+KW_NUAf = "건"
+KW_NUAv = "뭉치"
+KW_NUA = joinseq(KW_NUAf, KW_NUAv)
+
+### Book
+KW_NUBf = "단원|장|절|항"
+KW_NUBv = "부|파트"
+KW_NUB = joinseq(KW_NUBf, KW_NUBv)
+
 ### Currency
 KW_NUCf = "루블|엔|원|위안"
 KW_NUCv = "달러|리라|유로|페소"
@@ -382,7 +393,9 @@ KW_NUGv = "[k]?[LlMm]"
 KW_NUG = joinseq(KW_NUGf, KW_NUGv)
 
 ### Multiplication
-KW_NUM = "배"
+KW_NUMf = "곱"
+KW_NUMv = "배"
+KW_NUM = joinseq(KW_NUMf, KW_NUMv)
 
 ### aRea
 KW_NURf = "평"
@@ -413,7 +426,9 @@ KW_NUWv = "밀리리터|데시리터|리터|킬로리터|파운드"
 KW_NUW = joinseq(KW_NUWf, KW_NUWv)
 
 ### all
-KW_NU = joinseq(KW_NUD, KW_NUG, KW_NUM, KW_NUR, KW_NUS, KW_NUT, KW_NUV, KW_NUW)
+KW_NUf = joinseq(KW_NUAf, KW_NUBf, KW_NUCf, KW_NUDf, KW_NUGf, KW_NUMf, KW_NURf, KW_NUSf, KW_NUTf, KW_NUVf, KW_NUWf)
+KW_NUv = joinseq(KW_NUAv, KW_NUBv, KW_NUCv, KW_NUDv, KW_NUGv, KW_NUMv, KW_NURv, KW_NUSv, KW_NUTv, KW_NUVv, KW_NUWv)
+KW_NU = joinseq(KW_NUf, KW_NUv)
 
 
 ## Nouns - animaL
@@ -427,8 +442,28 @@ KW_NLIf = "개미|딱정벌레|지네"
 KW_NLIv = "[꿀]벌|[여]왕벌"
 KW_NLI = joinseq(KW_NLIf, KW_NLIv)
 
-### Thing
-KW_NT = "기계|모듈|자체|장비|컴퓨터|프로그램|함수"
+
+## Thing
+### Abstract
+KW_NTAf = "모델|모형|모듈|스텝|입력|차원|채널|출력|층|토큰|토픽|특성|프로그램|함수|행렬"
+KW_NTAv = "가중치|글자|단어|데이터|리뷰|메모리|배치|벡터|자체|차이|축소|폰트|학습 데이터"
+KW_NTA = joinseq(KW_NTAf, KW_NTAv)
+
+### maChine
+KW_NTCf = ""
+KW_NTCv = "기계|장비|컴퓨터"
+
+### Fruit
+KW_NTFf = "귤"
+KW_NTFv = "바나나|배|사과|오렌지"
+
+### Measure
+KW_NTMf = "폭" 
+KW_NTMv = "개수|너비|넓이|높이|단위|수|숫자|크기" 
+
+KW_NTf = joinseq(KW_NTAf, KW_NTCf, KW_NTFf, KW_NTMf)
+KW_NTv = joinseq(KW_NTAv, KW_NTCv, KW_NTFv, KW_NTMv)
+KW_NT = joinseq(KW_NTf, KW_NTv)
 
 
 ## Pronouns
