@@ -24,7 +24,7 @@ def monosyllables(psv):
 
 ## Nouns - Status
 KW_NSf = "둔감|건강|깔끔|가능|근면|곤란|[장졸]렬|동일|민감|병약|참신|[불]?성실|부실|복잡|부족|[부]?적절|공평"
-KW_NSv = "섬세|상이|수요|[장중]대|진부|[긴중필]요|부패"
+KW_NSv = "[자섬]세|상이|수요|[장중]대|진부|[긴중필]요|부패"
 KW_NS = joinseq(KW_NSf, KW_NSv)
 
 
@@ -38,7 +38,8 @@ KW_ASA = '|'.join(sorted(
         + conjugate(ks.KS_Ad, 'ㄹ', '아')  # 다+ㄹ+아(지다)(be sweety), ...
         + conjugate(ks.KS_Ae, 'ㅓ')        # 예ㅃ+ㅓ(지다), ...
         + conjugate(ks.KS_Af, 'ㄹ', '라')  # 다+ㄹ+라(지다)(be differentiated), ...
-        + conjugate(ks.KS_Ah, '해')        # 착+해(지다), ...
+        + conjugate(ks.KS_Ag, '해')        # 착+해(지다), ...
+        + conjugate(ks.KS_Ah, '해')        # 깔끔+해(지다), ...
         + conjugate(ks.KS_Ai, '어')        # 붉+어(지다), ...
         + conjugate(ks.KS_Aj, '아')        # 낮+아(지다), ...
         + conjugate(ks.KS_Am, '어')        # 맛있+어(지다), ...
@@ -61,9 +62,11 @@ KW_ASL = '|'.join(sorted(
         + conjugate(ks.KS_Ad, 'ㄹ')              # 다+ㄹ(sweet)
         + conjugate(ks.KS_Ae, 'ㅡ', 'ㄹ')        # 예ㅃ+ㅡ+ㄹ
         + conjugate(ks.KS_Af, 'ㄹ', 'ㅡ', 'ㄹ')  # 다+ㄹ+ㅡ+ㄹ(different)
-        + conjugate(ks.KS_Ah, '할')              # 착+할
+        + conjugate(ks.KS_Ag, '할')              # 착+할
+        + conjugate(ks.KS_Ah, '할')              # 깔끔+할
         + conjugate(ks.KS_Ai, '을')              # 붉+을
         + conjugate(ks.KS_Aj, '을')              # 낮+을
+        + conjugate(ks.KS_Al, '를')              # 맛있+을
         + conjugate(ks.KS_Am, '을')              # 맛있+을
         + conjugate(ks.KS_An, 'ㄹ')              # 머+ㄹ
         + conjugate(ks.KS_Ao, '을')              # 넓+을
@@ -85,9 +88,11 @@ KW_ASN = '|'.join(sorted(
         + conjugate(ks.KS_Ad, 'ㄴ')              # 다+ㄴ(sweet)
         + conjugate(ks.KS_Ae, 'ㅡ', 'ㄴ')        # 예ㅃ+ㅡ+ㄴ
         + conjugate(ks.KS_Af, 'ㄹ', 'ㅡ', 'ㄴ')  # 다+ㄹ+ㅡ+ㄴ(different)
-        + conjugate(ks.KS_Ah, '한')              # 착+한
+        + conjugate(ks.KS_Ag, '한')              # 착+한
+        + conjugate(ks.KS_Ah, '한')              # 깔끔+한
         + conjugate(ks.KS_Ai, '은')              # 붉+은
         + conjugate(ks.KS_Aj, '은')              # 낮+은
+        + conjugate(ks.KS_Al, '는')              # 섣부+른 
         + conjugate(ks.KS_Am, '는')              # 맛있+는
         + conjugate(ks.KS_An, 'ㄴ')              # 머+ㄴ
         + conjugate(ks.KS_Ao, '은')              # 넓+은
@@ -144,6 +149,7 @@ KW_PAN = '|'.join(
         + conjugate(ks.KS_Ad, 'ㄴ')
         + conjugate(ks.KS_Ae, 'ㅡ', 'ㄴ')
         + conjugate(ks.KS_Af, '른')
+        + conjugate(ks.KS_Ag, '한')
         + conjugate(ks.KS_Ah, '한')
         + conjugate(ks.KS_Ai, '은')
         + conjugate(ks.KS_Aj, '은')
@@ -170,6 +176,7 @@ KW_PAP = '|'.join(
         + conjugate(ks.KS_Ad, 'ㄹ', '았던')
         + conjugate(ks.KS_Ae, 'ㅓ', 'ㅆ', '던')
         + conjugate(ks.KS_Af, 'ㄹ', '랐던')
+        + conjugate(ks.KS_Ag, '했던')
         + conjugate(ks.KS_Ah, '했던')
         + conjugate(ks.KS_Ai, '었던')
         + conjugate(ks.KS_Aj, '았던')
@@ -200,10 +207,12 @@ KW_BC = '|'.join(sorted(
         + conjugate(ks.KS_Ad, 'ㄹ', '아서')
         + conjugate(ks.KS_Ae, 'ㅓ', '서')
         + conjugate(ks.KS_Af, 'ㄹ', '라서')
+        + conjugate(ks.KS_Ag, '해서')
         + conjugate(ks.KS_Ah, '해서')
         + conjugate(ks.KS_Ai, '어서')
         + conjugate(ks.KS_Aj, '아서')
         + conjugate(ks.KS_Al, 'ㄹ', '러서')
+        + conjugate(ks.KS_Am, '어서')
         + conjugate(ks.KS_An, 'ㄹ', '어서')
         + conjugate(ks.KS_Ao, '어서')
         + conjugate(ks.KS_Ap, '어서')
@@ -227,10 +236,12 @@ KW_BM = '|'.join(
         + conjugate(ks.KS_Ad, 'ㄹ', '게')
         + conjugate(ks.KS_Ae, 'ㅡ', '게')
         + conjugate(ks.KS_Af, '르게')
+        + conjugate(ks.KS_Ag, '하게')
         + conjugate(ks.KS_Ah, '하게')
         + conjugate(ks.KS_Ai, '게')
         + conjugate(ks.KS_Aj, '게')
         + conjugate(ks.KS_Al, '르게')
+        + conjugate(ks.KS_Am, '게')
         + conjugate(ks.KS_An, 'ㄹ', '게')
         + conjugate(ks.KS_Ao, '게')
         + conjugate(ks.KS_Ap, '게')
@@ -245,16 +256,18 @@ KW_BM = '|'.join(
 ### Negative 
 KW_BN = '|'.join(
     sorted(
-        conjugate(ks.KS_Ah, '하지')
-        + conjugate(ks.KS_Aa, 'ㅡ', '지')
+        conjugate(ks.KS_Aa, 'ㅡ', '지')
         + conjugate(ks.KS_Ab, 'ㅂ', '지')
         + conjugate(ks.KS_Ac, '지')
         + conjugate(ks.KS_Ad, 'ㄹ', '지')
         + conjugate(ks.KS_Ae, 'ㅡ', '지')
         + conjugate(ks.KS_Af, '르지')
+        + conjugate(ks.KS_Ag, '하지')
+        + conjugate(ks.KS_Ah, '하지')
         + conjugate(ks.KS_Ai, '지')
         + conjugate(ks.KS_Aj, '지')
         + conjugate(ks.KS_Al, '르지')
+        + conjugate(ks.KS_Am, '지')
         + conjugate(ks.KS_An, 'ㄹ', '지')
         + conjugate(ks.KS_Ao, '지')
         + conjugate(ks.KS_Ap, '지')
@@ -265,7 +278,20 @@ KW_BN = '|'.join(
         + conjugate(ks.KS_VTk, '르지')
     )
 )
-KW_B = joinseq(KW_BD, KW_BM, KW_BN)
+
+### ‘-이/-히’
+KW_BI = '|'.join(
+    sorted(
+        conjugate(ks.KS_Ac, '이')
+        + conjugate(ks.KS_Af, 'ㄹ', '리')
+        + conjugate(ks.KS_Ah, '히')
+        + conjugate(ks.KS_Ak, '이')
+        + conjugate(ks.KS_Al, 'ㄹ', '리')
+        + conjugate(ks.KS_Aw, '이')
+    )
+)
+
+KW_B = joinseq(KW_BD, KW_BM, KW_BN, KW_BI)
 KW_B1 = monosyllables(KW_B)
 
 ## Forein Words
@@ -445,12 +471,12 @@ KW_NLI = joinseq(KW_NLIf, KW_NLIv)
 
 ## Thing
 ### Abstract
-KW_NTAf = "모델|모형|모듈|스텝|입력|차원|채널|출력|층|토큰|토픽|특성|프로그램|함수|행렬"
-KW_NTAv = "가중치|글자|단어|데이터|리뷰|메모리|배치|벡터|자체|차이|축소|폰트|학습 데이터"
+KW_NTAf = "모델|모형|모듈|방법|스텝|입력|차원|채널|출력|층|토큰|토픽|특성|프로그램|함수|행렬"
+KW_NTAv = "가중치|글자|단어|데이터|리뷰|메모리|배치|벡터|인수|자체|절차|차이|축소|폰트|학습 데이터"
 KW_NTA = joinseq(KW_NTAf, KW_NTAv)
 
 ### maChine
-KW_NTCf = ""
+KW_NTCf = "툴"
 KW_NTCv = "기계|장비|컴퓨터"
 
 ### Fruit
@@ -461,8 +487,13 @@ KW_NTFv = "바나나|배|사과|오렌지"
 KW_NTMf = "폭" 
 KW_NTMv = "개수|너비|넓이|높이|단위|수|숫자|크기" 
 
-KW_NTf = joinseq(KW_NTAf, KW_NTCf, KW_NTFf, KW_NTMf)
-KW_NTv = joinseq(KW_NTAv, KW_NTCv, KW_NTFv, KW_NTMv)
+### Usual
+KW_NTUf = "잔|컵"
+KW_NTUv = "접시"
+KW_NTU = joinseq(KW_NTUf, KW_NTUv)
+
+KW_NTf = joinseq(KW_NTAf, KW_NTCf, KW_NTFf, KW_NTMf, KW_NTUf)
+KW_NTv = joinseq(KW_NTAv, KW_NTCv, KW_NTFv, KW_NTMv, KW_NTUv)
 KW_NT = joinseq(KW_NTf, KW_NTv)
 
 
@@ -473,11 +504,30 @@ KW_PP = "너희|내|우리|저희"
 KW_P = joinseq(KW_PP)
 
 ## Verb
-### from Adjective
+
+### Active
+### Did
+KW_VADw = '|'.join(
+    sorted(
+        conjugate(ks.KS_VAw, '우', '웠다')     # 키 + 웠다
+    )
+)
+
+##### inG 
+KW_VAGw = '|'.join(
+    sorted(
+        conjugate(ks.KS_VAw, '우', 'ㄴ', '다')  # 키우 + ㄴ + 다
+    )
+)
+
+KW_VA = joinseq(KW_VADw, KW_VAGw)
+
+
+### adJective
 #### Change of status
-KW_VACi = conjugate(KW_ASA, '지')  # idea (ex: 나빠+지(다))
-KW_VACn = conjugate(KW_ASA, '진')  # progress (ex: 나빠+진(다))
-KW_VACp = conjugate(KW_ASA, '졌')  # past (ex: 나빠+졌(다))
+KW_VJCi = conjugate(KW_ASA, '지')  # idea (ex: 나빠+지(다))
+KW_VJCn = conjugate(KW_ASA, '진')  # progress (ex: 나빠+진(다))
+KW_VJCp = conjugate(KW_ASA, '졌')  # past (ex: 나빠+졌(다))
 
 ### Passive
 KW_VPl = "갈리다"  # ends with '~리다(lida)'
@@ -486,10 +536,9 @@ KW_VPi = "쓰이다"  # ends with '~이다(ida)'
 KW_VIn = '|'.join(
     sorted(
         conjugate(ks.KS_VIa, 'ㄴ', '다')
-        + conjugate(ks.KS_VIe, 'ㄴ', '다')
-        + conjugate(ks.KS_VIy, 'ㄴ', '다')
-        + conjugate(ks.KS_VIl, 'ㄴ', '다')
-        + conjugate(ks.KS_VIl, 'ㄴ', '다')
+        + conjugate(ks.KS_VIe, 'ㄴ', '다')        # 여무 + ㄴ + 다
+        + conjugate(ks.KS_VIy, 'ㅣ', 'ㄴ', '다')  # 숨죽ㅇ + ㅣ + ㄴ + 다
+        + conjugate(ks.KS_VIl, 'ㄴ', '다')        # 조 + ㄴ + 다
     )
 )
 
@@ -498,8 +547,8 @@ KW_VTO = '|'.join(
     sorted(
         map(lambda x: x + '시',
             ['하', '보이']
-            + conjugate(KW_NAO, '하')
-            + conjugate(ks.KS_VTg, '으')
+            + conjugate(KW_NAO, '하')       # 가공 + 하 + 시
+            + conjugate(ks.KS_VTg, '으')    # 박 + 으 + 시
             + conjugate(ks.KS_VTh, '으')
             + conjugate(ks.KS_VTi, '')
             + conjugate(ks.KS_VTl, '')
