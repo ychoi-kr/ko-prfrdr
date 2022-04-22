@@ -23,7 +23,7 @@ def monosyllables(psv):
     return '|'.join([s for s in psv.split('|') if len(s) == 1])
 
 ## Nouns - Status
-KW_NSf = "둔감|건강|깔끔|가능|근면|곤란|[장졸]렬|동일|민감|병약|참신|[불]?성실|부실|복잡|부족|[부]?적절|공평"
+KW_NSf = "둔감|건강|간결|깔끔|가능|근면|곤란|[장졸]렬|동일|민감|병약|[단온지]순|참신|[불]?성실|부실|복잡|부족|[부]?적절|공평"
 KW_NSv = "[자섬]세|상이|수요|[장중]대|진부|[긴중필]요|부패"
 KW_NS = joinseq(KW_NSf, KW_NSv)
 
@@ -197,6 +197,12 @@ KW_PAP = '|'.join(
 
 KW_PA = joinseq(KW_PAN, KW_PAP)
 
+## Nouns - Idea
+KW_NIf = "확률"
+KW_NIn = "차원"
+KW_NIv = "수치"
+KW_NI = joinseq(KW_NIf, KW_NIn, KW_NIv)
+
 ## Busa(adverB)
 ### Cause(이유)
 KW_BC = '|'.join(sorted(
@@ -224,7 +230,7 @@ KW_BC = '|'.join(sorted(
         ))
 
 ### Degree (정도)
-KW_BD = '더|훨씬'
+KW_BD = '가장|그다지|더|별로|잘|훨씬'
 
 ### Manner(태도, 방법)
 KW_BM = '|'.join(
@@ -291,6 +297,15 @@ KW_BI = '|'.join(
     )
 )
 
+### With
+KW_BW = '|'.join(
+    sorted(
+        conjugate(KW_NIf, '로')
+        + conjugate(KW_NIn, '으로')
+        + conjugate(KW_NIv, '로')
+    )
+)
+
 KW_B = joinseq(KW_BD, KW_BM, KW_BN, KW_BI)
 KW_B1 = monosyllables(KW_B)
 
@@ -328,7 +343,6 @@ KW_NA = joinseq(KW_NAf, KW_NAv)
 
 ## Nouns - Dependant
 KW_ND = "밖|뿐"
-
 
 ## Nouns - Person
 ### by Existance
@@ -399,7 +413,7 @@ KW_NUAv = "뭉치"
 KW_NUA = joinseq(KW_NUAf, KW_NUAv)
 
 ### Book
-KW_NUBf = "단원|장|절|항"
+KW_NUBf = "글자|단어|단원|문|문장|장|절|항"
 KW_NUBv = "부|파트"
 KW_NUB = joinseq(KW_NUBf, KW_NUBv)
 
@@ -417,6 +431,11 @@ KW_NUD = joinseq(KW_NUDf, KW_NUDv)
 KW_NUGf = "[mk]?g" 
 KW_NUGv = "[k]?[LlMm]"
 KW_NUG = joinseq(KW_NUGf, KW_NUGv)
+
+### Information
+KW_NUIf = "큐빗"
+KW_NUIv = "기[가비]바이트|메[가비]바이트|바이트|비트|엑사바이트|제타바이트|키비바이트|킬로바이트|테[라비]바이트"
+KW_NUI = joinseq(KW_NUIf, KW_NUIv)
 
 ### Multiplication
 KW_NUMf = "곱"
@@ -452,8 +471,8 @@ KW_NUWv = "밀리리터|데시리터|리터|킬로리터|파운드"
 KW_NUW = joinseq(KW_NUWf, KW_NUWv)
 
 ### all
-KW_NUf = joinseq(KW_NUAf, KW_NUBf, KW_NUCf, KW_NUDf, KW_NUGf, KW_NUMf, KW_NURf, KW_NUSf, KW_NUTf, KW_NUVf, KW_NUWf)
-KW_NUv = joinseq(KW_NUAv, KW_NUBv, KW_NUCv, KW_NUDv, KW_NUGv, KW_NUMv, KW_NURv, KW_NUSv, KW_NUTv, KW_NUVv, KW_NUWv)
+KW_NUf = joinseq(KW_NUAf, KW_NUBf, KW_NUCf, KW_NUDf, KW_NUGf, KW_NUIf, KW_NUMf, KW_NURf, KW_NUSf, KW_NUTf, KW_NUVf, KW_NUWf)
+KW_NUv = joinseq(KW_NUAv, KW_NUBv, KW_NUCv, KW_NUDv, KW_NUGv, KW_NUIv, KW_NUMv, KW_NURv, KW_NUSv, KW_NUTv, KW_NUVv, KW_NUWv)
 KW_NU = joinseq(KW_NUf, KW_NUv)
 
 
@@ -471,8 +490,8 @@ KW_NLI = joinseq(KW_NLIf, KW_NLIv)
 
 ## Thing
 ### Abstract
-KW_NTAf = "모델|모형|모듈|방법|스텝|입력|점|차원|채널|출력|층|토큰|토픽|특성|프로그램|함수|행렬"
-KW_NTAv = "가중치|글자|단어|데이터|리뷰|메모리|배치|벡터|인수|자체|절차|정도|차이|축소|폰트|학습 데이터|형태"
+KW_NTAf = "모델|모형|모듈|방법|스텝|입력|점|차원|채널|출력|층|토큰|토픽|튜플|특성|프로그램|함수|행렬"
+KW_NTAv = "가중치|글자|단어|데이터|리뷰|메모리|배치|벡터|요소|인수|자체|절차|정도|차이|처리|축소|코드|폰트|학습 데이터|형태"
 KW_NTA = joinseq(KW_NTAf, KW_NTAv)
 
 ### maChine
@@ -487,12 +506,17 @@ KW_NTFv = "바나나|배|사과|오렌지"
 KW_NTMf = "폭" 
 KW_NTMv = "개수|너비|넓이|높이|단위|수|숫자|크기" 
 
+### Scenary
+KW_NTSf = "그림|[경상시전]황|[국장화]면"
+#KW_NTFv = 
+
+
 ### Usual
 KW_NTUf = "잔|컵"
 KW_NTUv = "접시"
 KW_NTU = joinseq(KW_NTUf, KW_NTUv)
 
-KW_NTf = joinseq(KW_NTAf, KW_NTCf, KW_NTFf, KW_NTMf, KW_NTUf)
+KW_NTf = joinseq(KW_NTAf, KW_NTCf, KW_NTFf, KW_NTMf, KW_NTSf,  KW_NTUf)
 KW_NTv = joinseq(KW_NTAv, KW_NTCv, KW_NTFv, KW_NTMv, KW_NTUv)
 KW_NT = joinseq(KW_NTf, KW_NTv)
 

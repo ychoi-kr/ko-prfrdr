@@ -70,6 +70,22 @@
       ]
     ],
     "exception": []
+  },
+  {
+    "kind": "문법",
+    "name": "grammer2_수식 오류",
+    "desc": "",
+    "cases": [
+      [
+        "(KW_NT)(KJ) (\\w+)기 위해서 (KW_BD) (KW_ASN) (KW_NT)(KJ)",
+        "()() ()는 () () ()()"
+      ],
+      [
+        "(메서드)의 (KW_NAO)(되었\\w*)",
+        "()가 ()()"
+      ]
+    ],
+    "exception": []
   }
 ]
   

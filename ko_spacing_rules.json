@@ -1408,7 +1408,15 @@
     "desc": "https://wikidocs.net/100750#a",
     "cases": [
       [
-        "\\b(\\d*)(KW_NNC)(KW_NUS)(\\w*)\\b",
+        "\\b(\\d+)[ ]?(KW_NNC)(KW_NUS)(\\w*)\\b",
+        "()() ()()"
+      ],
+      [
+        "\\b수[ ]?(KW_NND)(KW_NUS)(\\w*)\\b",
+        "수() ()()"
+      ],
+      [
+        "ignored:\\b(\\d*)[ ]?(KW_NNC)(KW_NUS)(\\w*)\\b",
         "()() ()()"
       ]
     ],
@@ -3670,6 +3678,18 @@
       [
         "\\b회복하는게",
         "회복하는 게"
+      ]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "spacerr1_띄어쓰기 오류",
+    "desc": "",
+    "cases": [
+      [
+        "(KW_BW)(보[여이]\\w*)",
+        "() ()"
       ]
     ],
     "exception": []
