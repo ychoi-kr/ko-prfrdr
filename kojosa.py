@@ -54,8 +54,11 @@ KJ_IA = "도"
 ### Contrast
 KJ_IC = "은|는"
 
-### Plural (More than one)
+### Plural
 KJ_IM = "들"
+
+### Polite
+KJ_IP = "요"
 
 ### Range
 KJ_IR = "부터|까지"
@@ -63,7 +66,8 @@ KJ_IR = "부터|까지"
 ### Unique
 KJ_IU = "만"
 
-KJ_I = joinseq(KJ_IA, KJ_IC, KJ_IM, KJ_IR, KJ_IU)
+
+KJ_I = joinseq(KJ_IA, KJ_IC, KJ_IM, KJ_IP, KJ_IR, KJ_IU)
 
 KJ = joinseq(KJ_C, KJ_I)
 
