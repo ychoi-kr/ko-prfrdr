@@ -3,32 +3,32 @@ from utils import joinseq
 #############
 # Korean Eomi
 
-## Finalize
-KE_FE = "구나\\b|세\\b"  # exclamination
-KE_FO = "라\\b|거라\\b"  # order
-KE_FQ = "나\\b|니\\b|는가\\b"  # question
-KE_FR = "자\\b|세\\b"  # request
-KE_FS = "다\\b|습니다|야|이다"  # statement
-KE_F = joinseq(KE_FE, KE_FO, KE_FQ, KE_FR, KE_FS)
+## Ending(어말 어미)
 
-## Conjunctive(연결)
-KE_Ca = "게\\b|지\\b|어\\b"  # auxiliary
-KE_Cc = "고\\b|으며\\b|며\\b"  # coordinate
-KE_Cd = "어야"  # conDition
-KE_Cs = "[으]면|[으]므로"  # subordinate
-KE_Ct = "지마는|지만"  # conTrary
-KE_C = joinseq(KE_Ca, KE_Cc, KE_Cd, KE_Cs, KE_Ct)
+### Conjunctive(연결)
+KE_ECa = "게\\b|지\\b|어\\b"  # Help auxiliary(보조)
+KE_ECc = "고\\b|으며\\b|며\\b|지마는|지만"  # coordinate(대등) 
+KE_ECs = "리만치\\b|어야|[으]면|[으]므로"  # subordinate(종속)
+KE_EC = joinseq(KE_ECa, KE_ECc, KE_ECs)
 
-## Derivational/Modifier(전성)
-KE_Da = "은\\b|ㄴ\\b|을\\b|ㄹ\\b"  # adnominal
-KE_Dn = "기\\b|음\\b|ㅁ\\b"  # noun
-KE_Dv = "도록|게\\b"  # adVerbial
-KE_D = joinseq(KE_Da, KE_Dn, KE_Dv)
+### Derivational/Modifier(전성)
+KE_EDa = "은\\b|ㄴ\\b|을\\b|ㄹ\\b"  # adnominal
+KE_EDn = "기\\b|음\\b|ㅁ\\b"  # noun
+KE_EDv = "도록|게\\b"  # adVerbial
+KE_ED = joinseq(KE_EDa, KE_EDn, KE_EDv)
 
-## Ending(어말)
-KE_E = joinseq(KE_F, KE_C, KE_D)
+### Finalize(종결)
+KE_EFE = "구나\\b|세\\b"  # exclamination
+KE_EFO = "라\\b|거라\\b"  # order
+KE_EFQ = "나\\b|니\\b|는가\\b"  # question
+KE_EFR = "자\\b|세\\b"  # request
+KE_EFS = "다\\b|습니다|야|이다"  # statement
+KE_EF = joinseq(KE_EFE, KE_EFO, KE_EFQ, KE_EFR, KE_EFS)
+
+KE_E = joinseq(KE_EC, KE_ED, KE_EF)
+
 
 ## Pre-final(선어말)
 KE_P = "시|었|더|겠"
 
-KE = joinseq(KE_C, KE_D, KE_E, KE_F, KE_P)
+KE = joinseq(KE_E, KE_P)

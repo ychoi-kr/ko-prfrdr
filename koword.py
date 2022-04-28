@@ -322,9 +322,14 @@ KW_NAOv = "[인증추참평]가|[제탈]거|[공소]개|[연촉]구|[대상연�
 KW_NAO = joinseq(KW_NAOf, KW_NAOv)
 
 ## can be Both of active(-하다) and passive(-받다)
-KW_NABf = "주목|할당|[입출]력|교육|추천"
-KW_NABv = "강요|오해"
+KW_NABf = "주목|처단|할당|[입출]력|주목|처방|[처]?벌|전송|교육|위임|추천|연장|강종|심판|반환"
+KW_NABv = "강요|기부|보조|오해"
 KW_NAB = joinseq(KW_NABf, KW_NABv)
+
+## abstract(like Emotion), can be used with ‘-받다’
+KW_NAEf = "감동|고통|눈총|미움|버림|벌|복|사랑|영향"
+KW_NAEv = "상처|죄"
+KW_NAE = joinseq(KW_NAEf, KW_NAEv)
 
 ### derived from Foreign language
 KW_NAFf = "게임|로그아웃|로그인|로깅|매핑|모니터링|로딩|인덱싱|인코딩|샘플링|컨트롤|컴파일|코딩|클릭|튜닝|필터링"
