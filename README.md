@@ -36,6 +36,7 @@
 
 * 웹
    * [yes24.py](#yes24py) : 예스24 도서 검색
+   * yesblog.py : YES 블로그 본문 추출
    * wikidocs_toc.py : 위키독스 책의 목차 추출
 
 * 번역
