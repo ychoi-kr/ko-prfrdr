@@ -3,7 +3,7 @@
 * [공통 요구사항](#공통)
 
 * 한국어 원고 교정
-   * [chk_manuscript.py](#chk_manuscriptpy) : 맞춤법과 문체 검사
+   * [correct.py](#correctpy) : 맞춤법과 문체 검사
    * [spellchk.py](#spellchkpy) : 맞춤법 검사
    * [stylechk.py](#stylechkpy) : 문체 검사
 
@@ -57,7 +57,7 @@
 - [윈도우 CMD에서 파이썬 활용 팁](https://wikidocs.net/124333)
 
 
-## chk_manuscript.py
+## correct.py
 
 원고(docx 파일)에서 규칙을 준수하는지 검사합니다.
 
@@ -89,19 +89,19 @@
 
 ```
 cd <원고가 있는 폴더>
-python3 c:\utils\chk_manuscript.py "Mastering_PyTorch_편집본_20211104.docx"
+python3 correct.py "Mastering_PyTorch_편집본_20211104.docx"
 ```
 
 파이썬 스크립트가 자동 실행 가능한 환경에서는 다음과 같이 할 수 있고,
 
 ```
-chk_manuscript "Mastering_PyTorch_편집본_20211104.docx"
+correct "Mastering_PyTorch_편집본_20211104.docx"
 ```
 
 파일명을 생략하면 최신 파일을 찾습니다. 따라서 다음과 같이 실행하면 됩니다.
 
 ```
-chk_manuscript
+correct
 ```
 
 파일이 열려 있으면 안 되므로 워드 파일을 닫거나 읽기 전용으로 바꾼 후 실행해야 합니다.
@@ -144,9 +144,9 @@ rule224_생략해야 하는 표현 ==> count: 17
 
 팁:
 
-- 실행 결과를 파일로 저장하려면 리다이렉션을 이용하면 됩니다. 예를 들어, `python3 chk_manuscript.py > report`를 실행하면 `report` 파일에 텍스트로 저장되고, 메모장으로 열 수 있습니다.
-- 워드 파일을 편집 중일 때 다른 프로그램에서 동시에 열 수 없지만, 다른 컴퓨터에서 OneDrive로 동기화된 파일을 열 수는 있습니다. 따라서 컴퓨터가 두 대 있다면 한 대로는 `python3 chk_manuscript.py | more`로 확인하면서 다른 컴퓨터로 워드 파일을 편집하는 식으로 작업할 수 있습니다.
-- `chk_manuscript.py`로 모든 검사를 한 번에 해도 되지만, `spellchk.py`로 맞춤법을 검사해서 수정한 후 `stylechk.py`로 문체를 검사하면 더 좋습니다.
+- 실행 결과를 파일로 저장하려면 리다이렉션을 이용하면 됩니다. 예를 들어, `python3 correct.py > report`를 실행하면 `report` 파일에 텍스트로 저장되고, 메모장으로 열 수 있습니다.
+- 워드 파일을 편집 중일 때 다른 프로그램에서 동시에 열 수 없지만, 다른 컴퓨터에서 OneDrive로 동기화된 파일을 열 수는 있습니다. 따라서 컴퓨터가 두 대 있다면 한 대로는 `python3 correct.py | more`로 확인하면서 다른 컴퓨터로 워드 파일을 편집하는 식으로 작업할 수 있습니다.
+- `correct.py`로 모든 검사를 한 번에 해도 되지만, `spellchk.py`로 맞춤법을 검사해서 수정한 후 `stylechk.py`로 문체를 검사하면 더 좋습니다.
 - [find 명령으로 여러 개의 파일을 검사](https://wikidocs.net/162133)
 
 ## doc2docx.py
