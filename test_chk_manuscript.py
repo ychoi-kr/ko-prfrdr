@@ -2,7 +2,7 @@ import unittest
 import glob
 import sys
 
-from chk_manuscript import *
+from correct import *
 
 import yaml
 

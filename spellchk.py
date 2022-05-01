@@ -2,7 +2,7 @@
 
 import os
 import argparse
-import chk_manuscript
+import correct
 
 parser = argparse.ArgumentParser()
 parser.add_argument("filename", nargs="?", type=str)
@@ -13,4 +13,4 @@ parser.add_argument("-r", "--rulefile", default=' '.join(default_rules))
 parser.add_argument("--debug", action="store_true")
 args = parser.parse_args()
     
-chk_manuscript.main(args.filename, args.rulefile, args.debug)
+correct.main(args.filename, args.rulefile, args.debug)
