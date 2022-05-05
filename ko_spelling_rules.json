@@ -357,7 +357,7 @@
     "name": "qa009051_하시오",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=9051",
     "cases": [
-      [ "\\b(KW_VTO)요[.]", "()오." ]
+      [ "(\\w+[그누기마미리사써쓰여우으이주파하]시)요[.]", "()오." ]
     ],
     "exception": []
   },
@@ -523,7 +523,16 @@
   },
   {
     "kind": "맞춤법",
-    "name": "twit9123_이점",
+    "name": "tw220699_눈 덮인",
+    "desc": "https://twitter.com/urimal365/status/220699514682613762",
+    "cases": [
+      [ "눈 덮힌", "눈 덮인"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "tw247516_이점",
     "desc": "https://twitter.com/urimal365/status/247516329224069123",
     "cases": [
       [ "잇점", "이점" ]
