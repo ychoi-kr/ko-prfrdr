@@ -1,0 +1,4 @@
+true cases:
+  - 나머지는 4이다 (7^2 mod 15 = 4).
+false cases:
+
