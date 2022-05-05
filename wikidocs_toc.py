@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 import urllib.request
 from bs4 import BeautifulSoup
+import sys
 
 
-url = 'https://wikidocs.net/book/2'
+url = 'https://wikidocs.net/book/' + sys.argv[1]
 with urllib.request.urlopen(url) as f:
     html = f.read().decode('utf-8')
 
