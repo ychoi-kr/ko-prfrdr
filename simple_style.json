@@ -124,6 +124,17 @@
   },
   {
     "kind": "윤문",
+    "name": "0165154g_겹말",
+    "desc": "https://wikidocs.net/165154#g",
+    "cases": [
+      ["(\\w+)[ ]?이후부터", "()부터"],
+      ["(\\w+)[ ]?이전까지", "()까지"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "윤문",
     "name": "0165221a-는가",
     "desc": "https://wikidocs.net/165221#a",
     "cases": [
