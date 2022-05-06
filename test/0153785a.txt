@@ -1,4 +1,0 @@
-Error cases:
-
-Good cases:
-FP: 칼럼의 위치 값 지정도 가능합니다.
