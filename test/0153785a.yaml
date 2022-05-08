@@ -3,3 +3,4 @@ true cases:
 
 false cases:
   - 칼럼의 위치 값 지정도 가능합니다.
+  - 설치가 진행된다.
