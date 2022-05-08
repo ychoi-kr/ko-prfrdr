@@ -48,30 +48,36 @@ def main(infile, rulefile, debug=False):
     global _dbg_
     _dbg_ = debug
     
-    _rules = loadrules(rulefile)
-    
-    if not infile:
-        infile = fileutil.latest_file()
-    
-    filetoread = fc.convert(infile)
-
-    try:
-        text = read_manuscript(filetoread)
-    except PermissionError:
-        sys.exit(f"Failed!!! Please close {filetoread} and retry...")
-    
     global warnings_counter
     warnings_counter = Counter()
     
-    try:
-        for paragraph in text.splitlines(True):
-            for line in re.split(r'(?<=[.?]) ', paragraph):
+    _rules = loadrules(rulefile)
+    
+    if infile:
+        filetoread = fc.convert(infile)
+        try:
+            text = read_manuscript(filetoread)
+        except PermissionError:
+            sys.exit(f"Failed!!! Please close {filetoread} and retry...")
+        
+        try:
+            for paragraph in text.splitlines(True):
+                for line in re.split(r'(?<=[.?]) ', paragraph):
+                    corrections = check(_rules, line)
+                    display_corrections(line, corrections)
+            display_summary()
+        except BrokenPipeError:  # when user hits 'q' during using pipe
+            pass  
+
+    else:
+        try:
+            for line in sys.stdin:
                 corrections = check(_rules, line)
                 display_corrections(line, corrections)
-        display_summary()
-    except BrokenPipeError:  # when user hits 'q' during using pipe
-        pass  
-
+            display_summary()
+        except BrokenPipeError:  # when user hits 'q' during using pipe
+            pass  
+    
 
 def loadrules(rulefile):
     allrules = []
