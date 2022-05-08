@@ -59,24 +59,19 @@ def main(infile, rulefile, debug=False):
             text = read_manuscript(filetoread)
         except PermissionError:
             sys.exit(f"Failed!!! Please close {filetoread} and retry...")
-        
-        try:
-            for paragraph in text.splitlines(True):
-                for line in re.split(r'(?<=[.?]) ', paragraph):
-                    corrections = check(_rules, line)
-                    display_corrections(line, corrections)
-            display_summary()
-        except BrokenPipeError:  # when user hits 'q' during using pipe
-            pass  
 
+        paragraphs = text.splitlines(True)
     else:
-        try:
-            for line in sys.stdin:
+        paragraphs = sys.stdin
+
+    try:
+        for paragraph in paragraphs:
+            for line in re.split(r'(?<=[.?]) ', paragraph):
                 corrections = check(_rules, line)
                 display_corrections(line, corrections)
-            display_summary()
-        except BrokenPipeError:  # when user hits 'q' during using pipe
-            pass  
+        display_summary()
+    except BrokenPipeError:  # when user hits 'q' during using pipe
+        pass  
     
 
 def loadrules(rulefile):
