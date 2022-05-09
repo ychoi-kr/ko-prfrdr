@@ -6,6 +6,18 @@ from bs4 import BeautifulSoup
 import argparse
 
 
+site = "http://www.yes24.com"
+
+basefilter = {
+    "인기도순": "SINDEX_ONLY",
+    "정확도순": "RELATION",
+    "신상품순": "RECENT",
+    "최저가순": "LOW_PRICE",
+    "최고가순": "HIGH_PRICE",
+    "평점순": "CONT_NT",
+    "리뷰순": "REVIEW_CNT"
+}
+
 categorymap = {
     "art": "001001007",
     "biz": "001001025",
@@ -42,16 +54,21 @@ categorymap = {
     "초등참고서": "001001044",
 }
 
-def main(keyword, order, category):
-    site = "http://www.yes24.com"
 
-    basefilter = {"인기도순": "SINDEX_ONLY",
-                  "정확도순": "RELATION",
-                  "신상품순": "RECENT",
-                  "최저가순": "LOW_PRICE",
-                  "최고가순": "HIGH_PRICE",
-                  "평점순": "CONT_NT",
-                  "리뷰순": "REVIEW_CNT"}
+def main(keyword, order, category):
+    for title in sorted(search(keyword, order, category),
+                        key=lambda d: int(d["saleNum"].split(' ')[1].replace(',', '')),
+                        reverse=True
+                        ):
+        print(title["gd_name"])
+        print(title["url"])
+        print(title["author"], '|', title["publisher"], '|', title["pubdate"])
+        print(title["saleNum"])
+        print('')
+   
+
+def search(keyword, order, category):
+    result = []
 
     qrylist = [
         ("domain", "BOOK"),
@@ -75,7 +92,6 @@ def main(keyword, order, category):
     soup = BeautifulSoup(html, 'html.parser')
     yesSchList = soup.select('#yesSchList > li')
 
-    result = []
     for item in yesSchList:
         if item.select_one("span.gd_res").text == "[eBook]":
             continue
@@ -93,18 +109,9 @@ def main(keyword, order, category):
         title["saleNum"] = saleNum
         
         result.append(title)
+    return result
+   
 
-    for title in sorted(result,
-                        key=lambda d: int(d["saleNum"].split(' ')[1].replace(',', '')),
-                        reverse=True
-                        ):
-        print(title["gd_name"])
-        print(title["url"])
-        print(title["author"], '|', title["publisher"], '|', title["pubdate"])
-        print(title["saleNum"])
-        print('')
-   
-   
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--order", default="인기도순", choices=["인기도순", "정확도순", "신상품순", "최저가순", "최고가순", "평점순", "리뷰순"])
