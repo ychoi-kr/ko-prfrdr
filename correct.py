@@ -18,7 +18,6 @@ import koword
 import fileconverter as fc
 import fileutil
 
-import docx2txt
 
 print(f'Trying to import KoNLPy...')
 try:
@@ -120,6 +119,12 @@ def ruletable(obj):
 def read_manuscript(infile):
     ext = Path(infile).suffix
     if ext == ".docx":
+        try:
+            print("Trying to import docx2txt package...")
+            import docx2txt
+        except:
+            sys.exit("Cannot import docx2txt!")
+
         print(f'Loading docx file: {infile}...')
         try:
             text = docx2txt.process(infile)

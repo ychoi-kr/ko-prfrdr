@@ -75,7 +75,7 @@
 
 요구사항:
 
-- `pip3 install docx2txt`
+- docx 파일을 검사하려면 docx2txt를 설치(`pip install docx2txt`)
 - PDF 파일을 검사하려면 [Xpdf](http://www.xpdfreader.com/about.html) 명령행 도구를 [설치](https://wikidocs.net/154110)
 - HWP 파일을 검사하려면
     - `pip3 install pyhwp`
@@ -125,14 +125,7 @@ rule002_다운로드하다 ==> count: 1
 rule101_간결하게 쓴다 ==> count: 1
 rule102_되도록 수동태 표현이나 사역형 표현은 쓰지 않는다 ==> count: 9
 rule103_가급적 쉬운 표현을 쓴다 ==> count: 51
-rule105_불필요한 조사를 뺀다 ==> count: 10
-rule108_자주 쓰는 표현은 가급적 한글로 표기한다 ==> count: 1
-rule204_-위해 ==> count: 4
-rule206_때문에 ==> count: 31
-rule207_-도록 ==> count: 1
-rule208_의미가 모호한 '제공하다'의 남발 ==> count: 1
-rule212_~되다 ==> count: 4
-rule213_영어의 have에서 비롯된 '가지다' ==> count: 24
+...
 rule222_각각의 ==> count: 4
 rule224_생략해야 하는 표현 ==> count: 17
 ```
