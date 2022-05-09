@@ -56,10 +56,15 @@ categorymap = {
 
 
 def main(keyword, order, category):
-    for title in sorted(search(keyword, order, category),
+    inckey = [k for k in keyword.split() if not k.startswith('-')]
+    exckey = [k[1:] for k in keyword.split() if k.startswith('-')]
+    for title in sorted(search(inckey, order, category),
                         key=lambda d: int(d["saleNum"].split(' ')[1].replace(',', '')),
                         reverse=True
                         ):
+        if any(map(lambda s: s in title["gd_name"], exckey)):
+            continue
+
         print(title["gd_name"])
         print(title["url"])
         print(title["author"], '|', title["publisher"], '|', title["pubdate"])
@@ -116,7 +121,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--order", default="인기도순", choices=["인기도순", "정확도순", "신상품순", "최저가순", "최고가순", "평점순", "리뷰순"])
     parser.add_argument("--category", default="001001003", type=str)
-    parser.add_argument("keyword", nargs="+", type=str)
+    parser.add_argument("keyword", type=str)
     args = parser.parse_args()
     main(args.keyword, args.order, args.category)
 
