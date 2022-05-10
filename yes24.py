@@ -62,10 +62,10 @@ def main(keyword, order, category):
                         key=lambda d: int(d["saleNum"].split(' ')[1].replace(',', '')),
                         reverse=True
                         ):
-        if any(map(lambda s: s in title["gd_name"], exckey)):
+        if any(map(lambda s: s in title["title"] + title["subtitle"], exckey)):
             continue
 
-        print(title["gd_name"])
+        print(title["title"] + title["subtitle"])
         print(title["url"])
         print(title["author"], '|', title["publisher"], '|', title["pubdate"])
         print(title["saleNum"])
@@ -106,7 +106,8 @@ def search(keyword, order, category):
             continue
         
         title = dict()
-        title["gd_name"] = item.select_one("div.info_row.info_name > a").text
+        title["title"] = item.select_one("div.info_row.info_name > a.gd_name").text.strip()
+        title["subtitle"] = ": " + item.select_one("span.gd_nameE").text if item.select_one("span.gd_nameE") else ''
         title["url"] = site + item.select_one("div.info_row.info_name > a")['href']
         title["author"] = item.select_one("span.authPub.info_auth").text.split('\n')[1].strip()
         title["publisher"] = item.select_one("span.authPub.info_pub > a").text
