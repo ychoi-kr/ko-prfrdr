@@ -414,6 +414,28 @@
   },
   {
     "kind": "맞춤법",
+    "name": "qa009103a_속음으로 발음하는 단어",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=9103",
+    "cases": [
+      ["\\b곤난", "곤란"],
+      ["\\b허낙", "허락"],
+      ["\\b의론", "의논"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "qa009103b_본음대로 발음하는 단어",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=9103",
+    "cases": [
+      ["\\b만란", "만난"],
+      ["\\b승락", "승낙"],
+      ["\\b토논", "토론"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "qa009051_하시오",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=9051",
     "cases": [
