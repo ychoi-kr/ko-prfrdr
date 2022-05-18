@@ -21,9 +21,8 @@ python wikidocs.py content 43
 '''
 
 
-def pagecontent(pagenum):
+def pagecontent(url):
     result = ''
-    url = 'https://wikidocs.net/' + pagenum
     with urllib.request.urlopen(url) as f:
         html = f.read().decode('utf-8')
     
@@ -61,24 +60,29 @@ if cmd == "toc":
     soup = BeautifulSoup(html, 'html.parser')
     titles = soup.select('.list-group-item > span')
     for title in titles[1:]:
-         s = title.select('span')[0].text.strip()
-         print(s)
+       s = title.select('span')[0].text.strip()
+       print(s)
 
 elif cmd == "page":
-    print(pagecontent(contentid))
+    pageurl = 'https://wikidocs.net/' + contentid
+    print(pagecontent(pageurl))
 
 elif cmd == "book":
     bookurl = 'https://wikidocs.net/book/' + contentid
+    print(pagecontent(bookurl))
+    time.sleep(3)
+    
     with urllib.request.urlopen(bookurl) as f:
         html = f.read().decode('utf-8')
     
     soup = BeautifulSoup(html, 'html.parser')
     titles = soup.select('.list-group-item')
     for title in titles[1:]:
-         m = re.search("\\d+", title['href'])
-         if m:
-             print(pagecontent(m.group()))
-             time.sleep(3)
+        m = re.search("\\d+", title['href'])
+        if m:
+            pageurl = 'https://wikidocs.net/' + m.group()
+            print(pagecontent(pageurl))
+            time.sleep(3)
 
 else:
     print(f"Not available command: {cmd}")
