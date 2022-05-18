@@ -532,6 +532,18 @@
   },
   {
     "kind": "맞춤법",
+    "name": "qa079348_며칠",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=79348",
+    "cases": [
+      [ "몇월", "몇 월"],
+      [ "몇일", "며칠"],
+      [ "몇일[ ]?동안", "며칠 동안"],
+      [ "\\b(몇날[ ]?며칠|몇[ ]?날[ ]?몇일)", "몇 날 며칠"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "qa101696_자유롭게, 생각게, 거센소리",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=101696",
     "cases": [
@@ -771,7 +783,7 @@
     "desc": "https://m.blog.naver.com/sodrktma119/221459140507",
     "cases": [
       [ "보던 말던", "보든 말든" ],
-      [ "몇일", "며칠" ],
+      [ "dup:몇일", "며칠" ],
       [ "어짜피", "어차피" ],
       [ "날라다님", "날아다님" ],
       [ "(\\w+[을를]) 살려나", "() 사려나" ],

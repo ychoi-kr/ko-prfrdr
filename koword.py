@@ -520,13 +520,15 @@ KW_NTA = joinseq(KW_NTAf, KW_NTAv)
 KW_NTCf = "툴"
 KW_NTCv = "기계|장비|컴퓨터"
 
-### Fruit
-KW_NTFf = "귤"
-KW_NTFv = "바나나|배|사과|오렌지"
+### Food
+KW_NTFf = "국|귤|라면|밥|빵"
+KW_NTFv = "국수|망고|바나나|배|사과|오렌지"
+KW_NTF = joinseq(KW_NTFf, KW_NTFv)
 
 ### Measure
 KW_NTMf = "폭" 
 KW_NTMv = "개수|너비|넓이|높이|단위|수|숫자|크기" 
+KW_NTM = joinseq(KW_NTMf, KW_NTMv)
 
 ### Scenary
 KW_NTSf = "그림|[경상시전]황|[국장화]면"
