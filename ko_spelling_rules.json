@@ -602,6 +602,15 @@
   },
   {
     "kind": "맞춤법",
+    "name": "qa144499_되어야/돼야",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=144499",
+    "cases": [
+      [ "(KW_NAO)[ ]?되야", "()돼야"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "qa199307_금세",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=199307",
     "cases": [
