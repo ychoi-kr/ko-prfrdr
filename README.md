@@ -37,7 +37,8 @@
 * 웹
    * [yes24.py](#yes24py) : 예스24 도서 검색
    * yesblog.py : YES 블로그 본문 추출
-   * wikidocs_toc.py : 위키독스 책의 목차 추출
+   * wikidocs.py : 위키독스 책의 목차 및 본문 추출
+   * wikipedia.py : 위키백과의 본문 추출
 
 * 번역
    * [fakemt.py](#fakemtpy) : OmegaT용 MT
@@ -459,6 +460,60 @@ orange  오렌지
 ## spellchk.py
 
 원고의 맞춤법, 띄어쓰기, 외래어 표기법을 검사합니다.
+
+사용 예:
+
+```
+$ wikipedia.py page "파이썬" | spellchk.py
+Trying to import KoNLPy...
+Loading rule file: ko_spelling_rules.json...
+Loading rule file: ko_spacing_rules.json...
+Loading rule file: foreign_sound_rules.json...
+다만 로고에는 뱀 두마리가 형상화 되어 있다.
+
+                         ^
+   => 형상화 되어 →  형상화되어	 (0067208a_-되다(접미사) : https://wikidocs.net/67208#a)
+
+                 ^
+   => 두마리가 →  두 마리가	 (0100750a2_단위를 나타내는 명사 : https://wikidocs.net/100750#a)
+
+객체 지향 프로그래밍과 구조적 프로그래밍을 완벽하게 지원하며 함수형 프로그래밍, 관점 지향 프로그래밍 등도 주요 기능에서 지원 된다.
+
+                                                                                                                        ^
+   => 지원 된다 →  지원된다	 (0067208a_-되다(접미사) : https://wikidocs.net/67208#a)
+
+파이썬의 이러한 엄격한 스타일 제한은 쓰는 사람에 관계 없이 통일성을 유지하게 하며, 그 결과 가독성이 향상될 수 있는 장점이 있지만, 다른 한편으로는 프로그램을 쓰는 스타일을 선택할 자유를 제약하는 것이란 의견도 있다.
+
+                                          ^
+   => 사람에 관계 없이 →  사람에 관계없이	 (0164399b_관계 없다 / 관계없다, 관계 있다 / 관계있다, 상관 없다 / 상관없다, 상관 있다 / 상관있다 : https://wikidocs.net/0164399#b)
+
+다음과 같이 한줄로 작성하여 표현하는 것을 'pythonic 하다'라고 말할 수 있다.
+
+            ^
+   => 한줄로 →  한 줄로	 (0100750a2_단위를 나타내는 명사 : https://wikidocs.net/100750#a)
+
+이뮤터블(immutable) 방식의 진리값.
+
+                           ^
+   => 진리값 →  진릿값	 (0080784d_값 : https://wikidocs.net/80784#d)
+
+Visual Studio Code : 파이썬 뿐이 아니라 대부분의 언어를 지원한다.
+                     ^
+   => 파이썬 뿐이 →  파이썬뿐이	 (0079973a_-뿐(조사) : https://wikidocs.net/79973#a)
+
+위키미디어 공용에 관련된미디어 분류가 있습니다.파이썬
+
+                                     ^
+   => 있습니다.파이썬 →  있습니다. 파이썬	 (0075024e_마침표의 띄어쓰기 : https://wikidocs.net/75024#e)
+
+=== Summary ===
+0067208a_-되다(접미사) ==> count: 2
+0075024e_마침표의 띄어쓰기 ==> count: 1
+0079973a_-뿐(조사) ==> count: 1
+0080784d_값 ==> count: 1
+0100750a2_단위를 나타내는 명사 ==> count: 2
+0164399b_관계 없다 / 관계없다, 관계 있다 / 관계있다, 상관 없다 / 상관없다, 상관 있다 / 상관있다 ==> count: 1
+```
 
 
 ## stylechk.py
