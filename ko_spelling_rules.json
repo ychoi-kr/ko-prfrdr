@@ -607,7 +607,7 @@
     "name": "qa144499_되어야/돼야",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=144499",
     "cases": [
-      [ "(KW_NAO)[ ]?되야", "()돼야"]
+      [ "\\b(KW_NAO)[ ]?되야", "()돼야"]
     ],
     "exception": []
   },
