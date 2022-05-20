@@ -565,88 +565,103 @@ pip install beautifulsoup4
 사용법:
 
 ```
-yes24.py [-h] [--order {인기도순,정확도순,신상품순,최저가순,최고가순,평점순,리뷰순}] keyword [keyword ...]
+yes24.py [-h] [--order {인기도순,정확도순,신상품순,최저가순,최고가순,평점순,리뷰순}] [--category CATEGORY] keyword
 ```
 
-예 1:
+두 개 이상의 키워드로 찾고 싶을 때는 따옴표로 감싸면 됩니다.
 
 ```
-$ python yes24.py 파이썬 위키북스
-Opening http://www.yes24.com/Product/Search?domain=BOOK&query=%ED%8C%8C%EC%9D%B4%EC%8D%AC+%EC%9C%84%ED%82%A4%EB%B6%81%EC%8A%A4 ...
+$ yes24.py "파이썬 위키북스"
+Opening http://www.yes24.com/Product/Search?domain=BOOK&query=%ED%8C%8C%EC%9D%B4%EC%8D%AC+%EC%9C%84%ED%82%A4%EB%B6%81%EC%8A%A4&order=SINDEX_ONLY&dispno2=001001003 ...
 
-파이썬을 이용한 딥러닝/강화학습 주식투자
-http://www.yes24.com/Product/Goods/108251432
-퀀티랩 저 | 위키북스 | 2022년 03월
-판매지수 1,776
+파이썬 머신러닝 완벽 가이드: 다양한 캐글 예제와 함께 기초 알고리즘부터 최신 기법까지 배우는
+http://www.yes24.com/Product/Goods/108824557
+권철민 저 | 위키북스 | 2022년 04월
+판매지수 4,401
 
-파이썬 텍스트 마이닝 완벽 가이드
-http://www.yes24.com/Product/Goods/107008224
-박상언, 강주영, 정석찬 저 | 위키북스 | 2022년 02월
-판매지수 2,517
+손가락 하나 까딱하지 않는 주식 거래 시스템 구축: 파이썬을 이용한 데이터 수집과 차트 분석, 매매 자동화까지
+http://www.yes24.com/Product/Goods/89999945
+장용준 저 | 위키북스 | 2020년 04월
+판매지수 3,900
 
-손에 잡히는 퀀트 투자 with 파이썬
-http://www.yes24.com/Product/Goods/107036607
-GIL′s LAB 저 | 위키북스 | 2022년 02월
-판매지수 1,782
-
-일 잘하는 직장인을 위한 엑셀 자동화 with 파이썬
+일 잘하는 직장인을 위한 엑셀 자동화 with 파이썬: 복잡하고 지루한 반복 업무를 쉽고 빠르게 해치우는 방법
 http://www.yes24.com/Product/Goods/94483920
 최은석 저 | 위키북스 | 2020년 11월
-판매지수 4,113
+판매지수 3,654
 
 ...
 ```
 
-예 2:
+검색어에서 제외하고 싶은 키워드는 마이너스를 붙이면 됩니다.
 
 ```
-$ yes24 C++
-Opening http://www.yes24.com/Product/Search?domain=BOOK&query=C%2B%2B&order=SINDEX_ONLY ...
+$ yes24.py "Rust -일러스트 -애니 -웹툰"
+Opening http://www.yes24.com/Product/Search?domain=BOOK&query=Rust&order=SINDEX_ONLY&dispno2=001001003 ...
 
-Clean Code 클린 코드
-http://www.yes24.com/Product/Goods/11681152
-로버트 C. 마틴 저/박재호, 이해영 역 | 인사이트(insight) | 2013년 12월
-판매지수 61,812
+15단계로 배우는 도커와 쿠버네티스
+http://www.yes24.com/Product/Goods/93317828
+타카라 마호 저/이동규 역 | 제이펍 | 2020년 10월
+판매지수 3,990
 
-전지적 독자 시점 4
-http://www.yes24.com/Product/Goods/107874372
-싱숑 원저/슬리피-C 글그림 | 에이템포미디어 | 2022년 02월
-판매지수 24,849
+쿠버네티스 모범 사례: 쿠버네티스 창시자가 알려주는 최신 쿠버네티스 개발 및 배포 기법 
+http://www.yes24.com/Product/Goods/95560470
+브렌던 번스, 에디 비얄바, 데이브 스트레벨, 라클런 이븐슨 저/장정호 역 | 한빛미디어 | 2020년 12월
+판매지수 2,622
 
-역시 내 청춘 러브코메디는 잘못됐다. 결 1
-http://www.yes24.com/Product/Goods/107847414
-와타리 와타루 저/퐁칸 ⑧ 그림/김장준 역 | 디앤씨미디어(D&C미디어) | 2022년 03월
-판매지수 18,843
+동시성 프로그래밍: Rust, C, 어셈블리어로 구현하며 배우는 동시성 프로그래밍 A to Z
+http://www.yes24.com/Product/Goods/108570426
+다카노 유키 저/김모세 역 | 한빛미디어 | 2022년 04월
+판매지수 2,310
+```
 
-혼자 공부하는 C 언어
-http://www.yes24.com/Product/Goods/74269921
-서현우 저 | 한빛미디어 | 2019년 06월
-판매지수 41,073
+정렬 순서를 지정할 수 있습니다.
 
-...
+```
+$ yes24.py --order 정확도순 C++ | head -16
+Opening http://www.yes24.com/Product/Search?domain=BOOK&query=C%2B%2B&order=RELATION&dispno2=001001003 ...
 
-$ yes24 --order 정확도순 C++
-Opening http://www.yes24.com/Product/Search?domain=BOOK&query=C%2B%2B&order=RELATION ...
+C++ 최적화: 최고 성능을 구현하는 10가지 검증된 기법
+http://www.yes24.com/Product/Goods/74971458
+커트 건서로스 저/옥찬호 역/박수현 감수 | 한빛미디어 | 2019년 07월
+판매지수 1,344
 
-독하게 시작하는 C 프로그래밍
-http://www.yes24.com/Product/Goods/18732021
-최호성 저 | 루비페이퍼 | 2015년 06월
-판매지수 1,440
-
-코믹 흔해빠진 직업으로 세계최강 8
-http://www.yes24.com/Product/Goods/108603876
-시라코메 료 원저/RoGa 글그림/김장준 역 | 디앤씨미디어(D&C미디어) | 2022년 04월
-판매지수 1,710
-
-방과 후, 이세계 카페에서 커피를 4
-http://www.yes24.com/Product/Goods/108603698
-카자미 도리 저/U스케 그림/이진주 역 | 디앤씨미디어(D&C미디어) | 2022년 04월
-판매지수 1,200
-
-Game Programming in C++
+Game Programming in C++: OpenGL과 SDL을 활용한 3D 게임 개발
 http://www.yes24.com/Product/Goods/78898401
 산자이 마드하브 저/박주항 역 | 에이콘출판사 | 2019년 09월
-판매지수 1,044
+판매지수 1,032
 
-...
+Programming : Principles and Practice Using C++ 한국어판
+http://www.yes24.com/Product/Goods/23207535
+비야네 스트롭스트룹 저 / 최광민 역 | 에이콘출판사 | 2015년 11월
+판매지수 1,002
 ```
+
+검색 카테고리를 지정할 수 있습니다.
+
+```
+$ yes24.py --category 대학교재 통계 | head -16
+Opening http://www.yes24.com/Product/Search?domain=BOOK&query=%ED%86%B5%EA%B3%84&order=SINDEX_ONLY&dispno2=001001014 ...
+
+제대로 알고 쓰는 논문 통계분석: SPSS & AMOS
+http://www.yes24.com/Product/Goods/70748357
+노경섭 저 | 한빛아카데미 | 2019년 02월
+판매지수 12,564
+
+SPSS 결과표 작성과 해석 방법: 한번에 통과하는 논문
+http://www.yes24.com/Product/Goods/59577796
+히든그레이스 논문통계팀, 김성은, 정규형, 우종훈, 허영회 저 | 한빛아카데미 | 2018년 03월
+판매지수 9,768
+
+정신질환의 진단 및 통계편람: DSM-5
+http://www.yes24.com/Product/Goods/17843603
+APA 저/권준수, 김재진, 남궁기, 박원명 역 | 학지사 | 2015년 04월
+판매지수 8,274
+```
+
+카테고리는 URL의 `dispno2` 값을 넣어도 되고, 한글로 지정할 수도 있습니다. 사용 가능한 카테고리 이름을 확인하려면 다음과 같이 하면 됩니다(제가 임의로 정한 것이므로 예스24의 카테고리명과는 차이가 있습니다).
+
+```
+$ python -c "import yes24; print(yes24.categorymap)"
+{'art': '001001007', 'biz': '001001025', 'elementary': '001001044', 'exam': '001001015', 'humanity': '001001019', 'it': '001001003', 'kid': '001001016', 'kids': '001001016', 'literature': '001001046', 'middle': '001001013', 'sci': '001001002', 'self': '001001026', 'teen': '001001005', 'test': '001001015', 'univ': '001001014', '경영': '001001025', '경제': '001001025', '과학': '001001002', '대학교재': '001001014', '문학': '001001046', '수험서': '001001015', '어린이': '001001016', '예술': '001001007', '인문': '001001019', '자격증': '001001015', '자기개발': '001001026', '자기계발': '001001026', '자연과학': '001001002', '중고등': '001001013', '중고등참고서': '001001013', '청소년': '001001005', '초등': '001001044', '초등참고서': '001001044'}
+``` 
+
