@@ -58,10 +58,7 @@ categorymap = {
 def main(keyword, order, category):
     inckey = [k for k in keyword.split() if not k.startswith('-')]
     exckey = [k[1:] for k in keyword.split() if k.startswith('-')]
-    for title in sorted(search(inckey, order, category),
-                        key=lambda d: int(d["saleNum"].split(' ')[1].replace(',', '')),
-                        reverse=True
-                        ):
+    for title in search(inckey, order, category):
         if any(map(lambda s: s in title["title"] + title["subtitle"], exckey)):
             continue
 
