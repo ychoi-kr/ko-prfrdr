@@ -99,8 +99,8 @@
     "desc": "https://wikidocs.net/67501",
     "cases": [
       [
-        "(KW_NAF) (KC_H)(\\w*)",
-        "()()()"
+        "(KW_NAF) (KC_H)\\b",
+        "()()"
       ]
     ],
     "exception": []

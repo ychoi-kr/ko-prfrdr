@@ -7,7 +7,7 @@ from kostr import concat
 
 # Korean Conjucation (strings can be used for Conjugation)
 KC_D = "[되된돼됐]"
-KC_H = "[하한함합할해했]"
+KC_H = "하[고니며지]|한[다]?|함[을]?|함이다|함입니다|합니다|할[지]?[도]?|해[서요]?|했고[요]?|했는데[요]?|했다[만]?|했습니다[만]?|했으[니면][서]?|했지[만]?[요]?"
 
 def conjugate(stems, *postfix):
     result = []
@@ -521,8 +521,8 @@ KW_NL = joinseq(KW_NLf, KW_NLv)
 
 ## Thing
 ### Abstract
-KW_NTAf = "명산|모델|모형|모듈|방법|스텝|알고리즘|애플리케이션|앱|입력|전략|점|차원|채널|출력|층|토큰|토픽|튜플|특성|프로그램|함수|행렬"
-KW_NTAv = "가중치|글자|단어|데이터|리뷰|메모리|배치|벡터|요소|인수|자체|절차|정도|차이|처리|축소|코드|폰트|학습 데이터|형태"
+KW_NTAf = "걸음|명산|모델|모형|모듈|방법|스텝|알고리즘|애플리케이션|앱|입력|전략|점|차원|채널|출력|층|토큰|토픽|튜플|특성|프로그램|함수|행렬"
+KW_NTAv = "가중치|글자|단어|데이터|리뷰|메모리|변화|배치|벡터|시류|요소|인수|자체|절차|정도|차이|처리|축소|코드|폰트|학습 데이터|형태"
 KW_NTA = joinseq(KW_NTAf, KW_NTAv)
 
 ### maChine
@@ -545,7 +545,7 @@ KW_NTSf = "그림|[경상시전]황|[국장화]면"
 
 
 ### Usual
-KW_NTUf = "잔|컵"
+KW_NTUf = "잔|컵|현수막|화투짝"
 KW_NTUv = "접시"
 KW_NTU = joinseq(KW_NTUf, KW_NTUv)
 

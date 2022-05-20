@@ -575,6 +575,27 @@
   },
   {
     "kind": "맞춤법",
+    "name": "qa122094a_뒤쳐지다",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=122094",
+    "cases": [
+      ["(KW_NTU)([이가]) 뒤처([져졌지진질짐]\\w*)", "()() 뒤쳐()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "qa122094b_뒤처지다",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=122094",
+    "cases": [
+      ["(KW_NP)(에게) 뒤쳐([져졌지진질짐]\\w*)", "()() 뒤처()"],
+      ["(KW_NTA)(에) 뒤쳐([져졌지진질짐]\\w*)", "()() 뒤처()"],
+      ["(\\w+)(보다) (\\w+[이가]) 뒤쳐([져졌지진질짐]\\w*)", "()() () 뒤처()"],
+      ["(\\w+)(보다) 뒤쳐([져졌지진질짐]\\w*)", "()() 뒤처()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "qa142416_돼서",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=142416",
     "cases": [
