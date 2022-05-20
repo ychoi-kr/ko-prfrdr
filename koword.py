@@ -7,7 +7,7 @@ from kostr import concat
 
 # Korean Conjucation (strings can be used for Conjugation)
 KC_D = "[되된돼됐]"
-KC_H = "[하한합할해했]"
+KC_H = "[하한함합할해했]"
 
 def conjugate(stems, *postfix):
     result = []
@@ -334,7 +334,7 @@ KW_M = joinseq(KW_MD, KW_MV, KW_MA)
 ## Nouns - Activity (can be verb with '-하다/-되다' or used in form of '~을/를 하다')
 ### Original (Korean + Hanja)
 KW_NAOf = "생각|[가수증]감|가공|곱|[건입]국|[연체]결|[총포]괄|접근|가늠|[담배]당|가동|[노]력|[수제훈]련|[기수]록|[발변설연작제조증]명|괄목|함몰|고민|[개선]발|체벌|[반중]복|[손연향]상|개선|발생|[건개배연증해]설|[구생작완형]성|[연학]습|[장파]악|[예해]약|[구시재]연|오염|[반운투]영|[사이적통포활]용|훈육|[지]원|확인|[도수]입|[수]?출입|시작|[긴등성저]장|[발회]전|조절|[결설수지측한]정|검증|선언|[개선수]정|[도장부탈]착|칭찬|제창|[도수연인창추]출|[계예]측|[간선채]택|[면입]학|국한|분할|포함|[결취]합|[구실재표]현|[비서진]행|[재]?실행|[동수연진]행"
-KW_NAOh = "가시화|간소화|강화|경량화|공산화|도커화|민주화|소형화|수치화|세분화|시각화|융화|인스턴스화|첨예화|초기화|최[신적]화|캡슐화|파편화|패턴화|특[수]?화|현[실행]화|[0-9]+차원화|형상화"
+KW_NAOh = "가시화|간소화|강화|경량화|공산화|도커화|민주화|소형화|수치화|세분화|시각화|융화|인스턴스화|중앙화|첨예화|초기화|최[신적]화|캡슐화|파편화|패턴화|특[수]?화|현[실행]화|[0-9]+차원화|형상화"
 KW_NAOv = "[인증추참평]가|[제탈]거|[공소]개|[연촉]구|[대상연제]기|이야기|시도|[고]려|[완치]료|[관격수처]리|마무리|연마|소모|근무|[공기]부|[감반발조]사|[감기축]소|[감준회]수|제시|제어|[기참]여|[긴소중필]요|[논유합]의|[주차폐]지|대체|[성]취|[납배설]치|검토|저하|이해|" + KW_NAOh 
 KW_NAO = joinseq(KW_NAOf, KW_NAOv)
 
@@ -350,7 +350,7 @@ KW_NAE = joinseq(KW_NAEf, KW_NAEv)
 
 ### derived from Foreign language
 KW_NAFf = "\\w+깅|\\w+닝|\\w+딩|\\w+링|\\w+싱|\\w+킹|\\w+핑|게임|로그아웃|로그인|컨트롤|컴파일|클릭"
-KW_NAFv = "다운로드|릴리스|마사지|업로드|업데이트|임포트|테스트|트리거|팔로우|폴로|플레이"
+KW_NAFv = "다운로드|릴리스|마사지|업로드|[언]?마운트|업데이트|임포트|테스트|트리거|팔로우|폴로|플레이"
 KW_NAF = joinseq(KW_NAFf, KW_NAFv)
 
 ### all
@@ -425,6 +425,11 @@ KW_NNK = "[다여일아열스서마쉰예백]?[한두세네섯댓곱덟홉]"
 
 ### all
 KW_NN = joinseq(KW_NNC, KW_NND, KW_NNK)   
+
+
+## Nouns - Resource
+KW_NRH = "http[s]?[:]//[A-Za-z0-9./\-_%#]+"  # HTTP
+KW_NR = KW_NRH
 
 
 ## Nouns - Unit
@@ -508,6 +513,10 @@ KW_NLD = joinseq(KW_NLDf, KW_NLDv)
 KW_NLIf = "개미|딱정벌레|지네"
 KW_NLIv = "[꿀]벌|[여]왕벌"
 KW_NLI = joinseq(KW_NLIf, KW_NLIv)
+
+KW_NLf = joinseq(KW_NLDf, KW_NLIf)
+KW_NLv = joinseq(KW_NLDv, KW_NLIv)
+KW_NL = joinseq(KW_NLf, KW_NLv)
 
 
 ## Thing
