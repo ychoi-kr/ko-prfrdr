@@ -43,7 +43,7 @@ def _debug(k, v=None):
         #input()
 
 
-def main(infile, rulefile, debug=False):
+def main(infile, rulefile, show_all_lines=False, debug=False):
     global _dbg_
     _dbg_ = debug
     
@@ -66,8 +66,8 @@ def main(infile, rulefile, debug=False):
     try:
         for paragraph in paragraphs:
             for line in re.split(r'(?<=[.?]) ', paragraph):
-                corrections = check(_rules, line)
-                display_corrections(line, corrections)
+                corrections = check(_rules, line, show_all_lines)
+                display_corrections(line, corrections, show_all_lines)
         display_summary()
     except BrokenPipeError:  # when user hits 'q' during using pipe
         pass  
@@ -144,7 +144,9 @@ def read_manuscript(infile):
     return text
 
 
-def check(rules, line):
+def check(rules, line, show_all_lines):
+    if show_all_lines:
+        print(line)
 
     # avoid false positive on rule108
     if not korean(line):
@@ -152,7 +154,8 @@ def check(rules, line):
 
     result = []
 
-    _debug('line', line)
+    if not show_all_lines:
+        _debug('line', line)
 
     for rule in rules:
         kind, name, desc, cases, exceptions = rule
@@ -342,14 +345,16 @@ def check(rules, line):
     return result
 
 
-def display_corrections(line, corrections):
+def display_corrections(line, corrections, show_all_lines):
     if line.strip() in ['true cases:', 'false cases:']:
-        print(line.strip())
+        if not show_all_lines:
+            print(line.strip())
     elif corrections:
         bullet = ''  # '*'
         space = ''  # ' '
         offset = len(bullet) + len(space)
-        print(bullet + space + line)
+        if not show_all_lines:
+            print(bullet + space + line)
         for cor in corrections:
             loc, kind, name, bad, good, desc = cor
             cl = carret_loc(line, loc)
@@ -393,7 +398,8 @@ if __name__ == '__main__':
                      'ja_ko_style_correction.json', 'wikibook_style_guide.json',
                      'simple_style.json']
     parser.add_argument("-r", "--rulefile", default=' '.join(default_rules))
+    parser.add_argument("--show_all_lines", action="store_true")
     parser.add_argument("--debug", action="store_true")
     args = parser.parse_args()
     
-    main(args.filename, args.rulefile, args.debug)
+    main(args.filename, args.rulefile, args.show_all_lines, args.debug)

@@ -13,11 +13,11 @@ class TestsContainer(unittest.TestCase):
 def make_test_function(name, line):
     def test(self):
         if re.match(r'\w+_TC\d', name):
-            corrections = check(rules, line)
+            corrections = check(rules, line, show_all_lines=False)
             #print(corrections)
             self.assertGreater(len(corrections), 0, name)
         elif re.match(r'\w+_FC\d', name):
-            corrections = check(rules, line)
+            corrections = check(rules, line, show_all_lines=False)
             #print(corrections)
             self.assertEqual(len(corrections), 0, name)
         else:
