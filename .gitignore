@@ -1,5 +1,4 @@
-test/wbsg103a.txt
-test/wbsg221a.txt
+test/*.txt
 __pycache__/
 *.sw?
 .idea/*
