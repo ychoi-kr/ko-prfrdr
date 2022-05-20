@@ -617,23 +617,23 @@ http://www.yes24.com/Product/Goods/108570426
 정렬 순서를 지정할 수 있습니다.
 
 ```
-$ yes24.py --order 정확도순 C++ | head -16
-Opening http://www.yes24.com/Product/Search?domain=BOOK&query=C%2B%2B&order=RELATION&dispno2=001001003 ...
+$ yes24.py --order 신상품순 AWS | head -16
+Opening http://www.yes24.com/Product/Search?domain=BOOK&query=AWS&order=RECENT&dispno2=001001003 ...
 
-C++ 최적화: 최고 성능을 구현하는 10가지 검증된 기법
-http://www.yes24.com/Product/Goods/74971458
-커트 건서로스 저/옥찬호 역/박수현 감수 | 한빛미디어 | 2019년 07월
-판매지수 1,344
+Must Have 코로나보드로 배우는 실전 웹 서비스 개발: Node.js와 AWS를 활용한 설계부터 크롤링, 개발, 운영, 수익화까지
+http://www.yes24.com/Product/Goods/108903274
+권영재, 주은진 저 | 골든래빗 | 2022년 05월
+판매지수 2,673
 
-Game Programming in C++: OpenGL과 SDL을 활용한 3D 게임 개발
-http://www.yes24.com/Product/Goods/78898401
-산자이 마드하브 저/박주항 역 | 에이콘출판사 | 2019년 09월
-판매지수 1,032
+쉽게 배우는 AWS AI 서비스: 챗봇, 음성비서, 크롤러 프로젝트를 구현하며 만나는 서비스형 AI
+http://www.yes24.com/Product/Goods/108685145
+피터 엘거, 오언 셔너히 저/맹윤호, 임지순 역/곽근봉 감수 | 한빛미디어 | 2022년 04월
+판매지수 576
 
-Programming : Principles and Practice Using C++ 한국어판
-http://www.yes24.com/Product/Goods/23207535
-비야네 스트롭스트룹 저 / 최광민 역 | 에이콘출판사 | 2015년 11월
-판매지수 1,002
+MLFlow를 활용한 MLOps: AWS, Azure, GCP에서 MLOps 시작하기
+http://www.yes24.com/Product/Goods/106709982
+스리다르 알라, 수만 칼리안 아다리 저/정이현 역 | 에이콘출판사 | 2022년 02월
+판매지수 1,938
 ```
 
 검색 카테고리를 지정할 수 있습니다.
