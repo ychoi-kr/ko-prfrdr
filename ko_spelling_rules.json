@@ -644,6 +644,15 @@
   },
   {
     "kind": "맞춤법",
+    "name": "qa149786_깡충깡충",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=149786",
+    "cases": [
+      ["\\b깡총깡총", "깡충깡충"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "qa196973_하고요",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=196973",
     "cases": [
@@ -914,6 +923,33 @@
         "쌍동이",
         "쌍둥이"
       ]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "hunmin02_맞춤법(훈민정음 야구단 2)",
+    "desc": "http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788961885416",
+    "cases": [
+      ["\\b눈꼽", "눈곱"],
+      ["\\b무릅", "무릎"],
+      ["\\b팔굼치", "팔꿈치"],
+      ["\\b눈꺼플", "눈꺼풀"],
+      ["\\b발자욱", "발자국"],
+      ["\\b나무잎", "나뭇잎"],
+      ["\\b등교길", "등굣길"],
+      ["\\b차잇점", "차이점"],
+      ["\\b햇님", "해님"],
+      ["\\b일찌기", "일찍이"],
+      ["\\b더우기", "더욱이"],
+      ["\\b짝짝꿍", "짝짜꿍"],
+      ["\\b절래절래", "절레절레"],
+      ["\\b멋장이", "멋쟁이"],
+      ["\\b겁장이", "겁쟁이"],
+      ["\\b대장쟁이", "대장장이"],
+      ["\\b깍뚜기", "깍두기"],
+      ["\\b볶은밥", "볶음밥"],
+      ["\\b숫가락", "숟가락"]
     ],
     "exception": []
   },
