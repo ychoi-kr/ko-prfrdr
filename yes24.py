@@ -4,6 +4,7 @@ from urllib import parse
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import argparse
+import re
 
 
 site = "http://www.yes24.com"
@@ -55,13 +56,13 @@ categorymap = {
 }
 
 
-def main(keyword, order, category, showurl, csv):
+def main(keyword, order, category, showurl, csv, id_only):
 
 
-    display(search(keyword, order, category, showurl), csv)
+    display(search(keyword, order, category, showurl), csv, id_only)
 
 
-def display(booklist, csv):
+def display(booklist, csv, id_only):
     if csv:
         print(
             '"제목"',
@@ -74,7 +75,9 @@ def display(booklist, csv):
             sep=','
         )
     for book in booklist:
-        if csv:
+        if id_only:
+            print(re.search(r"(\d+)$", book["url"]).group())
+        elif csv:
             quote = lambda s: '"' + s.replace('"', '\"') + '"' if csv else s
             print(
                 quote(book["title"]),
@@ -160,8 +163,9 @@ if __name__ == '__main__':
     parser.add_argument("--category", default="001001003", type=str)
     parser.add_argument("--showurl", action=argparse.BooleanOptionalAction)
     parser.add_argument("--csv", action=argparse.BooleanOptionalAction)
+    parser.add_argument("--id_only", action=argparse.BooleanOptionalAction)
     parser.add_argument("keyword", type=str)
     args = parser.parse_args()
-    main(args.keyword, args.order, args.category, args.showurl, args.csv)
+    main(args.keyword, args.order, args.category, args.showurl, args.csv, args.id_only)
 
 
