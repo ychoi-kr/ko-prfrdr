@@ -19,20 +19,21 @@ import fileconverter as fc
 import fileutil
 
 
-print(f'Trying to import KoNLPy...')
-try:
-    from konlpy.tag import Komoran
-    global komoran
-    dicpath = os.path.join(
-        os.path.dirname(os.path.realpath(__file__)), 'dic.txt'
-    )
-    komoran = Komoran(userdic=dicpath)
-
-    from konlpy.tag import Okt
-    global okt
-    okt = Okt()
-except:
-    pass
+def import_KoNLPy():
+    print(f'Trying to import KoNLPy...')
+    try:
+        from konlpy.tag import Komoran
+        global komoran
+        dicpath = os.path.join(
+            os.path.dirname(os.path.realpath(__file__)), 'dic.txt'
+        )
+        komoran = Komoran(userdic=dicpath)
+    
+        from konlpy.tag import Okt
+        global okt
+        okt = Okt()
+    except:
+        pass
 
 
 def _debug(k, v=None):
@@ -44,6 +45,10 @@ def _debug(k, v=None):
 
 
 def main(infile, rulefile, show_all_lines=False, debug=False):
+
+    # needs to be here to avoid waisting time when '--help' option is used
+    import_KoNLPy()
+
     global _dbg_
     _dbg_ = debug
     
