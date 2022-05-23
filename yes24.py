@@ -56,10 +56,10 @@ categorymap = {
 }
 
 
-def main(keyword, order, category, showurl, csv, id_only):
+def main(keyword, order, category, page, showurl, csv, id_only):
 
 
-    display(search(keyword, order, category, showurl), csv, id_only)
+    display(search(keyword, order, category, page, showurl), csv, id_only)
 
 
 def display(booklist, csv, id_only):
@@ -100,7 +100,7 @@ def display(booklist, csv, id_only):
             )
 
 
-def search(keyword, order, category, showurl):
+def search(keyword, order, category, page, showurl):
     result = []
 
     inckey = [k for k in keyword.split() if not k.startswith('-')]
@@ -110,6 +110,7 @@ def search(keyword, order, category, showurl):
         ("domain", "BOOK"),
         ("query", ' '.join(inckey)),
         ("order", basefilter[order]),
+        ("page", page),
     ]
 
     if category and category.lower() != "all":
@@ -161,11 +162,12 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--order", default="인기도순", choices=["인기도순", "정확도순", "신상품순", "최저가순", "최고가순", "평점순", "리뷰순"])
     parser.add_argument("--category", default="001001003", type=str)
+    parser.add_argument("--page", default=1, type=int)
     parser.add_argument("--showurl", action=argparse.BooleanOptionalAction)
     parser.add_argument("--csv", action=argparse.BooleanOptionalAction)
     parser.add_argument("--id_only", action=argparse.BooleanOptionalAction)
     parser.add_argument("keyword", type=str)
     args = parser.parse_args()
-    main(args.keyword, args.order, args.category, args.showurl, args.csv, args.id_only)
+    main(args.keyword, args.order, args.category, args.page, args.showurl, args.csv, args.id_only)
 
 
