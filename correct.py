@@ -226,8 +226,11 @@ def check(rules, line, show_all_lines):
                             strbuf += remain[:remain.index(f'({n})')] + m.group(n)
                             remain = remain[remain.index(f'({n})') + len(f'({n})'):]
                         elif '()' in remain:
-                            strbuf += remain[:remain.index('()')] + m.group(n)
-                            remain = remain[remain.index('()') + len('()'):]
+                            try:
+                                strbuf += remain[:remain.index('()')] + m.group(n)
+                                remain = remain[remain.index('()') + len('()'):]
+                            except:
+                                sys.exit("Failed!!! Parenthesis not match in rule " + name)
                         else:
                             pass
 
