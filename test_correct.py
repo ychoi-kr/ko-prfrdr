@@ -7,6 +7,8 @@ from correct import *
 import yaml
 
 
+import_KoNLPy()
+
 class TestsContainer(unittest.TestCase):
     longMessage = True
 
