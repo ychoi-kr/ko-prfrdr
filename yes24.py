@@ -9,6 +9,13 @@ import re
 
 site = "http://www.yes24.com"
 
+domainmap = {
+    "전체": "ALL",
+    "국내도서": "BOOK",
+    "ebook": "EBOOK",
+    "중고샵": "USED_GOODS",
+}
+
 basefilter = {
     "인기도순": "SINDEX_ONLY",
     "정확도순": "RELATION",
@@ -55,11 +62,15 @@ categorymap = {
     "초등참고서": "001001044",
 }
 
+mkEntrNo = {
+    "위키북스": "120040",
+    "위키북스(eBook)": "284569"
+}
 
-def main(keyword, order, category, page, showurl, csv, id_only):
+def main(keyword, domain, order, category, publisher, page, showurl, csv, id_only):
 
 
-    display(search(keyword, order, category, page, showurl), csv, id_only)
+    display(search(keyword, domain, order, category, publisher, page, showurl), csv, id_only)
 
 
 def display(booklist, csv, id_only):
@@ -80,7 +91,7 @@ def display(booklist, csv, id_only):
         elif csv:
             quote = lambda s: '"' + s.replace('"', '\"') + '"' if csv else s
             print(
-                quote(book["title"]),
+                quote(book["gd_res"] + ' ' + book["title"]),
                 quote(book["subtitle"]),
                 quote(book["url"]),
                 quote(book["author"]),
@@ -91,7 +102,7 @@ def display(booklist, csv, id_only):
             )
         else:
             print(
-                ": ".join([book["title"], book["subtitle"]]) if book["subtitle"] else book["title"],
+                book["gd_res"] + ' ' + (": ".join([book["title"], book["subtitle"]]) if book["subtitle"] else book["title"]),
                 book["url"],
                 book["author"] + '|' + book["publisher"] + '|' + book["pubdate"],
                 "판매지수 " + book["saleNum"],
@@ -100,14 +111,14 @@ def display(booklist, csv, id_only):
             )
 
 
-def search(keyword, order, category, page, showurl):
+def search(keyword, domain, order, category, publisher, page, showurl):
     result = []
 
     inckey = [k for k in keyword.split() if not k.startswith('-')]
     exckey = [k[1:] for k in keyword.split() if k.startswith('-')]
 
     qrylist = [
-        ("domain", "BOOK"),
+        ("domain", domainmap[domain.lower()]),
         ("query", ' '.join(inckey)),
         ("order", basefilter[order]),
         ("page", page),
@@ -118,6 +129,12 @@ def search(keyword, order, category, page, showurl):
             qrylist.append(("dispno2", category))
         else:
             qrylist.append(("dispno2", categorymap[category.lower()]))
+
+    if publisher:
+        qrylist.append((
+            "mkEntrNo",
+            ','.join(map(lambda x: mkEntrNo[x], publisher.split(',')))
+        ))
 
     qrystr = parse.urlencode(qrylist)
     url = site + "/Product/Search?" + qrystr
@@ -132,21 +149,17 @@ def search(keyword, order, category, page, showurl):
     yesSchList = soup.select('#yesSchList > li')
 
     for item in yesSchList:
-        if item.select_one("span.gd_res").text == "[eBook]":
-            continue
-
         saleNum = item.select_one("span.saleNum").text.replace("판매지수", '').strip() if item.select_one("span.saleNum") else None
-        if not saleNum:
-            continue
         
         title = dict()
+        title["gd_res"] = item.select_one("span.gd_res").text
         title["title"] = item.select_one("div.info_row.info_name > a.gd_name").text.strip()
         title["subtitle"] = item.select_one("span.gd_nameE").text if item.select_one("span.gd_nameE") else ''
         title["url"] = site + item.select_one("div.info_row.info_name > a")['href']
         title["author"] = item.select_one("span.authPub.info_auth").text.split('\n')[1].strip()
         title["publisher"] = item.select_one("span.authPub.info_pub > a").text
         title["pubdate"] = item.select_one("span.authPub.info_date").text
-        title["saleNum"] = saleNum
+        title["saleNum"] = saleNum if saleNum else ''
         
         skip = False
         for k in exckey:
@@ -160,14 +173,16 @@ def search(keyword, order, category, page, showurl):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
+    parser.add_argument("--domain", default="국내도서", choices=["전체", "국내도서", "외국도서", "eBook", "중고샵"])
     parser.add_argument("--order", default="인기도순", choices=["인기도순", "정확도순", "신상품순", "최저가순", "최고가순", "평점순", "리뷰순"])
     parser.add_argument("--category", default="001001003", type=str)
+    parser.add_argument("--publisher", type=str)
     parser.add_argument("--page", default=1, type=int)
     parser.add_argument("--showurl", action=argparse.BooleanOptionalAction)
     parser.add_argument("--csv", action=argparse.BooleanOptionalAction)
     parser.add_argument("--id_only", action=argparse.BooleanOptionalAction)
-    parser.add_argument("keyword", type=str)
+    parser.add_argument("keyword", nargs='?', type=str)
     args = parser.parse_args()
-    main(args.keyword, args.order, args.category, args.page, args.showurl, args.csv, args.id_only)
+    main(args.keyword, args.domain, args.order, args.category, args.publisher, args.page, args.showurl, args.csv, args.id_only)
 
 
