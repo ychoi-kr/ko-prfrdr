@@ -43,7 +43,7 @@ def main(goodsid_list, order, csv):
 def display(info, reviewlist, csv):
     for review in reviewlist:
         if csv:
-            quote = lambda s: '"' + s.replace('"', '\"') + '"' if csv else s
+            quote = lambda s: '"' + s.replace('"', '\'') + '"' if csv else s
             print(
                 quote(info["title"]),
                 quote(info["url"]),
@@ -53,14 +53,15 @@ def display(info, reviewlist, csv):
                 quote(review["reviewerid"]),
                 quote(review["buy"]),
                 quote(review["ratings"]),
-                quote(review["review"]),
+                quote(review["content"]),
                 sep=','
             )
+            sys.stdout.flush()
         else:
             print(
                 review["reviewdate"] + ' ' + review["reviewerid"] + ' ' + review["buy"],
                 review["ratings"],
-                review["review"],
+                review["content"],
                 sep='\n',
                 end='\n\n'
             )
@@ -74,11 +75,22 @@ def bookinfo(goodsid):
 
     soup = BeautifulSoup(html, 'html.parser')
 
+    ebook = soup.select_one("div.gd_titArea > strong.icon_res")
+    if ebook:
+        title = '[' + ebook.text + '] ' + soup.select_one("h2.gd_name").text
+    else:
+        title = soup.select_one("h2.gd_name").text
+
+    author = soup.select_one("span.gd_auth").text
+    moreAuthArea = soup.select_one("span.moreAuthArea")
+    if moreAuthArea:
+        author = author.replace(moreAuthArea.text, '')
+
     return {
         "goodsid": goodsid,
-        "title": soup.select_one("h2.gd_name").text,
+        "title": title,
         "url": url,
-        "author": soup.select_one("span.gd_auth").text.strip(),
+        "author": author.strip(),
         "pubdate": soup.select_one("span.gd_date").text
     }
 
@@ -113,7 +125,7 @@ def goodsReviewList(info, order, csv):
             "reviewerid": review.select_one("em.txt_id > a").text,
             "buy": buy.text.strip() if buy else '',
             "ratings": "내용 " + review.select_one("span.rating").text.strip() + "  편집/디자인 " + review.select_one("span.rating").text.strip(),
-            "review": review.select_one("div.reviewInfoBot").text.replace('\n', '').strip(),
+            "content": ' '.join(review.select_one("div.review_cont").text.split())
         })
         
     return result
@@ -149,7 +161,7 @@ def awordReviewList(info, order, csv):
             "reviewerid": review.select_one("em.txt_id > a").text,
             "ratings": review.select_one("span.rating").text.strip(),
             "buy": buy.text.strip() if buy else '',
-            "review": review.select_one("div.cmt_cont").text.strip(),
+            "content": review.select_one("div.cmt_cont").text.replace('\n', ' ').strip(),
         })
         
     return result
