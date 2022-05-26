@@ -6,5 +6,9 @@ true cases:
   - "print('pred_proba()결과 Shape : {0}'.format(pred_proba.shape))"
   - 자주SPA 셸을
   - 예제 3.19를배포한 후
+  - 사냥이나 전쟁대신에
+  - 영화때문에
+  - 요즘 월드컵등의 스포츠에서나
 
 false cases:
+  - MyAutoML3_메타모델_학습데이터.csv
