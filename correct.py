@@ -272,7 +272,10 @@ def check(rules, line, show_all_lines):
                     # remove errornous characters before using tagger
                     line = re.sub(r'[^\w\s!"#$%&\'()*+,-./:;<=>?@\[\\\]^_`{|}~]', '', line)
                     #_debug('line', line)
-                    morphs_line = ' '.join([''.join(komoran.morphs(eojeol)) for eojeol in line.split()])
+                    #morphs_line = ' '.join([''.join(komoran.morphs(eojeol)) for eojeol in line.split()])
+                    morphs_line = ''.join(
+                        [''.join(komoran.morphs(x) if komoran.morphs(x) else x) for x in re.split('(\W)', line) if x != '']
+                    )
                     if '<Noun>' in bad_root:
                         mode = 'Komoran_Noun'
                         _debug('mode', mode)
@@ -310,8 +313,7 @@ def check(rules, line, show_all_lines):
                                     _debug('_bad_root', _bad_root)
                                     _debug('bad_root', bad_root)
                                     _debug('_bad', _bad)
-                                    #bad = kostr.join(komoran.morphs(_bad))
-                                    bad = ' '.join([kostr.join(komoran.morphs(eojeol)) for eojeol in _bad.split()])
+                                    bad = ''.join([(kostr.join(komoran.morphs(x)) if x != ' ' else x) for x in re.split('(\W)', _bad) if x != ''])
                                     _debug('bad', bad)
                                     good = ' '.join([kostr.join(komoran.morphs(eojeol)) for eojeol in _good.split()])
                                     _debug('good', good)
