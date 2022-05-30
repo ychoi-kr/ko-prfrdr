@@ -76,9 +76,9 @@ def main(keyword, domain, order, category, publisher, page, showurl, csv, id_onl
 def display(booklist, csv, id_only):
     if csv:
         print(
+            '"URL"',
             '"제목"',
             '"부제"',
-            '"URL"',
             '"저자/역자"',
             '"출판사"',
             '"발행일"',
@@ -91,9 +91,9 @@ def display(booklist, csv, id_only):
         elif csv:
             quote = lambda s: '"' + s.replace('"', '\"') + '"' if csv else s
             print(
+                quote(book["url"]),
                 quote(book["gd_res"] + ' ' + book["title"]),
                 quote(book["subtitle"]),
-                quote(book["url"]),
                 quote(book["author"]),
                 quote(book["publisher"]),
                 quote(book["pubdate"]),
@@ -102,8 +102,8 @@ def display(booklist, csv, id_only):
             )
         else:
             print(
-                book["gd_res"] + ' ' + (": ".join([book["title"], book["subtitle"]]) if book["subtitle"] else book["title"]),
                 book["url"],
+                book["gd_res"] + ' ' + (": ".join([book["title"], book["subtitle"]]) if book["subtitle"] else book["title"]),
                 book["author"] + '|' + book["publisher"] + '|' + book["pubdate"],
                 "판매지수 " + book["saleNum"],
                 sep='\n',
