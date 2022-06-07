@@ -218,7 +218,17 @@
   },
   {
     "kind": "외래어",
-    "name": "gpfor062_인명(2005)",
+    "name": "gpfor022_인명",
+    "desc": "https://www.korean.go.kr/nkview/foreign/gpfor022.html",
+    "cases": [
+      ["레오나르도 디카프리오", "리어나도 디캐프리오"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
+    "name": "gpfor062_인명",
     "desc": "https://www.korean.go.kr/nkview/foreign/gpfor062.html",
     "cases": [
       ["도널드 럼스펠드", "도널드 럼즈펠드"]
