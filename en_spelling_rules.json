@@ -1,0 +1,12 @@
+[
+  {
+    "kind": "영문 철자",
+    "name": "enspl001",
+    "desc": "",
+    "cases": [
+      ["\\b([Mm])odulization", "()odularization"],
+      ["([Oo])verfloew", "()verflow"]
+    ],
+    "exception": []
+  }
+]
