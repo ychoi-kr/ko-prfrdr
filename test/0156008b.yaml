@@ -3,3 +3,4 @@ true cases:
   - y도 동시에 변하면 안되는 경우는
 
 false cases:
+  - 하지 않으려면
