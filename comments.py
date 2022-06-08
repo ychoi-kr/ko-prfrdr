@@ -11,7 +11,7 @@ import pathlib
 
 docxfilename = sys.argv[1]
 
-word = win32.gencache.EnsureDispatch("Word.Application")
+word = win32.dynamic.Dispatch("Word.Application")
 word.Visible = False
 filepath = os.path.realpath(docxfilename)
 
@@ -23,6 +23,7 @@ docx.Activate()
 
 comments = []
 comments.append((
+    "파일명",
     "작성자",
     "페이지",
     "행",
@@ -41,6 +42,7 @@ for c in word.ActiveDocument.Comments:
     if c.Ancestor:
         pass
     comments.append((
+        docxfilename,
         c.Author,
         c.Scope.Information(wdActiveEndPageNumber),
         c.Scope.Information(wdFirstCharacterLineNumber),
