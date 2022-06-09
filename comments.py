@@ -4,22 +4,19 @@ import platform
 if platform.system() != "Windows":
     sys.exit(platform.system() + "is not supported")
 
+import glob
 import os
 import win32com.client as win32
 import pathlib
 
+from natsort import natsorted
 
-docxfilename = sys.argv[1]
 
-word = win32.dynamic.Dispatch("Word.Application")
-word.Visible = False
-filepath = os.path.realpath(docxfilename)
-
-if not os.path.exists(filepath):
-    sys.exit(filepath + " is not exists!")
-
-docx = word.Documents.Open(filepath)
-docx.Activate()
+# https://docs.microsoft.com/en-us/office/vba/api/word.wdinformation
+wdActiveEndAdjustedPageNumber = 1
+wdActiveEndSectionNumber = 2
+wdActiveEndPageNumber = 3
+wdFirstCharacterLineNumber = 10
 
 comments = []
 comments.append((
@@ -32,26 +29,29 @@ comments.append((
     "작성일시",
 ))
 
-# https://docs.microsoft.com/en-us/office/vba/api/word.wdinformation
-wdActiveEndAdjustedPageNumber = 1
-wdActiveEndSectionNumber = 2
-wdActiveEndPageNumber = 3
-wdFirstCharacterLineNumber = 10
+word = win32.dynamic.Dispatch("Word.Application")
+word.Visible = False
 
-for c in word.ActiveDocument.Comments:
-    if c.Ancestor:
-        pass
-    comments.append((
-        docxfilename,
-        c.Author,
-        c.Scope.Information(wdActiveEndPageNumber),
-        c.Scope.Information(wdFirstCharacterLineNumber),
-        c.Scope.Text,
-        c.Range.Text,
-        c.Date
-    ))
-
-docx.Close()
+for docxfilename in natsorted(glob.glob("*.docx")):
+    print(docxfilename)
+    filepath = os.path.realpath(docxfilename)
+    docx = word.Documents.Open(filepath)
+    docx.Activate()
+    
+    for c in word.ActiveDocument.Comments:
+        if c.Ancestor:
+            pass
+        comments.append((
+            docxfilename,
+            c.Author,
+            c.Scope.Information(wdActiveEndPageNumber),
+            c.Scope.Information(wdFirstCharacterLineNumber),
+            c.Scope.Text,
+            c.Range.Text,
+            c.Date
+        ))
+    
+    docx.Close()
 
 excel = win32.Dispatch("Excel.Application")
 excel.Visible = True
