@@ -19,6 +19,7 @@
    * indian.py, indiantree.py : 영문으로 표기된 인도어를 한국어로 표기
 
 * 마이크로소프트 워드
+   * [comments.py](#commentspy) : doc 파일의 메모 목록을 엑셀 시트에 작성 (Windows 전용)
    * [doc2docx.py](#doc2docxpy) : doc 파일을 docx 파일로 일괄 변환 (Windows 전용)
    * [exfigs.py](#exfigspy) : docx 파일에서 이미지 파일을 일괄 추출
    * [openall.py](#openallpy) : 현재 경로의 모든 docx 파일을 열기 (Windows 전용)
@@ -27,6 +28,7 @@
 
 * 파일 관리
    * [mvfig.py](#mvfigpy) : 그림 파일명 일괄 변경
+   * [today.py](#todaypy) : 파일명의 날짜를 일괄 변경
 
 * PDF
    * [pdf_merge.py](#pdf_mergepy) : PDF 파일 병합
@@ -58,6 +60,11 @@
 팁:
 
 - [윈도우 CMD에서 파이썬 활용 팁](https://wikidocs.net/124333)
+
+
+## comments.py
+
+현재 디렉터리의 모든 `.docx` 파일의 메모를 엑셀 시트에 작성합니다. (Windows 전용)
 
 
 ## correct.py
@@ -551,6 +558,11 @@ Bibhuti Bhushan Jha                                1
 budget                                             1
 CNN                                                2
 ```
+
+
+## today.py
+
+현재 디렉터리의 모든 `.docx` 파일의 파일명에서 YYYYMMDD 형식으로 된 부분을 오늘 날짜로 바꿉니다. (Windows 전용)
 
 
 ## yes24.py
