@@ -1,6 +1,6 @@
 출판물 제작 업무를 돕는 명령행 스크립트들입니다.
 
-* [공통 요구사항](#공통)
+* [공통 요구사항](#requirements)
 
 * 한국어 원고 교정
    * [correct.py](#correctpy) : 맞춤법과 문체 검사
@@ -50,15 +50,16 @@
    * [sort.py](#sortpy) : 입력받은 행들을 오름차순으로 정렬하여 출력
 
 
-## 공통
+<a name="requirements"></a>
+## 공통 요구사항
 
-<a name="common_requirements"></a>
-요구사항:
+1. Python3가 설치되어 있어햐 합니다.
+2. 다음 명령을 실행해 필요한 패키지를 설치합니다.
 
-- [파이썬 3 설치](https://wikidocs.net/44)
+    `pip install -r requirements.txt`
 
 팁:
-
+- [파이썬 3 설치](https://wikidocs.net/44)
 - [윈도우 CMD에서 파이썬 활용 팁](https://wikidocs.net/124333)
 
 
@@ -386,12 +387,6 @@ python pdftotext.py [옵션] "<PDF 파일명>"
 ## pgcnt.py
 
 현재 디렉터리에 있는 docx 문서들의 페이지 수를 셉니다. (Windows 전용)
-
-요구사항:
-
-```
-pip install natsort
-```
 
 사용법:
 
