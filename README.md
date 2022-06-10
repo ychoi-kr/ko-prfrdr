@@ -75,7 +75,7 @@
 
 - 맞춤법: [ko_spelling_rules.json](ko_spelling_rules.json)
 - 띄어쓰기: [ko_spacing_rules.json](ko_spacing_rules.json)
-- 외래어 표기법: [foreign_sound_rules.json](foreign_sound_rules.json)
+- 외래어 표기법: [ko_foreign_word.json](ko_foreign_word.json)
 - 영한 번역투: [en_ko_style_correction.json](en_ko_style_correction.json)
 - 일한 번역투: [ja_ko_style_correction.json](ja_ko_style_correction.json)
 - 위키북스 글쓰기 지침: [wikibook_style_guide.json](wikibook_style_guide.json)
@@ -476,7 +476,7 @@ $ spellchk.py sample.txt
 Trying to import KoNLPy...
 Loading rule file: ko_spelling_rules.json...
 Loading rule file: ko_spacing_rules.json...
-Loading rule file: foreign_sound_rules.json...
+Loading rule file: ko_foreign_word.json...
 다만 로고에는 뱀 두마리가 형상화 되어 있다.
 
                          ^
