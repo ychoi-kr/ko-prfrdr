@@ -95,6 +95,7 @@
     "desc": "https://wikidocs.net/153177#b",
     "cases": [
       ["콤퓨[타터]", "컴퓨터"],
+      ["콘테이너", "컨테이너"],
       ["콘트롤", "컨트롤"]
     ],
     "exception": [
@@ -1185,6 +1186,21 @@
     "desc": "http://terms.tta.or.kr/dictionary/dictionaryView.do?word_seq=058427-1",
     "cases": [
       ["(트렌젝션|트랜젝션)", "트랜잭션"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
+    "name": "frsc2013_외래어(법원 맞춤법 자료집)",
+    "desc": "https://blog.kakaocdn.net/dn/lr24s/btqGxPXXP3n/sGKLZ7RKK4sOSksoCH14U0/%EB%B2%95%EC%9B%90%20%EB%A7%9E%EC%B6%A4%EB%B2%95%20%EC%9E%90%EB%A3%8C%EC%A7%91%20%EC%B5%9C%EC%A2%85.pdf?attach=1&knm=tfile.pdf",
+    "cases": [
+      ["트랙타", "트랙터"],
+      ["피씨방", "피시방"],
+      ["피티병", "페트병"],
+      ["핸드폰", "휴대전화"],
+      ["휴대폰", "휴대전화"],
+      ["휀룸", "팬룸"]
     ],
     "exception": [
     ]
