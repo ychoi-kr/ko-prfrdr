@@ -16,7 +16,6 @@ import koeomi
 import kojosa
 import koword
 import fileconverter as fc
-import fileutil
 
 
 def import_KoNLPy():
