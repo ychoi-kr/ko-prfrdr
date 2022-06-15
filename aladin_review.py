@@ -12,8 +12,8 @@ import re
 site = "https://www.aladin.co.kr"
 
 
-def openurl(url):
-    return urlopen(url)
+def readurl(url):
+    return urlopen(url).read().decode('utf-8')
 
 
 def main(itemid_list, csv, showurl):
@@ -77,9 +77,7 @@ def bookinfo(itemid, showurl):
     if showurl:
         print(url)
 
-    with openurl(url) as f:
-        html = f.read().decode('utf-8')
-
+    html = readurl(url)
     soup = BeautifulSoup(html, 'html.parser')
     
     title = soup.select_one("a.Ere_bo_title").text
@@ -126,8 +124,7 @@ def myReviewList(info, csv, showurl):
     if showurl:
         print(url)
 
-    with openurl(url) as f:
-        html = f.read().decode('utf-8')
+    html = readurl(url)
 
     soup = BeautifulSoup(html, 'html.parser')
 
@@ -174,8 +171,7 @@ def commentReviewList(info, csv, showurl):
     if showurl:
         print(url)
 
-    with openurl(url) as f:
-        html = f.read().decode('utf-8')
+    html = readurl(url)
 
     soup = BeautifulSoup(html, 'html.parser')
 
