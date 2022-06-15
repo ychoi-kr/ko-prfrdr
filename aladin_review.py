@@ -12,7 +12,11 @@ import re
 site = "https://www.aladin.co.kr"
 
 
-def main(itemid_list, csv):
+def openurl(url):
+    return urlopen(url)
+
+
+def main(itemid_list, csv, showurl):
     if not itemid_list:
         itemid_list = sys.stdin
 
@@ -31,11 +35,11 @@ def main(itemid_list, csv):
         )
 
     for itemid in itemid_list:
-        info = bookinfo(itemid.strip())
+        info = bookinfo(itemid.strip(), showurl)
         time.sleep(1)
         display(
             info,
-            commentReviewList(info, csv) + myReviewList(info, csv),
+            commentReviewList(info, csv, showurl) + myReviewList(info, csv, showurl),
             csv
         )
         time.sleep(1)
@@ -68,10 +72,12 @@ def display(info, reviewlist, csv):
             )
 
 
-def bookinfo(itemid):
+def bookinfo(itemid, showurl):
     url = site + "/shop/wproduct.aspx?ItemId=" + itemid
+    if showurl:
+        print(url)
 
-    with urlopen(url) as f:
+    with openurl(url) as f:
         html = f.read().decode('utf-8')
 
     soup = BeautifulSoup(html, 'html.parser')
@@ -96,7 +102,7 @@ def bookinfo(itemid):
     }
 
 
-def myReviewList(info, csv):
+def myReviewList(info, csv, showurl):
     result = []
 
     qrylist = [
@@ -117,8 +123,10 @@ def myReviewList(info, csv):
 
     qrystr = parse.urlencode(qrylist)
     url = site + "/ucl/shop/product/ajax/GetCommunityListAjax.aspx?" + qrystr
+    if showurl:
+        print(url)
 
-    with urlopen(url) as f:
+    with openurl(url) as f:
         html = f.read().decode('utf-8')
 
     soup = BeautifulSoup(html, 'html.parser')
@@ -142,7 +150,7 @@ def myReviewList(info, csv):
     return result
    
 
-def commentReviewList(info, csv):
+def commentReviewList(info, csv, showurl):
     result = []
 
     qrylist = [
@@ -163,8 +171,10 @@ def commentReviewList(info, csv):
 
     qrystr = parse.urlencode(qrylist)
     url = site + "/ucl/shop/product/ajax/GetCommunityListAjax.aspx?" + qrystr
+    if showurl:
+        print(url)
 
-    with urlopen(url) as f:
+    with openurl(url) as f:
         html = f.read().decode('utf-8')
 
     soup = BeautifulSoup(html, 'html.parser')
@@ -191,7 +201,8 @@ def commentReviewList(info, csv):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--csv", action=argparse.BooleanOptionalAction)
+    parser.add_argument("--showurl", action=argparse.BooleanOptionalAction)
     parser.add_argument("itemid_list", nargs='?', type=str)
     args = parser.parse_args()
-    main(args.itemid_list, args.csv)
+    main(args.itemid_list, args.csv, args.showurl)
 
