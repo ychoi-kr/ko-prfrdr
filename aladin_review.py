@@ -1,19 +1,20 @@
 #!/usr/bin/python3
 
 from urllib import parse
-from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import argparse
 import sys
 import time
 import re
 
+import requests
+
 
 site = "https://www.aladin.co.kr"
 
 
 def readurl(url):
-    return urlopen(url).read().decode('utf-8')
+    return requests.get(url).text
 
 
 def main(itemid_list, csv, showurl):
