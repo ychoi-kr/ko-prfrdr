@@ -7,14 +7,10 @@ import sys
 import time
 import re
 
-import requests
+import review_crawler
 
 
 site = "https://www.aladin.co.kr"
-
-
-def readurl(url):
-    return requests.get(url).text
 
 
 def main(itemid_list, csv, showurl):
@@ -78,7 +74,7 @@ def bookinfo(itemid, showurl):
     if showurl:
         print(url)
 
-    html = readurl(url)
+    html = review_crawler.readurl(url)
     soup = BeautifulSoup(html, 'html.parser')
     
     title = soup.select_one("a.Ere_bo_title").text
@@ -125,7 +121,7 @@ def myReviewList(info, csv, showurl):
     if showurl:
         print(url)
 
-    html = readurl(url)
+    html = review_crawler.readurl(url)
 
     soup = BeautifulSoup(html, 'html.parser')
 
@@ -172,7 +168,7 @@ def commentReviewList(info, csv, showurl):
     if showurl:
         print(url)
 
-    html = readurl(url)
+    html = review_crawler.readurl(url)
 
     soup = BeautifulSoup(html, 'html.parser')
 
