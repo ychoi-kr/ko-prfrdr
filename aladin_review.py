@@ -4,7 +4,6 @@ from urllib import parse
 from bs4 import BeautifulSoup
 import argparse
 import sys
-import time
 import re
 
 import review_crawler
