@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 
 from urllib import parse
-from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import argparse
 import sys
 import time
+
+import review_crawler
 
 
 site = "http://www.yes24.com"
@@ -69,10 +70,7 @@ def display(info, reviewlist, csv):
 
 def bookinfo(goodsid):
     url = site + "/Product/Goods/" + goodsid
-
-    with urlopen(url) as f:
-        html = f.read().decode('utf-8')
-
+    html = review_crawler.readurl(url)
     soup = BeautifulSoup(html, 'html.parser')
 
     ebook = soup.select_one("div.gd_titArea > strong.icon_res")
@@ -112,10 +110,7 @@ def goodsReviewList(info, order, csv):
 
     qrystr = parse.urlencode(qrylist)
     url = site + "/Product/communityModules/GoodsReviewList/" + info["goodsid"] + '?' + qrystr
-
-    with urlopen(url) as f:
-        html = f.read().decode('utf-8')
-
+    html = review_crawler.readurl(url)
     soup = BeautifulSoup(html, 'html.parser')
 
     for review in soup.select('div.reviewInfoGrp'):
@@ -148,10 +143,7 @@ def awordReviewList(info, order, csv):
 
     qrystr = parse.urlencode(qrylist)
     url = site + "/Product/communityModules/AwordReviewList/" + info["goodsid"] + '?' + qrystr
-
-    with urlopen(url) as f:
-        html = f.read().decode('utf-8')
-
+    html = review_crawler.readurl(url)
     soup = BeautifulSoup(html, 'html.parser')
 
     for review in soup.select('div.cmtInfoGrp'):
