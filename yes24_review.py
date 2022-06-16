@@ -105,7 +105,7 @@ def awordReviewList(info, order, csv):
         result.append({
             "reviewdate": review.select_one("em.txt_date").text,
             "reviewerid": review.select_one("em.txt_id > a").text,
-            "ratings": review.select_one("span.rating").text.strip(),
+            "rating": review.select_one("span.rating").text.strip(),
             "buy": buy.text.strip() if buy else '',
             "content": review.select_one("div.cmt_cont").text.replace('\n', ' ').strip(),
         })
