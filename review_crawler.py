@@ -1,4 +1,5 @@
 import sys
+import time
 
 import requests
 
@@ -47,3 +48,22 @@ def display(info, reviewlist, csv):
                 sep='\n',
                 end='\n\n'
             )
+
+
+def mainloop(itemid_list, bookinfo, reviewlist, csv, order=None, showurl=None):
+    if not itemid_list:
+        itemid_list = sys.stdin
+
+    if csv:
+        print_csv_header()
+
+    for itemid in itemid_list:
+        info = bookinfo(itemid.strip(), showurl)
+        time.sleep(1)
+        display(
+            info,
+            reviewlist(info, csv, order, showurl),
+            csv
+        )
+        time.sleep(1)
+

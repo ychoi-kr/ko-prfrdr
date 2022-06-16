@@ -18,21 +18,7 @@ def reviewlist(info, csv, order=None, showurl=None):
 
 
 def main(itemid_list, csv, order=None, showurl=None):
-    if not itemid_list:
-        itemid_list = sys.stdin
-
-    if csv:
-        review_crawler.print_csv_header()
-
-    for itemid in itemid_list:
-        info = bookinfo(itemid.strip(), showurl)
-        time.sleep(1)
-        review_crawler.display(
-            info,
-            reviewlist(info, csv, order, showurl),
-            csv
-        )
-        time.sleep(1)
+    review_crawler.mainloop(itemid_list, bookinfo, reviewlist, csv, order, showurl)
 
 
 def bookinfo(itemid, showurl):

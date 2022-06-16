@@ -4,7 +4,6 @@ from urllib import parse
 from bs4 import BeautifulSoup
 import argparse
 import sys
-import time
 
 import review_crawler
 
@@ -16,26 +15,15 @@ def reviewlist(info, csv, order=None, showurl=None):
     return goodsReviewList(info, order, csv) + awordReviewList(info, order, csv)
 
 
-def main(goodsid_list, csv, order=None, showurl=None):
-    if not goodsid_list:
-        goodsid_list = sys.stdin
-
-    if csv:
-        review_crawler.print_csv_header()
-
-    for goodsid in goodsid_list:
-        info = bookinfo(goodsid.strip(), showurl)
-        time.sleep(1)
-        review_crawler.display(
-            info,
-            reviewlist(info, csv, order, showurl),
-            csv
-        )
-        time.sleep(1)
+def main(itemid_list, csv, order=None, showurl=None):
+    review_crawler.mainloop(itemid_list, bookinfo, reviewlist, csv, order, showurl)
 
 
 def bookinfo(goodsid, showurl):
     url = site + "/Product/Goods/" + goodsid
+    if showurl:
+        print(url)
+
     html = review_crawler.readurl(url)
     soup = BeautifulSoup(html, 'html.parser')
 
