@@ -17,7 +17,7 @@ def reviewlist(info, csv, order=None, showurl=None):
     return commentReviewList(info, csv, showurl) + myReviewList(info, csv, showurl)
 
 
-def main(itemid_list, csv, showurl):
+def main(itemid_list, csv, order=None, showurl=None):
     if not itemid_list:
         itemid_list = sys.stdin
 
@@ -29,7 +29,7 @@ def main(itemid_list, csv, showurl):
         time.sleep(1)
         review_crawler.display(
             info,
-            reviewlist(info, csv, showurl=showurl),
+            reviewlist(info, csv, order, showurl),
             csv
         )
         time.sleep(1)

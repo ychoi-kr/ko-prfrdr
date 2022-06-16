@@ -16,7 +16,7 @@ def reviewlist(info, csv, order=None, showurl=None):
     return goodsReviewList(info, order, csv) + awordReviewList(info, order, csv)
 
 
-def main(goodsid_list, order, csv):
+def main(goodsid_list, csv, order=None, showurl=None):
     if not goodsid_list:
         goodsid_list = sys.stdin
 
@@ -24,17 +24,17 @@ def main(goodsid_list, order, csv):
         review_crawler.print_csv_header()
 
     for goodsid in goodsid_list:
-        info = bookinfo(goodsid.strip())
+        info = bookinfo(goodsid.strip(), showurl)
         time.sleep(1)
         review_crawler.display(
             info,
-            reviewlist(info, csv, order=order),
+            reviewlist(info, csv, order, showurl),
             csv
         )
         time.sleep(1)
 
 
-def bookinfo(goodsid):
+def bookinfo(goodsid, showurl):
     url = site + "/Product/Goods/" + goodsid
     html = review_crawler.readurl(url)
     soup = BeautifulSoup(html, 'html.parser')
@@ -131,6 +131,6 @@ if __name__ == '__main__':
     parser.add_argument("--csv", action=argparse.BooleanOptionalAction)
     parser.add_argument("goodsid_list", nargs='?', type=str)
     args = parser.parse_args()
-    main(args.goodsid_list, args.order, args.csv)
+    main(args.goodsid_list, args.csv, args.order)
 
 
