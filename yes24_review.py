@@ -23,39 +23,12 @@ def main(goodsid_list, order, csv):
     for goodsid in goodsid_list:
         info = bookinfo(goodsid.strip())
         time.sleep(1)
-        display(
+        review_crawler.display(
             info,
             goodsReviewList(info, order, csv) + awordReviewList(info, order, csv),
             csv
         )
         time.sleep(1)
-
-
-def display(info, reviewlist, csv):
-    for review in reviewlist:
-        if csv:
-            quote = lambda s: '"' + s.replace('"', '\'') + '"' if csv else s
-            print(
-                quote(info["title"]),
-                quote(info["url"]),
-                quote(info["author"]),
-                quote(info["pubdate"]),
-                quote(review["reviewdate"]),
-                quote(review["reviewerid"]),
-                quote(review["buy"]),
-                quote(review["ratings"]),
-                quote(review["content"]),
-                sep=','
-            )
-            sys.stdout.flush()
-        else:
-            print(
-                review["reviewdate"] + ' ' + review["reviewerid"] + ' ' + review["buy"],
-                review["ratings"],
-                review["content"],
-                sep='\n',
-                end='\n\n'
-            )
 
 
 def bookinfo(goodsid):
@@ -109,7 +82,7 @@ def goodsReviewList(info, order, csv):
             "reviewdate": review.select_one("em.txt_date").text,
             "reviewerid": review.select_one("em.txt_id > a").text,
             "buy": buy.text.strip() if buy else '',
-            "ratings": "내용 " + review.select_one("span.rating").text.strip() + "  편집/디자인 " + review.select_one("span.rating").text.strip(),
+            "rating": "내용 " + review.select_one("span.rating").text.strip() + "  편집/디자인 " + review.select_one("span.rating").text.strip(),
             "content": ' '.join(review.select_one("div.review_cont").text.split())
         })
         

@@ -23,39 +23,12 @@ def main(itemid_list, csv, showurl):
     for itemid in itemid_list:
         info = bookinfo(itemid.strip(), showurl)
         time.sleep(1)
-        display(
+        review_crawler.display(
             info,
             commentReviewList(info, csv, showurl) + myReviewList(info, csv, showurl),
             csv
         )
         time.sleep(1)
-
-
-def display(info, reviewlist, csv):
-    for review in reviewlist:
-        if csv:
-            quote = lambda s: '"' + s.replace('"', '\'') + '"' if csv else s
-            print(
-                quote(info["title"]),
-                quote(info["url"]),
-                quote(info["author"]),
-                quote(info["pubdate"]),
-                quote(review["reviewdate"]),
-                quote(review["reviewerid"]),
-                quote(review["buy"]),
-                quote(review["rating"]),
-                quote(review["content"]),
-                sep=','
-            )
-            sys.stdout.flush()
-        else:
-            print(
-                review["reviewdate"] + ' ' + review["reviewerid"] + ' ' + review["buy"],
-                review["rating"],
-                review["content"],
-                sep='\n',
-                end='\n\n'
-            )
 
 
 def bookinfo(itemid, showurl):
