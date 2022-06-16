@@ -18,18 +18,7 @@ def main(itemid_list, csv, showurl):
         itemid_list = sys.stdin
 
     if csv:
-        print(
-            '"책 제목"',
-            '"URL"',
-            '"저자/역자"',
-            '"발행일"',
-            '"작성일"',
-            '"작성자"',
-            '"구매"',
-            '"평점"',
-            '"리뷰"',
-            sep=','
-        )
+        review_crawler.print_csv_header()
 
     for itemid in itemid_list:
         info = bookinfo(itemid.strip(), showurl)
