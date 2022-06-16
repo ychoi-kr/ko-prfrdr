@@ -12,6 +12,9 @@ import review_crawler
 site = "http://www.yes24.com"
 
 
+def reviewlist(info, csv, order=None, showurl=None):
+    return goodsReviewList(info, order, csv) + awordReviewList(info, order, csv)
+
 
 def main(goodsid_list, order, csv):
     if not goodsid_list:
@@ -25,7 +28,7 @@ def main(goodsid_list, order, csv):
         time.sleep(1)
         review_crawler.display(
             info,
-            goodsReviewList(info, order, csv) + awordReviewList(info, order, csv),
+            reviewlist(info, csv, order=order),
             csv
         )
         time.sleep(1)

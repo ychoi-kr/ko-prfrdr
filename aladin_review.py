@@ -13,6 +13,10 @@ import review_crawler
 site = "https://www.aladin.co.kr"
 
 
+def reviewlist(info, csv, order=None, showurl=None):
+    return commentReviewList(info, csv, showurl) + myReviewList(info, csv, showurl)
+
+
 def main(itemid_list, csv, showurl):
     if not itemid_list:
         itemid_list = sys.stdin
@@ -25,7 +29,7 @@ def main(itemid_list, csv, showurl):
         time.sleep(1)
         review_crawler.display(
             info,
-            commentReviewList(info, csv, showurl) + myReviewList(info, csv, showurl),
+            reviewlist(info, csv, showurl=showurl),
             csv
         )
         time.sleep(1)
