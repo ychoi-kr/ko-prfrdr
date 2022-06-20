@@ -50,11 +50,11 @@ def display(info, reviewlist, csv):
             )
 
 
-def mainloop(itemid_list, bookinfo, reviewlist, csv, order=None, showurl=None):
+def mainloop(itemid_list, bookinfo, reviewlist, csv, noheader=False, order=None, showurl=None):
     if not itemid_list:
         itemid_list = sys.stdin
 
-    if csv:
+    if csv and not noheader:
         print_csv_header()
 
     for itemid in itemid_list:

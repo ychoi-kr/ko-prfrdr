@@ -15,8 +15,8 @@ def reviewlist(info, csv, order=None, showurl=None):
     return goodsReviewList(info, order, csv) + awordReviewList(info, order, csv)
 
 
-def main(itemid_list, csv, order=None, showurl=None):
-    review_crawler.mainloop(itemid_list, bookinfo, reviewlist, csv, order, showurl)
+def main(itemid_list, csv, noheader, order=None, showurl=None):
+    review_crawler.mainloop(itemid_list, bookinfo, reviewlist, csv, noheader, order, showurl)
 
 
 def bookinfo(goodsid, showurl):
@@ -117,8 +117,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--order", default="최근순", choices=["최근순", "추천순", "별점순"])
     parser.add_argument("--csv", action=argparse.BooleanOptionalAction)
+    parser.add_argument("--noheader", action=argparse.BooleanOptionalAction)
     parser.add_argument("goodsid_list", nargs='?', type=str)
     args = parser.parse_args()
-    main(args.goodsid_list, args.csv, args.order)
+    main(args.goodsid_list, args.csv, args.noheader, args.order)
 
 
