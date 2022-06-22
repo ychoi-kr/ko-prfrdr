@@ -26,12 +26,18 @@ def bookinfo(goodsid, showurl):
     if moreAuthArea:
         author = author.replace(moreAuthArea.text, '')
 
+    detail = soup.select("textarea.txtContentText")
+    desc = detail[0]
+    toc = detail[1]
+
     return {
         "goodsid": goodsid,
         "title": title,
         "url": url,
         "author": author.strip(),
-        "pubdate": soup.select_one("span.gd_date").text
+        "pubdate": soup.select_one("span.gd_date").text,
+        "desc": desc.text,
+        "toc": toc.text
     }
 
 def main(goodsid):
