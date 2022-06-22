@@ -1,4 +1,7 @@
+#!/usr/bin/python3
+
 from bs4 import BeautifulSoup
+import argparse
 
 import yes24
 import spider
@@ -30,4 +33,15 @@ def bookinfo(goodsid, showurl):
         "author": author.strip(),
         "pubdate": soup.select_one("span.gd_date").text
     }
+
+def main(goodsid):
+    for k, v in bookinfo(goodsid, showurl=None).items():
+        print(k, v)
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument("goodsid", type=str)
+    args = parser.parse_args()
+    main(args.goodsid)
 
