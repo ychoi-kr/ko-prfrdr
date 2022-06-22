@@ -9,9 +9,6 @@ import yes24
 import review_crawler
 
 
-site = yes24.site
-
-
 def reviewlist(info, csv, order=None, showurl=None):
     return goodsReviewList(info, order, csv) + awordReviewList(info, order, csv)
 
@@ -21,7 +18,7 @@ def main(itemid_list, csv, noheader, order=None, showurl=None):
 
 
 def bookinfo(goodsid, showurl):
-    url = site + "/Product/Goods/" + goodsid
+    url = yes24.site + "/Product/Goods/" + goodsid
     if showurl:
         print(url)
 
@@ -64,7 +61,7 @@ def goodsReviewList(info, order, csv):
     ]
 
     qrystr = parse.urlencode(qrylist)
-    url = site + "/Product/communityModules/GoodsReviewList/" + info["goodsid"] + '?' + qrystr
+    url = yes24.site + "/Product/communityModules/GoodsReviewList/" + info["goodsid"] + '?' + qrystr
     html = review_crawler.readurl(url)
     soup = BeautifulSoup(html, 'html.parser')
 
@@ -97,7 +94,7 @@ def awordReviewList(info, order, csv):
     ]
 
     qrystr = parse.urlencode(qrylist)
-    url = site + "/Product/communityModules/AwordReviewList/" + info["goodsid"] + '?' + qrystr
+    url = yes24.site + "/Product/communityModules/AwordReviewList/" + info["goodsid"] + '?' + qrystr
     html = review_crawler.readurl(url)
     soup = BeautifulSoup(html, 'html.parser')
 
