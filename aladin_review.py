@@ -6,6 +6,7 @@ import argparse
 import sys
 import re
 
+import spider
 import review_crawler
 
 
@@ -25,7 +26,7 @@ def bookinfo(itemid, showurl):
     if showurl:
         print(url)
 
-    html = review_crawler.readurl(url)
+    html = spider.readurl(url)
     soup = BeautifulSoup(html, 'html.parser')
     
     title = soup.select_one("a.Ere_bo_title").text
@@ -72,7 +73,7 @@ def myReviewList(info, csv, showurl):
     if showurl:
         print(url)
 
-    html = review_crawler.readurl(url)
+    html = spider.readurl(url)
 
     soup = BeautifulSoup(html, 'html.parser')
 
@@ -119,7 +120,7 @@ def commentReviewList(info, csv, showurl):
     if showurl:
         print(url)
 
-    html = review_crawler.readurl(url)
+    html = spider.readurl(url)
 
     soup = BeautifulSoup(html, 'html.parser')
 

@@ -1,12 +1,6 @@
 import sys
 import time
 
-import requests
-
-
-def readurl(url):
-    return requests.get(url).text
-
 
 def print_csv_header():
     print(

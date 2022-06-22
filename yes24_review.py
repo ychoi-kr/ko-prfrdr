@@ -6,6 +6,7 @@ import argparse
 import sys
 
 import yes24
+import spider
 import review_crawler
 
 
@@ -22,7 +23,7 @@ def bookinfo(goodsid, showurl):
     if showurl:
         print(url)
 
-    html = review_crawler.readurl(url)
+    html = spider.readurl(url)
     soup = BeautifulSoup(html, 'html.parser')
 
     ebook = soup.select_one("div.gd_titArea > strong.icon_res")
@@ -62,7 +63,7 @@ def goodsReviewList(info, order, csv):
 
     qrystr = parse.urlencode(qrylist)
     url = yes24.site + "/Product/communityModules/GoodsReviewList/" + info["goodsid"] + '?' + qrystr
-    html = review_crawler.readurl(url)
+    html = spider.readurl(url)
     soup = BeautifulSoup(html, 'html.parser')
 
     for review in soup.select('div.reviewInfoGrp'):
@@ -95,7 +96,7 @@ def awordReviewList(info, order, csv):
 
     qrystr = parse.urlencode(qrylist)
     url = yes24.site + "/Product/communityModules/AwordReviewList/" + info["goodsid"] + '?' + qrystr
-    html = review_crawler.readurl(url)
+    html = spider.readurl(url)
     soup = BeautifulSoup(html, 'html.parser')
 
     for review in soup.select('div.cmtInfoGrp'):
