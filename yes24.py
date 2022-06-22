@@ -70,10 +70,10 @@ mkEntrNo = {
 def main(keyword, domain, order, category, publisher, page, showurl, csv, id_only):
 
 
-    display(search(keyword, domain, order, category, publisher, page, showurl), csv, id_only)
+    display(search(keyword, domain, order, category, publisher, page, showurl), order, csv, id_only)
 
 
-def display(booklist, csv, id_only):
+def display(booklist, order, csv, id_only):
     if csv:
         print(
             '"URL"',
@@ -85,6 +85,9 @@ def display(booklist, csv, id_only):
             '"판매지수"',
             sep=','
         )
+
+    booklist = sorted(booklist, key=lambda x: int(x["saleNum"].replace(',', '')), reverse=True) if order == "판매지수순" else booklist
+
     for book in booklist:
         if id_only:
             print(re.search(r"(\d+)$", book["url"]).group())
@@ -120,9 +123,13 @@ def search(keyword, domain, order, category, publisher, page, showurl):
     qrylist = [
         ("domain", domainmap[domain.lower()]),
         ("query", ' '.join(inckey)),
-        ("order", basefilter[order]),
         ("page", page),
     ]
+
+    if order in ["인기도순", "정확도순", "신상품순", "최저가순", "평점순", "리뷰순"]:
+        qrylist.append(("order", basefilter[order]))
+    elif order == "판매지수순":
+        pass  # implemented by sorting because it's not provided by Yes24
 
     if category and category.lower() != "all":
         if category.startswith('0'):
@@ -166,6 +173,9 @@ def search(keyword, domain, order, category, publisher, page, showurl):
             if any(map(lambda x: k in x, title.values())):
                 skip = True
 
+        if order == "판매지수순" and title["saleNum"] == '':
+            skip = True
+
         if not skip:
             result.append(title)
     return result
@@ -174,7 +184,7 @@ def search(keyword, domain, order, category, publisher, page, showurl):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--domain", default="국내도서", choices=["전체", "국내도서", "외국도서", "eBook", "중고샵"])
-    parser.add_argument("--order", default="인기도순", choices=["인기도순", "정확도순", "신상품순", "최저가순", "최고가순", "평점순", "리뷰순"])
+    parser.add_argument("--order", default="인기도순", choices=["인기도순", "정확도순", "신상품순", "최저가순", "최고가순", "평점순", "리뷰순", "판매지수순"])
     parser.add_argument("--category", default="001001003", type=str)
     parser.add_argument("--publisher", type=str)
     parser.add_argument("--page", default=1, type=int)
