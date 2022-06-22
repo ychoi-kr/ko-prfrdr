@@ -5,10 +5,11 @@ from bs4 import BeautifulSoup
 import argparse
 import sys
 
+import yes24
 import review_crawler
 
 
-site = "http://www.yes24.com"
+site = yes24.site
 
 
 def reviewlist(info, csv, order=None, showurl=None):
