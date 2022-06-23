@@ -40,7 +40,7 @@ if not 2 <= len(sys.argv) <= 3:
 
 cmd = sys.argv[1]
 
-if cmd == "help":
+if cmd == "help" or cmd == "--help":
     print(usage)
     print(description)
     print(examples)
