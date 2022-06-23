@@ -11,13 +11,13 @@ python wikidocs.py <command> [content id]
 '''
 
 description = '''Description:
-Available commands are toc, content and help.
+Available commands are toc, page and help.
 Content id should be a number.
 '''
 
 examples = '''Examples:
 python wikidocs.py toc 2
-python wikidocs.py content 43
+python wikidocs.py page 43
 '''
 
 
