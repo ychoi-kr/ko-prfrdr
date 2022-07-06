@@ -16,10 +16,14 @@ def bookinfo(goodsid, showurl):
     soup = BeautifulSoup(html, 'html.parser')
 
     ebook = soup.select_one("div.gd_titArea > strong.icon_res")
-    if ebook:
-        title = '[' + ebook.text + '] ' + soup.select_one("h2.gd_name").text
-    else:
-        title = soup.select_one("h2.gd_name").text
+
+    title = ''
+    gd_name = soup.select_one("h2.gd_name")
+    if gd_name:
+        if ebook:
+            title = '[' + ebook.text + '] ' + gd_name.text
+        else:
+            title = gd_name.text
 
     author = soup.select_one("span.gd_auth").text
     moreAuthArea = soup.select_one("span.moreAuthArea")
