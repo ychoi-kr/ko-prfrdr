@@ -20,7 +20,7 @@
     "exception": []
   },
   {
-    "kind": "띄어쓰기",
+    "kind": "맞춤법",
     "name": "0067205b_만듦, 베풂, 줄어듦",
     "desc": "https://wikidocs.net/67205#a",
     "cases": [
@@ -244,7 +244,7 @@
   },
   {
     "kind": "맞춤법",
-    "name": "0156340c_‘뒤’와 뒷말을 띄어 써야 하는 것",
+    "name": "0156340c_사이시옷 없이 '뒤'와 뒷말을 띄어 써야 하는 것",
     "desc": "https://wikidocs.net/156340#c",
     "cases": [
       [ "뒷[ ]?(단어)", "뒤 ()" ]
@@ -382,6 +382,16 @@
     "cases": [
       ["커핏값", "커피값"],
       ["해싯값", "해시값"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "0168429d_띠다",
+    "desc": "https://wikidocs.net/168429#d",
+    "cases": [
+      ["(형태|임무|\\w+빛|노기|성격)([을를]) 띄(\\w+)", "()() 띠()"],
+      ["(형태|임무|\\w+빛|노기|성격)([을를]) 띈(\\w+)", "()() 띤()"]
     ],
     "exception": []
   },
@@ -583,7 +593,18 @@
     "exception": []
   },
   {
-    "kind": "띄어쓰기",
+    "kind": "맞춤법",
+    "name": "qa128005_로/으로",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=128005",
+    "cases": [
+      ["(\\w*[KL_NFC])([(][^()]+[)])으로", "()()로"],
+      ["(\\w*[KL_WFL])([(][^()]+[)])으로", "()()로"],
+      ["(\\w*[KL_NFL])([(][^()]+[)])로", "()()으로"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "qa128272_돼 보이다",
     "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=128272",
     "cases": [
@@ -597,7 +618,7 @@
     "name": "qa142416_돼서",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=142416",
     "cases": [
-      [ "(KW_NAO)되서", "()돼서"],
+      [ "(KW_NAO)되([서야])", "()돼()"],
       [ "(KW_NAO)됬(\\w+)", "()됐()"],
       [ "(KW_NPf)가 됬(다|으니|으므로)", "()가 됐()" ],
       [ "(KW_NPf)이 되서", "()이 돼서" ],
@@ -983,7 +1004,9 @@
 	  ["인스터스", "인스턴스"],
 	  ["\\b(KW_NAO)하자 (않\\w+)", "()하지 ()"],
 	  ["<Noun>르 생성", "()를 생성"],
-	  ["트랙잭션", "트랜잭션"]
+	  ["트랙잭션", "트랜잭션"],
+      ["\\b한는데", "하는데"],
+      ["(KW_NAO)해자", "()하자"]
     ],
     "exception": []
   },
