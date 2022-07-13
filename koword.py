@@ -5,7 +5,7 @@ from kostr import concat
 
 """Korean Words"""
 
-# Korean Conjucation (strings can be used for Conjugation)
+# Korean Conjugation (strings can be used for Conjugation)
 KC_D = "[되된돼됐]"
 KC_H = "하고[는자]?|하겠\\w+|하[는니다며여]|하도록|하려[고는]?|하[?]면|하여[야]?|하였\\w+|하지[만]?|한 [것뒤적후]|한 다음|한다[고는니며지]?|할|할까[요]?|할래|할지[도]?[요]?|함[을]?|함이다|함입니다|합니다|해보[니다면]|해볼[까래]?|해[서야요]?|했고[요]?|했는데[요]?|했다[만]?|했습니다[만]?|했으[니면][서]?|했을[지]?|했지[만]?[요]?"
 
@@ -334,8 +334,8 @@ KW_M = joinseq(KW_MD, KW_MV, KW_MA)
 ## Nouns - Activity (can be verb with '-하다/-되다' or used in form of '~을/를 하다')
 ### Original (Korean + Hanja)
 KW_NAOf = "생각|[가수증]감|가공|곱|[건입출]국|공격|[연체]결|방과|[총포]괄|집권|접근|송금|가늠|[담배]당|[가이]동|[노]력|[관마수제훈]련|[기수]록|[발변설연작제조증]명|괄목|함몰|질문|고민|[개선]발|체벌|[반중]복|준비|[수조]사|[손연향]상|개선|발생|[건개배연증해]설|[구생작완형]성|[계상]속|[연학]습|임신|[장파]악|[예해]약|[수성영작]업|[구시재]연|오염|[반운촬투]영|[사이작적통포활]용|훈육|[지]원|불응|[승확]인|[도수투]입|[수]?출입|시작|[긴등성저출]장|[발운회]전|조절|[결설수지측한]정|검증|부진|선언|[개선수]정|[도장부집탈]착|칭찬|제창|[도수연인제진창추]출|[계예]측|[간선채]택|[면유입재]학|국한|분할|포함|[결부취]합|[미전통]화|반환|[구실재표]현|[동비서수운연진]행|[재]?실행"
-KW_NAOh = "가시화|간소화|강화|경량화|공산화|도커화|디지털화|모듈화|민주화|소형화|수치화|세분화|시각화|융화|인스턴스화|중앙화|첨예화|초기화|최[신적]화|캡슐화|파편화|패턴화|특[수]?화|현[실행]화|[0-9]+차원화|형상화"
-KW_NAOv = "[인증추참평]가|[제탈]거|[공소]개|[연촉]구|[대상연제]기|이야기|시도|[고]려|[완치]료|[관격수처]리|마무리|연마|소모|근무|[공기]부|[감반발조]사|[감기축]소|[감준회]수|제시|제어|[기참]여|[긴소중필]요|[논유합회]의|[주차폐]지|대체|[성]취|[납배설]치|검토|실패|배포|저하|이해|" + KW_NAOh 
+KW_NAOh = "가시화|간소화|강화|경량화|공산화|도커화|디지털화|모듈화|무료화|민주화|소형화|수치화|세분화|시각화|융화|인스턴스화|중앙화|첨예화|초기화|최[신적]화|캡슐화|파편화|패턴화|특[수]?화|현[실행]화|[0-9]+차원화|형상화"
+KW_NAOv = "[인증추참평]가|[제탈]거|[공소]개|[연촉]구|[대상연제]기|이야기|시도|[고]려|[완치]료|[관격수처]리|마무리|연마|소모|근무|[공기]부|[감반발조]사|[감기축]소|[감준회]수|제시|제어|[기참]여|[긴소중필]요|[논유합회]의|복제|[주차폐]지|대체|[성]취|[납배설]치|검토|실패|배포|저하|이해|" + KW_NAOh 
 KW_NAO = joinseq(KW_NAOf, KW_NAOv)
 
 ## can be Both of active(-하다) and passive(-받다)
@@ -363,6 +363,9 @@ KW_NA = joinseq(KW_NAf, KW_NAv)
 #KW_NASf = joinseq(KW_NAf, KW_NSTf)
 #KW_NASv = joinseq(KW_NAv, KW_NSTv)
 #KW_NAS = joinseq(KW_NASf, KW_NASv)
+
+## Nouns - Color
+KW_NC = "녹색"
 
 ## Nouns - Dependant
 KW_ND = "밖|뿐"
@@ -523,11 +526,11 @@ KW_NL = joinseq(KW_NLf, KW_NLv)
 ## Thing
 ### Abstract
 KW_NTAf = "걸음|명산|모델|모형|모듈|방법|블록|스텝|시스템|알고리즘|애플리케이션|앱|입력|전략|점|차원|채널|출력|층|칼럼|토큰|토픽|튜플|특성|프로그램|[변함]수|행렬"
-KW_NTAv = "정도|코드|시류|메모리|처리|리뷰|[요축]소|[변인]수|단어|범위|차이|글자|절차|피처|자체|가중치|배치|데이터|벡터|학습 데이터|형태|이벤트|폰트|변화"
+KW_NTAv = "정도|코드|시류|메모리|처리|리뷰|[요축]소|[변인]수|단어|범위|차이|글자|절차|아키텍처|피처|자체|가중치|배치|데이터|벡터|학습 데이터|형태|이벤트|폰트|변화"
 KW_NTA = joinseq(KW_NTAf, KW_NTAv)
 
 ### maChine
-KW_NTCf = "툴"
+KW_NTCf = "로봇|툴"
 KW_NTCv = "기계|서버|장비|컴퓨터|클라이언트"
 KW_NTC = joinseq(KW_NTCf, KW_NTCv)
 
@@ -566,7 +569,9 @@ KW_NTf = joinseq(KW_NTAf, KW_NTCf, KW_NTEf, KW_NTFf, KW_NTMf, KW_NTSf, KW_NTUf, 
 KW_NTv = joinseq(KW_NTAv, KW_NTCv, KW_NTEv, KW_NTFv, KW_NTMv, KW_NTSv, KW_NTUv, KW_NTVv)
 KW_NT = joinseq(KW_NTf, KW_NTv)
 
-KW_NVA = '|'.join(
+## Nouns from Verb
+### -음
+KW_NVAm = '|'.join(
     sorted(
         conjugate(ks.KS_VAd, '음')          # 넣+음
         + conjugate(ks.KS_VAh, '함')        # 가까이+함
@@ -580,6 +585,37 @@ KW_NVA = '|'.join(
     )
 )
 
+KW_NVm = KW_NVAm
+
+### -기
+
+KW_NVAk = '|'.join(
+    sorted(
+        conjugate(ks.KS_VAd, '기')          # 넣+기
+        + conjugate(ks.KS_VAh, '하기')      # 가까이+하기
+        + conjugate(ks.KS_VAi, 'ㅣ', '기')  # 외ㅊ+ㅣ+기
+        + conjugate(ks.KS_VAl, '리기')      # 돌+리기
+        + conjugate(ks.KS_VAm, '기')        # 빼+기
+        + conjugate(ks.KS_VAn, '기')        # 만나+기
+        + conjugate(ks.KS_VAr, 'ㄹ', '기')  # 내미+ㄹ+기
+        + conjugate(ks.KS_VAu, 'ㅜ', '기')  # 늦ㅊ+ㅜ+기
+        + conjugate(ks.KS_VAw, '우기')      # 치+우기   
+    )
+)
+
+KW_NVIk = '|'.join(
+    sorted(
+        conjugate(ks.KS_VIa, '기')          # 가+기
+        + conjugate(ks.KS_VId, 'ㄷ', '기')  # 거+ㄷ+기
+        + conjugate(ks.KS_VIe, 'ㄹ', '기')  # 여무+ㄹ+기
+        + conjugate(ks.KS_VIl, 'ㄹ', '기')  # 조+ㄹ+기
+        + conjugate(ks.KS_VIn, '기')        # 가+기
+        + conjugate(ks.KS_VIy, 'ㅣ', '기')  # 생ㄱ+ㅣ+기
+    )
+)
+
+KW_NVk = joinseq(KW_NVAk, KW_NVIk)
+KW_NV = joinseq(KW_NVm, KW_NVk)
 
 ## Pronouns
 ### Person
