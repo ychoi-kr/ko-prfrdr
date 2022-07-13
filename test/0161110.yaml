@@ -14,6 +14,8 @@ true cases:
   - EOA 시 0반환
   - 2.5가 아닌2가 나왔다는
   - 의존성과 관련된비용을 일찍 식별
+  - 녹색박스
+  - GRU아키텍처
 
 false cases:
   - MyAutoML3_메타모델_학습데이터.csv
