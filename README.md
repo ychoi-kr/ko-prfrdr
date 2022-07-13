@@ -535,23 +535,41 @@ Visual Studio Code : 파이썬 뿐이 아니라 대부분의 언어를 지원�
 사용법:
 
 ```
-$termchk
+$ ./termlist.py sample.txt
 TERM                                               COUNT
-Atari                                              1
-atomic                                             1
-Automated Machine Learning                         1
-AutoML                                             1
-auxiliary classifier                               1
-Azure                                              2
-Azure Machine Learnin Service, AMLS                1
-b                                                  1
-batch_size                                         1
-Beam Search                                        1
-Bernd Krueger                                      1
-bias correction                                    1
-Bibhuti Bhushan Jha                                1
-budget                                             1
-CNN                                                2
+Anaconda                                           1
+Beautiful Soup                                     1
+BitTorrent                                         1
+boolean                                            1
+Byte code                                          1
+Cython                                             1
+Dropbox                                            1
+dynamic typing                                     2
+dynamically typed                                  1
+en                                                 1
+GC, Garbage Collector                              1
+ILM                                                1
+immutable                                          7
+Inkscape                                           1
+JPython                                            1
+JS                                                 1
+long integer                                       1
+MailMan                                            1
+MoinMoin Wiki                                      1
+mutable                                            3
+NASA                                               1
+NOAA                                               1
+NumPy                                              1
+Paint Shop Pro                                     1
+Pillow                                             1
+Plucker                                            1
+Portage                                            1
+PyGame                                             1
+PySol                                              1
+repository                                         1
+Shade                                              1
+tuple                                              1
+VB.NET                                             1
 ```
 
 
