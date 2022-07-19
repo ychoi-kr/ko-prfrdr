@@ -2,10 +2,13 @@ Amazon	NNP
 Google	NNP
 Linux	NNP
 MySQL	NNP
-Python	NNP
 PHP	NNP
+Python	NNP
 REST	NNP
+딕셔너리	NNG
 에포크	NNG
 카테고리 NNG
+코랩	NNP
+태스크	NNG
 파라미터	NNG
-딕셔너리	NNG
+파이토치	NNP
