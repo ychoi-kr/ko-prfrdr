@@ -10,6 +10,7 @@ true cases:
   - EOA 시 0반환
   - 녹색박스
   - GRU아키텍처
+  - 특정 컴포넌트조합만 허용
 
 false cases:
   - 651회의 반복이 필요
