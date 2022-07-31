@@ -335,7 +335,7 @@ KW_M = joinseq(KW_MD, KW_MV, KW_MA)
 ### Original (Korean + Hanja)
 KW_NAOf = "생각|[가수증]감|가공|곱|[건입출]국|공격|[연체]결|방과|[총포]괄|집권|접근|송금|가늠|[담배]당|[가이]동|[취획]득|[노]력|[관마수제훈]련|[기수]록|[발변설연작제조증]명|괄목|함몰|질문|고민|[개선]발|체벌|[반중]복|준비|[수조]사|[손연향]상|개선|발생|[건개배연증해]설|[구생작완형]성|[계상]속|[연학]습|임신|[장파]악|[예해]약|[수성영작]업|[구시재]연|오염|[반운촬투]영|[사이작적통포활]용|훈육|[지]원|불응|[승확]인|[도수투]입|[수]?출입|시작|[긴등성저출]장|[발운회]전|조절|[걱결설수지측한]정|검증|부진|선언|[개선수]정|[도장부집탈]착|칭찬|제창|[도수연인제진창추]출|[계예]측|[간선채]택|[면유입재]학|국한|분할|포함|[결부취]합|[미전통]화|반환|[구실재표]현|[동비서수운연진]행|[재]?실행"
 KW_NAOh = "가시화|간소화|강화|경량화|공산화|도커화|디지털화|모듈화|무료화|민주화|소형화|수치화|세분화|시각화|융화|인스턴스화|중앙화|첨예화|초기화|최[신적]화|캡슐화|파편화|패턴화|특[수]?화|현[실행]화|[0-9]+차원화|형상화"
-KW_NAOv = "[인증추참평]가|[제탈]거|[공소]개|[연촉]구|[대상연제]기|이야기|시도|[고]려|[완치]료|[관격수]리|[전후]?처리|마무리|연마|소모|근무|[공기]부|[감반발조]사|[감기축]소|[감준회]수|제시|제어|[기참]여|[긴소중필]요|[논유합회]의|복제|[주차폐]지|대체|[성]취|[납배설]치|검토|실패|배포|저하|이해|" + KW_NAOh 
+KW_NAOv = "[인증추참평]가|[제탈]거|[공소]개|[연촉]구|[대상연제]기|이야기|시도|[고]려|[완치]료|[관격수]리|[전후]?처리|마무리|연마|소모|근무|[공거기]부|[감반발조]사|[감기축]소|[감준회]수|제시|제어|[기참]여|[긴소중필]요|[논유합회]의|복제|[주차폐]지|대체|[성]취|[납배설]치|검토|실패|배포|저하|이해|" + KW_NAOh 
 KW_NAO = joinseq(KW_NAOf, KW_NAOv)
 
 ## can be Both of active(-하다) and passive(-받다)
@@ -496,9 +496,8 @@ KW_NUTv = "밀리초|반기|분기|세기|세대|초"
 KW_NUT = joinseq(KW_NUTf, KW_NUTv)
 
 ### Volume
-KW_NUVf = ""
 KW_NUVv = "세제곱미터"
-KW_NUV = joinseq(KW_NUVf, KW_NUVv)
+KW_NUV = KW_NUVv
 
 ### Weight
 KW_NUWf = "그램|킬로그램|평"
@@ -506,7 +505,7 @@ KW_NUWv = "밀리리터|데시리터|리터|킬로리터|파운드"
 KW_NUW = joinseq(KW_NUWf, KW_NUWv)
 
 ### all
-KW_NUf = joinseq(KW_NUAf, KW_NUBf, KW_NUCf, KW_NUDf, KW_NUGf, KW_NUIf, KW_NUMf, KW_NURf, KW_NUSf, KW_NUTf, KW_NUVf, KW_NUWf)
+KW_NUf = joinseq(KW_NUAf, KW_NUBf, KW_NUCf, KW_NUDf, KW_NUGf, KW_NUIf, KW_NUMf, KW_NURf, KW_NUSf, KW_NUTf, KW_NUWf)
 KW_NUv = joinseq(KW_NUAv, KW_NUBv, KW_NUCv, KW_NUDv, KW_NUGv, KW_NUIv, KW_NUMv, KW_NURv, KW_NUSv, KW_NUTv, KW_NUVv, KW_NUWv)
 KW_NU = joinseq(KW_NUf, KW_NUv)
 

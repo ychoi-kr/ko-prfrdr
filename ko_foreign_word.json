@@ -758,6 +758,17 @@
   },
   {
     "kind": "외래어",
+    "name": "qa115184_‘drop’의 표기",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=115184",
+    "cases": [
+      ["\\b드랍", "드롭"],
+      ["\\b드랍[ ]?아웃", "드롭아웃"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
     "name": "qa122235_'identity'의 표기",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=122235",
     "cases": [
