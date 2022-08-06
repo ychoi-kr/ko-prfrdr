@@ -198,7 +198,7 @@ KW_PAP = '|'.join(
 KW_PA = joinseq(KW_PAN, KW_PAP)
 
 ## Nouns - Idea
-KW_NIf = "확률"
+KW_NIf = "확률|이름"
 KW_NIn = "차원"
 KW_NIv = "수치"
 KW_NI = joinseq(KW_NIf, KW_NIn, KW_NIv)
@@ -333,9 +333,9 @@ KW_M = joinseq(KW_MD, KW_MV, KW_MA)
 
 ## Nouns - Activity (can be verb with '-하다/-되다' or used in form of '~을/를 하다')
 ### Original (Korean + Hanja)
-KW_NAOf = "생각|[가수증]감|가공|곱|[건입출]국|공격|[연체]결|방과|[총포]괄|집권|접근|송금|가늠|[담배]당|[가이]동|[취획]득|[노]력|[관마수제훈]련|[기수]록|[발변설연작제조증]명|괄목|함몰|질문|고민|[개선]발|체벌|[반중]복|준비|[수조]사|[손연향]상|개선|발생|[건개배연증해]설|[구생작완형]성|[계상]속|[연학]습|임신|[장파]악|[예해]약|[수성영작]업|[구시재]연|오염|[반운촬투]영|[사이작적통포활]용|훈육|[지]원|불응|[승확]인|[도수투]입|[수]?출입|시작|[긴등성저출]장|[발운회]전|조절|[걱결설수지측한]정|검증|부진|선언|[개선수]정|[도장부집탈]착|칭찬|제창|[도수연인제진창추]출|[계예]측|[간선채]택|[면유입재]학|국한|분할|포함|[결부취]합|[미전통]화|반환|[구실재표]현|[동비서수운연진]행|[재]?실행"
+KW_NAOf = "생각|[가수증]감|가공|곱|[건입출]국|공격|[연체]결|방과|[총포]괄|집권|접근|송금|가늠|[담배]당|[가이작]동|[납취획]득|[노]력|[관마수제훈]련|[기수]록|[발변설연작제조증]명|괄목|함몰|질문|고민|[개선]발|체벌|[반중]복|준비|[수조]사|[손연향]상|개선|발생|[건개배연증해]설|[구생작완형]성|[계상]속|[연학]습|임신|[장파]악|[예해]약|[수성영작]업|[구시재]연|오염|[반운촬투]영|[사이작적통포활]용|훈육|[지]원|불응|[승확]인|[도수투]입|[수]?출입|[동시]작|[긴등성저출]장|[발운회]전|조절|[걱결설수지측한]정|검증|부진|선언|[개선수]정|[도장부집탈]착|칭찬|제창|[도수연인제진창추]출|[계예]측|[간선채]택|[면유입재]학|국한|분할|포함|[결부취]합|[미전통]화|반환|[구실재표]현|[동비서수운연진]행|[재]?실행"
 KW_NAOh = "가시화|간소화|강화|경량화|공산화|도커화|디지털화|모듈화|무료화|민주화|소형화|수치화|세분화|시각화|융화|인스턴스화|중앙화|첨예화|초기화|최[신적]화|캡슐화|파편화|패턴화|특[수]?화|현[실행]화|[0-9]+차원화|형상화"
-KW_NAOv = "[인증추참평]가|[제탈]거|[공소]개|[연촉]구|[대상연제]기|이야기|시도|[고]려|[완치]료|[관격수]리|[전후]?처리|마무리|연마|소모|근무|[공거기]부|[감반발조]사|[감기축]소|[감준회]수|제시|제어|[기참]여|[긴소중필]요|[논유합회]의|복제|[주차폐]지|대체|[성]취|[납배설]치|검토|실패|배포|저하|이해|" + KW_NAOh 
+KW_NAOv = "[인증추참평]가|[제탈]거|[공소]개|[연촉]구|[대상연제]기|이야기|시도|[고]려|[완치]료|[관격수]리|[전후]?처리|마무리|연마|소모|근무|[공거기]부|[감반발조]사|[감기축]소|[감준회]수|제시|제어|[기참]여|[긴소중필]요|[논유합회]의|복제|[유주차폐]지|대체|[성]취|[납배설]치|검토|실패|배포|저하|이해|" + KW_NAOh 
 KW_NAO = joinseq(KW_NAOf, KW_NAOv)
 
 ## can be Both of active(-하다) and passive(-받다)
@@ -529,7 +529,7 @@ KW_NL = joinseq(KW_NLf, KW_NLv)
 ## Thing
 ### Abstract
 KW_NTAf = "걸음|명산|모델|모형|모듈|방법|블록|스텝|시스템|알고리즘|애플리케이션|앱|입력|전략|점|차원|채널|출력|층|칼럼|토큰|토픽|튜플|특성|프로그램|[변함]수|행렬"
-KW_NTAv = "정도|코드|시류|메모리|처리|리뷰|[요축]소|[변인]수|단어|범위|차이|글자|절차|아키텍처|피처|자체|가중치|배치|데이터|벡터|학습 데이터|형태|이벤트|컴포넌트|폰트|변화"
+KW_NTAv = "정도|코드|시류|메모리|처리|리뷰|[요축]소|[변인]수|마이크로서비스|단어|범위|차이|글자|절차|아키텍처|피처|자체|가중치|배치|데이터|벡터|학습 데이터|형태|이벤트|컴포넌트|폰트|변화|기회"
 KW_NTA = joinseq(KW_NTAf, KW_NTAv)
 
 ### maChine
@@ -546,6 +546,10 @@ KW_NTE = joinseq(KW_NTEf, KW_NTEv)
 KW_NTFf = "국|귤|라면|밥|빵"
 KW_NTFv = "국수|망고|바나나|배|사과|오렌지"
 KW_NTF = joinseq(KW_NTFf, KW_NTFv)
+
+KW_NTLf = "파이썬"
+KW_NTLv = "자바스크립트"
+KW_NTL = joinseq(KW_NTLf, KW_NTLv)
 
 ### Measure
 KW_NTMf = "폭" 
@@ -568,8 +572,8 @@ KW_NTVf = "개학|생일|월드컵|올림픽"
 KW_NTVv = "유세|콘퍼런스|대회|운동회"
 KW_NTV = joinseq(KW_NTVf, KW_NTVv)
 
-KW_NTf = joinseq(KW_NTAf, KW_NTCf, KW_NTEf, KW_NTFf, KW_NTMf, KW_NTSf, KW_NTUf, KW_NTVf)
-KW_NTv = joinseq(KW_NTAv, KW_NTCv, KW_NTEv, KW_NTFv, KW_NTMv, KW_NTSv, KW_NTUv, KW_NTVv)
+KW_NTf = joinseq(KW_NTAf, KW_NTCf, KW_NTEf, KW_NTFf, KW_NTLf, KW_NTMf, KW_NTSf, KW_NTUf, KW_NTVf)
+KW_NTv = joinseq(KW_NTAv, KW_NTCv, KW_NTEv, KW_NTFv, KW_NTLv, KW_NTMv, KW_NTSv, KW_NTUv, KW_NTVv)
 KW_NT = joinseq(KW_NTf, KW_NTv)
 
 ## Nouns from Verb
@@ -617,7 +621,20 @@ KW_NVIk = '|'.join(
     )
 )
 
-KW_NVk = joinseq(KW_NVAk, KW_NVIk)
+KW_NVTk = '|'.join(
+    sorted(
+        conjugate(ks.KS_VTg, '기')          # 잡+기
+        + conjugate(ks.KS_VTh, '기')        # 먹+기
+        + conjugate(ks.KS_VTi, '기')        # 보+기
+        + conjugate(ks.KS_VTl, 'ㄹ', '기')  # 가+ㄹ+기
+        + conjugate(ks.KS_VTk, '르', '기')  # 모+르+기
+        + conjugate(ks.KS_VTm, 'ㄹ', '기')  # 드+ㄹ+기
+        + conjugate(ks.KS_VTn, 'ㄹ', '기')  # 빠+ㄹ+기
+        + conjugate(ks.KS_VTn, 'ㅜ', '기')  # 나ㄴ+ㅜ+기
+    )
+)
+
+KW_NVk = joinseq(KW_NVAk, KW_NVIk, KW_NVTk)
 KW_NV = joinseq(KW_NVm, KW_NVk)
 
 ## Pronouns

@@ -671,6 +671,18 @@
   },
   {
     "kind": "맞춤법",
+    "name": "qa18662_하다/한다",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=186662",
+    "cases": [
+      ["\\b(어렵|같지 않|같)(기[나는도]) 한다", "()() 하다"],
+      ["\\b(헷갈리)(기[나는도]) 하다", "()() 한다"],
+      ["\\b(KW_NTf)(이기[나는도]) 한다", "()() 하다"],
+      ["\\b(KW_NTv)([이]?기[나는도]) 한다", "()() 하다"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "qa196973_하고요",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=196973",
     "cases": [
