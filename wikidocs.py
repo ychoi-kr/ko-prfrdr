@@ -47,21 +47,26 @@ if cmd == "help" or cmd == "--help":
     sys.exit()
 
 contentid = sys.argv[2]
-if not re.match("[0-9]+", contentid):
-    print(f"{contentid} is not a number")
+if not (re.match("[0-9]+", contentid) or contentid.startswith("https://")):
+    print(f"{contentid} is not valid content id")
     sys.exit(usage)
 
 
 if cmd == "toc":
-    url = 'https://wikidocs.net/book/' + contentid
+    url = contentid if contentid.startswith("https://") else "https://wikidocs.net/book/" + contentid
     with urllib.request.urlopen(url) as f:
         html = f.read().decode('utf-8')
     
     soup = BeautifulSoup(html, 'html.parser')
-    titles = soup.select('.list-group-item > span')
-    for title in titles[1:]:
-       s = title.select('span')[0].text.strip()
-       print(s)
+    listgroupitems = soup.select('.list-group-item')
+    for listgroupitem in listgroupitems[1:]:
+        pageid = re.search(r"\d+", listgroupitem['href']).group(0)
+        span0 = listgroupitem.select('span')[0]
+        heading = span0.text.strip()
+        padding = int(re.search(r"\d+", span0.select('span')[0]['style']).group(0))
+        indent = ' ' * (padding // 5)
+        bullet = '*'
+        print(f"{indent}{bullet} [{heading}]({pageid})")
 
 elif cmd == "page":
     pageurl = 'https://wikidocs.net/' + contentid
