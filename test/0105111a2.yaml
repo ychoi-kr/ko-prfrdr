@@ -1,0 +1,4 @@
+true cases:
+  - "shape이 (2, 3, 4)인 점 과도 일맥상통한다."
+false cases:
+  - 피처 의도

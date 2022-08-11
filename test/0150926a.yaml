@@ -1,0 +1,3 @@
+true cases:
+  - API 서버에게 부하를 줄 수 있다.
+false cases:
