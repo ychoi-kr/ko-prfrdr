@@ -1,5 +1,6 @@
 true cases:
   - 데이터가 어떤 형태으로 다운로드됐는지
+  - 구체적은 알고리즘들은
 
 false cases:
   - 무료 비공개(private) npm 레지스트리
