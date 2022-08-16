@@ -529,12 +529,12 @@ KW_NL = joinseq(KW_NLf, KW_NLv)
 ## Thing
 ### Abstract
 KW_NTAf = "걸음|명산|모델|모형|모듈|방법|블록|솔루션|스텝|시스템|알고리즘|애플리케이션|앱|입력|전략|점|차원|채널|출력|층|칼럼|토큰|토픽|튜플|특성|프로그램|[변함]수|행렬"
-KW_NTAv = "정도|코드|시류|메모리|처리|리뷰|[요축]소|[변인]수|마이크로서비스|단어|범위|차이|글자|절차|아키텍처|피처|자체|가중치|배치|데이터|벡터|학습 데이터|형태|이벤트|컴포넌트|폰트|변화|기회"
+KW_NTAv = "정도|메서드|코드|시류|메모리|처리|리뷰|[요축]소|[변인]수|마이크로서비스|클래스|단어|범위|차이|글자|절차|아키텍처|피처|자체|가중치|배치|데이터|벡터|학습 데이터|형태|이벤트|컴포넌트|폰트|분포|변화|기회"
 KW_NTA = joinseq(KW_NTAf, KW_NTAv)
 
-### maChine
+### maChine(tool)
 KW_NTCf = "로봇|툴"
-KW_NTCv = "API|CPU|GPU|기계|서버|장비|컴퓨터|클라이언트"
+KW_NTCv = "API|CPU|GPU|기계|로더|서버|장비|컴퓨터|클라이언트"
 KW_NTC = joinseq(KW_NTCf, KW_NTCv)
 
 ### Entity
@@ -543,7 +543,7 @@ KW_NTEv = "테슬라|발행사|회사|업소|엔비디아|이탈리아|한라|�
 KW_NTE = joinseq(KW_NTEf, KW_NTEv)
 
 ### Food
-KW_NTFf = "국|귤|라면|밥|빵"
+KW_NTFf = "감|국|귤|라면|밥|빵"
 KW_NTFv = "국수|망고|바나나|배|사과|오렌지"
 KW_NTF = joinseq(KW_NTFf, KW_NTFv)
 
@@ -551,7 +551,7 @@ KW_NTLf = "파이썬"
 KW_NTLv = "자바스크립트"
 KW_NTL = joinseq(KW_NTLf, KW_NTLv)
 
-### Measure
+### Measure(dimension)
 KW_NTMf = "폭" 
 KW_NTMv = "개수|너비|넓이|높이|단위|수|숫자|크기" 
 KW_NTM = joinseq(KW_NTMf, KW_NTMv)
