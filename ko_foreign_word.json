@@ -220,7 +220,7 @@
   },
   {
     "kind": "외래어",
-    "name": "gpfor022_인명",
+    "name": "frname22_인명",
     "desc": "https://www.korean.go.kr/nkview/foreign/gpfor022.html",
     "cases": [
       ["레오나르도 디카프리오", "리어나도 디캐프리오"]
@@ -230,7 +230,7 @@
   },
   {
     "kind": "외래어",
-    "name": "gpfor062_인명",
+    "name": "frname62_인명",
     "desc": "https://www.korean.go.kr/nkview/foreign/gpfor062.html",
     "cases": [
       ["도널드 럼스펠드", "도널드 럼즈펠드"]
@@ -1218,5 +1218,16 @@
     ],
     "exception": [
     ]
+  },
+  {
+    "kind": "외래어",
+    "name": "frname00_인명",
+    "desc": "https://kornorms.korean.go.kr/",
+    "cases": [
+      ["프란시스 골턴", "프랜시스 골턴"]
+    ],
+    "exception": [
+    ]
   }
+
 ]
