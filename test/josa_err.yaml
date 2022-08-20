@@ -3,5 +3,6 @@ true cases:
   - 구체적은 알고리즘들은
 
 false cases:
+  - 값을 이상치로
   - 무료 비공개(private) npm 레지스트리
 
