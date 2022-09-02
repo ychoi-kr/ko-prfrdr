@@ -21,11 +21,12 @@ wdFirstCharacterLineNumber = 10
 comments = []
 comments.append((
     "파일명",
-    "작성자",
     "페이지",
     "행",
     "본문",
+    "작성자",
     "의견",
+    "완료",
     "작성일시",
 ))
 
@@ -43,11 +44,12 @@ for docxfilename in natsorted(glob.glob("*.docx")):
             pass
         comments.append((
             docxfilename,
-            c.Author,
             c.Scope.Information(wdActiveEndPageNumber),
             c.Scope.Information(wdFirstCharacterLineNumber),
             c.Scope.Text,
+            c.Author,
             c.Range.Text,
+            c.Done,
             c.Date
         ))
     
