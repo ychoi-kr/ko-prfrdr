@@ -1,4 +1,4 @@
 true cases:
-
+  - 서버와 클라이언트간 통신
 false cases:
   - 기대치 관리는 다자간 업무로
