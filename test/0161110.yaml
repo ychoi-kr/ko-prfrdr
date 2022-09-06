@@ -2,6 +2,7 @@ true cases:
   - 자주SPA 셸을
   - 예제 3.19를배포한 후
   - 2.5가 아닌2가 나왔다는
+  - rand 크레이트로난수를 만들 때
 
 false cases:
   - MyAutoML3_메타모델_학습데이터.csv
