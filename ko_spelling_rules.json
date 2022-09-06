@@ -390,6 +390,15 @@
   },
   {
     "kind": "맞춤법",
+    "name": "0170399_‘repository’의 표기",
+    "desc": "https://wikidocs.net/170399",
+    "cases": [
+      ["\\b(레[파포]지[터토]리|리[파포]지토리|리파지터리)", "리포지터리"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "qa001106_깊숙이",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=1106",
     "cases": [
@@ -1057,7 +1066,8 @@
       ["츨력", "출력"],
 	  ["있께", "있게"],
 	  ["간한한", "간단한"],
-	  ["\\b(솟수|수소)(를 \\d+개)\\b", "소수(2)"]
+	  ["\\b(솟수|수소)(를 \\d+개)\\b", "소수(2)"],
+      ["있돌고", "있도록"]
     ],
     "exception": []
   },

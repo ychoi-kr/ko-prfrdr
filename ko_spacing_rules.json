@@ -2052,7 +2052,7 @@
       ["(\\w+는)(데[에]?) ([사유이활]용|충분|필요)([하한할해했]\\w*)", "() () ()()"],
       ["(\\w+는)(데[에]?) (매우|아주) (유용|필요)([하한할해했]\\w*)", "() () () ()()"],
       ["(\\w+로) (떠오른|부상한)(데에는)", "() ()"],
-      ["(\\w+[를을])[ ]?하는데[ ]?(있어[서]?)", "() 하는 데 ()"]
+      ["(\\w+[를을])[ ]?(KW_PVAN)데[ ]?(있어[서]?)", "() () 데 ()"]
     ],
     "exception": []
   },
@@ -2483,6 +2483,7 @@
     "desc": "https://wikidocs.net/161110",
     "cases": [
 	  ["(\\w+다면)(\\w+[를을])", "() ()"],
+	  ["\\b(KW_NT)([으]?로)(KW_NT)([를을])", "()() ()()"],
 	  ["\\b(KW_BD)([A-Za-z]+) ([가-힣]+)(KJ)\\b", "() () ()()"],
       ["(KW_NAO)되는(KW_BD)\\b", "()되는 ()"],
       ["(\\w+)(에서)(KW_NAO)(KC_D)(\\w*)", "()() ()()()"],
@@ -3064,14 +3065,19 @@
   },
   {
     "kind": "띄어쓰기",
+    "name": "qa114568_끝부분",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=114568",
+    "cases": [
+      ["\\b끝 부분", "끝부분"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
     "name": "qa116469_할 일 / 할 말",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=116469",
     "cases": [
-      [
-
-        "\\b할([일말]\\w*)",
-        "할 ()"
-      ]
+      ["\\b할([일말]\\w*)", "할 ()"]
     ],
     "exception": []
   },
@@ -3239,6 +3245,15 @@
   },
   {
     "kind": "띄어쓰기",
+    "name": "qa145034_몸 둘 바",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=145034",
+    "cases": [
+      ["\\b몸둘 바(KJ)", "몸 둘 바()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
     "name": "qa158311_초중반, 중후반",
     "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=158311",
     "cases": [
@@ -3306,6 +3321,18 @@
   },
   {
     "kind": "띄어쓰기",
+    "name": "qa190403_그런가이다",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=190403",
+    "cases": [
+      [
+        "(그런가|그런지|그러냐|그럴까)[?]? ([이]?[었였]?다)\\b",
+        "()()"
+      ]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
     "name": "qa190536_하다 보면",
     "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=190536",
     "cases": [
@@ -3318,13 +3345,10 @@
   },
   {
     "kind": "띄어쓰기",
-    "name": "qa190403_그런가이다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=190403",
+    "name": "qa192958_몸속",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=192958",
     "cases": [
-      [
-        "(그런가|그런지|그러냐|그럴까)[?]? ([이]?[었였]?다)\\b",
-        "()()"
-      ]
+      ["\\b몸 속(|[도에은을의]|마저[도]?|만[도은을이]?|으로[는도]?|이[고다며면]?|이지[만]?|입니다|조차[도]?)\\b", "몸속()"]
     ],
     "exception": []
   },
