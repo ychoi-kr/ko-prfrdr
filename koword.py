@@ -7,7 +7,7 @@ from kostr import concat
 
 # Korean Conjugation (strings can be used for Conjugation)
 KC_D = "[되된돼됐]"
-KC_H = "하고[는자]?|하겠\\w+|하기|하[는니다며여]|하도록|하려[고는]?|하[?]면|하여[야]?|하였\\w+|하지[만]?|한 [것뒤적후]|한 다음|한다[고는니며지]?|할|할까[요]?|할래|할지[도]?[요]?|함[을]?|함이다|함입니다|합니다|해보[니다면]|해볼[까래]?|해[서야요]?|했고[요]?|했기|했는데[요]?|했다[만]?|했습니다[만]?|했으[니면][서]?|했을[지]?|했지[만]?[요]?"
+KC_H = "하고[는자]?|하[겠였]\\w+|하기|하[는니다며여]|하도록|하려[고는]?|하[?]면|하여[야]?|하지[만]?|한 [것뒤적후]|한 다음|한다[고는니며지]?|할|할까[요]?|할래|할지[도]?[요]?|함[을]?|함이다|함입니다|합니다|해보[니다면]|해볼[까래]?|해[서야요]?|했고[요]?|했기|했는데[요]?|했다[만]?|했습니다[만]?|했으[니면][서]?|했을[지]?|했지[만]?[요]?"
 
 def conjugate(stems, *postfix):
     result = []
@@ -350,22 +350,6 @@ KW_Ff = "(\\w*)(all|ell|earn|one)"  # f: has final consonant in Korean
 KW_Fv = "(\\w*)(ice|ocks|old|uy)"  # v: ends with vowel (does not have final consonant) in Korean
 
 
-# Modifier(관형어)
-
-## Adjective
-KW_MA = "다를"
-
-## Determiners(관형사)
-KW_MD = "새|헌"  
-
-## Verb
-KW_MVl = "나아갈|부릴|어찌할"
-KW_MVn= "느낀|배운"
-KW_MV = joinseq(KW_MVl, KW_MVn)
-
-KW_M = joinseq(KW_MD, KW_MV, KW_MA)
-
-
 ## Nouns - Activity (can be verb with '-하다/-되다' or used in form of '~을/를 하다')
 ### Original (Korean + Hanja)
 KW_NAOf = "생각|[가수증]감|가공|곱|[건입출]국|공격|[연체]결|변경|[총포]괄|집권|접근|송금|가늠|기능|도달|[담배]당|[가이작]동|[납취획]득|[노]력|[관마수제훈]련|[기수]록|[발변설연작제조증]명|괄목|함몰|질문|고민|[개선]발|체벌|[반중]복|준비|[손연향]상|개선|발생|[건개배연증해]설|[구생작완형]성|[계상]속|[연학]습|임신|[장파]악|[예해]약|[수성영작]업|[구시재]연|오염|[반운촬투]영|[사이작적통포활]용|훈육|[지]원|불응|[승확]인|[도수투]입|[수]?출입|[동시조]작|[긴등성저출]장|[발운회]전|조절|[걱검결설수지추측한]정|검증|부진|선언|[개선수]정|[도장부집탈]착|칭찬|제창|[도수연인제진창추]출|[계예]측|[간선채]택|[면유입재]학|국한|분할|포함|[결부취]합|[전통]화|반환|[구실재표]현|[동비서시수운연진]행|[재]?실행"
@@ -677,6 +661,28 @@ KW_NVTk = '|'.join(
 
 KW_NVk = joinseq(KW_NVAk, KW_NVIk, KW_NVTk)
 KW_NV = joinseq(KW_NVm, KW_NVk)
+
+
+# Modifier(관형어)
+
+## Adjective
+KW_MA = "다를"
+
+## Determiners(관형사)
+KW_MD = "새|헌"  
+
+## Verb
+KW_MVl = "나아갈|부릴|어찌할"
+KW_MVn= '|'.join(
+    sorted(
+        ["느낀", "배운"]
+        + conjugate(KW_NAO, '된')
+    )
+)
+KW_MV = joinseq(KW_MVl, KW_MVn)
+
+KW_M = joinseq(KW_MD, KW_MV, KW_MA)
+
 
 ## Pronouns
 ### Person
