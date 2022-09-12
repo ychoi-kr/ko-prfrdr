@@ -8,6 +8,7 @@ import argparse
 from pathlib import Path
 from collections import Counter
 import zipfile
+from time import process_time
 
 from kosound import hasfinalconsonant
 import kostr
@@ -17,6 +18,8 @@ import kojosa
 import koword
 import fileconverter as fc
 
+
+profiler = dict()
 
 def import_KoNLPy():
     print(f'Trying to import KoNLPy...')
@@ -43,7 +46,7 @@ def _debug(k, v=None):
         #input()
 
 
-def main(infile, rulefile, show_all_lines=False, debug=False):
+def main(infile, rulefile, show_all_lines=False, debug=False, profile=False):
 
     # needs to be here to avoid waisting time when '--help' option is used
     import_KoNLPy()
@@ -76,6 +79,10 @@ def main(infile, rulefile, show_all_lines=False, debug=False):
     except BrokenPipeError:  # when user hits 'q' during using pipe
         pass  
     
+    if profile:
+        print("***Profile***")
+        for x in profiler.keys():
+            print(x.split('_')[0], profiler[x])
 
 def loadrules(rulefile):
     allrules = []
@@ -117,6 +124,9 @@ def ruletable(obj):
             else:
                 caselist.append((rc[0], rc[1]))
         table.append((rule['kind'], rule['name'], rule['desc'], caselist, rule['exception']))
+
+        profiler[rule['name']] = 0
+
     return table
 
 
@@ -148,7 +158,7 @@ def read_manuscript(infile):
     return text
 
 
-def check(rules, line, show_all_lines):
+def check(rules, line, show_all_lines, profiler=profiler):
     if show_all_lines:
         print(line)
 
@@ -163,6 +173,7 @@ def check(rules, line, show_all_lines):
 
     for rule in rules:
         kind, name, desc, cases, exceptions = rule
+        start = process_time()
         for cs in cases:
             bad, good = cs[0], cs[1]
             mode = None
@@ -350,6 +361,9 @@ def check(rules, line, show_all_lines):
                         warnings_counter[name] += 1
 
                     result.append((loc, kind, name, bad, good, desc))
+        end = process_time()
+
+        profiler[name] += (end - start)
 
     return result
 
@@ -409,6 +423,7 @@ if __name__ == '__main__':
     parser.add_argument("-r", "--rulefile", default=' '.join(default_rules))
     parser.add_argument("--show_all_lines", action="store_true")
     parser.add_argument("--debug", action="store_true")
+    parser.add_argument("--profile", action="store_true")
     args = parser.parse_args()
     
-    main(args.filename, args.rulefile, args.show_all_lines, args.debug)
+    main(args.filename, args.rulefile, args.show_all_lines, args.debug, args.profile)
