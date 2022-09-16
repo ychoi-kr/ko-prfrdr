@@ -1,5 +1,6 @@
 true cases:
   - 실행 가능 하다.
+  - 매우 유사 하기 때문에
 false cases:
   - 실행 가능 해(feasible solution)라고 하며
   - 최적화 모델의 실행 가능 해 공간 예시

@@ -6,6 +6,7 @@ true cases:
   - "https://static.packt-cdn.com/downloads/9781800563568_ColorImages.pdf 에서 다운로드할 수"
   - 어떻게 다룰 것 인가이다.
   - 자바스크립트 가 작동한다.
+  - 8억 일 경우
 false cases:
   - 그리고 이 강화학습 환경을 인자로 Agent 클래스의 인스턴스를 생성합니다.
   - Backend로 사용할 딥러닝 프레임워크와 로그 설정을 먼저 해야 학습기 클래스에도 이 설정이 적용되기 때문입니다.
