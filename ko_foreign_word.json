@@ -31,7 +31,7 @@
     "name": "0067217b_‘ㅅ’으로 시작하는 외래어 중 이중모음을 쓰는 것",
     "desc": "https://wikidocs.net/67217#siot-double-vowel",
     "cases": [
-      ["수퍼(마켓|마킷)", "슈퍼마켓"],
+      ["dup:수퍼(마켓|마킷)", "슈퍼마켓"],
       ["수퍼(맨|모델|챗)", "슈퍼()"]
     ],
     "exception": [
@@ -234,6 +234,16 @@
     "desc": "https://www.korean.go.kr/nkview/foreign/gpfor062.html",
     "cases": [
       ["도널드 럼스펠드", "도널드 럼즈펠드"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
+    "name": "gxfo1324_인명",
+    "desc": "https://www.korean.go.kr/nkview/foreign/gxfor13_24.html",
+    "cases": [
+      ["루즈벨트", "루스벨트"]
     ],
     "exception": [
     ]
@@ -758,6 +768,38 @@
   },
   {
     "kind": "외래어",
+    "name": "qa080001a_[ju] 음의 표기",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=80001",
+    "cases": [
+      ["\\b수퍼(마켓|마킷)", "슈퍼마켓"],
+      ["\\b스투디오", "스튜디오"],
+      ["\\b시물레이션", "시뮬레이션"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
+    "name": "qa086769_알루미늄",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=86769",
+    "cases": [
+      ["알류미늄", "알루미늄"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
+    "name": "qa106350_페널티",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=106350",
+    "cases": [
+      ["패널티", "페널티"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
     "name": "qa115184_‘drop’의 표기",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=115184",
     "cases": [
@@ -1180,6 +1222,16 @@
     "cases": [
       ["타블렛", "태블릿"],
       ["테블릿", "태블릿"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
+    "name": "rf017338_메타데이터",
+    "desc": "https://korean.go.kr/front/imprv/refineView.do?mn_id=158&imprv_refine_seq=17338",
+    "cases": [
+      ["메타 데이터", "메타데이터"]
     ],
     "exception": [
     ]
