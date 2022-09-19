@@ -13,6 +13,7 @@ true cases:
   - 복잡성때문에
   - csv파일
   - 실습파일
+  - 모델성능
 
 false cases:
   - 651회의 반복이 필요
