@@ -21,7 +21,7 @@ KJ_CF = "의"
 KJ_CG = "께|에게|한테"
 
 ## predicative('Ida')
-KJ_CI = "이다"
+KJ_CI = "이다|인가[는도를에]?|일"
 
 ### linKing
 KJ_CK = "와|과|이고|이랑|랑|하고|고"
@@ -63,6 +63,9 @@ KJ_IE = "마다"
 ### Plural
 KJ_IM = "들"
 
+### not the preferred Option
+KJ_IO = "라도|이라도"
+
 ### Polite
 KJ_IP = "요"
 
@@ -73,7 +76,7 @@ KJ_IR = "부터|까지"
 KJ_IU = "만"
 
 
-KJ_I = joinseq(KJ_IA, KJ_IC, KJ_ID, KJ_IE, KJ_IM, KJ_IP, KJ_IR, KJ_IU)
+KJ_I = joinseq(KJ_IA, KJ_IC, KJ_ID, KJ_IE, KJ_IM, KJ_IO, KJ_IP, KJ_IR, KJ_IU)
 
 KJ = joinseq(KJ_C, KJ_I)
 
