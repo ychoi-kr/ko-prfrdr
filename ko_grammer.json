@@ -11,7 +11,16 @@
   },
   {
     "kind": "문법",
-    "name": "165168_필요하다",
+    "name": "0147195_-적(的)",
+    "desc": "https://wikidocs.net/147195",
+    "cases": [
+      ["\\b몸적으로", "육체적으로"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "문법",
+    "name": "0165168_필요하다",
     "desc": "https://wikidocs.net/165168",
     "cases": [
       [
