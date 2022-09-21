@@ -768,12 +768,42 @@
   },
   {
     "kind": "외래어",
+    "name": "qa002014_포맷",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?&mn_id=84&qna_seq=2014",
+    "cases": [
+      ["포멧", "포맷"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
+    "name": "qa032126_'screeshot'의 표기",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=32126",
+    "cases": [
+      ["스크린샷", "스크린숏"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
     "name": "qa080001a_[ju] 음의 표기",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=80001",
     "cases": [
       ["\\b수퍼(마켓|마킷)", "슈퍼마켓"],
       ["\\b스투디오", "스튜디오"],
       ["\\b시물레이션", "시뮬레이션"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
+    "name": "qa081761_'block'의 표기",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=81761",
+    "cases": [
+      ["블럭", "블록"]
     ],
     "exception": [
     ]
@@ -815,16 +845,6 @@
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=122235",
     "cases": [
       ["아이덴터티", "아이덴티티"]
-    ],
-    "exception": [
-    ]
-  },
-  {
-    "kind": "외래어",
-    "name": "qa081761_'block'의 표기",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=81761",
-    "cases": [
-      ["블럭", "블록"]
     ],
     "exception": [
     ]
@@ -898,7 +918,6 @@
       ["로타리", "로터리"],
       ["\\b로라", "롤러"],
       ["류머티스", "류머티즘"],
-      ["리더쉽", "리더십"],
       ["리모콘", "리모컨"],
       ["리싸이틀", "리사이틀"],
       ["레포트", "리포트"],
@@ -1176,24 +1195,13 @@
     ]
   },
   {
-    "kind": "외래어",
-    "name": "qa002014_포맷",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?&mn_id=84&qna_seq=2014",
+    "kind": "맞춤법",
+    "name": "qa095095_리더십",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=95095",
     "cases": [
-      ["포멧", "포맷"]
+      ["리더쉽", "리더십"]
     ],
-    "exception": [
-    ]
-  },
-  {
-    "kind": "외래어",
-    "name": "qa032126_'screeshot'의 표기",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=32126",
-    "cases": [
-      ["스크린샷", "스크린숏"]
-    ],
-    "exception": [
-    ]
+    "exception": []
   },
   {
     "kind": "외래어",
