@@ -14,6 +14,7 @@ true cases:
   - csv파일
   - 실습파일
   - 모델성능
+  - relativedelta패키지 등을 임포트한다.
 
 false cases:
   - 651회의 반복이 필요
