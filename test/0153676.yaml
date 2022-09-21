@@ -1,4 +1,6 @@
 true cases:
-  - 모듈화 시키는 것이며
-  - 모듈화(modularization) 시키는 것이며
+  - 것을 모듈화 시키는 것이며
+  - 것을 모듈화(modularization) 시키는 것이며
+  - 일부를 누락(dropout) 시켜 과적합을 방지
 false cases:
+  - 많은 준비 시키다.
