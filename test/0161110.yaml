@@ -4,6 +4,8 @@ true cases:
   - 2.5가 아닌2가 나왔다는
   - rand 크레이트로난수를 만들 때
   - AIC는적정한 변수의 개수를 찾는 데 유용
+  - 그림과 같이Metaworld라는
+  - 알고리즘의surrogate loss를
 
 false cases:
   - MyAutoML3_메타모델_학습데이터.csv
