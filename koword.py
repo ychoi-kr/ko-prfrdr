@@ -502,8 +502,8 @@ KW_NURv = "제곱미터|평방미터"
 KW_NUR = joinseq(KW_NURf, KW_NURv)
 
 ### Stuff 
-KW_NUSf = "그릇|달|명|방울|벌|쌍|장|줄|쪽"
-KW_NUSv = "가지|개|마리|박스|봉지|채|페이지|회"
+KW_NUSf = "그릇|권|달|명|방울|벌|쌍|장|줄|쪽|통"
+KW_NUSv = "가지|개|구|대|마리|박스|봉지|채|페이지|회"
 KW_NUSd = "대" # should be handled carefully: '세 대(three device)' vs '3세대(third generation)' 
 KW_NUS = joinseq(
     KW_NUSf, KW_NUSv#, KW_NUSd
