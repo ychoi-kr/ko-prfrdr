@@ -1,3 +1,4 @@
 ﻿true cases:
   - 함수를 통해 수행된다 . SPA 셸이 시작될 때  # test for non-breaking space 
 false cases:
+  - “사람은 사회적 동물이다.”라고 말한 학자가 있다.
