@@ -159,6 +159,10 @@ def read_manuscript(infile):
 
 
 def check(rules, line, show_all_lines, profiler=profiler):
+
+    line = line.replace('“', '"').replace('”', '"')
+    line = line.replace("‘", "'").replace("’", "'")
+
     if show_all_lines:
         print(line)
 
