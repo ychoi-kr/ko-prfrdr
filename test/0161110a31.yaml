@@ -17,6 +17,8 @@ true cases:
   - relativedelta패키지 등을 임포트한다.
   - 클래스메서드로서 사용합니다.
   - MAP_N크기의
+  - "[Ctrl]키를 눌러"
+  - "Ctrl키를 눌러"
 
 false cases:
   - 651회의 반복이 필요

@@ -1,0 +1,4 @@
+true cases:
+  - 한 번에 하나의 인수 밖에 넣을 수 없다.
+false cases:
+

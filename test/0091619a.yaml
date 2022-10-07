@@ -1,6 +1,7 @@
 true cases:
   - 그 만큼
   - 집을 대궐 만큼 크게 짓다.
+  - count 만큼
 
 false cases:
   - 먹을 만큼 먹어라.
