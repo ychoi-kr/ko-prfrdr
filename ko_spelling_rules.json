@@ -847,6 +847,15 @@
   },
   {
     "kind": "맞춤법",
+    "name": "qa190396_어미 ‘-ㄴ다’가 결합할 수 없는 것",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=190396",
+    "cases": [
+      ["\\b(가능|간결|유사|우수|[긴중필]요|유용|복잡|적합)한다", "()하다"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "qa196973_하고요",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=196973",
     "cases": [
@@ -1251,7 +1260,9 @@
       ["\\b적업", "작업"],
       ["\\b개제([하한할해했]\\w*)", "게재()"],
       ["\\b[안않]될[ ]?떄", "안될 때"],
-      ["\\b마이크로스프트", "마이크로소프트"]
+      ["\\b마이크로스프트", "마이크로소프트"],
+      ["(\\d+만\\d+)웡네서", "()원에서"],
+      ["곶간", "곳간"]
     ],
     "exception": []
   },
