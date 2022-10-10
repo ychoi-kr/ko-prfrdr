@@ -423,7 +423,8 @@ if __name__ == '__main__':
     default_rules = ['ko_spelling_rules.json', 'ko_spacing_rules.json',
                      'ko_foreign_word.json', 'en_ko_style_correction.json',
                      'ja_ko_style_correction.json', 'wikibook_style_guide.json',
-                     'simple_style.json', 'terms.json', 'en_spelling_rules.json']
+                     'simple_style.json', 'terms.json', 'en_spelling_rules.json',
+                     'ko_norm_2002.json']
     parser.add_argument("-r", "--rulefile", default=' '.join(default_rules))
     parser.add_argument("--show_all_lines", action="store_true")
     parser.add_argument("--debug", action="store_true")
