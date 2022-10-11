@@ -202,6 +202,16 @@
     ],
     "exception": [
     ]
+  },
+  {
+    "kind": "문법",
+    "name": "qa142824_‘-던’",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=142824",
+    "cases": [
+	  ["\\b기다리던 끝에", "기다린 끝에"]
+    ],
+    "exception": [
+    ]
   }
 ]
   

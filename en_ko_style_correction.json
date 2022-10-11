@@ -91,7 +91,26 @@
     ]
   },
   {
-    "kind": "번역투",
+    "kind": "번역 투",
+    "name": "0152679_영어 투 '~에 있어'",
+    "desc": "https://wikidocs.net/152679",
+    "cases": [
+      ["(\\w+[을를] \\w+는[ ]?데)[에]? 있어 (\\w+[ ]?\\w+[은는])", "() ()"],
+      ["(\\w+[을를]) 만남에 있어", "() 만날 때"],
+      ["(\\w+[을를]) 만드는[ ]?데[에]? 있어 ([중필]요[하한할해]\\w*)", "() 만들 때 ()"],
+      ["\\b(KW_NAO)에 있어 (|가장 )([중필]요[하한할해]\\w*)", "()에서 ()()"],
+      ["\\b(KW_NAO)함에 있어", "()할 때에"],
+      ["(\\w+가는[ ]데) 있어 (|가장 )([중필]요[하한할해]\\w*)", "() ()()"],
+      ["\\b(그)에게 있어", "()에게"],
+      ["~는 데 있어(서)", "~는 데(에)"],
+      ["~에게 있어", "~에게"],
+      ["경쟁에 있어", "경쟁에서"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "번역 투",
     "name": "0158728a_0개의 O",
     "desc": "https://wikidocs.net/158728#a",
     "cases": [
@@ -138,7 +157,7 @@
     "exception": [ ]
   },
   {
-    "kind": "번역투",
+    "kind": "번역 투",
     "name": "0158728b_0개의 O",
     "desc": "https://wikidocs.net/158728#b",
     "cases": [
@@ -166,7 +185,7 @@
     "exception": [ ]
   },
   {
-    "kind": "번역투",
+    "kind": "번역 투",
     "name": "0158728c_0개의 O",
     "desc": "https://wikidocs.net/158728#c",
     "cases": [
@@ -178,7 +197,7 @@
     "exception": [ ]
   },
   {
-    "kind": "번역투",
+    "kind": "번역 투",
     "name": "0158728d_0개의 O",
     "desc": "https://wikidocs.net/158728#d",
     "cases": [
@@ -190,7 +209,7 @@
     "exception": [ ]
   },
   {
-    "kind": "번역투",
+    "kind": "번역 투",
     "name": "0165392_가지다(have)",
     "desc": "https://wikidocs.net/165392",
     "cases": [
@@ -202,7 +221,7 @@
     ]
   },
   {
-    "kind": "번역투",
+    "kind": "번역 투",
     "name": "hanbit00_흔한 번역 투 TOP 12",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
@@ -212,7 +231,7 @@
     ]
   },
   {
-    "kind": "번역투",
+    "kind": "번역 투",
     "name": "hanbit01_흔한 번역 투 TOP 12 - 대명사 남발",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
@@ -224,8 +243,8 @@
     ]
   },
   {
-    "kind": "번역투",
-    "name": "hanbit03_흔한 번역투 TOP 12 - 3. '의' 남용",
+    "kind": "번역 투",
+    "name": "hanbit03_흔한 번역 투 TOP 12 - 3. '의' 남용",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
       ["(갓뚜기|삼[성전]|삼성전자|신한은행|오뚜기|애플|테슬라|하이닉스|현대|KB[ ]?국민은행|LG|)의 (KW_NPJA)", "() ()"],
@@ -236,8 +255,8 @@
     ]
   },
   {
-    "kind": "번역투",
-    "name": "hanbit05_흔한 번역투 TOP 12 - 5. '~에 관하여', '~에 대하여'",
+    "kind": "번역 투",
+    "name": "hanbit05_흔한 번역 투 TOP 12 - 5. '~에 관하여', '~에 대하여'",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
       ["(\\w+)에 대한 (\\w+법[을를]) (\\w+[보본]\\w+)", "() () ()"] 
@@ -246,8 +265,8 @@
     ]
   },
   {
-    "kind": "번역투",
-    "name": "hanbit06_흔한 번역투 TOP 12 - 6. '~하는 중이다'",
+    "kind": "번역 투",
+    "name": "hanbit06_흔한 번역 투 TOP 12 - 6. '~하는 중이다'",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
       ["(\\w+)[을를] (KW_NAT)하는 (\\w+[을를]) (KW_NAT)(하는 중이다)", "() () () ()한다"] 
@@ -256,8 +275,8 @@
     ]
   },
   {
-    "kind": "번역투",
-    "name": "hanbit07_흔한 번역투 TOP 12 - 7. '~을/를 가지다, 가지고 있다'",
+    "kind": "번역 투",
+    "name": "hanbit07_흔한 번역 투 TOP 12 - 7. '~을/를 가지다, 가지고 있다'",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
       ["(KW_NPRf)을 (KW_NNK) [가갖]\\w+ (있\\w+)", "()이 () ()"],
@@ -267,8 +286,8 @@
     ]
   },
   {
-    "kind": "번역투",
-    "name": "hanbit08_흔한 번역투 TOP 12 - 8. '~로부터'",
+    "kind": "번역 투",
+    "name": "hanbit08_흔한 번역 투 TOP 12 - 8. '~로부터'",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
       ["(\\w+?)[으]?로부터 (\\w+)([ ]?)(KW_NUD) (떨어\\w+)", "()에서 ()()() ()"]
@@ -277,8 +296,8 @@
     ]
   },
   {
-    "kind": "번역투",
-    "name": "hanbit09_흔한 번역투 TOP 12 - 9. '~를 통해'(through)",
+    "kind": "번역 투",
+    "name": "hanbit09_흔한 번역 투 TOP 12 - 9. '~를 통해'(through)",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
       ["(KW_NAT)+[을를] 통해 (\\w+에 \\w+[하한했되된됐]\\w*)", "()해 ()"]
@@ -287,17 +306,7 @@
     ]
   },
   {
-    "kind": "번역투",
-    "name": "hanbit10_흔한 번역투 TOP 12 - 10. '~에 있어'(for)",
-    "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
-    "cases": [
-      ["(\\w+[을를] \\w+는[ ]?데)[에]? 있어 (\\w+[ ]?\\w+[은는])", "() ()"]
-    ],
-    "exception": [
-    ]
-  },
-  {
-    "kind": "번역투",
+    "kind": "번역 투",
     "name": "ysyn0900_당신의 문제: 인칭대명사의 의미와 용법의 차이",
     "desc": "https://play.google.com/books/reader?id=gX1RCwAAQBAJ&pg=GBS.PT135&hl=ko", 
     "cases": [
@@ -308,7 +317,7 @@
     ]
   },
   {
-    "kind": "번역투",
+    "kind": "번역 투",
     "name": "ysyn1401_간결한 피동사",
     "desc": "https://play.google.com/books/reader?id=gX1RCwAAQBAJ&pg=GBS.PT211&hl=ko",
     "cases": [
@@ -322,7 +331,7 @@
     ]
   },
   {
-    "kind": "번역투",
+    "kind": "번역 투",
     "name": "ysyn1402_간결한 피동사",
     "desc": "https://play.google.com/books/reader?id=gX1RCwAAQBAJ&pg=GBS.PT215&hl=ko",
     "cases": [
@@ -337,7 +346,7 @@
     ]
   },
   {
-    "kind": "번역투",
+    "kind": "번역 투",
     "name": "ysyn1403_간결한 피동사",
     "desc": "https://play.google.com/books/reader?id=gX1RCwAAQBAJ&pg=GBS.PT215&hl=ko",
     "cases": [
