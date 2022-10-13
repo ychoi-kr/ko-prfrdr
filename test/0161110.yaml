@@ -6,6 +6,7 @@ true cases:
   - AIC는적정한 변수의 개수를 찾는 데 유용
   - 그림과 같이Metaworld라는
   - 알고리즘의surrogate loss를
+  - 제삼자가 훔쳐보는‘도청’을 막을 수
 
 false cases:
   - MyAutoML3_메타모델_학습데이터.csv

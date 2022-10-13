@@ -2,4 +2,5 @@ true cases:
   - GPU나 TPU에서 훈련시킬 때도 같은 코드를 사용할 수 있다.
   - 명칭에 사용된 것이다.
   - String 타입의 push 메서드를 이용하면 char 타입 문자를 추가할 수 있다.
+  - 해시화를 사용하면
 false cases:

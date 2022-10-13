@@ -1,0 +1,7 @@
+true cases:
+  - require이
+  - w32time가 있습니다.
+  - w32time(Windows Time 서비스)가 있습니다.
+  - ‘w32time(Windows Time 서비스)’가 있습니다.
+false cases:
+
