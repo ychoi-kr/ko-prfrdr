@@ -1,4 +1,5 @@
 true cases:
   - 서버가 고장나도 다른 서버에서
+  - 고장나는 수가 있다.
 false cases:
 
