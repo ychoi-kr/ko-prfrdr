@@ -1,0 +1,6 @@
+true cases:
+  - "단일 페이지 애플리케이션(SPA: single-page application)로 명명했다."
+  - 데이터셋(dataset)로 분할한다.
+false cases:
+  - 압축된 타르볼(tarball)로도 충분하다.
+

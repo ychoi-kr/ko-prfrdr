@@ -9,6 +9,8 @@ true cases:
   - 제삼자가 훔쳐보는‘도청’을 막을 수
   - 패킷에도‘헤더’라는
   - ‘IP 헤더’를 붙여서‘IP 패킷’을
+  - 복호화 키를‘비밀키’로 서버에 저장
+  - ‘메서드’와‘URL(Uniform Resource Locator)’의 일부를
 
 false cases:
   - MyAutoML3_메타모델_학습데이터.csv
