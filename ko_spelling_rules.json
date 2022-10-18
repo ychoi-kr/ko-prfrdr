@@ -858,10 +858,10 @@
   },
   {
     "kind": "맞춤법",
-    "name": "qa12800b_으로",
+    "name": "qa128005b_으로",
     "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=128005",
     "cases": [
-      ["\\b(KW_NTAf)로(|[는도만]|[서써]\\w*)\\b", "()으로()"]
+      ["\\b(KW_NTAfc)로(|[는도만]|[서써]\\w*)\\b", "()으로()"]
     ],
     "exception": []
   },
