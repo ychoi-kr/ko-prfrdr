@@ -13,6 +13,7 @@ true cases:
   - ‘메서드’와‘URL(Uniform Resource Locator)’의 일부를
   - 나타내는‘시작 태그’와
   - 어떤 작업을 수행하는지,‘설정 변경’과
+  - 데이터가‘PATH_INFO’라는 변수에
 
 false cases:
   - MyAutoML3_메타모델_학습데이터.csv
