@@ -1,5 +1,7 @@
 Amazon	NNP
 Google	NNP
+ECMAScript	NNP
+JavaScript	NNP
 Linux	NNP
 MySQL	NNP
 PHP	NNP
