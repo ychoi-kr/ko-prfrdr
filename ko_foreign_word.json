@@ -1108,7 +1108,6 @@
       ["커피샵", "커피숍"],
       ["컨소시움", "컨소시엄"],
       ["dup:콘트롤", "컨트롤"],
-      ["\\b칼라", "컬러"],
       ["케익", "케이크"],
       ["케찹", "케첩"],
       ["캐플러", "케플러"],
@@ -1203,7 +1202,17 @@
     ]
   },
   {
-    "kind": "맞춤법",
+    "kind": "외래어",
+    "name": "qa044438_컬러",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=44438",
+    "cases": [
+      ["\\b칼라 (화면)", "컬러 ()"],
+      ["(다양한|화려한) 칼라", "() 컬러"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "외래어",
     "name": "qa095095_리더십",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=95095",
     "cases": [
