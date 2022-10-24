@@ -4,8 +4,10 @@
     "name": "enspl001",
     "desc": "",
     "cases": [
-      ["\\b([Mm])odulization", "()odularization"],
-      ["([Oo])verfloew", "()verflow"]
+	  ["JBoxx", "JBoss"],
+	  ["Java[Ss]crtip", "JavaScript"],
+      ["([Oo])verfloew", "()verflow"],
+      ["\\b([Mm])odulization", "()odularization"]
     ],
     "exception": []
   }
