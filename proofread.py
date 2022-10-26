@@ -425,13 +425,14 @@ if __name__ == '__main__':
         'en_spelling_rules.json',
         'ja_ko_style_correction.json',
         'ko_foreign_word.json',
+        'ko_gov_terms_2012.json',
         'ko_grammer.json',
         'ko_norm_2002.json',
         'ko_plain.json',
         'ko_spacing_rules.json',
         'ko_spelling_rules.json',
-        'simple_style.json',
-        'terms.json',
+        'concise_writing.json',
+        'ko_terms_error.json',
         'wikibook_style_guide.json',
     ]
     parser.add_argument("-r", "--rulefile", default=' '.join(default_rules))

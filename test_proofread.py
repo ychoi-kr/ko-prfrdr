@@ -2,7 +2,7 @@ import unittest
 import glob
 import sys
 
-from correct import *
+from proofread import *
 
 import yaml
 
