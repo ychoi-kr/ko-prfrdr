@@ -1,0 +1,12 @@
+[
+  {
+    "kind": "윤문",
+    "name": "kg120380_행정용어 순화",
+    "desc": "https://docs.google.com/spreadsheets/d/1MD2A0fQcbxqeEtCCkCuYaM1fao7RgKx0PKC4Wbp77i0/edit?usp=sharing",
+    "cases": [
+      ["\\b초두", "첫머리, 애초"]
+    ],
+    "exception": [
+    ]
+  }
+]
