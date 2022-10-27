@@ -114,7 +114,7 @@ python3 fakemt.py
 ```
 $ echo "양자 알고리즘의 제시되었다." | grmchk.py
 Trying to import KoNLPy...
-Loading rule file: ko_grammer.json...
+Loading rule file: ko_grammar.json...
 양자 알고리즘의 제시되었다.
 
      ^
@@ -357,7 +357,7 @@ $ python pgcnt.py # 현재 폴더 내 모든 워드 파일의 페이지 수 출�
 - [ja_ko_style_correction.json](ja_ko_style_correction.json) : 일어 번역 투
 - [ko_foreign_word.json](ko_foreign_word.json) : 외래어 표기법
 - [ko_gov_terms_2012.json](ko_gov_terms_2012.json) : 행정 용어 순화(2012년)
-- [ko_grammer.json](ko_grammer.json) : 국문법 
+- [ko_grammar.json](ko_grammar.json) : 국문법 
 - [ko_norm_2002.json](ko_norm_2022.json) : 어문 규범(2002)
 - [ko_plain.json](ko_plain.json) : 쉬운 말
 - [ko_spacing_rules.json](ko_spacing_rules.json) : 띄어쓰기
