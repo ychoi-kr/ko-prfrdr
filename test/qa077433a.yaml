@@ -4,4 +4,5 @@ true cases:
   - w32time(Windows Time 서비스)가 있습니다.
   - ‘w32time(Windows Time 서비스)’가 있습니다.
 false cases:
+  - 실을 감는 중에
 
