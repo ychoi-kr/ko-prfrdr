@@ -426,7 +426,7 @@ if __name__ == '__main__':
         'ja_ko_style_correction.json',
         'ko_foreign_word.json',
         'ko_gov_terms_2012.json',
-        'ko_grammer.json',
+        'ko_grammar.json',
         'ko_norm_2002.json',
         'ko_plain.json',
         'ko_spacing_rules.json',
