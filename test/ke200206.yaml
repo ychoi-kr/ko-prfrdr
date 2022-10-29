@@ -1,0 +1,4 @@
+true cases:
+  - 에너지 절감을 위해 고객의 자발적 DR 필요
+false cases:
+  - 카카오 서비스 장애가 10시간 넘게 이어지면서 재해복구(Disaster Recovery, 이하 DR)의 중요성이 IT업계에 각인됐다.
