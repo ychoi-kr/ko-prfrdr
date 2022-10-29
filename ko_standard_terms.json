@@ -1,0 +1,52 @@
+[
+  {
+    "kind": "용어",
+    "name": "std27697_표준 전문용어",
+    "desc": "https://www.korean.go.kr/front/imprv/stndrdView.do?mn_id=159&imprv_stndrd_seq=27697",
+    "cases": [
+      ["(무빙보틀넥|보틀넥) 현상", "병목 현상"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "용어",
+    "name": "std27769_표준 전문용어",
+    "desc": "https://www.korean.go.kr/front/imprv/stndrdView.do?mn_id=159&imprv_stndrd_seq=27769",
+    "cases": [
+      ["데이터 사이언스", "데이터 과학"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "용어",
+    "name": "std27770_표준 전문용어",
+    "desc": "https://www.korean.go.kr/front/imprv/stndrdView.do?mn_id=159&imprv_stndrd_seq=27770",
+    "cases": [
+      ["디지털 트랜스포메이션", "디지털 전환"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "용어",
+    "name": "std27773_표준 전문용어",
+    "desc": "https://www.korean.go.kr/front/imprv/stndrdView.do?mn_id=159&imprv_stndrd_seq=27773",
+    "cases": [
+      ["트랜스미션", "변속기, 변속 장치"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "용어",
+    "name": "std27777_표준 전문용어",
+    "desc": "https://www.korean.go.kr/front/imprv/stndrdView.do?mn_id=159&imprv_stndrd_seq=27777",
+    "cases": [
+      ["데이터 디바이드", "디지털 격차"]
+    ],
+    "exception": [
+    ]
+  }
+]
