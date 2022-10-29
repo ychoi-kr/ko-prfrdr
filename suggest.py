@@ -6,15 +6,7 @@ import proofread as prf
 
 parser = argparse.ArgumentParser()
 parser.add_argument("filename", nargs="?", type=str)
-
-default_rules = [
-    'ko_norm_2002.json',
-    'ko_gov_terms_2012.json',
-    'ko_plain.json',
-    'ko_unbiased.json',
-]
-
-parser.add_argument("-r", "--rulefile", default=' '.join(default_rules))
+parser.add_argument("-r", "--rulefile", default=' '.join(prf.suggest_rules))
 parser.add_argument("--show_all_lines", action="store_true")
 parser.add_argument("--debug", action="store_true")
 args = parser.parse_args()
