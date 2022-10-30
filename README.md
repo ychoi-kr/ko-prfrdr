@@ -350,21 +350,27 @@ $ python pgcnt.py # 현재 폴더 내 모든 워드 파일의 페이지 수 출�
 
 관련 파일:
 
-- [concise_writing.json](concise_writing.json) : 간결한 글쓰기
-- [dic.txt](dic.txt) : 사전
-- [en_ko_style_correction.json](en_ko_style_correction.json) : 영어 번역 투
-- [en_spelling_rules.json](en_spelling_rules.json) : 영어 철자
-- [ja_ko_style_correction.json](ja_ko_style_correction.json) : 일어 번역 투
-- [ko_foreign_word.json](ko_foreign_word.json) : 외래어 표기법
-- [ko_gov_terms_2012.json](ko_gov_terms_2012.json) : 행정 용어 순화(2012년)
-- [ko_grammar.json](ko_grammar.json) : 국문법 
-- [ko_norm_2002.json](ko_norm_2022.json) : 어문 규범(2002)
-- [ko_plain.json](ko_plain.json) : 쉬운 말
-- [ko_spacing_rules.json](ko_spacing_rules.json) : 띄어쓰기
-- [ko_spelling_rules.json](ko_spelling_rules.json) : 맞춤법 
-- [ko_terms_error.json](ko_terms_error.json) : 용어 오탈자
-- [ko_unbiased.json](ko_unbiased.json) : 차별적 표현
-- [wikibook_style_guide.json](wikibook_style_guide.json) : 위키북스 글쓰기 지침
+- 맞춤법
+    - [dic.txt](dic.txt) : 사전
+    - [en_spelling_rules.json](en_spelling_rules.json) : 영어 철자
+    - [ko_foreign_word.json](ko_foreign_word.json) : 외래어 표기법
+    - [ko_spacing_rules.json](ko_spacing_rules.json) : 띄어쓰기
+    - [ko_spelling_rules.json](ko_spelling_rules.json) : 맞춤법 
+    - [ko_terms_error.json](ko_terms_error.json) : 용어 오탈자
+- 문체
+    - [en_ko_style_correction.json](en_ko_style_correction.json) : 영어 번역 투
+    - [ja_ko_style_correction.json](ja_ko_style_correction.json) : 일어 번역 투
+    - [ko_grammar.json](ko_grammar.json) : 국문법 
+    - [concise_writing.json](concise_writing.json) : 간결한 글쓰기
+    - [wikibook_style_guide.json](wikibook_style_guide.json) : 위키북스 글쓰기 지침
+- 제안
+    - [ko_electric_terms.json](ko_electric_terms.json) : 전력용어 순화
+    - [ko_forest_terms.json](ko_forest_terms.json) : 산림용어 순화
+    - [ko_gov_terms_2012.json](ko_gov_terms_2012.json) : 행정 용어 순화(2012년)
+    - [ko_norm_2002.json](ko_norm_2022.json) : 어문 규범(2002)
+    - [ko_plain.json](ko_plain.json) : 쉬운 말
+    - [ko_standard_terms.json](ko_standard_terms.json) : 표준 전문용어
+    - [ko_unbiased.json](ko_unbiased.json) : 차별적 표현
 
 요구사항:
 
