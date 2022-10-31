@@ -367,7 +367,7 @@ $ python pgcnt.py # 현재 폴더 내 모든 워드 파일의 페이지 수 출�
     - [ko_electric_terms.json](ko_electric_terms.json) : 전력용어 순화
     - [ko_forest_terms.json](ko_forest_terms.json) : 산림용어 순화
     - [ko_gov_terms_2012.json](ko_gov_terms_2012.json) : 행정 용어 순화(2012년)
-    - [ko_norm_2002.json](ko_norm_2022.json) : 어문 규범(2002)
+    - [ko_norm_2002.json](ko_norm_2002.json) : 어문 규범(2002)
     - [ko_plain.json](ko_plain.json) : 쉬운 말
     - [ko_standard_terms.json](ko_standard_terms.json) : 표준 전문용어
     - [ko_unbiased.json](ko_unbiased.json) : 차별적 표현
