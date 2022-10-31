@@ -73,11 +73,14 @@ def main(infile, rulefile, show_all_lines=False, debug=False, profile=False):
     else:
         paragraphs = sys.stdin
 
+    lines = []
+    for paragraph in paragraphs:
+        lines += re.split(r'(?<=[.?]) ', paragraph)
+
     try:
-        for paragraph in paragraphs:
-            for line in re.split(r'(?<=[.?]) ', paragraph):
-                corrections = check(_rules, line, show_all_lines)
-                display_corrections(line, corrections, show_all_lines)
+        for line in lines:
+            corrections = check(_rules, line, show_all_lines)
+            display_corrections(line, corrections, show_all_lines)
         display_summary()
     except BrokenPipeError:  # when user hits 'q' during using pipe
         pass  
