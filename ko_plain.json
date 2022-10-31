@@ -981,7 +981,6 @@
       ["\\b스키드 마크", "타이어 자국, 타이어 밀린 자국"],
       ["\\b스타덤", "인기 대열"],
       ["\\b스타디움", "경기장"],
-      ["\\b스타트업", "새싹 기업, 창업 초기 기업, 신생 기업"],
       ["\\b스타플레이어", "인기 선수"],
       ["\\b스태그플레이션", "불황 속 물가 상승"],
       ["\\b스탠더드", "국제 표준, 국제 기준"],
@@ -1807,7 +1806,6 @@
       ["\\b펫 시터", "반려동물 돌봄이"],
       ["\\b펫 푸드", "애완동물 먹이, 반려동물 먹이"],
       ["\\b포럼", "토론회, 대중 토론회, 공개 토론회"],
-      ["\\b포레스트", "숲"],
       ["\\b포멀 드레스", "야회복"],
       ["\\b포멀 웨어", "정장"],
       ["\\b포메이션", "정보, 안내"],
@@ -2315,6 +2313,17 @@
   },
   {
     "kind": "윤문",
+    "name": "kpl01462_일반 국민 60%가 이해하지 못하는 낱말",
+    "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=스타트업",
+    "cases": [
+      ["\\b스타트업 (\\d+[ ]?곳)", "새싹 기업 ()"],
+      ["\\b스타트업 (.*) (개발자)", "창업 초기 기업 () ()"],
+      ["\\b스타트업(.*)(특징)", "신생 기업()()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "윤문",
     "name": "kpl01520_일반 국민 60%가 이해하지 못하는 낱말",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=스파크",
     "cases": [
@@ -2565,6 +2574,17 @@
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=페인트%20존",
     "cases": [
       ["\\b페인트 존", "3초 제한 구역"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "윤문",
+    "name": "kpl02990_일반 국민 60%가 이해하지 못하는 낱말",
+    "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=포레스트",
+    "cases": [
+      ["\\b(청춘) 포레스트", "() 숲"],
+      ["\\b포레스트 (뉴스|향)(\\w*)", "숲 ()()"]
     ],
     "exception": [
     ]
