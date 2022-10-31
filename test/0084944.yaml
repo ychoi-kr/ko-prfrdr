@@ -1,5 +1,6 @@
 true cases:
   - 브라우저에서 동작하게 만들어 보자.
   - 서버가 동작할 때는
+  - TCP 위에서 동작하므로
 false cases:
 
