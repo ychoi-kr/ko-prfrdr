@@ -19,6 +19,12 @@ import kojosa
 import koword
 import fileconverter as fc
 
+try:
+    from tqdm import tqdm
+except ImportError:
+    def tqdm(iterator, *args, **kwargs):
+        return iterator
+    
 
 profiler = dict()
 
@@ -78,7 +84,7 @@ def main(infile, rulefile, show_all_lines=False, debug=False, profile=False):
         lines += re.split(r'(?<=[.?]) ', paragraph)
 
     try:
-        for line in lines:
+        for line in tqdm(lines):
             corrections = check(_rules, line, show_all_lines)
             display_corrections(line, corrections, show_all_lines)
         display_summary()
