@@ -9,6 +9,7 @@ from pathlib import Path
 from collections import Counter
 import zipfile
 from time import process_time
+from tqdm import tqdm
 
 from kosound import hasfinalconsonant
 import kostr
@@ -22,7 +23,7 @@ import fileconverter as fc
 profiler = dict()
 
 def import_KoNLPy():
-    print(f'Trying to import KoNLPy...')
+    print("Trying to import KoNLPy...")
     try:
         from konlpy.tag import Komoran
         global komoran
@@ -30,10 +31,12 @@ def import_KoNLPy():
             os.path.dirname(os.path.realpath(__file__)), 'dic.txt'
         )
         komoran = Komoran(userdic=dicpath)
+        print("Komoran enabled")
     
         from konlpy.tag import Okt
         global okt
         okt = Okt()
+        print("Okt enabled")
     except:
         pass
 
