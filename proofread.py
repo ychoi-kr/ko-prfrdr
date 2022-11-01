@@ -9,7 +9,6 @@ from pathlib import Path
 from collections import Counter
 import zipfile
 from time import process_time
-from tqdm import tqdm
 
 from kosound import hasfinalconsonant
 import kostr
@@ -19,14 +18,17 @@ import kojosa
 import koword
 import fileconverter as fc
 
+
+_tqdm_enabled = True
 try:
     from tqdm import tqdm
 except ImportError:
+    _tqdm_enabled = False
     def tqdm(iterator, *args, **kwargs):
         return iterator
-    
 
 profiler = dict()
+
 
 def import_KoNLPy():
     print("Trying to import KoNLPy...")
@@ -55,10 +57,19 @@ def _debug(k, v=None):
         #input()
 
 
-def main(infile, rulefile, show_all_lines=False, debug=False, profile=False):
+def main(infile, rulefile, show_all_lines=False, debug=False, profile=False, show_progress=False):
 
     # needs to be here to avoid waisting time when '--help' option is used
     import_KoNLPy()
+
+    if show_progress:
+        if _tqdm_enabled:
+            progress = tqdm
+        else:
+            print("tqdm is not enabled. Progress will not displayed")
+            progress = list
+    else:
+        progress = list
 
     global _dbg_
     _dbg_ = debug
@@ -81,10 +92,12 @@ def main(infile, rulefile, show_all_lines=False, debug=False, profile=False):
 
     lines = []
     for paragraph in paragraphs:
-        lines += re.split(r'(?<=[.?]) ', paragraph)
+        paragraph = paragraph.strip()
+        if paragraph != '':
+            lines += re.split(r'(?<=[.?]) ', paragraph)
 
     try:
-        for line in tqdm(lines):
+        for line in progress(lines):
             corrections = check(_rules, line, show_all_lines)
             display_corrections(line, corrections, show_all_lines)
         display_summary()
@@ -463,6 +476,7 @@ if __name__ == '__main__':
     parser.add_argument("--show_all_lines", action="store_true")
     parser.add_argument("--debug", action="store_true")
     parser.add_argument("--profile", action="store_true")
+    parser.add_argument("--show_progress", action="store_true")
     args = parser.parse_args()
     
-    main(args.filename, args.rulefile, args.show_all_lines, args.debug, args.profile)
+    main(args.filename, args.rulefile, args.show_all_lines, args.debug, args.profile, args.show_progress)
