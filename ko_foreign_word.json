@@ -851,6 +851,16 @@
   },
   {
     "kind": "외래어",
+    "name": "qa126590_'halloween'의 표기",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=126590",
+    "cases": [
+      ["\\b할로윈", "핼러윈"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
     "name": "qa149958_‘production’의 표기",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=149958",
     "cases": [
