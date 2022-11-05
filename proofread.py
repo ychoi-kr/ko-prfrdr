@@ -458,6 +458,7 @@ stylechk_rules = [
 
 suggest_rules = [
     'ko_electric_terms.json',
+    'ko_fire_terms.json',
     'ko_forest_terms.json',
     'ko_gov_terms_2012.json',
     'ko_norm_2002.json',

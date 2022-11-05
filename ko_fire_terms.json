@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "용어",
+    "name": "nfag2020_소방용어 순화",
+    "desc": "https://nfa.go.kr/nfa/news/pressrelease/press/?boardId=bbs_0000000000000010&mode=view&cntId=841",
+    "cases": [
+      ["\\b부서([하한할함합해했]\\w*)", "배치()"],
+      ["\\b피스톨관창", "권총형관창"],
+      ["\\b요구조자", "구조대상자"],
+      ["\\b농연", "짙은 연기"],
+      ["\\b취명", "울림"]
+    ],
+    "exception": [
+    ]
+  }
+]
