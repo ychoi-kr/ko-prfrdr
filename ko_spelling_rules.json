@@ -728,7 +728,6 @@
       ["이루었졌다", "이루어졌다"],
       ["영화 사영", "영화 상영"],
       ["(\\w+) 산의 거리", "() 간의 거리"],
-      ["\\b(KW_NAO)한 수\\b", "()한 후"],
       ["\\b빗방을", "빗방울"],
       ["\\b문백단어", "문맥단어"],
       ["3ㅏ섯", "다섯"],
@@ -787,9 +786,33 @@
       ["\\b있ㄱㅎ", "있고"],
       ["이이 <Noun>은", "이 ()은"],
       ["\\b앞도적(|인) (승리|영향력|우위)", "압도적() ()"],
-      ["\\b연략([망]?)(|[은을이]|으로|이라도|조차|[하한할함합해했]\\w*)\\b", "연락()()"]
+      ["\\b연략([망]?)(|[은을이]|으로|이라도|조차|[하한할함합해했]\\w*)\\b", "연락()()"],
+      ["\\b갉고[ ]?(닦\\w+)", "갈고()"],
+      ["증가시고", "증가시키고"],
+      ["\\b(감소|증가)할 대마다", "()할 때마다"]
     ],
     "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "kyw80401_부응하다",
+    "desc": "https://blog.naver.com/kyw804/220544837097",
+    "cases": [
+	  ["\\b(기대에) 부흥([하한할함합해했]\\w*)", "() 부응()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "맞춤법",
+    "name": "kyw80402_-대",
+    "desc": "https://blog.naver.com/kyw804/220402866235",
+    "cases": [
+	  ["\\b(못 온)데[.]", "()대."],
+	  ["\\b(왜 이렇게)(.*)데[?]", "()()대?"]
+    ],
+    "exception": [
+    ]
   },
   {
     "kind": "맞춤법",
@@ -1665,6 +1688,24 @@
   },
   {
     "kind": "맞춤법",
+    "name": "qa113775_알루미늄",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=113775",
+    "cases": [
+      [ "\\b알미늄", "알루미늄"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "qa115341_스스럼없다",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=115341",
+    "cases": [
+      ["\\b서스럼[ ]?(없\\w*)", "스스럼()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "qa115668_설레다",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=115668",
     "cases": [
@@ -1880,6 +1921,15 @@
       [ "\\b왠만([하한해히]\\w*)", "웬만()"]
     ],
     "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "qa235597_-한 후",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=235597",
+    "cases": [
+      ["\\b(KW_NAO)한 수\\b", "()한 후"]
+    ],
+    "exception": ["곱", "나눈", "더한", "뺀"]
   },
   {
     "kind": "맞춤법",
