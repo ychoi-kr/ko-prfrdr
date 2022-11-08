@@ -4,4 +4,5 @@ true cases:
   - msg.sender를 From 이벤트에 입력해  From 이벤트를 출력한다.
   - 프로그래머 끼리는
   - 변수 v의  값을 출력한다.
+  - 금리 상승은 인플레 이션 때문입니다.
 false cases:
