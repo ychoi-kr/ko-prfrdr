@@ -5,6 +5,7 @@ true cases:
   - 기동시
   - 드라이브 장애시 영향을
   - 데이터 송수신시 해시값을 비교
+  - pivot시 누락된 칼럼을
 
 false cases:
   - condition이 만족하지 않으면 AssertionError 예외를 발생시킵니다.
