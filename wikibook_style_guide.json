@@ -254,12 +254,12 @@
     "name": "wbsg108a_자주 쓰는 표현은 가급적 한글로 표기한다",
     "desc": "",
     "cases": [
-      ["\\bJava(?!Script)", "자바"],
-      [" ActionScript", "액션스크립트"],
-      [" JavaScript", "자바스크립트"],
-      [" Windows", "윈도우"],
-      [" Linux", "리눅스"],
-      [" Python", "파이썬"]
+      ["(?<![(])Java(?!Script)", "자바"],
+      ["(?<![(])ActionScript", "액션스크립트"],
+      ["(?<![(])JavaScript", "자바스크립트"],
+      ["(?<![(])Windows", "윈도우"],
+      ["(?<![(])Linux", "리눅스"],
+      ["(?<![(])Python", "파이썬"]
     ],
     "exception": [
     ]
