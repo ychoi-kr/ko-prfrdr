@@ -57,7 +57,7 @@ def _debug(k, v=None):
         #input()
 
 
-def main(infile, rulefile, show_all_lines=False, debug=False, profile=False, show_progress=False):
+def main(infile, rulefile, specified_rule=None, show_all_lines=False, debug=False, profile=False, show_progress=False):
 
     # needs to be here to avoid waisting time when '--help' option is used
     import_KoNLPy()
@@ -98,7 +98,7 @@ def main(infile, rulefile, show_all_lines=False, debug=False, profile=False, sho
 
     try:
         for line in progress(lines):
-            corrections = check(_rules, line, show_all_lines)
+            corrections = check(_rules, line, specified_rule, show_all_lines)
             display_corrections(line, corrections, show_all_lines)
         display_summary()
     except BrokenPipeError:  # when user hits 'q' during using pipe
@@ -183,7 +183,7 @@ def read_manuscript(infile):
     return text
 
 
-def check(rules, line, show_all_lines, profiler=profiler):
+def check(rules, line, specified_rule, show_all_lines, profiler=profiler):
 
     line = line.replace('“', '"').replace('”', '"')
     line = line.replace("‘", "'").replace("’", "'")
@@ -202,6 +202,10 @@ def check(rules, line, show_all_lines, profiler=profiler):
 
     for rule in rules:
         kind, name, desc, cases, exceptions = rule
+
+        if specified_rule and specified_rule.lstrip('0') != name.split('_')[0].lstrip('0'):
+            continue
+
         start = process_time()
         for cs in cases:
             bad, good = cs[0], cs[1]
@@ -472,7 +476,8 @@ if __name__ == '__main__':
     parser.add_argument("filename", nargs="?", type=str)
     
     default_rules = spellchk_rules + stylechk_rules + suggest_rules
-    parser.add_argument("-r", "--rulefile", default=' '.join(default_rules))
+    parser.add_argument("--rule", type=str)
+    parser.add_argument("--rulefile", default=' '.join(default_rules))
 
     parser.add_argument("--show_all_lines", action="store_true")
     parser.add_argument("--debug", action="store_true")
@@ -480,4 +485,4 @@ if __name__ == '__main__':
     parser.add_argument("--show_progress", action="store_true")
     args = parser.parse_args()
     
-    main(args.filename, args.rulefile, args.show_all_lines, args.debug, args.profile, args.show_progress)
+    main(args.filename, args.rulefile, args.rule, args.show_all_lines, args.debug, args.profile, args.show_progress)
