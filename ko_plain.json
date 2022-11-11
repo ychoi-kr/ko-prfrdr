@@ -1721,7 +1721,6 @@
       ["\\b패트롤", "안전 요원, 순찰"],
       ["\\b패트롤 카", "순찰차"],
       ["\\b팩션", "각색 실화"],
-      ["\\b팩토리", "실습장"],
       ["\\b팬덤", "열성 팬, 열성 조직"],
       ["\\b팬시점", "선물 가게"],
       ["\\b팬터마임", "무언극"],
@@ -2804,6 +2803,18 @@
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=패키지%20딜",
     "cases": [
       ["\\b패키지 딜", "일괄 타결"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "윤문",
+    "name": "kpl02891_일반 국민 60%가 이해하지 못하는 낱말",
+    "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=팩토리",
+    "cases": [
+      ["\\b(문화) 팩토리를", "() 공방을"],
+      ["dup:\\b(스마트) 팩토리", "지능형 공장"],
+      ["\\b(각) 팩토리(.*)(제품)", "() 공방()()"]
     ],
     "exception": [
     ]
