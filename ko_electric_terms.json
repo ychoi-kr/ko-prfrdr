@@ -268,7 +268,7 @@
       ["\\b(Exploit)", "취약점 공격 (Exploit)"],
       ["\\b(FA)", "공장 자동화 (FA)"],
       ["\\b(Firewall (침입차단시스템))", "방화벽(Firewall)"],
-      ["\\b(HA)", "가정 자동화 (HA)"],
+      ["ignored:\\b(HA)", "가정 자동화 (HA)"],
       ["\\b(IDS)", "침입 탐지 시스템 (IDS)"],
       ["\\b(IED)", "지능형 전자 장치 (IED)"],
       ["\\b(ISM BAND)", "ISM 주파수 대역(ISM BAND)"],

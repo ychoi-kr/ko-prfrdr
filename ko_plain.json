@@ -1324,7 +1324,6 @@
       ["\\b인바운드", "국내"],
       ["\\b인벤토리", "목록"],
       ["\\b인보이스", "송장, 보냄표"],
-      ["\\b인스톨", "설치"],
       ["\\b인스트럭터", "강사, 지도자, 강습자"],
       ["\\b인스피레이션", "영감"],
       ["\\b인저리", "부상"],
@@ -2394,6 +2393,16 @@
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=유저",
     "cases": [
       ["\\b(게임 |신규 |)유저(\\w*)", "() 사용자()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "윤문",
+    "name": "kpl02115_일반 국민 60%가 이해하지 못하는 낱말",
+    "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=인스톨",
+    "cases": [
+      ["\\b인스톨이 (필요 없\\w+)", "설치가 ()"],
+      ["\\b인스톨([하한할함합해했]\\w*| 없이)", "설치()"]
     ],
     "exception": []
   },
