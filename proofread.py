@@ -216,7 +216,7 @@ def check(rules, line, specified_rule, show_all_lines, profiler=profiler):
                 #_debug('mode', mode)
                 continue
 
-            elif re.match('^(ignored|dup)[:]', bad):
+            elif re.match('^(deprecated|dup|ignored|obsolete)[:]', bad):
                 continue
                  
             elif any(map(lambda x: x in '[]\+?|', bad)):
