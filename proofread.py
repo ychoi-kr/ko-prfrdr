@@ -40,7 +40,12 @@ def import_KoNLPy():
         )
         komoran = Komoran(userdic=dicpath)
         print("Komoran enabled")
-    
+        
+        from konlpy.tag import Hannanum
+        global hannanum
+        hannanum = Hannanum()
+        print("Hannanum enabled")
+        
         from konlpy.tag import Okt
         global okt
         okt = Okt()
@@ -286,12 +291,12 @@ def check(rules, line, specified_rule, show_all_lines, profiler=profiler):
                 if bad.endswith(')') and korean(bad.rstrip(')').rsplit('(', 1)[1]):
                     bad_root = bad.rsplit('(', 1)[0]
                  
-                # Part of Speech match with Okt
-                if 'okt' in globals() and any(x in bad_root for x in ['<Adjective>', '<Adverb>', '<Verb>', '<Josa>']):
+                if 'okt' in globals() and any(x in bad_root for x in ['<Adjective>', '<Adverb>', '<Verb>', '<Josa>', '<Okt_Noun>']):
                     mode, morphs_line, line, bad, bad_root, good = POSOkt(line, bad, bad_root, good)
 
-                # Part of Speech match with Komoran
-                # below looks very expensive. may need some optimization.
+                elif 'hannanum' in globals() and any(x in bad_root for x in ['<N>']):
+                    mode, morphs_line, line, bad, bad_root, good = POSHannanum(line, bad, bad_root, good)
+
                 elif 'komoran' in globals() and re.search(r"<\w+>", bad_root):
                     mode, morphs_line, line, bad, bad_root, good = POSKomoran(line, bad, bad_root, good)
                  
@@ -336,7 +341,9 @@ def POSOkt(line, bad, bad_root, good):
     mode = 'Okt'
     _debug('mode', mode)
     _debug('okt.pos(line)', okt.pos(line))
+    bad = bad.replace("Okt_", '')
     _bad = bad
+    bad_root = bad_root.replace("Okt_", '')
     _bad_root = bad_root
     _good = good
     for a in re.findall('<\w+>', bad_root):
@@ -356,6 +363,54 @@ def POSOkt(line, bad, bad_root, good):
         break
     return mode, None, line, bad, bad_root, good
 
+
+def POSHannanum(line, bad, bad_root, good):
+    # remove errornous characters before using tagger
+    line = re.sub(r'[^\w\s!"#$%&\'‘’()*+,-./:;<=>?@\[\\\]^_`{|}~]', '', line)
+    #_debug('line', line)
+    morphs_line = ''.join(
+        [''.join(hannanum.morphs(x) if hannanum.morphs(x) else x) for x in re.split('(\W)', line) if x != '']
+    )
+    if '<N>' in bad_root:
+        mode = 'Hannanum_N'
+        _debug('mode', mode)
+        _debug('<N> exists in bad_root', bad_root)
+        nouns = hannanum.nouns(line)
+        _debug('nouns', nouns)
+        for n in nouns:
+            candidate = bad_root.replace('<N>', n)
+            if candidate in line:
+                _debug('hannanum.pos(line)', hannanum.pos(line))
+                bad = bad_root = candidate
+                good = good.replace('<N>', n)
+                good = good.replace('()', n)
+                break
+        _debug('good', good) 
+    else:
+        mode = 'Hannanum_POS'
+        _bad = bad
+        _bad_root = bad_root
+        _good = good
+        for a in re.findall('<\w+>', bad_root):
+            for b in [m for m, p in hannanum.pos(line) if f'<{p}>' == a]:
+                _bad = _bad.replace(a, b, 1)
+                _bad_root = _bad_root.replace(a, b, 1)
+                _good = _good.replace(a, b, 1)
+                
+                if _bad_root in line or _bad_root in morphs_line:
+                    _debug('morphs_line', morphs_line)
+                    bad_root = _bad_root
+                    _debug('_bad_root', _bad_root)
+                    _debug('bad_root', bad_root)
+                    _debug('_bad', _bad)
+                    bad = ''.join([(kostr.join(hannanum.morphs(x)) if x != ' ' else x) for x in re.split('(\W)', _bad) if x != ''])
+                    _debug('bad', bad)
+                    good = ' '.join([kostr.join(hannanum.morphs(eojeol)) for eojeol in _good.split()])
+                    _debug('good', good)
+            else:
+                continue
+            break 
+    return mode, morphs_line, line, bad, bad_root, good
 
 def POSKomoran(line, bad, bad_root, good):
     # remove errornous characters before using tagger
