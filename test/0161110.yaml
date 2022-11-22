@@ -24,6 +24,7 @@ true cases:
   - 옛날에는 디스켓으로부팅했다.
   - 계산 결과는 4×3 행렬이됩니다.
   - 복잡도 O(logN)으로구할수 있습니다.
+  - A와Z 사이에 있는
 
 false cases:
   - MyAutoML3_메타모델_학습데이터.csv

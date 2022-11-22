@@ -1,0 +1,4 @@
+true cases:
+  - Thread-safe 방식으로 참조 카운트를
+false cases:
+  - 스레드 안전(Thread-safe) 방식으로 참조 카운트를

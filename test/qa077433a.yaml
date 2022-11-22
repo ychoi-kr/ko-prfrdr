@@ -5,4 +5,5 @@ true cases:
   - ‘w32time(Windows Time 서비스)’가 있습니다.
 false cases:
   - 실을 감는 중에
+  - 약한 참조는 소유권 관계를 표현
 
