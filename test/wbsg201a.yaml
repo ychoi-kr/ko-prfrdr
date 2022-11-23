@@ -1,3 +1,4 @@
 true cases:
+  - 소규모의 동적 페이지를 작성
 false cases:
   - 대규모의 잘 정제된 학습 데이터
