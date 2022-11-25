@@ -10,6 +10,7 @@ Python	NNP
 REST	NNP
 Webpack NNP
 딕셔너리	NNG
+서비스 인	NNG
 에포크	NNG
 제페토	NNP
 카테고리 NNG
