@@ -1,4 +1,6 @@
 true cases:
+  - GRU아키텍처
   - EOA 시 0반환
 false cases:
+  - println!("\n글자 수 = {}자", pr.chars().count());
 
