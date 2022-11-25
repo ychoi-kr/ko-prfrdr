@@ -35,7 +35,7 @@
 
 * PDF
    * [pdf_merge.py](#pdf_mergepy) : PDF 파일 병합
-   * [pdf2docx.py](#pdf2docxpy) : PDF 파일을 docx 파일로 변환
+   * pdf2docx : PDF 파일을 docx 파일로 변환 --> https://github.com/dothinking/pdf2docx
    * [pdftotext.py](#pdftotextpy) : PDF 파일을 txt 파일로 변환
    * [searchable.py](#searchablepy) : 검색 가능한 PDF 파일을 생성
 
@@ -262,19 +262,6 @@ python pdf_merge.py [directory] bookname`
 ```
 python d:\GitHub\sk8erchoi\ko-prfrdr\pdf_merge.py "Mastering PyTorch_최종인쇄용_0125"
 ```
-
-## pdf2docx.py
-
-PDF 문서를 docx로 변환하는 [pdf2docx](https://github.com/dothinking/pdf2docx)를 호출합니다.
-
-요구사항:
-
-`pip install pdf2docx`
-
-사용법:
-
-`pdf2docx <파일명>`
-
 
 ## pdftotext.py
 
