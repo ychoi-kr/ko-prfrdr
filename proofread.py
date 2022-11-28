@@ -196,7 +196,7 @@ def check(rules, line, specified_rule, show_all_lines, warnings_counter, profile
 
     # avoid false positive on rule108
     if not korean(line):
-        return None
+        return None, warnings_counter
 
     result = []
 
