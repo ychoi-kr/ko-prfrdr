@@ -1,6 +1,7 @@
 import unittest
 import glob
 import sys
+from collections import Counter
 
 from proofread import *
 
@@ -14,12 +15,13 @@ class TestsContainer(unittest.TestCase):
 
 def make_test_function(name, line):
     def test(self):
+        warnings_counter = Counter()
         if re.match(r'\w+_TC\d', name):
-            corrections = check(rules, line, None, show_all_lines=False)
+            corrections, warnings_counter = check(rules, line, None, False, warnings_counter)
             #print(corrections)
             self.assertGreater(len(corrections), 0, name)
         elif re.match(r'\w+_FC\d', name):
-            corrections = check(rules, line, None, show_all_lines=False)
+            corrections, warnings_counter = check(rules, line, None, False, warnings_counter)
             #print(corrections)
             self.assertEqual(len(corrections), 0, name)
         else:
