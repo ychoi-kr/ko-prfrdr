@@ -79,9 +79,6 @@ def main(infile, rulefile, specified_rule=None, show_all_lines=False, debug=Fals
     global _dbg_
     _dbg_ = debug
     
-    global warnings_counter
-    warnings_counter = Counter()
-    
     _rules = loadrules(rulefile)
     
     if infile:
@@ -101,11 +98,12 @@ def main(infile, rulefile, specified_rule=None, show_all_lines=False, debug=Fals
         if paragraph != '':
             lines += re.split(r'(?<=[.?]) ', paragraph)
 
+    warnings_counter = Counter()
     try:
         for line in progress(lines):
-            corrections = check(_rules, line, specified_rule, show_all_lines)
+            corrections, warnings_counter = check(_rules, line, specified_rule, show_all_lines, warnings_counter)
             display_corrections(line, corrections, show_all_lines)
-        display_summary()
+        display_summary(warnings_counter)
     except BrokenPipeError:  # when user hits 'q' during using pipe
         pass  
     
@@ -188,7 +186,7 @@ def read_manuscript(infile):
     return text
 
 
-def check(rules, line, specified_rule, show_all_lines, profiler=profiler):
+def check(rules, line, specified_rule, show_all_lines, warnings_counter, profiler=profiler):
 
     line = line.replace('“', '"').replace('”', '"')
     line = line.replace("‘", "'").replace("’", "'")
@@ -326,15 +324,14 @@ def check(rules, line, specified_rule, show_all_lines, profiler=profiler):
                         skip = True
 
                 if not skip:
-                    if 'warnings_counter' in globals():
-                        warnings_counter[name] += 1
+                    warnings_counter[name] += 1
 
                     result.append((loc, kind, name, bad, good, desc))
         end = process_time()
 
         profiler[name] += (end - start)
 
-    return result
+    return result, warnings_counter
 
 
 def POSOkt(line, bad, bad_root, good):
@@ -505,7 +502,7 @@ def message(kind, name, bad, good, desc):
     sys.stdout.flush()
 
 
-def display_summary():
+def display_summary(warnings_counter):
     print('=== Summary ===')
     for ele in sorted(warnings_counter):
         print(f'{ele} ==> count: {warnings_counter[ele]}')
