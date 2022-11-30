@@ -445,7 +445,7 @@ KW_NAB = joinseq(KW_NABf, KW_NABv)
 ### derived from Foreign language
 # Don't use '*팅' instead of '부팅' for case like: 디스켓으로부팅한후 --> 디스켓으로 부팅한 후
 KW_NAFf = "\\w+[깅닝딩링밍싱킹핑]|게임|로그아웃|로그인|마케팅|컨트롤|컴파일|클릭|부팅"  
-KW_NAFv = "다운로드|릴리스|마사지|업로드|[언]?마운트|업데이트|임포트|카운트|테스트|트리거|팔로우|폴로|플레이"
+KW_NAFv = "다운로드|릴리스|링크|마사지|업로드|[언]?마운트|업데이트|임포트|카운트|테스트|트리거|팔로우|폴로|플레이"
 KW_NAF = joinseq(KW_NAFf, KW_NAFv)
 
 KW_NAHf = joinseq(KW_NABf, KW_NAFf, KW_NAOf)
