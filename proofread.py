@@ -433,7 +433,7 @@ def POSKomoran(line, bad, bad_root, good):
                 break
         _debug('good', good) 
     else:
-        #_debug('komoran.pos(line)', komoran.pos(line))
+        _debug('komoran.pos(line)', komoran.pos(line))
         mode = 'Komoran_POS'
         #_debug('mode', mode)
         #_debug('bad', bad)
