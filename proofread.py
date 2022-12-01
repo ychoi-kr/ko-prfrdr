@@ -534,11 +534,13 @@ suggest_rules = [
     ('ko_unbiased.json', '차별적 표현'),
 ]
 
+default_rules = spellchk_rules + stylechk_rules + suggest_rules
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("filename", nargs="?", type=str)
 
-    default_rules = spellchk_rules + stylechk_rules + suggest_rules
     parser.add_argument("--rule", type=str)
     parser.add_argument("--rulefile", default=' '.join([x[0] for x in default_rules]))
 
