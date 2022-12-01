@@ -1,6 +1,6 @@
 [
   {
-    "kind": "번역투",
+    "kind": "영어 투",
     "name": "0067481a_영어 번역투 순화 - 'be+~ing(현재진행형)' 구문",
     "desc": "https://wikidocs.net/67481#a",
     "cases": [
@@ -15,7 +15,7 @@
     ]
   },
   {
-    "kind": "번역투",
+    "kind": "영어 투",
     "name": "0067481b_영어 번역투 순화 - 어색한 피동 표현",
     "desc": "https://wikidocs.net/67481#b",
     "cases": [
@@ -26,7 +26,7 @@
     ]
   },
   {
-    "kind": "번역투",
+    "kind": "영어 투",
     "name": "0067481c_영어 번역투 순화 - 사물 주어",
     "desc": "스스로 움직이지 않는 사물이나 추상적 대상이 능동적 행위의 주어로 나오는 문장 https://wikidocs.net/67481",
     "cases": [
@@ -37,7 +37,7 @@
     ]
   },
   {
-    "kind": "번역투",
+    "kind": "영어 투",
     "name": "0067481f_영어 번역투 순화 - 수동태",
     "desc": "https://wikidocs.net/67481",
     "cases": [
@@ -50,7 +50,7 @@
     ]
   },
   {
-    "kind": "번역투",
+    "kind": "영어 투",
     "name": "0067481g_영어 번역투 순화 - 굴절",
     "desc": "https://wikidocs.net/67481",
     "cases": [
@@ -63,7 +63,7 @@
     ]
   },
   {
-    "kind": "번역투",
+    "kind": "영어 투",
     "name": "0067481f_영어 번역투 순화 - 전치사구",
     "desc": "https://wikidocs.net/67481",
     "cases": [
@@ -77,7 +77,7 @@
     ]
   },
   {
-    "kind": "번역투",
+    "kind": "영어 투",
     "name": "0146266a_강조어",
     "desc": "basically, essentially, totally 등이 본래의 뜻이 아니라 단순히 강조어 기능으로 쓰일 때는 사용하지 않는 것이 더 깔끔한 문장이 된다. https://wikidocs.net/146266",
     "cases": [
@@ -91,7 +91,7 @@
     ]
   },
   {
-    "kind": "번역 투",
+    "kind": "영어 투",
     "name": "0152679_영어 투 '~에 있어'",
     "desc": "https://wikidocs.net/152679",
     "cases": [
@@ -110,7 +110,7 @@
     ]
   },
   {
-    "kind": "번역 투",
+    "kind": "영어 투",
     "name": "0158728a_0개의 O",
     "desc": "https://wikidocs.net/158728#a",
     "cases": [
@@ -157,7 +157,7 @@
     "exception": [ ]
   },
   {
-    "kind": "번역 투",
+    "kind": "영어 투",
     "name": "0158728b_0개의 O",
     "desc": "https://wikidocs.net/158728#b",
     "cases": [
@@ -185,7 +185,7 @@
     "exception": [ ]
   },
   {
-    "kind": "번역 투",
+    "kind": "영어 투",
     "name": "0158728c_0개의 O",
     "desc": "https://wikidocs.net/158728#c",
     "cases": [
@@ -197,7 +197,7 @@
     "exception": [ ]
   },
   {
-    "kind": "번역 투",
+    "kind": "영어 투",
     "name": "0158728d_0개의 O",
     "desc": "https://wikidocs.net/158728#d",
     "cases": [
@@ -209,7 +209,7 @@
     "exception": [ ]
   },
   {
-    "kind": "번역 투",
+    "kind": "영어 투",
     "name": "0165392_가지다(have)",
     "desc": "https://wikidocs.net/165392",
     "cases": [
@@ -222,7 +222,7 @@
     ]
   },
   {
-    "kind": "번역 투",
+    "kind": "영어 투",
     "name": "hanbit00_흔한 번역 투 TOP 12",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
@@ -232,7 +232,7 @@
     ]
   },
   {
-    "kind": "번역 투",
+    "kind": "영어 투",
     "name": "hanbit01_흔한 번역 투 TOP 12 - 대명사 남발",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
@@ -244,7 +244,7 @@
     ]
   },
   {
-    "kind": "번역 투",
+    "kind": "영어 투",
     "name": "hanbit03_흔한 번역 투 TOP 12 - 3. '의' 남용",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
@@ -256,7 +256,7 @@
     ]
   },
   {
-    "kind": "번역 투",
+    "kind": "영어 투",
     "name": "hanbit05_흔한 번역 투 TOP 12 - 5. '~에 관하여', '~에 대하여'",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
@@ -266,7 +266,7 @@
     ]
   },
   {
-    "kind": "번역 투",
+    "kind": "영어 투",
     "name": "hanbit06_흔한 번역 투 TOP 12 - 6. '~하는 중이다'",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
@@ -276,7 +276,7 @@
     ]
   },
   {
-    "kind": "번역 투",
+    "kind": "영어 투",
     "name": "hanbit07_흔한 번역 투 TOP 12 - 7. '~을/를 가지다, 가지고 있다'",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
@@ -287,7 +287,7 @@
     ]
   },
   {
-    "kind": "번역 투",
+    "kind": "영어 투",
     "name": "hanbit08_흔한 번역 투 TOP 12 - 8. '~로부터'",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
@@ -297,7 +297,7 @@
     ]
   },
   {
-    "kind": "번역 투",
+    "kind": "영어 투",
     "name": "hanbit09_흔한 번역 투 TOP 12 - 9. '~를 통해'(through)",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
@@ -307,7 +307,7 @@
     ]
   },
   {
-    "kind": "번역 투",
+    "kind": "영어 투",
     "name": "ysyn0900_당신의 문제: 인칭대명사의 의미와 용법의 차이",
     "desc": "https://play.google.com/books/reader?id=gX1RCwAAQBAJ&pg=GBS.PT135&hl=ko", 
     "cases": [
@@ -318,7 +318,7 @@
     ]
   },
   {
-    "kind": "번역 투",
+    "kind": "영어 투",
     "name": "ysyn1401_간결한 피동사",
     "desc": "https://play.google.com/books/reader?id=gX1RCwAAQBAJ&pg=GBS.PT211&hl=ko",
     "cases": [
@@ -332,7 +332,7 @@
     ]
   },
   {
-    "kind": "번역 투",
+    "kind": "영어 투",
     "name": "ysyn1402_간결한 피동사",
     "desc": "https://play.google.com/books/reader?id=gX1RCwAAQBAJ&pg=GBS.PT215&hl=ko",
     "cases": [
@@ -347,7 +347,7 @@
     ]
   },
   {
-    "kind": "번역 투",
+    "kind": "영어 투",
     "name": "ysyn1403_간결한 피동사",
     "desc": "https://play.google.com/books/reader?id=gX1RCwAAQBAJ&pg=GBS.PT215&hl=ko",
     "cases": [
@@ -357,7 +357,7 @@
     ]
   },
   {
-    "kind": "번역 투",
+    "kind": "영어 투",
     "name": "mk291554_일상생활 속 나도 모르게 남용하는 '번역 투'",
     "desc": "https://www.mk.co.kr/news/society/view/2016/04/291554/",
     "cases": [

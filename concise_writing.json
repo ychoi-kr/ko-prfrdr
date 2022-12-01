@@ -1,6 +1,6 @@
 [
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "0079918_쉼표, 반점",
     "desc": "https://wikidocs.net/79918",
     "cases": [
@@ -10,7 +10,7 @@
     "exception": []
   },
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "0079918d_쉼표, 반점",
     "desc": "https://wikidocs.net/79918#d",
     "cases": [
@@ -19,7 +19,7 @@
     "exception": []
   },
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "0100750b1_단위를 나타내는 명사가 숫자와 어울리어 쓰이는 경우 붙여 쓸 수 있다.",
     "desc": "https://wikidocs.net/100750#b",
     "cases": [
@@ -31,7 +31,7 @@
     ]
   },
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "0100750b2_단위를 나타내는 명사가 숫자와 어울리어 쓰이는 경우 붙여 쓸 수 있다.",
     "desc": "https://wikidocs.net/100750#b",
     "cases": [
@@ -43,7 +43,7 @@
     ]
   },
   {
-    "kind": "순화어",
+    "kind": "간결한 글쓰기",
     "name": "0147195_-적(的)",
     "desc": "https://wikidocs.net/147195",
     "cases": [
@@ -53,7 +53,7 @@
     "exception": []
   },
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "0153445d_‘마지막 끝’(의미 중복)",
     "desc": "https://wikidocs.net/153445#d",
     "cases": [
@@ -65,7 +65,7 @@
     ]
   },
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "0157657a_관형격 조사 '의'",
     "desc": "https://wikidocs.net/157657",
     "cases": [
@@ -80,7 +80,7 @@
     ]
   },
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "0157657c_관형격 조사 '의'",
     "desc": "https://wikidocs.net/157657#c",
     "cases": [
@@ -91,7 +91,7 @@
     "exception": ["일련의"]
   },
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "0161110a2_붙여 써도 되는 전문 용어(우리말샘에 있는 단어)",
     "desc": "https://wikidocs.net/161110#a2",
     "cases": [
@@ -102,7 +102,7 @@
     ]
   },
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "0165154b_두 체언의 의미가 겹친 말",
     "desc": "https://wikidocs.net/165154#b",
     "cases": [
@@ -114,7 +114,7 @@
     ]
   },
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "0165154c_관형어와 체언의 의미가 겹친 말",
     "desc": "https://wikidocs.net/165154#c",
     "cases": [
@@ -131,7 +131,7 @@
     ]
   },
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "0165154g_겹말",
     "desc": "https://wikidocs.net/165154#g",
     "cases": [
@@ -142,7 +142,7 @@
     ]
   },
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "0165221a-는가",
     "desc": "https://wikidocs.net/165221#a",
     "cases": [
@@ -152,7 +152,7 @@
     ]
   },
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "0165221d_‘-는지’(연결 어미)",
     "desc": "https://wikidocs.net/165221#d",
     "cases": [
@@ -166,7 +166,7 @@
     ]
   },
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "0165243_이중 피동",
     "desc": "https://wikidocs.net/165243",
     "cases": [
@@ -208,7 +208,7 @@
     ]
   },
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "0165244_불필요한 ‘수 있다’",
     "desc": "https://wikidocs.net/165243",
     "cases": [
@@ -224,7 +224,7 @@
     ]
   },
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "0177592a_쉬운 표현",
     "desc": "https://wikidocs.net/177592#a",
     "cases": [
@@ -242,7 +242,7 @@
     ]
   },
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "hn343801_‘때문’",
     "desc": "https://www.hani.co.kr/arti/SERIES/61/343801.html",
     "cases": [
@@ -252,7 +252,7 @@
     ]
   },
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "qa173772_할 수 있다",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=173772",
     "cases": [
@@ -265,7 +265,7 @@
     ]
   },
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "simple01_",
     "desc": "",
     "cases": [
@@ -280,7 +280,7 @@
     ]
   },
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "simple02_중복 표현",
     "desc": "",
     "cases": [
@@ -294,7 +294,7 @@
     ]
   },
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "stsc2013_쉬운 단어(법원 맞춤법 자료집)",
     "desc": "",
     "cases": [
@@ -308,7 +308,7 @@
     ]
   },
   {
-    "kind": "윤문",
+    "kind": "간결한 글쓰기",
     "name": "lottehs19_윤문(홈쇼핑 언어 사용 지침서)",
     "desc": "https://korean.go.kr/front/etcData/etcDataView.do?mn_id=&etc_seq=637",
     "cases": [

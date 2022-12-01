@@ -136,7 +136,7 @@
     "exception": []
   },
   {
-    "kind": "띄어쓰기",
+    "kind": "맞춤법",
     "name": "0096346b_비(非)-",
     "desc": "https://wikidocs.net/96346#b",
     "cases": [
@@ -145,7 +145,7 @@
     "exception": [ ]
   },
   {
-    "kind": "띄어쓰기",
+    "kind": "맞춤법",
     "name": "0105112b_대(臺)",
     "desc": "https://wikidocs.net/105112#b",
     "cases": [
@@ -229,7 +229,7 @@
     "exception": []
   },
   {
-    "kind": "띄어쓰기",
+    "kind": "맞춤법",
     "name": "0152332f_전제하다",
     "desc": "https://wikidocs.net/152332#f",
     "cases": [
@@ -238,7 +238,7 @@
     "exception": []
   },
   {
-    "kind": "띄어쓰기",
+    "kind": "맞춤법",
     "name": "0153824_인용 표현",
     "desc": "https://wikidocs.net/153824",
     "cases": [
@@ -1524,7 +1524,7 @@
     "exception": []
   },
   {
-    "kind": "띄어쓰기",
+    "kind": "맞춤법",
     "name": "qa046510_기대되다",
     "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=46510",
     "cases": [

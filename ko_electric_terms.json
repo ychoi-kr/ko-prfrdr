@@ -1,6 +1,6 @@
 [
   {
-    "kind": "용어",
+    "kind": "전력 용어",
     "name": "kelc2020_전력분야 용어순화(2020)",
     "desc": "https://www.kea.kr/etc_file/2020_elec_word.hwp",
     "cases": [
@@ -338,7 +338,7 @@
     ]
   },
   {
-    "kind": "용어",
+    "kind": "전력 용어",
     "name": "kelc2015_전력분야 용어순화(2015)",
     "desc": "https://www.kea.kr/etc_file/2020_elec_word.hwp",
     "cases": [

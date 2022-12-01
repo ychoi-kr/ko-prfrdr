@@ -1,6 +1,6 @@
 [
   {
-    "kind": "문법",
+    "kind": "국문법",
     "name": "0041497_‘욕구’",
     "desc": "https://wikidocs.net/41497",
     "cases": [
@@ -9,7 +9,7 @@
     "exception": []
   },
   {
-    "kind": "문법",
+    "kind": "국문법",
     "name": "0067208c_‘-게 되다’",
     "desc": "https://wikidocs.net/67208#c",
     "cases": [
@@ -18,7 +18,7 @@
     "exception": []
   },
   {
-    "kind": "문법",
+    "kind": "국문법",
     "name": "0079974d_'받다'와 어울리지 않는 단어",
     "desc": "https://wikidocs.net/79974#d",
     "cases": [
@@ -31,7 +31,7 @@
     "exception": []
   },
   {
-    "kind": "문법",
+    "kind": "국문법",
     "name": "0147195_-적(的)",
     "desc": "https://wikidocs.net/147195",
     "cases": [
@@ -40,7 +40,7 @@
     "exception": []
   },
   {
-    "kind": "문법",
+    "kind": "국문법",
     "name": "0165168_필요하다",
     "desc": "https://wikidocs.net/165168",
     "cases": [
@@ -96,7 +96,7 @@
     "exception": []
   },
   {
-    "kind": "문법",
+    "kind": "국문법",
     "name": "0167020e_목적어와 서술어의 호응",
     "desc": "https://wikidocs.net/167020#e",
     "cases": [
@@ -107,7 +107,7 @@
     ]
   },
   {
-    "kind": "문법",
+    "kind": "국문법",
     "name": "0167020g_목적어와 서술어의 호응",
     "desc": "https://wikidocs.net/167020#g",
     "cases": [
@@ -122,7 +122,7 @@
     ]
   },
   {
-    "kind": "문법",
+    "kind": "국문법",
     "name": "0176361_피습",
     "desc": "https://wikidocs.net/176361",
     "cases": [
@@ -134,7 +134,7 @@
     ]
   },
   {
-    "kind": "문법",
+    "kind": "국문법",
     "name": "0167020a_주어-술어 호응",
     "desc": "https://wikidocs.net/167020#a",
     "cases": [
@@ -148,7 +148,7 @@
     "exception": []
   },
   {
-    "kind": "문법",
+    "kind": "국문법",
     "name": "grammar0_문법 오류",
     "desc": "",
     "cases": [
@@ -158,7 +158,7 @@
     "exception": []
   },
   {
-    "kind": "문법",
+    "kind": "국문법",
     "name": "grammar2_주어-술어 호응(‘비중’)",
     "desc": "‘비중(比重)’은 ‘다른 것과 비교할 때 차지하는 중요한 정도’라는 뜻이므로 ‘많다’와는 호응할 수 없다. ‘크다’, ‘작다’, ‘높다’, ‘낮다’ 따위의 서술어와 호응한다.",
     "cases": [
@@ -167,7 +167,7 @@
     "exception": []
   },
   {
-    "kind": "문법",
+    "kind": "국문법",
     "name": "grammar3_주어-술어 호응(‘~이/가 필요하다’)",
     "desc": "",
     "cases": [
@@ -176,7 +176,7 @@
     "exception": []
   },
   {
-    "kind": "문법",
+    "kind": "국문법",
     "name": "grammar4_목적어-술어 호응(‘~을/를 ~하다’)",
     "desc": "",
     "cases": [
@@ -185,7 +185,7 @@
     "exception": []
   },
   {
-    "kind": "문법",
+    "kind": "국문법",
     "name": "grammar5_수식 오류",
     "desc": "",
     "cases": [
@@ -201,7 +201,7 @@
     "exception": []
   },
   {
-    "kind": "문법",
+    "kind": "국문법",
     "name": "grpl1121_틀린 어휘",
     "desc": "신문과 방송언 언어 사용 실태 조사, 2011",
     "cases": [
@@ -220,7 +220,7 @@
     ]
   },
   {
-    "kind": "문법",
+    "kind": "국문법",
     "name": "grsc2013_문법(법원 맞춤법 자료집)",
     "desc": "",
     "cases": [
@@ -230,7 +230,7 @@
     ]
   },
   {
-    "kind": "문법",
+    "kind": "국문법",
     "name": "nk200504_문장 성분과 호응",
     "desc": "https://www.korean.go.kr/nkview/nklife/2005_4/2005_0411.pdf",
     "cases": [
@@ -247,7 +247,7 @@
     "exception": []
   },
   {
-    "kind": "문법",
+    "kind": "국문법",
     "name": "qa142824_‘-던’",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=142824",
     "cases": [

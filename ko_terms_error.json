@@ -1,6 +1,6 @@
 [
   {
-    "kind": "용어",
+    "kind": "용어 오탈자",
     "name": "0084944_작동",
     "desc": "https://wikidocs.net/84944",
     "cases": [
@@ -13,7 +13,7 @@
     "exception": []
   },
   {
-    "kind": "용어",
+    "kind": "용어 오탈자",
     "name": "0166776_fault tolerance",
     "desc": "https://wikidocs.net/166776",
     "cases": [
@@ -26,7 +26,7 @@
     "exception": []
   },
   {
-    "kind": "문법",
+    "kind": "용어 오탈자",
     "name": "term2011a_적확하지 않은 어휘",
     "desc": "신문과 방송의 언어 사용 실태 조사, 2011",
     "cases": [
@@ -42,7 +42,7 @@
     ]
   },
   {
-    "kind": "문법",
+    "kind": "용어 오탈자",
     "name": "term2011b_어휘 관련 잘못",
     "desc": "신문과 방송의 언어 사용 실태 조사, 2011",
     "cases": [
@@ -55,7 +55,7 @@
     ]
   },
   {
-    "kind": "용어",
+    "kind": "용어 오탈자",
     "name": "termerr0_용어 오탈자",
     "desc": "",
     "cases": [

@@ -1,6 +1,6 @@
 [
   {
-    "kind": "번역 투",
+    "kind": "일본어 투",
     "name": "0152718b_일본어 투 순화(~로 인하여)",
     "desc": "'https://wikidocs.net/152718#b",
     "cases": [
@@ -11,7 +11,7 @@
     ]
   },
   {
-    "kind": "번역 투",
+    "kind": "일본어 투",
     "name": "0067481h_일본어 투 순화(~의 경우)",
     "desc": "https://wikidocs.net/67481",
     "cases": [
@@ -21,7 +21,7 @@
     ]
   },
   {
-    "kind": "번역 투",
+    "kind": "일본어 투",
     "name": "0067216_인계, 인수, 합병",
     "desc": "https://wikidocs.net/67216",
     "cases": [
@@ -46,7 +46,7 @@
     ]
   },
   {
-    "kind": "번역 투",
+    "kind": "일본어 투",
     "name": "0152718d_일본식 용어(법제처)",
     "desc": "https://wikidocs.net/152718#d",
     "cases": [
@@ -62,7 +62,7 @@
     ]
   },
   {
-    "kind": "번역 투",
+    "kind": "일본어 투",
     "name": "0176267_우리말에 들어온 일본어",
     "desc": "https://wikidocs.net/176267",
     "cases": [
@@ -398,7 +398,7 @@
     ]
   },
   {
-    "kind": "번역 투",
+    "kind": "일본어 투",
     "name": "0176349b_역할",
     "desc": "https://wikidocs.net/176349#b",
     "cases": [
@@ -410,7 +410,7 @@
     ]
   },
   {
-    "kind": "순화",
+    "kind": "일본어 투",
     "name": "0177884a_인상/인하",
     "desc": "https://wikidocs.net/177884#a",
     "cases": [
@@ -437,7 +437,7 @@
     ]
   },
   {
-    "kind": "순화",
+    "kind": "일본어 투",
     "name": "0177884b_할인/할증",
     "desc": "https://wikidocs.net/177884#b",
     "cases": [
@@ -455,7 +455,7 @@
     ]
   },
   {
-    "kind": "",
+    "kind": "일본어 투",
     "name": "jako5e0e_서비스 인(サービスイン)",
     "desc": "https://ja.dict.naver.com/#/entry/jako/5e0e5eca83b34b47bd55b78cf748aa5e",
     "cases": [
@@ -465,7 +465,7 @@
     ]
   },
   {
-    "kind": "번역 투",
+    "kind": "일본어 투",
     "name": "ke000091_일본어 투 용어 순화",
     "desc": "https://www.korean.go.kr/front/etcData/etcDataView.do?mn_id=208&etc_seq=91",
     "cases": [
