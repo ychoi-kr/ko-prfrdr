@@ -508,39 +508,39 @@ def display_summary(warnings_counter):
         print(f'{ele} ==> count: {warnings_counter[ele]}')
 
 spellchk_rules = [
-    'en_spelling_rules.json',
-    'ko_foreign_word.json',
-    'ko_spacing_rules.json',
-    'ko_spelling_rules.json',
-    'ko_terms_error.json',
+    ('en_spelling_rules.json', '영어 철자'),
+    ('ko_foreign_word.json', '외래어 표기법'),
+    ('ko_spacing_rules.json', '띄어쓰기'),
+    ('ko_spelling_rules.json', '맞춤법'),
+    ('ko_terms_error.json', '용어 오탈자'),
 ]
 
 stylechk_rules = [
-    'en_ko_style_correction.json',
-    'ja_ko_style_correction.json',
-    'concise_writing.json',
-    'wikibook_style_guide.json',
-    'ko_grammar.json',
+    ('concise_writing.json', '간결한 글쓰기'),
+    ('en_ko_style_correction.json', '영어 번역 투'),
+    ('ja_ko_style_correction.json', '일어 번역 투'),
+    ('ko_grammar.json', '국문법'),
+    ('wikibook_style_guide.json', '위키북스 글쓰기 지침'),
 ]
 
 suggest_rules = [
-    'ko_electric_terms.json',
-    'ko_fire_terms.json',
-    'ko_forest_terms.json',
-    'ko_gov_terms_2012.json',
-    'ko_norm_2002.json',
-    'ko_plain.json',
-    'ko_standard_terms.json',
-    'ko_unbiased.json',
+    ('ko_electric_terms.json', '전력용어 순화'),
+    ('ko_fire_terms.json', '소방용어 순화'),
+    ('ko_forest_terms.json', '산림용어 순화'),
+    ('ko_gov_terms_2012.json', '행정용어 순화'),
+    ('ko_norm_2002.json', '어문 규범'),
+    ('ko_plain.json', '쉬운 말'),
+    ('ko_standard_terms.json', '표준 전문용어'),
+    ('ko_unbiased.json', '차별적 표현'),
 ]
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("filename", nargs="?", type=str)
-    
+
     default_rules = spellchk_rules + stylechk_rules + suggest_rules
     parser.add_argument("--rule", type=str)
-    parser.add_argument("--rulefile", default=' '.join(default_rules))
+    parser.add_argument("--rulefile", default=' '.join([x[0] for x in default_rules]))
 
     parser.add_argument("--show_all_lines", action="store_true")
     parser.add_argument("--debug", action="store_true")
