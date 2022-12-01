@@ -3156,6 +3156,18 @@
   },
   {
     "kind": "윤문",
+    "name": "kpl03168_일반 국민 60%가 이해하지 못하는 낱말",
+    "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=플랫폼",
+    "cases": [
+      ["\\b플랫폼(.*)(유통)(\\w*)", "온라인 체제 기반()()()"],
+      ["\\b플랫폼 (사업자)(\\w*)", "온라인 거래터 ()()"],
+      ["\\b플랫폼으로 ([가간갈감갑갔]\\w*)", "승강장으로 ()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "윤문",
     "name": "kpl03171_일반 국민 60%가 이해하지 못하는 낱말",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=플러그인",
     "cases": [
