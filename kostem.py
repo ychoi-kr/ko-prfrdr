@@ -6,7 +6,7 @@ from utils import joinseq
 ## A: Adjective (removed final consonant which will be dropped during conjugatation)
 # can be conjugated to                            # VS            AS       ASL     ASN     AVC          AVM     AVN     BH
 KS_Aa = '나ㅃ|바ㅃ'                               # +ㅏ지다       +ㅡ+다   +ㅡ+ㄹ  +ㅡ+ㄴ  +ㅏ서        +ㅡ+게  +ㅡ+지 
-KS_Ab = '가까|귀여|더|무서|쉬|차가|추|해로'       # +워지다       +ㅂ+다   +울     +운     +워서        +ㅂ+게  +ㅂ+지 
+KS_Ab = '가까|귀여|더|무서|쉬|즐거|차가|추|해로'       # +워지다       +ㅂ+다   +울     +운     +워서        +ㅂ+게  +ㅂ+지 
 KS_Ac = '많|맑|않|작|좁'                          # +아지다       +다      +을     +은     +아서        +게     +지    
 KS_Ad = '다'            # sweet                   # +ㄹ+아지다    +ㄹ+다   +ㄹ     +ㄴ     +ㄹ+아서     +ㄹ+게  +ㄹ+지 
 KS_Ae = '예ㅃ|ㅋ'                                 # +ㅓ지다       +ㅡ+다   +ㅡ+ㄹ  +ㅡ+ㄴ  +ㅓ서        +ㅡ+게  +ㅡ+지 

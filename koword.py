@@ -22,8 +22,26 @@ def conjugate(stems, *postfix):
 def monosyllables(psv):
     return '|'.join([s for s in psv.split('|') if len(s) == 1])
 
-## Nouns - Status
+## Nouns - From Adjective
+KW_NF = '|'.join(sorted(
+        conjugate(ks.KS_Ab, '움')
+        + conjugate(ks.KS_Ac, '음')
+        + conjugate(ks.KS_Ae, 'ㅡ', 'ㅁ')
+        + conjugate(ks.KS_Ai, '음')
+        + conjugate(ks.KS_Aj, '음')
+        + conjugate(ks.KS_Ak, '음')
+        + conjugate(ks.KS_Al, '름')
+        + conjugate(ks.KS_Am, '음')
+        + conjugate(ks.KS_Am, 'ㅁ')
+        + conjugate(ks.KS_Ao, '음')
+        + conjugate(ks.KS_Ap, 'ㅁ')
+        + conjugate(ks.KS_Ar, '움')
+        + conjugate(ks.KS_As, '음')
+        + conjugate(ks.KS_Aw, '움')
+    )
+)
 
+## Nouns - Status
 KW_NSf = "심각|[둔민]감|건강|간결|깔끔|매끈|[불]?가능|간단|못마땅|가득|근면|곤란|부지런|[장졸]렬|지저분|[단온지]순|비슷|참신|[불]?성실|부실|[미병심]약|치열|편안|동일|복잡|부족|[부]?적절|착|공평|[명정]확"
 KW_NSv = "유사|[자섬]세|간소|상이|수요|[거장중]대|진부|[긴중필]요"
 KW_NS = joinseq(KW_NSf, KW_NSv)
@@ -355,7 +373,7 @@ KW_Fv = "[A-Za-z0-9]*ice|[A-Za-z0-9]*ocks|[A-Za-z0-9]*old|[A-Za-z0-9]*uy|[A-Za-z
 
 ## Thing(무정물)
 ### Abstract
-KW_NTAfc = "관측값|공간|물건|학년|[능출]력|연령|프로그램|말|명산|걸음|목적|전략|칼럼|입력|블록|그룹|스트림|별명|[품항]목|논문|방법|형상|성|창의성|특성|솔루션|커넥션|애플리케이션|[상지]식|직업|앱|영역|차원|웹|도메인|요인|타입|점|규정|[시지]점|수준|알고리즘|군집|층|토큰|스텝|시스템|패턴|팀|상품|토픽|국민[ ]?평형|모형"
+KW_NTAfc = "관측값|공간|물건|학년|[능출]력|연령|프로그램|말|명산|걸음|목적|전략|칼럼|입력|블록|그룹|스트림|별명|[품항]목|논문|방법|형상|성|창의성|특성|솔루션|커넥션|애플리케이션|[상지]식|직업|앱|영역|차원|웹|도메인|요인|타입|점|규정|[시지]점|수준|알고리즘|인터넷|군집|층|토큰|스텝|시스템|패턴|팀|상품|토픽|국민[ ]?평형|모형"
 KW_NTAfl = "채널|모델|모듈|행렬|테이블|현실|[이]?메일|스타일|품질|튜플" # ends with letter which has ㄹ(lieul) as final consonant
 KW_NTAf = joinseq(KW_NTAfc, KW_NTAfl)
 KW_NTAv = "근거|출입구|[용정]도|메서드|스레드|코드|사용료|시류|메모리|처리|카테고리|리뷰|의사|[요축]소|[난변인함]수|부동소수점수|분위수|순서|마이크로서비스|서비스|클래스|[단언]어|레이어|소프트웨어|하드웨어|범위|차이|글자|일자|범주|이미지|[시절]차|아키텍처|피처|[고기물신액옥자형]체|가중치|관측치|배치|네트워크|에포크|태스크|데이터|벡터|학습 데이터|형태|세그먼트|이벤트|컴포넌트|크레이트|폰트|전자파|분포|번호|비밀번호|변화|기회"
