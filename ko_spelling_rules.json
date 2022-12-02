@@ -615,6 +615,24 @@
   },
   {
     "kind": "맞춤법",
+    "name": "esjg0388a_삼다",
+    "desc": "https://esjgum.tistory.com/388",
+    "cases": [
+      ["\\b(멘토|양자|운동|신조)(|[으]?로) 삶([고는다며아았지]\\w*)", "()() 삼()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "esjg0388b_삶다",
+    "desc": "https://esjgum.tistory.com/388",
+    "cases": [
+      ["\\b(감자|고구마|고기|고무장갑|땅콩|문어|빨래|수육|시래기|야채|양배추|오징어|재료|풋땅콩|행주)([를을]?) 삼([다아았]\\w*)", "()() 삶()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "hunmin02_맞춤법(훈민정음 야구단 2)",
     "desc": "http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788961885416",
     "cases": [
@@ -1569,7 +1587,7 @@
     "name": "qa065951_듯이",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=65951",
     "cases": [
-      ["(\\w+)드시\\b", "()듯이"]
+      ["(\\w+[렸이하])드시\\b", "()듯이"]
     ],
     "exception": []
   },
