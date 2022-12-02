@@ -1,6 +1,6 @@
 [
   {
-    "kind": "외래어",
+    "kind": "어문 규범",
     "name": "nm200221_부정확한 단어(어문 규범 준수 실태 조사, 2002)",
     "desc": "https://www.korean.go.kr/attachFile/viewer/202211/9f40126a-2948-43cc-b551-307ec5d94ade.hwp.htm",
     "cases": [
@@ -12,7 +12,7 @@
     ]
   },
   {
-    "kind": "외래어",
+    "kind": "어문 규범",
     "name": "nm200222_외래어 및 한자어 남용(어문 규범 준수 실태 조사, 2002)",
     "desc": "https://www.korean.go.kr/attachFile/viewer/202211/9f40126a-2948-43cc-b551-307ec5d94ade.hwp.htm",
     "cases": [
