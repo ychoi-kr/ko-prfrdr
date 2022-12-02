@@ -917,15 +917,6 @@
   },
   {
     "kind": "맞춤법",
-    "name": "jkpark09_비규범 표기(박종관) - ‘읍니다, 스빈다’",
-    "desc": "https://s-space.snu.ac.kr/bitstream/10371/176693/1/000000165948.pdf",
-    "cases": [
-      ["(\\w*[렀었])[ ]?(읍니다|스빈다)", "()습니다"]
-    ],
-    "exception": []
-  },
-  {
-    "kind": "맞춤법",
     "name": "jkpark13a_비규범 표기(박종관) - 대체",
     "desc": "https://s-space.snu.ac.kr/bitstream/10371/176693/1/000000165948.pdf",
     "cases": [
@@ -1465,6 +1456,15 @@
   },
   {
     "kind": "맞춤법",
+    "name": "qa011244_산산이",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?&mn_id=&qna_seq=11244",
+    "cases": [
+      ["\\b산산히\\b", "산산이"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "qa012047_그러고 나서",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?&mn_id=&qna_seq=12047",
     "cases": [
@@ -1561,6 +1561,15 @@
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=59339",
     "cases": [
       ["\\b꼭지점", "꼭짓점"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "qa065951_듯이",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=65951",
+    "cases": [
+      ["(\\w+)드시\\b", "()듯이"]
     ],
     "exception": []
   },
@@ -1803,6 +1812,15 @@
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=113775",
     "cases": [
       [ "\\b알미늄", "알루미늄"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "qa114680_‘습니다’",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=114680",
+    "cases": [
+      ["(\\w*[렀었])[ ]?(읍니다|스빈다)", "()습니다"]
     ],
     "exception": []
   },
