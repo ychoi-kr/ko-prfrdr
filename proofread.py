@@ -507,34 +507,46 @@ def display_summary(warnings_counter):
     for ele in sorted(warnings_counter):
         print(f'{ele} ==> count: {warnings_counter[ele]}')
 
-spellchk_rules = [
+spell_rules = [
     ('ko_spelling_rules.json', '맞춤법'),
-    ('ko_spacing_rules.json', '띄어쓰기'),
-    ('ko_terms_error.json', '용어 오탈자'),
-    ('ko_foreign_word.json', '외래어 표기'),
     ('en_spelling_rules.json', '영문 철자'),
 ]
 
-stylechk_rules = [
+spacing_rules = [
+    ('ko_spacing_rules.json', '띄어쓰기'),
+]
+
+style_rules = [
     ('ko_grammar.json', '국문법'),
-    ('en_ko_style_correction.json', '영어 투'),
-    ('ja_ko_style_correction.json', '일본어 투'),
+    ('ko_norm_2002.json', '어문 규범'),
     ('concise_writing.json', '간결한 글쓰기'),
     ('wikibook_style_guide.json', '위키북스 글쓰기 지침'),
 ]
 
-suggest_rules = [
-    ('ko_norm_2002.json', '어문 규범'),
+fluency_rules = [
+    ('ko_foreign_word.json', '외래어 표기'),
+    ('en_ko_style_correction.json', '영어 투'),
+    ('ja_ko_style_correction.json', '일본어 투'),
+]
+
+standard_rules = [
     ('ko_standard_terms.json', '표준 전문용어'),
+    ('ko_terms_error.json', '용어 오탈자'),
+]
+
+plain_rules = [
     ('ko_plain.json', '쉬운 말'),
     ('ko_unbiased.json', '차별적 표현'),
+]
+
+special_rules = [
     ('ko_gov_terms_2012.json', '행정용어 순화'),
     ('ko_electric_terms.json', '전력용어 순화'),
     ('ko_fire_terms.json', '소방용어 순화'),
     ('ko_forest_terms.json', '산림용어 순화'),
 ]
 
-default_rules = spellchk_rules + stylechk_rules + suggest_rules
+default_rules = spell_rules + spacing_rules + style_rules + fluency_rules + standard_rules + plain_rules + special_rules
 
 
 if __name__ == '__main__':
