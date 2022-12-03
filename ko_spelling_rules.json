@@ -239,6 +239,15 @@
   },
   {
     "kind": "맞춤법",
+    "name": "0153785b_-어지다",
+    "desc": "https://wikidocs.net/153785#b",
+    "cases": [
+      ["\\b이뤄어[ ]?([져졌지진질짐집]\\w*)", "이루어()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "0153824_인용 표현",
     "desc": "https://wikidocs.net/153824",
     "cases": [
