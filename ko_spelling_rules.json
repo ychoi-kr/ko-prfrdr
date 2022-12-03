@@ -1422,6 +1422,15 @@
   },
   {
     "kind": "맞춤법",
+    "name": "qa008054a_한해서",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=8054",
+    "cases": [
+      ["\\b(KW_NT)에 한에(서[만]?) (KW_NAF)(\\w*)", "(1)에 한해(2) (3)(4)"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "qa008434_서슴지",
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=8434",
     "cases": [
