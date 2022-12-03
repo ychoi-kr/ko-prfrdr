@@ -518,7 +518,8 @@ spacing_rules = [
 
 style_rules = [
     ('ko_grammar.json', '국문법'),
-    ('ko_norm_2002.json', '어문 규범'),
+    ('ko_precise_word.json', '적확한 단어'),
+    ('ko_hanja_abusing.json', '한자어 남용'),
     ('concise_writing.json', '간결한 글쓰기'),
     ('wikibook_style_guide.json', '위키북스 글쓰기 지침'),
 ]

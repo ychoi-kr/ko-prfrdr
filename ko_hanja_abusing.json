@@ -1,0 +1,14 @@
+[
+  {
+    "kind": "한자어 남용",
+    "name": "nm200222h_한자어 남용(어문 규범 준수 실태 조사, 2002)",
+    "desc": "https://www.korean.go.kr/attachFile/viewer/202211/9f40126a-2948-43cc-b551-307ec5d94ade.hwp.htm",
+    "cases": [
+      ["십지[ ]?지문", "열 손가락 지문"],
+      ["\\b공란", "빈칸"],
+      ["\\b구좌", "계좌"]
+    ],
+    "exception": [
+    ]
+  }
+]
