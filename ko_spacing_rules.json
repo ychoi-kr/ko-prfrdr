@@ -4315,13 +4315,19 @@
   },
   {
     "kind": "띄어쓰기",
-    "name": "qa200935_겉모습",
+    "name": "qa200935a_모습",
     "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=200935",
     "cases": [
-      [
-        "겉 모습",
-        "겉모습"
-      ]
+      ["\\b(생활|속)모습", "() 모습"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "qa200935b_겉모습",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=200935",
+    "cases": [
+      ["\\b겉 모습", "겉모습"]
     ],
     "exception": []
   },
