@@ -7,7 +7,7 @@ import proofread as prf
 parser = argparse.ArgumentParser()
 parser.add_argument("filename", nargs="?", type=str)
 parser.add_argument("--rule", type=str)
-parser.add_argument("--rulefile", default=' '.join([x[0] for x in prf.spellchk_rules]))
+parser.add_argument("--rulefile", default=' '.join([x[0] for x in prf.spell_rules + prf.spacing_rules]))
 parser.add_argument("--show_all_lines", action="store_true")
 parser.add_argument("--debug", action="store_true")
 parser.add_argument("--profile", action="store_true")

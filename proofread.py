@@ -509,6 +509,7 @@ def display_summary(warnings_counter):
 
 spell_rules = [
     ('ko_spelling_rules.json', '맞춤법'),
+    ('ko_terms_error.json', '오탈자'),
     ('en_spelling_rules.json', '영문 철자'),
 ]
 
@@ -518,7 +519,7 @@ spacing_rules = [
 
 style_rules = [
     ('ko_grammar.json', '국문법'),
-    ('ko_precise_word.json', '적확한 단어'),
+    ('ko_precise_word.json', '적확하지 않은 어휘'),
     ('ko_hanja_abusing.json', '한자어 남용'),
     ('concise_writing.json', '간결한 글쓰기'),
     ('wikibook_style_guide.json', '위키북스 글쓰기 지침'),
@@ -532,7 +533,6 @@ fluency_rules = [
 
 standard_rules = [
     ('ko_standard_terms.json', '표준 전문용어'),
-    ('ko_terms_error.json', '용어 오탈자'),
 ]
 
 plain_rules = [
