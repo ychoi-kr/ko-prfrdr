@@ -592,7 +592,7 @@
     "name": "cplus202_자주 헷갈리는 철자",
     "desc": "이것만 알아두면 맞춤법은 끝나(http://cultureplus.com/)",
     "cases": [
-      [ "걸맞는", "걸맞은" ],
+      ["dup:걸맞는", "걸맞은" ],
       ["dup:넓직한", "널찍한" ],
       [ "뇌졸증", "뇌졸중" ],
       [ "도데체", "도대체" ],
@@ -1478,6 +1478,15 @@
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=9051",
     "cases": [
       [ "(\\w+[그누기마미리사써쓰여우으이주파하]시)요[.]", "()오." ]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "qa009268_걸맞은",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=9268",
+    "cases": [
+      ["걸맞는", "걸맞은" ]
     ],
     "exception": []
   },
