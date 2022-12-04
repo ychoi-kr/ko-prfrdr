@@ -574,6 +574,15 @@
   },
   {
     "kind": "맞춤법",
+    "name": "0181584_욱여넣다",
+    "desc": "https://wikidocs.net/181584",
+    "cases": [
+      ["\\b우겨(넣[고는다단습어으음을지진며면]\\w*)", "욱여()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "chad2016_한눈에 알아보는 문화재 안내문 바로 쓰기",
     "desc": "https://www.korean.go.kr/front/etcData/etcDataView.do?mn_id=46&etc_seq=495",
     "cases": [
@@ -656,6 +665,15 @@
       ["\\b깍뚜기", "깍두기"],
       ["\\b볶은밥", "볶음밥"],
       ["\\b숫가락", "숟가락"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "jade0275_어치",
+    "desc": "https://bookeditorjade.tistory.com/275",
+    "cases": [
+      ["\\b(\\d+)만[ ]?원치", "()만 원어치"]
     ],
     "exception": []
   },
