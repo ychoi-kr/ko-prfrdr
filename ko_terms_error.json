@@ -23,7 +23,6 @@
       ["\\b서비서(|를) (만[드든들]\\w*)", "서비스() ()"],
       ["프로로콜", "프로토콜"],
       ["([A-Za-z0-9_]+ 의) 편자", "() 편차"],
-      ["에라토스테네스의 채", "에라토스테네스의 체"],
       ["배타분포", "베타분포"],
       ["데스트[탑톱]", "데스크톱"],
       ["\\b캐이블", "케이블"],
@@ -35,6 +34,24 @@
       ["\\b변렬", "병렬"],
       ["\\b숙발 시설", "숙박 시설"],
       ["\\b([송수]신) 포터 (번호)", "() 포트 ()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "오탈자",
+    "name": "sd332817_체",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=332817&searchKeywordTo=3",
+    "cases": [
+      ["에라토스테네스의 채", "에라토스테네스의 체"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "오탈자",
+    "name": "sd357412_푸리에",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=357412&searchKeywordTo=3",
+    "cases": [
+      ["\\b고속 프리에 변환", "고속 푸리에 변환"]
     ],
     "exception": []
   }
