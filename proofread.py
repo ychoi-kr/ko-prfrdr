@@ -541,6 +541,7 @@ plain_rules = [
 ]
 
 special_rules = [
+    ('ko_culture_guide_2016.json', '문화재 안내문 바로 쓰기'),
     ('ko_gov_terms_2012.json', '행정용어 순화'),
     ('ko_electric_terms.json', '전력용어 순화'),
     ('ko_fire_terms.json', '소방용어 순화'),
