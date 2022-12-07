@@ -70,7 +70,7 @@ KJ_IO = "라도|이라도"
 KJ_IP = "요"
 
 ### Range
-KJ_IR = "부터|까지"
+KJ_IR = "부터|까지[가도는를]?"
 
 ### Unique
 KJ_IU = "만"
