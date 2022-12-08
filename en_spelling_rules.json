@@ -7,7 +7,9 @@
 	  ["JBoxx", "JBoss"],
 	  ["Java[Ss]crtip", "JavaScript"],
       ["([Oo])verfloew", "()verflow"],
-      ["\\b([Mm])odulization", "()odularization"]
+      ["\\b([Mm])odulization", "()odularization"],
+      ["\\braodmap", "roadmap"],
+      ["\\bDMBS", "DBMS"]
     ],
     "exception": []
   }

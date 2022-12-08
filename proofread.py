@@ -509,7 +509,7 @@ def display_summary(warnings_counter):
 
 spell_rules = [
     ('ko_spelling_rules.json', '맞춤법'),
-    ('ko_terms_error.json', '오탈자'),
+    ('ko_terms_error.json', '용어 오탈자'),
     ('en_spelling_rules.json', '영문 철자'),
 ]
 

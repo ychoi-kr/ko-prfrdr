@@ -1178,7 +1178,6 @@
       ["\\b에어 택시", "비행 택시, 항공 택시"],
       ["\\b에어컨디셔너", "냉난방기, 공기 조절기"],
       ["\\b에이전시", "대행사"],
-      ["\\b에이전트", "대리점, 대리상, 대리인, 대행인"],
       ["\\b에이징", "건식 숙성"],
       ["\\b에지 컴퓨팅", "분산 서버 실행, 실시간 데이터 처리"],
       ["\\b에코 드라이빙", "친환경 운전"],
@@ -2553,6 +2552,15 @@
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=에디터",
     "cases": [
       ["\\b(|전문 |잡지사 )에디터( 역할| 육성|로 일[하한할함합해했]\\w*)", "()편집자()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "쉬운 말",
+    "name": "kpl01811_일반 국민 60%가 이해하지 못하는 낱말",
+    "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=에이전트",
+    "cases": [
+      ["\\b(|프로스포츠 |수출 저작권 )에이전트", "()대리인"]
     ],
     "exception": []
   },
