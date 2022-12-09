@@ -456,10 +456,32 @@
   },
   {
     "kind": "일본어 투",
+    "name": "0181968a_요구되다",
+    "desc": "https://wikidocs.net/181968#a",
+    "cases": [
+      ["\\b(KW_NP)들의 각별한 (KW_NAO)[가이] 요구됩니다", "(1)들이 각별히 (2)해야 합니다"],
+      ["\\b(KW_NP)들의 신중한 (KW_NAO)[가이] 요구됩니다", "(1)들이 신중하게 (2)해야 합니다"],
+      ["\\b(풍부)한 (KW_NAH)([가이]) 요구되면서", "(1)하게 ()할 필요가 생기면서"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "일본어 투",
     "name": "jako5e0e_서비스 인(サービスイン)",
     "desc": "https://ja.dict.naver.com/#/entry/jako/5e0e5eca83b34b47bd55b78cf748aa5e",
     "cases": [
       ["\\b서비스[ ]?인 (까지\\w*|과 함께)\\b", "서비스 인()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "일본어 투",
+    "name": "kbs00284b_주어지다",
+    "desc": "http://world.kbs.co.kr/service/contents_view.htm?lang=k&menu_cate=learnkorean&id=&board_seq=228502&page=284",
+    "cases": [
+      ["\\b자기에게 주어진 역할에", "자기가 맡은 역할에"]
     ],
     "exception": [
     ]
