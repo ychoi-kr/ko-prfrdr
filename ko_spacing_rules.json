@@ -3556,7 +3556,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa000268_걱정하지 마",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=268",
+    "desc": "https://wikidocs.net/181967#268",
     "cases": [
       ["(KW_NAO)하지([마말]\\w*)", "()하지 ()"]
     ],
@@ -3565,7 +3565,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa002768_등",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=2768",
+    "desc": "https://wikidocs.net/181967#2768",
     "cases": [
       ["([A-Za-z_]+)(등)(|[에은을의]|으로\\w*|[이인일입]\\w*)\\b", "() ()()"],
       ["\\b(KW_NT)(등)(|[에은을의]|으로\\w*|[이인일입]\\w*)\\b", "() ()()"],
@@ -3576,7 +3576,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa002843_오랜 시간",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=2843",
+    "desc": "https://wikidocs.net/181967#2843",
     "cases": [
       ["\\b오랜시간", "오랜 시간"]
     ],
@@ -3585,7 +3585,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa007529_‘상자’, ‘박스’",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=7529",
+    "desc": "https://wikidocs.net/181967#7529",
     "cases": [
       ["\\b(KW_NC)(박스)", "() ()"],
       ["\\b([뇌보선]물|사과|용돈|라면)(박스|상자)", "() ()"]
@@ -3595,7 +3595,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa007828_안 좋다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=7828",
+    "desc": "https://wikidocs.net/181967#7828",
     "cases": [
       ["\\b안(좋다[고면]?|좋아[서]?|좋으\\w+|좋을 것|좋을 텐더|좋을까\\w*)", "안 ()"],
       ["\\b안좋을[ ]?뿐더러", "안 좋을뿐더러"] 
@@ -3605,7 +3605,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa007881_외",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=7881",
+    "desc": "https://wikidocs.net/181967#7881",
     "cases": [
       ["([가-힣]+)외 (\\d+)([명인])", "() 외 ()()"],
       ["\\b(\\w*값|[A-Za-z0-9_])(외\\w*)", "() ()"],
@@ -3616,7 +3616,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa008414_산 속",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=8414",
+    "desc": "https://wikidocs.net/181967#8414",
     "cases": [
       ["\\b깊은 산 속", "깊은 산속"],
       ["\\b(바닷속.*) 산 속", "() 산속"]
@@ -3626,7 +3626,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa009474",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=9474",
+    "desc": "https://wikidocs.net/181967#9474",
     "cases": [
       ["\\b불 ([길빛])", "불()"],
       ["\\b햇 ([빛])", "햇()"],
@@ -3649,7 +3649,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa011900_눈치채다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=11900",
+    "desc": "https://wikidocs.net/181967#11900",
     "cases": [
       ["\\b눈치 (채\\w+)", "눈치()"]
     ],
@@ -3658,7 +3658,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa015230_‘어떤가’",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=15230",
+    "desc": "https://wikidocs.net/181967#15230",
     "cases": [
       ["\\b어떤 가(에)\\b", "어떤가()"]
     ],
@@ -3667,7 +3667,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa015712_오래전",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=15712",
+    "desc": "https://wikidocs.net/181967#15712",
     "cases": [
       ["\\b오래 전", "오래전"]
     ],
@@ -3676,7 +3676,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa027863_타",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=27863",
+    "desc": "https://wikidocs.net/181967#27863",
     "cases": [
       ["\\b타(거점|문화|업소|지역)", "타 ()"]
     ],
@@ -3685,7 +3685,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa027952_-고 있다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=27952",
+    "desc": "https://wikidocs.net/181967#27952",
     "cases": [
       [
         "\\b(갖|기다리|듣|먹|자|지니|하)고(있\\w*)",
@@ -3705,7 +3705,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa028675a_미소 짓다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=28675",
+    "desc": "https://wikidocs.net/181967#28675",
     "cases": [
       [
         "(미소)([지지졌]\\w*)",
@@ -3717,7 +3717,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa028675b_방 안",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=28675",
+    "desc": "https://wikidocs.net/181967#28675",
     "cases": [
       [
         "\\b(방)(안으로 들어[가갈갔]\\w*)",
@@ -3729,7 +3729,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa028675c_몇 초",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=28675",
+    "desc": "https://wikidocs.net/181967#28675",
     "cases": [
       [
         "몇초",
@@ -3741,7 +3741,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa035951_한두 달",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=35951",
+    "desc": "https://wikidocs.net/181967#35951",
     "cases": [
       ["\\b한두달", "한두 달"]
     ],
@@ -3750,7 +3750,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa046510_기대되다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=46510",
+    "desc": "https://wikidocs.net/181967#46510",
     "cases": [
       ["\\b(기대) (되[고는며지]\\w*)", "()()"],
       ["\\b(기대) ([된될됨됩돼됐]\\w*)", "()()"]
@@ -3760,7 +3760,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa049816_이후",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=49816",
+    "desc": "https://wikidocs.net/181967#49816",
     "cases": [
       ["\\b이 후(\\w*)", "이후()"]
     ],
@@ -3769,7 +3769,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa052181_조차",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=52181",
+    "desc": "https://wikidocs.net/181967#52181",
     "cases": [
       ["\\b(KW_NI) 조차", "()조차"],
       ["\\b(철수|영희) 조차", "()조차"],
@@ -3785,7 +3785,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa052875_가량",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=52875",
+    "desc": "https://wikidocs.net/181967#52875",
     "cases": [
       ["(\\d+%) (가량)", "()()"]
     ],
@@ -3794,7 +3794,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa053182_이어 붙이다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=53182",
+    "desc": "https://wikidocs.net/181967#53182",
     "cases": [
       ["\\b(이어)(붙[여였이인일임]\\w*)", "() ()"]
     ],
@@ -3803,7 +3803,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa055233_예상외",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=55233",
+    "desc": "https://wikidocs.net/181967#55233",
     "cases": [
       ["dup:\\b예상 외(|[로의])\\b", "예상외()"]
     ],
@@ -3812,7 +3812,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa065247_주식회사",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=65247",
+    "desc": "https://wikidocs.net/181967#65247",
     "cases": [
       ["주식 회사", "주식회사"],
       ["(\\w+)주식[ ]?회사", "() 주식회사"],
@@ -3824,7 +3824,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa073127_씨",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=73127",
+    "desc": "https://wikidocs.net/181967#73127",
     "cases": [
       ["홍걸씨", "홍걸 씨"]
     ],
@@ -3833,7 +3833,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa073333_삼다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=73333",
+    "desc": "https://wikidocs.net/181967#73333",
     "cases": [
       ["<Noun>삼아", "() 삼아"]
     ],
@@ -3842,7 +3842,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa078024_단 한 번",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=78024",
+    "desc": "https://wikidocs.net/181967#78024",
     "cases": [
       [
         "\\b(단|오직)[ ]?한(번[ ]?뿐)",
@@ -3858,7 +3858,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa079849_가져오다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=79849",
+    "desc": "https://wikidocs.net/181967#79849",
     "cases": [
       [
         "\\b(가져) ([오온올왔]\\w*)",
@@ -3870,7 +3870,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa081555_여러 가지",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=81555",
+    "desc": "https://www.wikidocs.net/181967#81555",
     "cases": [
       [
         "여러가지",
@@ -3882,7 +3882,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa084889_똑같은",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=84889",
+    "desc": "https://wikidocs.net/181967#84889",
     "cases": [
       ["\\b똑 같은", "똑같은"]
     ],
@@ -3891,7 +3891,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa086153_오도 가도",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=86153",
+    "desc": "https://www.wikidocs.net/181967#86153",
     "cases": [
       ["오도가도", "오도 가도"]
     ],
@@ -3900,7 +3900,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa090073_한때",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=90073",
+    "desc": "https://www.wikidocs.net/181967#90073",
     "cases": [
       ["(\\w+[는은]) 한 (때의 \\w+[를을])", "() 한()"]
     ],
@@ -3909,7 +3909,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa091617_때문",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=91617",
+    "desc": "https://www.wikidocs.net/181967#91617",
     "cases": [
       ["\\b([그이])(때문\\w*)", "() ()"]
     ],
@@ -3918,7 +3918,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa092387_훨씬 더",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=92387",
+    "desc": "https://www.wikidocs.net/181967#92387",
     "cases": [
       ["훨씬더", "훨씬 더"]
     ],
@@ -3927,7 +3927,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa094384a_집안",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=94384",
+    "desc": "https://www.wikidocs.net/181967#94384",
     "cases": [
       ["\\b집 안([의]?) (식구|어른|운수)", "집안() ()"],
       ["\\b집 안이 (망[하한할했]|안되|화합)(\\w*)", "집안이 ()()"]
@@ -3937,7 +3937,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa094384b_집 안",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=94384",
+    "desc": "https://www.wikidocs.net/181967#94384",
     "cases": [
       ["\\b집안(|에 있는|의) (각종 \\w+|물건|시설)", "집 안() ()"]
     ],
@@ -3946,7 +3946,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa097252_우리말",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=97252",
+    "desc": "https://www.wikidocs.net/181967#97252",
     "cases": [
       [
         "우리 말",
@@ -3958,7 +3958,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa102618_몇",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=102618",
+    "desc": "https://wikidocs.net/181967#102618",
     "cases": [
       [
         "몇(가지|개|차례)",
@@ -3970,7 +3970,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa103407_-명(名)",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=103407",
+    "desc": "https://wikidocs.net/181967#103407",
     "cases": [
       ["\\b(디렉터리|메서드|물품|범주|변수|서비스|수도|지역|칼럼|클래스|파일|패키지|포장|폴더|함수|회사) 명(|까지\\w*|마다|마저\\w*|부터\\w*|뿐|에서\\w*|으로\\w*|을|이|조차\\w*)\\b", "()명()"]
     ],
@@ -3979,7 +3979,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa104151_첫걸음",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=1014151",
+    "desc": "https://wikidocs.net/181967#1014151",
     "cases": [
       [
         "(\\w*[디지]는|위한) 첫 (걸음\\w*)",
@@ -3995,7 +3995,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa105055_일어나다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=105055",
+    "desc": "https://wikidocs.net/181967#105055",
     "cases": [
       ["\\b일어 ([나난남날났]\\w*)", "일어()"]
     ],
@@ -4004,7 +4004,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa109219_고장 나다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=109219",
+    "desc": "https://wikidocs.net/181967#109219",
     "cases": [
       ["\\b고장(나[는도서]|난|났\\w+)\\b", "고장 ()"]
     ],
@@ -4013,7 +4013,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa113293_빈자리 / 빈 자리",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=113293",
+    "desc": "https://www.wikidocs.net/181967#113293",
     "cases": [
       ["\\b빈 자리(나 가서|에) (앉\\w*)", "빈자리() ()"],
       ["\\b빈 자리를 (노[리려]\\w*)", "빈자리를 ()"],
@@ -4025,7 +4025,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa113419_용지",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=113419",
+    "desc": "https://www.wikidocs.net/181967#113419",
     "cases": [
       [ "\\b([A-B][0-9]+)용지", "() 용지"]
     ],
@@ -4034,7 +4034,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa114568_끝부분",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=114568",
+    "desc": "https://www.wikidocs.net/181967#114568",
     "cases": [
       ["\\b끝 부분", "끝부분"]
     ],
@@ -4043,7 +4043,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa116306_스타트업",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=116306",
+    "desc": "https://www.wikidocs.net/181967#116306",
     "cases": [
       ["\\b스타트 업(|[도은을에이]|에서[도는만]?|이다|입니다)\\b", "스타트업()"]
     ],
@@ -4052,7 +4052,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa116469_할 일 / 할 말",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=116469",
+    "desc": "https://www.wikidocs.net/181967#116469",
     "cases": [
       ["\\b할([일말]\\w*)", "할 ()"]
     ],
@@ -4061,7 +4061,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa117010_배",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=117010",
+    "desc": "https://www.wikidocs.net/181967#117010",
     "cases": [
       ["\\b(KW_NNK)배(|[고나는다로를만면인일]|만큼|보다|여서[가는도]|였다|였습니다|이다|[이]?지만|임에도|입니다|쯤)\\b", "() 배()"]
     ],
@@ -4070,7 +4070,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa117048_-까지 하다",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=117048",
+    "desc": "https://www.wikidocs.net/181967#117048",
     "cases": [
       [
         "(고맙기까지)(하다)",
@@ -4082,7 +4082,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa118484_봉지",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=118484",
+    "desc": "https://www.wikidocs.net/181967#118484",
     "cases": [
       ["\\b(비닐) 봉지", "()봉지"],
       ["\\b(설탕|종이)봉지", "() 봉지"]
@@ -4092,7 +4092,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa124192_라, 라고",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=124192",
+    "desc": "https://wikidocs.net/181967#124192",
     "cases": [
       ["(\\w*[^를을 ]) 라[ ]?([고]?)\\b", "()라()"]
     ],
@@ -4101,7 +4101,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa124217_~에 따라",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=124217",
+    "desc": "https://wikidocs.net/181967#124217",
     "cases": [
       ["(\\w+에)(따라[서]?)", "() ()"]
     ],
@@ -4110,7 +4110,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa127230_와닿다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=127230",
+    "desc": "https://wikidocs.net/181967#127230",
     "cases": [
       ["b와 (닿[고는다아았은을지]\\w*)", "와()"]
     ],
@@ -4119,7 +4119,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa127895_어처구니없다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=127895",
+    "desc": "https://wikidocs.net/181967#127895",
     "cases": [
       [
         "(어처구니) (없\\w*)",
@@ -4131,7 +4131,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa129566_처리",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=129566",
+    "desc": "https://wikidocs.net/181967#129566",
     "cases": [
 	  ["\\b(사고|일|주석|행정)(처리)", "() ()"],
 	  ["\\b(처리)(속도)", "() ()"]
@@ -4141,7 +4141,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa133755a_모양",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=133755",
+    "desc": "https://wikidocs.net/181967#133755",
     "cases": [
       ["<Noun>모양", "() 모양"]
     ],
@@ -4150,7 +4150,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa133790_가능한 한",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=133790",
+    "desc": "https://wikidocs.net/181967#133790",
     "cases": [
       [
         "가능한한",
@@ -4162,7 +4162,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa133893_놀이 기구",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=133893",
+    "desc": "https://wikidocs.net/181967#133893",
     "cases": [
       ["놀이기구", "놀이 기구"]
     ],
@@ -4171,7 +4171,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa135077_한 해",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=135077",
+    "desc": "https://wikidocs.net/181967#135077",
     "cases": [
       ["\\b(올|건강한) 한해\\b", "() 한 해"]
     ],
@@ -4180,7 +4180,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa136393_더없이",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=136393",
+    "desc": "https://wikidocs.net/181967#136393",
     "cases": [
       ["\\b더 없이 (행복)(\\w*)", "더없이 ()()"]
     ],
@@ -4189,7 +4189,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa137856_오(誤)",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=137856",
+    "desc": "https://wikidocs.net/181967#137856",
     "cases": [
       ["\\b오 (KW_NAO)", "오()"]
     ],
@@ -4198,7 +4198,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa139240_컵",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=139240",
+    "desc": "https://wikidocs.net/181967#139240",
     "cases": [
       ["\\b(유리) 컵", "()컵"],
       ["\\b(사기|청동)컵", "() 컵"]
@@ -4208,7 +4208,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa142356_만 0세",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?&mn_id=&qna_seq=142356",
+    "desc": "https://wikidocs.net/181967#142356",
     "cases": [
       ["만([1-9]?[0-9]+)세", "만 ()세"]
     ],
@@ -4217,7 +4217,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa144059_흉내 내다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=144059",
+    "desc": "https://wikidocs.net/181967#144059",
     "cases": [
       [
         "(흉내)([내낼냈]\\w+)",
@@ -4229,7 +4229,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa144170_자신 있다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=144170",
+    "desc": "https://wikidocs.net/181967#144170",
     "cases": [
       ["dup:\\b(자신)(있\\w+)", "() ()"]
     ],
@@ -4238,7 +4238,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa145034_몸 둘 바",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=145034",
+    "desc": "https://wikidocs.net/181967#145034",
     "cases": [
       ["\\b몸둘 바(KJ)", "몸 둘 바()"]
     ],
@@ -4247,7 +4247,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa158311_초중반, 중후반",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=158311",
+    "desc": "https://wikidocs.net/181967#158311",
     "cases": [
       [
         "초 중반",
@@ -4263,7 +4263,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa158573_잘못되다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=158573",
+    "desc": "https://wikidocs.net/181967#158573",
     "cases": [
       ["(규정|규칙|문제|법|보기|예제|일|코드)(가|이) (잘못) ([되된될됐]\\w+)", "()() ()()"]
     ],
@@ -4272,7 +4272,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa171555_방 안",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=171555",
+    "desc": "https://wikidocs.net/181967#171555",
     "cases": [
       ["\\b(|내 )방안(|에[서]?) (가득|가보면|가서|\\w+ 공방|누가|누구|무슨 소리가|음악\\w*)", "()방 안() ()"]
     ],
@@ -4281,7 +4281,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa173099_요구 사항",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=173099",
+    "desc": "https://wikidocs.net/181967#173099",
     "cases": [
       ["요구사항", "요구 사항"]
     ],
@@ -4290,7 +4290,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa173808_가다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=173808",
+    "desc": "https://wikidocs.net/181967#173808",
     "cases": [
       ["\\b(군대|집|\\w*학교|[A-Za-z0-9]+)(가[는니다도보봐서자]\\w*|간다|간 뒤로\\w*|간 후에|갈게\\w*)\\b", "() ()"]
     ],
@@ -4299,7 +4299,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa177648_이렇다 할",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=177648",
+    "desc": "https://wikidocs.net/181967#177648",
     "cases": [
       [
         "이렇다할",
@@ -4311,7 +4311,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa179712_별다른",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=179712",
+    "desc": "https://wikidocs.net/181967#179712",
     "cases": [
       ["\\b별 다른", "별다른"]
     ],
@@ -4320,7 +4320,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa180311_쉴 새 없다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=180311",
+    "desc": "https://wikidocs.net/181967#180311",
     "cases": [
       ["\\b쉴새 (없\\w+)", "쉴 새 ()"],
       ["\\b(쉴)[ ]?새(없\\w+)", "() 새 ()"]
@@ -4330,7 +4330,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa184692_전(全)",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=184692",
+    "desc": "https://wikidocs.net/181967#184692",
     "cases": [
       [
         "\\b전(국민|세계)",
@@ -4342,7 +4342,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa186744_따라가다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=186744",
+    "desc": "https://wikidocs.net/181967#186744",
     "cases": [
       ["\\b따라 (가며|가면서|가다|간|간다|갈|갈지[는도를만]?|감|갑니다|갔\\w*)\\b", "따라()"]
     ],
@@ -4351,7 +4351,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa188364_디테일하다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=188364",
+    "desc": "https://wikidocs.net/181967#188364",
     "cases": [
       ["\\b디테일 ([하한할함해했]\\w*)", "디테일()"]
     ],
@@ -4360,7 +4360,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa190403_그런가이다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=190403",
+    "desc": "https://wikidocs.net/181967#190403",
     "cases": [
       [
         "(그런가|그런지|그러냐|그럴까)[?]? ([이]?[었였]?다)\\b",
@@ -4372,7 +4372,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa190536_하다 보면",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=190536",
+    "desc": "https://wikidocs.net/181967#190536",
     "cases": [
       ["(\\w*하다|\\w*해[ ]?가다)(보면)", "() ()"]
     ],
@@ -4381,7 +4381,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa192958_몸속",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=192958",
+    "desc": "https://wikidocs.net/181967#192958",
     "cases": [
       ["\\b몸 속(|[도에은을의]|마저[도]?|만[도은을이]?|으로[는도]?|이[고다며면]?|이지[만]?|입니다|조차[도]?)\\b", "몸속()"]
     ],
@@ -4390,7 +4390,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa195789_신경 쓰다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=195789",
+    "desc": "https://wikidocs.net/181967#195789",
     "cases": [
       ["\\b(신경)([써썼쓰쓴쓸]\\w*)", "() ()"]
     ],
@@ -4399,7 +4399,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa200935a_모습",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=200935",
+    "desc": "https://wikidocs.net/181967#200935",
     "cases": [
       ["\\b(생활|속)모습", "() 모습"]
     ],
@@ -4408,7 +4408,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa200935b_겉모습",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=200935",
+    "desc": "https://wikidocs.net/181967#200935",
     "cases": [
       ["\\b겉 모습", "겉모습"]
     ],
@@ -4417,7 +4417,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa202694_올해",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=202694",
+    "desc": "https://wikidocs.net/181967#202694",
     "cases": [
       ["올 해(?= 단 한 번)", "올해"]
     ],
@@ -4426,7 +4426,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa203393_아주 오래전",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=203393",
+    "desc": "https://wikidocs.net/181967#203393",
     "cases": [
       ["아주 오래 전", "아주 오래전"]
     ],
@@ -4435,7 +4435,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa205783_~하기만 하다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=205783",
+    "desc": "https://wikidocs.net/181967#205783",
     "cases": [
       ["\\b(\\w*[받보]|\\w*[려어워]지|미루|빼|숨)(기만)([하한할함합해했]\\w*)", "()() ()"],
       ["\\b(귀찮|끔찍하|낯설|놀랍|두렵|멀|무겁|무섭|불길하|싫|아프|어색하|좋)(기만)([하한할함합해했]\\w*)", "()() ()"]
@@ -4445,7 +4445,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa208850_건너뛰다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=208850",
+    "desc": "https://wikidocs.net/181967#208850",
     "cases": [
       ["건너 ([뛰뛴]\\w*)", "건너()"]
     ],
@@ -4454,7 +4454,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa215319a_‘-ㄴ바’",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=215319",
+    "desc": "https://wikidocs.net/181967#215319",
     "cases": [
       [
         "(\\w*한) (바[,]? 사실과 달랐다)",
@@ -4466,7 +4466,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa215319b_‘바’",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=215319",
+    "desc": "https://wikidocs.net/181967#215319",
     "cases": [
       [
         "(\\w*[진한])(바[가와])\\b",
@@ -4478,7 +4478,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa219282_‘백스페이스’",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=219282",
+    "desc": "https://wikidocs.net/181967#219282",
     "cases": [
       ["\\b백 스페이스", "백스페이스"]
     ],
@@ -4487,7 +4487,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa219377_알 게",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=219377",
+    "desc": "https://wikidocs.net/181967#219377",
     "cases": [
       ["\\b알게 (뭐야)", "알 게 ()"]
     ],
@@ -4496,7 +4496,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa222235_자료 요청",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=222235",
+    "desc": "https://wikidocs.net/181967#222235",
     "cases": [
       ["자료요청", "자료 요청"]
     ],
@@ -4505,7 +4505,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa222598a_사용 중",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=222598",
+    "desc": "https://wikidocs.net/181967#222598",
     "cases": [
       [
         "([이사활]용)(중\\w*)",
@@ -4517,7 +4517,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa224845_빈자리",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=224845",
+    "desc": "https://www.wikidocs.net/181967#224845",
     "cases": [
       ["\\b(네) 빈 자리가 (너무 [커크]\\w*)", "() 빈자리가 ()"]
     ],
@@ -4526,7 +4526,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa227135_안, 아니",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=227135",
+    "desc": "https://wikidocs.net/181967#227135",
     "cases": [
       ["\\b(너무 \\w+서) 안(보[여였이인일임]\\w*)", "() 안 ()"],
       ["\\b(안|아니)([넣]\\w+)", "() ()"],
@@ -4538,7 +4538,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa228050_가득 차다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=228050",
+    "desc": "https://wikidocs.net/181967#228050",
     "cases": [
       ["\\b가득([차찬찰참찹찼]\\w*)", "가득 ()"]
     ],
@@ -4547,7 +4547,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa228949_디자인되다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=228949",
+    "desc": "https://wikidocs.net/181967#228949",
     "cases": [
       ["\\b(디자인) ([돼됐되된될됨됩]\\w*)", "()()"]
     ],
@@ -4556,7 +4556,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa229580_일수",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=229580",
+    "desc": "https://wikidocs.net/181967#229580",
     "cases": [
       ["\\b(연체)일수", "() 일수"],
       ["\\b(연체)([된]?)[ ]?일 수(만큼)", "()() 일수()"],
@@ -4567,7 +4567,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa234751_게임 회사",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=234751",
+    "desc": "https://wikidocs.net/181967#234751",
     "cases": [
       [
         "(게임)(회사)",
@@ -4579,7 +4579,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa236477_한데",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=236477",
+    "desc": "https://wikidocs.net/181967#236477",
     "cases": [
       ["\\b한 데 (모[아았여였으은을이인일임]\\w*)", "한데 ()"]
     ],
@@ -4588,7 +4588,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa238217_마음가짐",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=238217",
+    "desc": "https://wikidocs.net/181967#238217",
     "cases": [
       ["마음 가짐", "마음가짐"]
     ],
@@ -4597,7 +4597,7 @@
   {
     "kind": "띄어쓰기",
     "name": "qa239943_-기 쉽다",
-    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=239943",
+    "desc": "https://wikidocs.net/181967#239943",
     "cases": [
       [
         "(\\w*기)([쉬쉽]\\w*)",

@@ -57,7 +57,7 @@
   {
     "kind": "적확하지 않은 어휘",
     "name": "qa175577_편(책이나 영화, 시 따위를 세는 단위)",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=175577",
+    "desc": "https://wikidocs.net/181967#175577",
     "cases": [
       ["(\\d+)개의 (시|영화|책)", "(1)편의 (2), (2) (1)편"]
     ],

@@ -789,7 +789,7 @@
   {
     "kind": "외래어",
     "name": "qa002014_포맷",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?&mn_id=84&qna_seq=2014",
+    "desc": "https://wikidocs.net/181967#2014",
     "cases": [
       ["포멧", "포맷"]
     ],
@@ -799,7 +799,7 @@
   {
     "kind": "외래어",
     "name": "qa032126_'screeshot'의 표기",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=32126",
+    "desc": "https://wikidocs.net/181967#32126",
     "cases": [
       ["스크린샷", "스크린숏"]
     ],
@@ -809,7 +809,7 @@
   {
     "kind": "외래어",
     "name": "qa080001a_[ju] 음의 표기",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=80001",
+    "desc": "https://wikidocs.net/181967#80001",
     "cases": [
       ["\\b수퍼(마켓|마킷)", "슈퍼마켓"],
       ["\\b스투디오", "스튜디오"],
@@ -821,7 +821,7 @@
   {
     "kind": "외래어",
     "name": "qa081761_'block'의 표기",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=81761",
+    "desc": "https://wikidocs.net/181967#81761",
     "cases": [
       ["블럭", "블록"]
     ],
@@ -831,7 +831,7 @@
   {
     "kind": "외래어",
     "name": "qa086769_알루미늄",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=86769",
+    "desc": "https://wikidocs.net/181967#86769",
     "cases": [
       ["알류미늄", "알루미늄"]
     ],
@@ -841,7 +841,7 @@
   {
     "kind": "외래어",
     "name": "qa106350_페널티",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=106350",
+    "desc": "https://wikidocs.net/181967#106350",
     "cases": [
       ["패널티", "페널티"]
     ],
@@ -851,7 +851,7 @@
   {
     "kind": "외래어",
     "name": "qa115184_‘drop’의 표기",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=115184",
+    "desc": "https://wikidocs.net/181967#115184",
     "cases": [
       ["\\b드랍", "드롭"],
       ["\\b드랍[ ]?아웃", "드롭아웃"]
@@ -862,7 +862,7 @@
   {
     "kind": "외래어",
     "name": "qa122235_'identity'의 표기",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=122235",
+    "desc": "https://wikidocs.net/181967#122235",
     "cases": [
       ["아이덴터티", "아이덴티티"]
     ],
@@ -872,7 +872,7 @@
   {
     "kind": "외래어",
     "name": "qa126590_'halloween'의 표기",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=126590",
+    "desc": "https://wikidocs.net/181967#126590",
     "cases": [
       ["\\b할로윈", "핼러윈"]
     ],
@@ -882,7 +882,7 @@
   {
     "kind": "외래어",
     "name": "qa149958_‘production’의 표기",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=149958",
+    "desc": "https://wikidocs.net/181967#149958",
     "cases": [
       ["프러덕션", "프로덕션"]
     ],
@@ -1234,7 +1234,7 @@
   {
     "kind": "외래어",
     "name": "qa044438_컬러",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=44438",
+    "desc": "https://wikidocs.net/181967#44438",
     "cases": [
       ["\\b칼라 (화면)", "컬러 ()"],
       ["(다양한|화려한) 칼라", "() 컬러"]
@@ -1244,7 +1244,7 @@
   {
     "kind": "외래어",
     "name": "qa095095_리더십",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=95095",
+    "desc": "https://wikidocs.net/181967#95095",
     "cases": [
       ["리더쉽", "리더십"]
     ],
@@ -1253,7 +1253,7 @@
   {
     "kind": "외래어",
     "name": "qa072199_스탠퍼드",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?&mn_id=84&qna_seq=72199",
+    "desc": "https://wikidocs.net/181967#72199",
     "cases": [
       ["스탠포드[ ]?대학", "스탠퍼드 대학"]
     ],
@@ -1263,7 +1263,7 @@
   {
     "kind": "외래어",
     "name": "qa086670_팸플릿",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?&mn_id=84&qna_seq=86670",
+    "desc": "https://wikidocs.net/181967#86670",
     "cases": [
       ["팜플렛", "팸플릿"]
     ],
@@ -1273,7 +1273,7 @@
   {
     "kind": "외래어",
     "name": "qa235435_태블릿",
-    "desc": "https://m.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=235435",
+    "desc": "https://wikidocs.net/181967#235435",
     "cases": [
       ["타블렛", "태블릿"],
       ["테블릿", "태블릿"]

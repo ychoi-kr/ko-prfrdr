@@ -272,8 +272,8 @@
   },
   {
     "kind": "간결한 글쓰기",
-    "name": "qa173772_할 수 있다",
-    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=173772",
+    "name": "kw229322_할 수 있다",
+    "desc": "http://world.kbs.co.kr/service/contents_view.htm?lang=k&menu_cate=learnkorean&id=&board_seq=229322&page=225&board_code=net_lang",
     "cases": [
 	  ["\\b(KW_NAO)가 가능하다", "()할 수 있다"],
 	  ["\\b(KW_NAOf)이 가능하([고다])\\b", "()할 수 있()"],
