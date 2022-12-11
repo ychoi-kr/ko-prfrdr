@@ -223,6 +223,19 @@
   },
   {
     "kind": "영어 투",
+    "name": "0182031_많이",
+    "desc": "https://wikidocs.net/182031",
+    "cases": [
+      ["\\b많은 (KW_NP)([가이]) (있\\w+|필요\\w*)\\b", "()() 많이 ()"],
+      ["\\b많은 (KW_NTA)([가이]) (있\\w+|필요\\w*|[든들]\\w*)\\b", "()() 많이 ()"],
+      ["\\b많은 (KW_NTC)([가이]) (있\\w+|필요\\w*)\\b", "()() 많이 ()"],
+      ["\\b많은 (KW_NAO)[가이] 필요하다(|[고는지며면]\\w*)\\b", "많이 ()해야 한다()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "영어 투",
     "name": "hanbit00_흔한 번역 투 TOP 12",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [

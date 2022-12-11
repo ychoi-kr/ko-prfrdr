@@ -31,6 +31,15 @@
   },
   {
     "kind": "적확하지 않은 어휘",
+    "name": "0165478_개연성",
+    "desc": "https://wikidocs.net/165478",
+    "cases": [
+      ["(\\w+지는 것과) (.*) (사이\\w*) 개연성이\\b", "() () () 관계가"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "적확하지 않은 어휘",
     "name": "0166776_fault tolerance",
     "desc": "https://wikidocs.net/166776",
     "cases": [
