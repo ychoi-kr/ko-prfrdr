@@ -26,6 +26,7 @@ true cases:
   - 복잡도 O(logN)으로구할수 있습니다.
   - A와Z 사이에 있는
   - N의 값에 따라서N^2의 값이 어떻게 변하는지
+  - 바꿔말하면
 
 false cases:
   - MyAutoML3_메타모델_학습데이터.csv

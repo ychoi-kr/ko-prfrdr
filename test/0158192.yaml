@@ -1,4 +1,5 @@
 true cases:
   - 3미만의 매개변수를 받았으므로
   - 반환값이 두 개이상인 함수
+  - min이상
 false cases:
