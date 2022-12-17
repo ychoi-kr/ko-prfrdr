@@ -903,7 +903,7 @@
   },
   {
     "kind": "외래어",
-    "name": "rf17172_‘resolution’의 표기",
+    "name": "rfn17172_‘resolution’의 표기",
     "desc": "https://www.korean.go.kr/front/imprv/refineView.do?mn_id=158&imprv_refine_seq=17172",
     "cases": [
       ["\\b[레리]졸루션|리절루션", "레절루션"]
