@@ -52,6 +52,15 @@
   },
   {
     "kind": "용어 오탈자",
+    "name": "sd17678_게이트웨이",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=17678&searchKeywordTo=3",
+    "cases": [
+      ["게이트 웨이", "게이트웨이"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "용어 오탈자",
     "name": "sd332817_체",
     "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=332817&searchKeywordTo=3",
     "cases": [
