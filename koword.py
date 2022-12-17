@@ -504,6 +504,11 @@ KW_ND = "밖|뿐"
 KW_NPEf = "사람|인[간물]"
 KW_NPEv = "인류"
 
+### Family name
+KW_NPFf = "김|박|정|강|윤|장|임|한|신|권|황|안|송|류|전|홍|문|양|손|백|남|심|곽|성|민|진|엄|원|천|방|공|현|함|변|염|석|선|설|길|연|명|반|왕|금|옥|육|인|맹|남궁|탁|국|은|편|용|예|경|봉|황보|복|목|형|두|감|제갈|음|빈|동|온|사공|호|범|선우|팽|승|간|상|갈|서문|단|견|당|화|창|옹|순|빙|종|풍|엽|궁|평|독고|랑|판|로|궉|동방|묵|근|점|탄|만|필|돈|운|곡|섭|담|뢰|학|총|삼|독|관|영|등|란|산|증|난|망절|어금|무본|번|완|등정|탕|황목"
+KW_NPFv = "이|최|조|오|서|고|배|허|유|노|하|차|주|우|구|라|지|채|여|추|도|소|마|위|기|표|제|모|어|사|가|부|태|계|피|좌|시|대|아|내|매|초|해|야|자|포|후|수|나|요|애|묘|미|비|무|교|다|보"
+KW_NPF = joinseq(KW_NPFf, KW_NPFv)
+
 ### by biological or phisical conditioN
 KW_NPNf = "[비]?장애인|어른|소년"
 KW_NPNv = "어린이|감염자|[고남여병환]자|[동양이]성애자|바보|아기|아이"
@@ -520,14 +525,16 @@ KW_NPKv = "경[사위]|[대중소준][위좌]|[상중하]사"
 ### by social Relation
 KW_NPRf = "아들|동문|조상|자손|식솔|[처]?자식|[부장]인|동창|[일사삼오육칠팔]촌|남편"
 KW_NPRv = "[식친]구|처남|자녀|아내|아주머니|[어할]머니|아줌마|엄마|[고대부이]모|동료|며느리|[대형]부|아빠|[제형]수|아저씨|애인|사위|저|[자처형]제|[할]아버지|제부|처형"
+KW_NPR = joinseq(KW_NPRf, KW_NPRv)
 
 ### by Activity, accident, crime
 KW_NPAf = "고객|손님|애[견묘]인|[증행]인"
 KW_NPAv = "수집가|애호가|프로|아마추어|글쓴이|엮은이|지은이|감[독시]자|강[연의]자|관[계련찰]자|당[사직]자|[사이]용자|소유자|반[려역]자|발[제표]자|운전자|응시자|[원]작자|참[가석여]자|투자자|협력자|[가피]해자|팬"
+KW_NPA = joinseq(KW_NPAf, KW_NPAv)
 
 ### all
-KW_NPf = joinseq(KW_NPEf, KW_NPNf, KW_NPJf, KW_NPKf, KW_NPRf, KW_NPAf)
-KW_NPv = joinseq(KW_NPEv, KW_NPNv, KW_NPJv, KW_NPKv, KW_NPRv, KW_NPAv)
+KW_NPf = joinseq(KW_NPEf, KW_NPFf, KW_NPNf, KW_NPJf, KW_NPKf, KW_NPRf, KW_NPAf)
+KW_NPv = joinseq(KW_NPEv, KW_NPFv, KW_NPNv, KW_NPJv, KW_NPKv, KW_NPRv, KW_NPAv)
 KW_NP = joinseq(KW_NPf, KW_NPv)
 
 
