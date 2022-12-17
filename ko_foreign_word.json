@@ -184,8 +184,8 @@
   },
   {
     "kind": "외래어",
-    "name": "frgn002a_자주 틀리는 외래어",
-    "desc": "마이크로소프트웨어 396호",
+    "name": "frgn002a_자주 틀리는 외래어 - 마이크로소프트웨어 396호",
+    "desc": "https://play.google.com/books/reader?id=7dOgDwAAQBAJ&pg=GBS.PA129&hl=ko",
     "cases": [
       ["어플리케이션", "애플리케이션"],
       ["라이센스", "라이선스"],
