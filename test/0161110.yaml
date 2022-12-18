@@ -27,6 +27,7 @@ true cases:
   - A와Z 사이에 있는
   - N의 값에 따라서N^2의 값이 어떻게 변하는지
   - 바꿔말하면
+  - 타는승강장까지
 
 false cases:
   - MyAutoML3_메타모델_학습데이터.csv
