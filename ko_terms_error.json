@@ -46,7 +46,9 @@
       ["\\b(인터넷)(.* )IU 주소", "()()IP 주소"],
       ["\\b(스택|힙) 영영", "() 영역"],
       ["\\b변서 ([A-Za-z]\\w*)", "변수 ()"],
-      ["\\bUFT[-](7|8|16)", "UTF-()"]
+      ["\\bUFT[-](7|8|16)", "UTF-()"],
+      ["\\b데이이터", "데이터"],
+      ["\\b(교통) (사고|안전)", "()()"]
     ],
     "exception": []
   },
@@ -74,6 +76,15 @@
     "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=357412&searchKeywordTo=3",
     "cases": [
       ["\\b고속 프리에 변환", "고속 푸리에 변환"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "용어 오탈자",
+    "name": "sd674875_프레임워크",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=674875&searchKeywordTo=3",
+    "cases": [
+      ["\\b(프레임) (워크)", "()()"]
     ],
     "exception": []
   }

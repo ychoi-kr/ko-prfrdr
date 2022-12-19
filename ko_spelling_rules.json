@@ -54,6 +54,15 @@
   },
   {
     "kind": "맞춤법",
+    "name": "0075017a_거",
+    "desc": "https://wikidocs.net/75017#a",
+    "cases": [
+      ["\\b([늘될할])[ ]?꺼(예요)", "() 거()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "0075024a1_마침표",
     "desc": "https://wikidocs.net/75024#a",
     "cases": [
@@ -504,6 +513,7 @@
       ["고유값", "고윳값"],
       ["\\b(나무[ ]?가지|나뭇 가지)(\\w*)", "나뭇가지(2)"],
       ["대체값", "대쳇값"],
+      ["\\b맥주집", "맥줏집"],
       ["실제값", "실젯값"],
       ["여유값", "여윳값"],
       ["온도값", "온돗값"],
@@ -2171,6 +2181,15 @@
   },
   {
     "kind": "맞춤법",
+    "name": "qa190889_어두운",
+    "desc": "https://wikidocs.net/181967#190889",
+    "cases": [
+      ["\\b어둔[ ]?(밤|세상|영)", "어두운 ()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "qa196973_하고요",
     "desc": "https://wikidocs.net/181967#196973",
     "cases": [
@@ -2193,6 +2212,15 @@
     "desc": "https://wikidocs.net/181967#229063",
     "cases": [
       [ "\\b왠만([하한해히]\\w*)", "웬만()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "qa231134_~해도 돼요",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=231134",
+    "cases": [
+      [ "(\\w*해도) 되요", "() 돼요"]
     ],
     "exception": []
   },
