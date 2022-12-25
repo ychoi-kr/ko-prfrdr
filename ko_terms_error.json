@@ -1,6 +1,51 @@
 [
   {
     "kind": "용어 오탈자",
+    "name": "hallym01_의학용어",
+    "desc": "https://hallym.hallym.or.kr/hallymuniv_sub.asp?left_menu=left_health&screen=ptm800&hangul=%A4%B5&alphabet=&search_type=&search_text=&page=336",
+    "cases": [
+	  ["\\b세포 체(|[가는도로를에])\\b", "세포체()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "용어 오탈자",
+    "name": "sd17678_게이트웨이",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=17678&searchKeywordTo=3",
+    "cases": [
+      ["게이트 웨이", "게이트웨이"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "용어 오탈자",
+    "name": "sd332817_체",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=332817&searchKeywordTo=3",
+    "cases": [
+      ["에라토스테네스의 채", "에라토스테네스의 체"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "용어 오탈자",
+    "name": "sd357412_푸리에",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=357412&searchKeywordTo=3",
+    "cases": [
+      ["\\b고속 프리에 변환", "고속 푸리에 변환"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "용어 오탈자",
+    "name": "sd674875_프레임워크",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=674875&searchKeywordTo=3",
+    "cases": [
+      ["\\b(프레임) (워크)", "()()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "용어 오탈자",
     "name": "termerr0_용어 오탈자",
     "desc": "",
     "cases": [
@@ -51,43 +96,8 @@
       ["\\b(교통) (사고|안전)", "()()"],
       ["\\b(파이) ([선썬])", "()()"],
       ["\\b시트블록 거리", "시티블록 거리"],
-      ["\\bmach (구문|문)", "match ()"]
-    ],
-    "exception": []
-  },
-  {
-    "kind": "용어 오탈자",
-    "name": "sd17678_게이트웨이",
-    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=17678&searchKeywordTo=3",
-    "cases": [
-      ["게이트 웨이", "게이트웨이"]
-    ],
-    "exception": []
-  },
-  {
-    "kind": "용어 오탈자",
-    "name": "sd332817_체",
-    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=332817&searchKeywordTo=3",
-    "cases": [
-      ["에라토스테네스의 채", "에라토스테네스의 체"]
-    ],
-    "exception": []
-  },
-  {
-    "kind": "용어 오탈자",
-    "name": "sd357412_푸리에",
-    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=357412&searchKeywordTo=3",
-    "cases": [
-      ["\\b고속 프리에 변환", "고속 푸리에 변환"]
-    ],
-    "exception": []
-  },
-  {
-    "kind": "용어 오탈자",
-    "name": "sd674875_프레임워크",
-    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=674875&searchKeywordTo=3",
-    "cases": [
-      ["\\b(프레임) (워크)", "()()"]
+      ["\\bmach (구문|문)", "match ()"],
+      ["부동수수점", "부동소수점"]
     ],
     "exception": []
   }
