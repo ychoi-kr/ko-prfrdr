@@ -1,0 +1,4 @@
+true cases:
+  - TPU가 지원하지않는 딥러닝의 training 단계를 지원하고
+false cases:
+
