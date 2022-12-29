@@ -222,6 +222,16 @@
   },
   {
     "kind": "간결한 글쓰기",
+    "name": "glb11411_‘소위’와 ‘말하다’",
+    "desc": "https://www.globale.co.kr/news/articleView.html?idxno=11411",
+    "cases": [
+      ["\\b소위 (말하는|말해서)", "이른바"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "간결한 글쓰기",
     "name": "hn343801_‘때문’",
     "desc": "https://www.hani.co.kr/arti/SERIES/61/343801.html",
     "cases": [
