@@ -42,7 +42,7 @@ KW_NF = '|'.join(sorted(
 )
 
 ## Nouns - Status
-KW_NSf = "심각|[둔민]감|건강|간결|깔끔|매끈|[불]?가능|간단|못마땅|가득|근면|곤란|부지런|[장졸]렬|지저분|[단온지]순|비슷|참신|[불]?성실|부실|[미병심]약|치열|편안|동일|복잡|부족|[부]?적절|착|공평|[명정]확"
+KW_NSf = "심각|[둔민]감|건강|간결|깔끔|들쑥날쑥|매끈|[불]?가능|간단|못마땅|가득|근면|곤란|부지런|[장졸]렬|지저분|[단온지]순|비슷|참신|[불]?성실|부실|[미병심]약|치열|편안|동일|복잡|부족|[부]?적절|착|공평|[명정]확"
 KW_NSv = "유사|[자섬]세|간소|상이|수요|[거장중]대|진부|[긴중필]요"
 KW_NS = joinseq(KW_NSf, KW_NSv)
 
@@ -257,7 +257,7 @@ KW_NIn = "차원"
 KW_NIv = "수치"
 KW_NI = joinseq(KW_NIf, KW_NIn, KW_NIv)
 
-## Busa(adverB)
+## Busa(부사, adverb)
 ### Cause(이유)
 KW_BC = '|'.join(sorted(
         ['일부러']
@@ -289,7 +289,7 @@ KW_BD = '가장|거의|그다지|더|많이|별로|약간|얼마간|자주|잘|�
 ### Manner(태도, 방법)
 KW_BM = '|'.join(
     sorted(
-        ['그대로', '함부로', '이러쿵저러쿵']
+        ['그대로', '함부로']
         + conjugate(ks.KS_Aa, 'ㅡ', '게')
         + conjugate(ks.KS_Ab, 'ㅂ', '게')
         + conjugate(ks.KS_Ac, '게')
@@ -351,6 +351,9 @@ KW_BI = '|'.join(
     )
 )
 
+### can be a Verb when conjugated by ‘-하다’
+KW_BV = '이러쿵저러쿵'
+
 ### With
 KW_BW = '|'.join(
     sorted(
@@ -360,7 +363,7 @@ KW_BW = '|'.join(
     )
 )
 
-KW_B = joinseq(KW_BD, KW_BM, KW_BN, KW_BI)
+KW_B = joinseq(KW_BD, KW_BM, KW_BN, KW_BI, KW_BV, KW_BW)
 KW_B1 = monosyllables(KW_B)
 
 ## Forein Words
@@ -466,7 +469,7 @@ KW_NAOf3 = "불구경|송수신|수출입|재실행"
 KW_NAOf = joinseq(KW_NAOf1, KW_NAOf2, KW_NAOf3)
 
 KW_NAOh = '|'.join(conjugate("강|미|융|특", '화') + conjugate(ks.KS_Az, '화') + conjugate(KW_NTB, '화'))
-KW_NAOv2 = "[인증추참평]가|[제탈]거|[공소전]개|설계|[경방]과|[복연촉]구|[경대상연제표]기|[연증확]대|[시유]도|계류|[고]려|신뢰|[완치]료|[관격분수]리|처리|연마|구매|소모|근무|방미|[공거기]부|준비|[감공반발수식조퇴]사|[감기축]소|[감준회]수|[감실제출표]시|제어|[기부참]여|[긴소중필]요|[논유정주합회]의|정의|투자|복제|참조|[유주차폐]지|[기탑]재|대체|[갈성수탈편]취|[납배설위]치|검토|돌파|[부실]패|배포|발표|보호|[저전통]화|[분이]해"
+KW_NAOv2 = "[인증추참평]가|[제탈]거|[공소전]개|설계|[경방]과|[복연촉]구|[경대상연제표]기|[연증확]대|[시유]도|계류|[고]려|신뢰|[완치]료|[관격분수]리|처리|연마|구매|소모|근무|방미|[공거기]부|준비|[감공반발수식조퇴]사|[감기축]소|[감준회]수|[감실제출표]시|제어|[기부참]여|[소제]외|[긴소중필]요|[논유정주합회]의|정의|투자|복제|참조|[유주차폐]지|[기탑]재|대체|[갈성수탈편]취|[납배설위]치|검토|돌파|[부실]패|배포|발표|보호|[저전통]화|[분이]해"
 KW_NAOv3 = "이야기|[재전후]처리|마무리|재정의|재투자"
 KW_NAOv = joinseq(KW_NAOv2, KW_NAOv3, KW_NAOh)
 
@@ -479,8 +482,16 @@ KW_NAB = joinseq(KW_NABf, KW_NABv)
 
 ### derived from Foreign language
 # Don't use '*팅' instead of '부팅' for case like: 디스켓으로부팅한후 --> 디스켓으로 부팅한 후
-KW_NAFf = "\\w+[깅닝딩링밍싱킹핑]|게임|로그아웃|로그인|마케팅|스크립팅|컨트롤|컴파일|클릭|부팅"  
-KW_NAFv = "다운로드|리사이즈|릴리스|링크|마사지|업로드|[언]?마운트|업데이트|임포트|카운트|테스트|트리거|팔로우|폴로|플레이"
+KW_NAFf1 = "[킥킵핑]"
+KW_NAFf2 = "\\w{1}[깅닝딩링밍싱징킹팅핑]|게임|클릭"  
+KW_NAFf3 = "\\w{2}[깅닝딩링밍싱징킹팅핑]|로그인|컨트롤|컴파일"  
+KW_NAFf4 = "\\w{3}[깅닝딩링밍싱징킹팅핑]|로그아웃"
+KW_NAFf5 = "\\w{4}[깅닝딩링밍싱징킹팅핑]"
+KW_NAFf = joinseq(KW_NAFf1, KW_NAFf2, KW_NAFf3, KW_NAFf4, KW_NAFf5)
+KW_NAFv2 = "링크|폴로"
+KW_NAFv3 = "릴리스|마사지|업로드|마운트|임포트|카운트|테스트|트리거|팔로우|플레이"
+KW_NAFv4 = "다운로드|리사이즈|언마운트|업데이트"
+KW_NAFv = joinseq(KW_NAFv2, KW_NAFv3, KW_NAFv4)
 KW_NAF = joinseq(KW_NAFf, KW_NAFv)
 
 KW_NAHf = joinseq(KW_NABf, KW_NAFf, KW_NAOf)

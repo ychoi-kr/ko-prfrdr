@@ -1983,7 +1983,6 @@
       ["\\bR&D", "특허 연계 연구 개발, 지식 재산 기반 연구 개발"],
       ["\\bRCEP", "역내포괄적경제동반자협정"],
       ["\\bSOC", "사회 기반 시설, 사회 간접 자본"],
-      ["\\bSW", "소프트웨어"],
       ["\\b(지역|충북|\\d+[ ]?곳의) TP", "() 테크노파크"],
       ["\\bUAE", "아랍에미리트"],
       ["\\bWHO", "세계보건기구"],
@@ -3324,7 +3323,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03171_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03172_일반 국민 60%가 이해하지 못하는 낱말",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=플러그인",
     "cases": [
       ["\\b(보안) (플러그인|플러그인 프로그램)", "() 기능 확장 프로그램"],
@@ -3336,7 +3335,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03196_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03200_일반 국민 60%가 이해하지 못하는 낱말",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=피크",
     "cases": [
       ["\\b(귀경길) 피크(\\w*)", "() 절정()"],
@@ -3348,7 +3347,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03206_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03211_일반 국민 60%가 이해하지 못하는 낱말",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=픽셀",
     "cases": [
       ["\\b픽셀을 (개발)(\\w*)", "화소를 ()()"],
@@ -3360,7 +3359,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03258_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03260_일반 국민 60%가 이해하지 못하는 낱말",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=하이픈",
     "cases": [
       ["\\b(영어)(.*)하이픈( 등)", "()()붙임표()"],
@@ -3372,7 +3371,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03437_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03439_일반 국민 60%가 이해하지 못하는 낱말",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=EU",
     "cases": [
       ["\\bEU([도에이입]\\w*| 내)(.*)(온실 가스 배출량|화장품|목록)(\\w+)", "유럽 연합()()()()"],
@@ -3384,7 +3383,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03453_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03455_일반 국민 60%가 이해하지 못하는 낱말",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=GDP",
     "cases": [
       ["\\b(세계.*) GDP는", "() 국내 총생산은"],
@@ -3396,7 +3395,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03584_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03590_일반 국민 60%가 이해하지 못하는 낱말",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=SW",
     "cases": [
       ["\\b(\\w+[도를을]) SW(로 해결)", "() 소프트웨어()"],
@@ -3408,7 +3407,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03588_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03594_일반 국민 60%가 이해하지 못하는 낱말",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=TF",
     "cases": [
       ["\\b(아동 학대)(.*)TF팀을 구성", "()()전담반을 구성"],
@@ -3420,7 +3419,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03607_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03614_일반 국민 60%가 이해하지 못하는 낱말",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=VR",
     "cases": [
       ["\\bVR로", "가상 현실로"],
@@ -3431,7 +3430,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03704_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03708_일반 국민 60%가 이해하지 못하는 낱말",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=프라이",
     "cases": [
       ["\\b프라이하는", "부치는"],
