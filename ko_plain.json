@@ -2654,6 +2654,16 @@
   },
   {
     "kind": "쉬운 말",
+    "name": "kpl01793_쉬운 우리말 쓰기",
+    "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=에러",
+    "cases": [
+      ["\\b(수비) 에러", "() 실책"],
+      ["\\b(시스템|통신) 에러", "() 오류"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "쉬운 말",
     "name": "kpl01811_일반 국민 60%가 이해하지 못하는 낱말",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=에이전트",
     "cases": [

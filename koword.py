@@ -376,8 +376,8 @@ KW_Fv = "[A-Za-z0-9]*ice|[A-Za-z0-9]*ocks|[A-Za-z0-9]*old|[A-Za-z0-9]*uy|[A-Za-z
 
 ## Thing(무정물)
 ### Abstract
-KW_NTAfc = "관측값|공간|물건|자금|학년|게놈|[능출]력|연령|프로그램|명산|걸음|목적|전략|칼럼|입력|기록|블록|그룹|스트림|별명|[품항]목|논문|[동식]물|동식물|방법|재산|형상|성|창의성|특성|솔루션|커넥션|애플리케이션|[상지]식|직업|앱|영역|비용|차원|웹|도메인|요인|파일|타입|점|규정|[단시장지]점|수준|알고리즘|인터넷|군집|층|토큰|스택|스텝|시스템|패턴|팀|상품|토픽|국민[ ]?평형|모형|힙"
-KW_NTAfl = "채널|모델|모듈|행렬|말|물|테이블|현실|[이]?메일|스타일|품질|튜플" # ends with letter which has ㄹ(lieul) as final consonant
+KW_NTAfc = "관측값|공간|물건|자금|학년|게놈|[능출]력|연령|프로그램|명산|걸음|목적|전략|칼럼|입력|기록|블록|그룹|스트림|별명|[품항]목|논문|방법|재산|형상|성|창의성|특성|솔루션|커넥션|애플리케이션|[상지]식|직업|앱|영역|비용|차원|웹|도메인|요인|타입|점|규정|[단시장지]점|수준|알고리즘|인터넷|군집|층|토큰|스택|스텝|시스템|패턴|팀|상품|토픽|국민[ ]?평형|모형|힙"
+KW_NTAfl = "채널|모델|모듈|행렬|말|물|[동식]물|동식물|테이블|현실|[이]?메일|파일|스타일|품질|튜플" # ends with letter which has ㄹ(lieul) as final consonant
 KW_NTAf = joinseq(KW_NTAfc, KW_NTAfl)
 KW_NTAv = "근거|[용정]도|메서드|스레드|코드|사용료|시류|메모리|처리|카테고리|리뷰|의사|[요축]소|[난변소인함]수|부동소수점수|분위수|순서|마이크로서비스|서비스|클래스|[단언]어|레이어|소프트웨어|하드웨어|범위|차이|글자|일자|범주|이미지|[시절]차|아키텍처|피처|[고기물신액옥자형]체|가중치|관측치|배치|네트워크|에포크|태스크|데이터|벡터|학습 데이터|형태|세그먼트|이벤트|컴포넌트|크레이트|폰트|전자파|[분세점]포|좌표|번호|비밀번호|변화|기회"
 KW_NTA = joinseq(KW_NTAf, KW_NTAv)
@@ -423,7 +423,7 @@ KW_NTN = joinseq(KW_NTNf, KW_NTNv)
 
 ### Organization
 KW_NTOf = "공군|기관|삼성|애플|육군|은행|해군"
-KW_NTOv = "발행사|업소|엔비디아|위원회|테슬라|해병대|학교|한라|회사"
+KW_NTOv = "군대|발행사|업소|엔비디아|위원회|테슬라|해병대|학교|한라|회사"
 KW_NTO = joinseq(KW_NTOf, KW_NTOv)
 
 ### Place
@@ -466,13 +466,16 @@ KW_NT = joinseq(KW_NTf, KW_NTv)
 KW_NAOf1 = "곱"
 KW_NAOf2 = "생각|보간|[가수증]감|동결|[가제]공|[건입출]국|공격|[연체]결|[구변]경|[총포]괄|집권|[접출]근|송금|지급|가늠|기능|[차판]단|[도전]달|[담배해]당|[가기운이작]동|[납취획]득|누락|[생중후]략|[노]력|[관마수제훈]련|[기수]록|소멸|[발변설소연작제조증]명|[괄주지]목|함몰|질문|고민|위반|[개선]발|체벌|식별|[반중]복|구분|계산|[손연향]상|[검수탐]색|발생|[분해]석|개선|[건개배연증해]설|[구생작완형]성|[계상접]속|[방소전]송|[기저]술|[연학]습|[발송수통]신|임신|[장파]악|[고보제]안|[계예해]약|선언|[수성영작]업|[구시재]연|오염|[반운촬투]영|[사응이작적통포허활]용|훈육|[기지]원|불응|방일|통일|[기도수출투]입|[동시조]작|[긴등성저출]장|경쟁|산적|[발운회]전|조절|근접|[개걱검결선설수지추측한확]정|[마방]중|검증|감지|부진|[결매모수편]집|[도장부집탈]착|칭찬|제창|신청|[구압]축|[도산수연인제진창추]출|[계예]측|[강이]탈|[간선채]택|[면유입재]학|국한|방한|분할|포함|[결부취]합|[동발비서시수운연진]행|실행|시험|[구실재표]현|[반변]환|계획"
 KW_NAOf3 = "불구경|송수신|수출입|재실행"
-KW_NAOf = joinseq(KW_NAOf1, KW_NAOf2, KW_NAOf3)
+KW_NAOfz = joinseq(KW_NAOf2, KW_NAOf3)
+KW_NAOf = joinseq(KW_NAOf1, KW_NAOfz)
 
 KW_NAOh = '|'.join(conjugate("강|미|융|특", '화') + conjugate(ks.KS_Az, '화') + conjugate(KW_NTB, '화'))
 KW_NAOv2 = "[인증추참평]가|[제탈]거|[공소전]개|설계|[경방]과|[복연촉]구|[경대상연제표]기|[연증확]대|[시유]도|계류|[고]려|신뢰|[완치]료|[관격분수]리|처리|연마|구매|소모|근무|방미|[공거기]부|준비|[감공반발수식조퇴]사|[감기축]소|[감준회]수|[감실제출표]시|제어|[기부참]여|[소제]외|[긴소중필]요|[논유정주합회]의|정의|투자|복제|참조|[유주차폐]지|[기탑]재|대체|[갈성수탈편]취|[납배설위]치|검토|돌파|[부실]패|배포|발표|보호|[저전통]화|[분이]해"
 KW_NAOv3 = "이야기|[재전후]처리|마무리|재정의|재투자"
-KW_NAOv = joinseq(KW_NAOv2, KW_NAOv3, KW_NAOh)
+KW_NAOvz = joinseq(KW_NAOv2, KW_NAOv3)
+KW_NAOv = joinseq(KW_NAOvz, KW_NAOh)
 
+KW_NAOz = joinseq(KW_NAOfz, KW_NAOvz)
 KW_NAO = joinseq(KW_NAOf, KW_NAOv)
 
 ## can be Both of active(-하다) and passive(-받다)
@@ -487,11 +490,17 @@ KW_NAFf2 = "\\w{1}[깅닝딩링밍싱징킹팅핑]|게임|클릭"
 KW_NAFf3 = "\\w{2}[깅닝딩링밍싱징킹팅핑]|로그인|컨트롤|컴파일"  
 KW_NAFf4 = "\\w{3}[깅닝딩링밍싱징킹팅핑]|로그아웃"
 KW_NAFf5 = "\\w{4}[깅닝딩링밍싱징킹팅핑]"
-KW_NAFf = joinseq(KW_NAFf1, KW_NAFf2, KW_NAFf3, KW_NAFf4, KW_NAFf5)
+KW_NAFfz = joinseq(KW_NAFf2, KW_NAFf3, KW_NAFf4, KW_NAFf5)
+KW_NAFf = joinseq(KW_NAFf1, KW_NAFfz)
+
 KW_NAFv2 = "링크|폴로"
 KW_NAFv3 = "릴리스|마사지|업로드|마운트|임포트|카운트|테스트|트리거|팔로우|플레이"
 KW_NAFv4 = "다운로드|리사이즈|언마운트|업데이트"
-KW_NAFv = joinseq(KW_NAFv2, KW_NAFv3, KW_NAFv4)
+KW_NAFvz = joinseq(KW_NAFv2, KW_NAFv3, KW_NAFv4)
+KW_NAFv = KW_NAFvz
+
+KW_NAF1 = KW_NAFf1
+KW_NAFz = joinseq(KW_NAFfz, KW_NAFvz)
 KW_NAF = joinseq(KW_NAFf, KW_NAFv)
 
 KW_NAHf = joinseq(KW_NABf, KW_NAFf, KW_NAOf)
@@ -505,8 +514,9 @@ KW_NAE = joinseq(KW_NAEf, KW_NAEv)
 
 
 ### all
-KW_NAf = joinseq(KW_NAOf, KW_NAFf)
-KW_NAv = joinseq(KW_NAOv, KW_NAFv)
+KW_NAf = joinseq(KW_NAFf, KW_NAOf)
+KW_NAv = joinseq(KW_NAFv, KW_NAOv)
+KW_NAz = joinseq(KW_NAFz, KW_NAOz)
 KW_NA = joinseq(KW_NAf, KW_NAv)
 
 ## Nouns (Activity + Status)
