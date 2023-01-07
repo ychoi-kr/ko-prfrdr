@@ -1,2 +1,2 @@
-natsort
 pyyaml
+git+https://github.com/konlpy/konlpy@943f2c
