@@ -376,8 +376,8 @@ KW_Fv = "[A-Za-z0-9]*ice|[A-Za-z0-9]*ocks|[A-Za-z0-9]*old|[A-Za-z0-9]*uy|[A-Za-z
 
 ## Thing(무정물)
 ### Abstract
-KW_NTAfc = "관측값|공간|물건|자금|학년|게놈|[능출]력|연령|프로그램|명산|걸음|목적|전략|칼럼|입력|기록|블록|그룹|스트림|별명|[품항]목|논문|방법|재산|형상|성|창의성|특성|솔루션|커넥션|애플리케이션|[상지]식|방안|직업|배열|연관 배열|앱|영역|비용|차원|웹|도메인|요인|타입|점|규정|[단시장지]점|수준|알고리즘|인터넷|군집|대책|층|토큰|스택|스텝|시스템|패턴|팀|상품|토픽|국민[ ]?평형|모형|힙"
-KW_NTAfl = "채널|모델|모듈|행렬|말|물|[동식]물|동식물|테이블|현실|[이]?메일|파일|스타일|품질|튜플" # ends with letter which has ㄹ(lieul) as final consonant
+KW_NTAfc = "관측값|공간|물건|자금|학년|게놈|[능출]력|연령|프로그램|명산|걸음|목적|전략|칼럼|입력|기록|블록|그룹|스트림|별명|[품항]목|논문|방법|재산|형상|성|창의성|특성|솔루션|커넥션|애플리케이션|[상지]식|방안|직업|앱|영역|비용|차원|웹|도메인|요인|타입|점|규정|[단시장지]점|수준|알고리즘|인터넷|군집|대책|층|토큰|스택|스텝|시스템|패턴|팀|상품|토픽|국민[ ]?평형|모형|힙"
+KW_NTAfl = "채널|모델|모듈|행렬|말|물|[동식]물|동식물|테이블|배열|연관 배열|현실|[이]?메일|파일|스타일|품질|튜플" # ends with letter which has ㄹ(lieul) as final consonant
 KW_NTAf = joinseq(KW_NTAfc, KW_NTAfl)
 KW_NTAv = "근거|[용정]도|메서드|스레드|코드|사용료|시류|메모리|처리|카테고리|리뷰|의사|[요축]소|[난변소인함]수|부동소수점수|분위수|순서|마이크로서비스|서비스|클래스|[단언]어|레이어|소프트웨어|하드웨어|범위|차이|글자|일자|범주|이미지|[시절]차|아키텍처|피처|[고기물신액옥자형]체|가중치|관측치|배치|네트워크|에포크|태스크|데이터|벡터|학습 데이터|형태|세그먼트|이벤트|컴포넌트|크레이트|폰트|전자파|[분세점]포|좌표|번호|비밀번호|변화|기회"
 KW_NTA = joinseq(KW_NTAf, KW_NTAv)
@@ -409,7 +409,9 @@ KW_NTJv = "영구|대내|영속|도시|임시|한시|대외|민주|향토"
 KW_NTJ = joinseq(KW_NTJf, KW_NTJv)
 
 ### Guyeok (행정구역명)
-KW_NTG = "가남|강릉|곡성|공주|광명|광주|구미|구례|구포|군산|김천|김포|김해|나주|남원|논산|단양|대구|대전|동해|둔내|마산|만종|목포|묵호|밀양|부발|부산|상봉|서울|세종|수원|순천|아산|양평|여천|영주|오송|용산|울산|원주|익산|인천|장호원|전주|정동진|정읍|제천|진주|창원|천안|청량리|충주|포항|풍기|평창|행신|횡성"
+KW_NTGf = "가남|강릉|경남|경북|곡성|광명|군산|김천|남원|논산|단양|대전|마산|만종|밀양|부발|부산|상봉|서울|세종|수원|순천|아산|양평|여천|오송|용산|울산|익산|인천|장호원|전남|전북|정동진|정읍|제천|창원|천안|청량리|충남|충북|포항|풍기|평창|행신|횡성"
+KW_NTGv = "공주|광주|구미|구례|구포|김포|김해|나주|대구|동해|둔내|목포|묵호|영주|원주|전주|진주|충주"
+KW_NTG = joinseq(KW_NTGf, KW_NTGv)
 
 ### metapHor (~같다)
 KW_NTHf = "한결|대궐|당금|불꽃|꿈|[끌놋]날|실낱|득달|댕돌|득돌|찰떡|똑|쥐똥|굴뚝|[다벼]락|벽력|전반|철벽|불|쥐뿔|[쏜]?살|추상|[목철]석|박속|장승|굴왕신|귀신|[개쥐]?좆|[감금깜무]쪽|주옥|악착|억척|왕청|[딴분철]통|바둑판|떡판"
@@ -461,8 +463,8 @@ KW_NTMf = "폭"
 KW_NTMv = "개수|너비|넓이|높이|단위|수|숫자|크기" 
 KW_NTM = joinseq(KW_NTMf, KW_NTMv)
 
-KW_NTf = joinseq(KW_NTAf, KW_NTBf, KW_NTCf, KW_NTDf, KW_NTFf, KW_NTHf, KW_NTLf, KW_NTNf, KW_NTMf, KW_NTOf, KW_NTSf, KW_NTTf, KW_NTUf, KW_NTVf)
-KW_NTv = joinseq(KW_NTAv, KW_NTBv, KW_NTCv, KW_NTDv, KW_NTFv, KW_NTHv, KW_NTLv, KW_NTNv, KW_NTMv, KW_NTOv, KW_NTSv, KW_NTTv, KW_NTUv, KW_NTVv)
+KW_NTf = joinseq(KW_NTAf, KW_NTBf, KW_NTCf, KW_NTDf, KW_NTFf, KW_NTGf, KW_NTHf, KW_NTLf, KW_NTNf, KW_NTMf, KW_NTOf, KW_NTSf, KW_NTTf, KW_NTUf, KW_NTVf)
+KW_NTv = joinseq(KW_NTAv, KW_NTBv, KW_NTCv, KW_NTDv, KW_NTFv, KW_NTGv, KW_NTHv, KW_NTLv, KW_NTNv, KW_NTMv, KW_NTOv, KW_NTSv, KW_NTTv, KW_NTUv, KW_NTVv)
 KW_NT = joinseq(KW_NTf, KW_NTv)
 
 
