@@ -686,6 +686,16 @@
   },
   {
     "kind": "맞춤법",
+    "name": "cwsd2227_바닷가",
+    "desc": "https://blog.naver.com/chatwithsd/222771536020",
+    "cases": [
+      ["\\b바다가 (골프장)", "바닷가 ()"],
+      ["\\b바다가([로에])", "바닷가()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "esjg0388a_삼다",
     "desc": "https://esjgum.tistory.com/388",
     "cases": [

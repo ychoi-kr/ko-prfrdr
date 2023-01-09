@@ -774,6 +774,26 @@
   },
   {
     "kind": "외래어",
+    "name": "mgsm2217a_‘baton(bâton)’의 표기",
+    "desc": "https://m.blog.naver.com/magicsmile7/221720962823",
+    "cases": [
+        ["\\b(바[턴톤]|배[톤통])을 (?=넘겨|떨어|이어)", "바통을, 배턴을"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
+    "name": "mgsm2217b_‘baton’의 표기",
+    "desc": "https://m.blog.naver.com/magicsmile7/221720962823",
+    "cases": [
+        ["\\b(바[턴톤통]|배[톤통])[ ]?터치", "배턴 터치"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
     "name": "noti0370_포르투갈어(2006)",
     "desc": "https://korean.go.kr/front/board/boardStandardView.do?board_id=4&mn_id=17&b_seq=370",
     "cases": [
@@ -1028,7 +1048,7 @@
       ["바텐다", "바텐더"],
       ["뺏지", "배지"],
       ["밧데리", "배터리"],
-      ["바톤", "배턴"],
+      ["dup:바톤", "배턴"],
       ["벤쿠버", "밴쿠버"],
       ["발란스", "밸런스"],
       ["발렌타인데이", "밸런타인데이"],
