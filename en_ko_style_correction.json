@@ -282,6 +282,19 @@
   },
   {
     "kind": "영어 투",
+    "name": "0185596_‘로부터’",
+    "desc": "https://wikidocs.net/185596",
+    "cases": [
+      ["\\b(KW_NP)[으]?로부터 (나[오온올옴옵와왔]\\w*)", "()에게서 ()"],
+      ["\\b(KW_NP)[으]?로부터 (당무보고|보고)(를) (받\\w*)", "(1)에게 (2)(3) (4), (1)의 (2)(3) (4)"],
+      ["\\b(KW_NTO)[으]?로부터 (버림받\\w*)", "()에서 ()"],
+      ["\\b(KW_NTA)[으]?로부터", "()에서"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "영어 투",
     "name": "hanbit00_흔한 번역 투 TOP 12",
     "desc": "https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS1174085364",
     "cases": [
