@@ -10,7 +10,16 @@
   },
   {
     "kind": "용어 오탈자",
-    "name": "sd17678_게이트웨이",
+    "name": "o1024030_애드온",
+    "desc": "https://opendic.korean.go.kr/dictionary/view?sense_no=1024030&viewType=confirm",
+    "cases": [
+      ["\\b애든온", "애드온"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "용어 오탈자",
+    "name": "sd017678_게이트웨이",
     "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=17678&searchKeywordTo=3",
     "cases": [
       ["게이트 웨이", "게이트웨이"]
