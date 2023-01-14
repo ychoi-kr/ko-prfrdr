@@ -1,4 +1,5 @@
 Amazon	NNP
+Babel	NNP
 ECMAScript	NNP
 Google	NNP
 JavaScript	NNP

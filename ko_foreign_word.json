@@ -133,6 +133,16 @@
   },
   {
     "kind": "외래어",
+    "name": "0186097_‘formatting’의 표기",
+    "desc": "https://wikidocs.net/186097",
+    "cases": [
+      ["포맷팅", "포매팅"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
     "name": "frgn001a_외래어 표기 5원칙 - ① ‘남는 소리’는 적지 않는다.",
     "desc": "https://www.hani.co.kr/arti/society/schooling/250943.html",
     "cases": [
