@@ -327,11 +327,12 @@ def check(rules, line, specified_rule, show_all_lines, warnings_counter, profile
                     warnings_counter[name] += 1
 
                     result.append((loc, kind, name, bad, good, desc))
+        
         end = process_time()
 
         profiler[name] += (end - start)
 
-    return result, warnings_counter
+    return sorted(result, key=lambda x: x[0]), warnings_counter
 
 
 def POSOkt(line, bad, bad_root, good):
