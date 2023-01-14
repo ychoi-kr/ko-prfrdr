@@ -521,6 +521,7 @@ style_rules = [
     ('ko_grammar.json', '국문법'),
     ('ko_precise_word.json', '적확하지 않은 어휘'),
     ('ko_hanja_abusing.json', '한자어 남용'),
+    ('ko_slang.json', '은어'),
     ('concise_writing.json', '간결한 글쓰기'),
     ('wikibook_style_guide.json', '위키북스 글쓰기 지침'),
 ]
