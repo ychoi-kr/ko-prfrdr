@@ -367,19 +367,18 @@ KW_B = joinseq(KW_BD, KW_BM, KW_BN, KW_BI, KW_BV, KW_BW)
 KW_B1 = monosyllables(KW_B)
 
 ## Forein Words
-
-### f: has final consonant in Korean (BUT NOT IN ENGLISH)
-KW_Ff = "[A-Za-z0-9]*all|[A-Za-z0-9]*ell|[A-Za-z0-9]*earn|[A-Za-z0-9]*ime|[A-Za-z0-9]*one|[A-Z]*ML|LIME|URL|VPN"
-
-### v: ends with vowel (does not have final consonant) in Korean (BUT NOT IN ENGLISH)
+KW_Fc = "[A-Za-z0-9]*earn|[A-Za-z0-9]*ime|[A-Za-z0-9]*one|LIME|VPN"
+KW_Fl = "[A-Za-z0-9]*all|[A-Za-z0-9]*e[l]{1,2}|[A-Z]*ML|URL"
+KW_Ff = joinseq(KW_Fc, KW_Fl)
 KW_Fv = "[A-Za-z0-9]*ice|[A-Za-z0-9]*ocks|[A-Za-z0-9]*old|[A-Za-z0-9]*uy|[A-Za-z0-9]*dog|[A-Za-z0-9]*uire|[A-Za-z]*[a-z]+ter|[A-Z]*TP|DARPA|[D]?NS|ENQUIRE|UDP|URI|config"
+KW_F = joinseq(KW_Ff, KW_Fv)
 
 ## Thing(무정물)
 ### Abstract
-KW_NTAfc = "관측값|공간|물건|자금|학년|게놈|[능출]력|연령|프로그램|명산|걸음|목적|전략|칼럼|입력|기록|블록|그룹|스트림|화면|별명|[품항]목|논문|방법|재산|형상|성|창의성|특성|솔루션|커넥션|애플리케이션|웹 애플리케이션|기술|[상지]식|방안|직업|앱|영역|[내비]용|차원|웹|마음|도메인|요인|타입|점|규정|[단시장지]점|수준|알고리즘|인터넷|군집|대책|층|명칭|토큰|스택|스텝|시스템|패턴|팀|상품|토픽|국민[ ]?평형|모형|힙"
-KW_NTAfl = "채널|모델|모듈|행렬|말|물|[동식]물|동식물|테이블|배열|연관 배열|현실|[이]?메일|파일|스타일|품질|튜플" # ends with letter which has ㄹ(lieul) as final consonant
+KW_NTAfc = "관측값|공간|물건|자금|학년|게놈|[능출]력|연령|프로그램|명산|걸음|목적|전략|칼럼|입력|기록|블록|그룹|스트림|화면|별명|[품항]목|논문|방법|재산|형상|성|창의성|특성|솔루션|커넥션|애플리케이션|웹 애플리케이션|[상지]식|방안|직업|앱|영역|[내비]용|차원|웹|마음|도메인|요인|타입|점|규정|[단시장지]점|수준|알고리즘|인터넷|군집|대책|층|명칭|토큰|스택|스텝|시스템|패턴|팀|상품|토픽|국민[ ]?평형|모형|힙"
+KW_NTAfl = "채널|모델|모듈|행렬|말|물|[동식]물|동식물|테이블|기술|배열|연관 배열|현실|[이]?메일|파일|스타일|품질|튜플" # ends with letter which has ㄹ(lieul) as final consonant
 KW_NTAf = joinseq(KW_NTAfc, KW_NTAfl)
-KW_NTAv = "근거|[용정]도|메서드|스레드|코드|사용료|시류|메모리|처리|카테고리|리뷰|의사|[요축]소|[난변소인함]수|부동소수점수|분위수|순서|마이크로서비스|서비스|클래스|[단언]어|레이어|소프트웨어|하드웨어|범위|차이|글자|일자|범주|이미지|[시절]차|아키텍처|피처|[고기물신액옥자형]체|가중치|관측치|배치|네트워크|에포크|태스크|데이터|벡터|학습 데이터|형태|세그먼트|이벤트|컴포넌트|크레이트|폰트|전자파|[분세점]포|좌표|번호|비밀번호|변화|기회"
+KW_NTAv = "근거|[용정]도|메서드|스레드|코드|사용료|시류|메모리|처리|카테고리|리뷰|의사|[요축]소|[난변소인함]수|[극]?소수|부동소수점수|분위수|순서|마이크로서비스|서비스|클래스|[단언]어|레이어|소프트웨어|하드웨어|범위|차이|글자|일자|범주|이미지|[시절]차|아키텍처|피처|[고기물신액옥자형]체|가중치|관측치|배치|네트워크|에포크|태스크|데이터|벡터|학습 데이터|형태|세그먼트|이벤트|컴포넌트|크레이트|폰트|전자파|[분세점]포|좌표|번호|비밀번호|변화|기회"
 KW_NTA = joinseq(KW_NTAf, KW_NTAv)
 
 ### can Be(‘-화’)
@@ -389,8 +388,8 @@ KW_NTB = joinseq(KW_NTBf, KW_NTBv)
 
 
 ### maChine, instrument, tool, furniture
-KW_NTCf = "로봇|툴"
-KW_NTCv = "API|Babel|CPU|GPU|Grunt|gulp|기계|마이크로 프런트엔드|백엔드|비행기|생성기|판별기|항공기|침대|로더|서버|웹[ ]?서버|장비|브라우저|웹[ ]?브라우저|스토리지|[객기마열]?차|자동차|웹 워커|컴퓨터|클라이언트|태스크 러너|프런트엔드"
+KW_NTCf = "Babel|로봇|툴"
+KW_NTCv = "API|CPU|GPU|Grunt|gulp|기계|마이크로 프런트엔드|백엔드|비행기|생성기|판별기|항공기|침대|로더|서버|웹[ ]?서버|장비|브라우저|웹[ ]?브라우저|스토리지|[객기마열]?차|자동차|웹 워커|컴퓨터|클라이언트|태스크 러너|프런트엔드"
 KW_NTC = joinseq(KW_NTCf, KW_NTCv)
 
 ### District unit
@@ -475,8 +474,12 @@ KW_NTVf = "개학|생일|월드컵|올림픽"
 KW_NTVv = "유세|콘퍼런스|대회|운동회"
 KW_NTV = joinseq(KW_NTVf, KW_NTVv)
 
-KW_NTf = joinseq(KW_NTAf, KW_NTBf, KW_NTCf, KW_NTDf, KW_NTFf, KW_NTGf, KW_NTHf, KW_NTIf, KW_NTLf, KW_NTNf, KW_NTMf, KW_NTOf, KW_NTSf, KW_NTTf, KW_NTUf, KW_NTVf)
-KW_NTv = joinseq(KW_NTAv, KW_NTBv, KW_NTCv, KW_NTDv, KW_NTFv, KW_NTGv, KW_NTHv,          KW_NTLv, KW_NTNv, KW_NTMv, KW_NTOv, KW_NTSv, KW_NTTv, KW_NTUv, KW_NTVv)
+### tYpe
+KW_NTYf = "문자[열]?형|불[린]?형|숫자형|정수형"
+KW_NTY = KW_NTYf
+
+KW_NTf = joinseq(KW_NTAf, KW_NTBf, KW_NTCf, KW_NTDf, KW_NTFf, KW_NTGf, KW_NTHf, KW_NTIf, KW_NTLf, KW_NTNf, KW_NTMf, KW_NTOf, KW_NTSf, KW_NTTf, KW_NTUf, KW_NTVf, KW_NTYf)
+KW_NTv = joinseq(KW_NTAv, KW_NTBv, KW_NTCv, KW_NTDv, KW_NTFv, KW_NTGv, KW_NTHv,          KW_NTLv, KW_NTNv, KW_NTMv, KW_NTOv, KW_NTSv, KW_NTTv, KW_NTUv, KW_NTVv         )
 KW_NT = joinseq(KW_NTf, KW_NTv)
 
 ## Nouns - Activity (can be verb with '-하다/-되다' or used in form of '~을/를 하다')
@@ -564,6 +567,7 @@ KW_NPF = joinseq(KW_NPFf, KW_NPFv)
 ### by biological or phisical conditioN
 KW_NPNf = "[비]?장애인|어른|소년"
 KW_NPNv = "어린이|감염자|[고남여병환]자|[동양이]성애자|바보|아기|아이"
+KW_NPN = joinseq(KW_NPNf, KW_NPNv)
 
 ### by Job title or membership
 KW_NPJf = "감독[관]?[님]?|강사님|과장[님]?|교수님|[국군도동시]민|기업인|대[리표]님|대통령[님]?|마을 사람|[사의]원|[사소의회]장[님]?|시인|작[곡사]?가님|정치인|직장인|고교생|[대중]?학생|초등학생|[수해]병|이사장|초대 회장|회사원|군인|경찰|동호인"
