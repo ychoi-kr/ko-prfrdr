@@ -376,7 +376,7 @@ KW_Fv = "[A-Za-z0-9]*ice|[A-Za-z0-9]*ocks|[A-Za-z0-9]*old|[A-Za-z0-9]*uy|[A-Za-z
 
 ## Thing(무정물)
 ### Abstract
-KW_NTAfc = "관측값|공간|물건|자금|학년|게놈|[능출]력|연령|프로그램|명산|걸음|목적|전략|칼럼|입력|기록|블록|그룹|스트림|화면|별명|[품항]목|논문|방법|재산|형상|성|창의성|특성|솔루션|커넥션|애플리케이션|웹 애플리케이션|기술|[상지]식|방안|직업|앱|영역|[내비]용|차원|웹|도메인|요인|타입|점|규정|[단시장지]점|수준|알고리즘|인터넷|군집|대책|층|명칭|토큰|스택|스텝|시스템|패턴|팀|상품|토픽|국민[ ]?평형|모형|힙"
+KW_NTAfc = "관측값|공간|물건|자금|학년|게놈|[능출]력|연령|프로그램|명산|걸음|목적|전략|칼럼|입력|기록|블록|그룹|스트림|화면|별명|[품항]목|논문|방법|재산|형상|성|창의성|특성|솔루션|커넥션|애플리케이션|웹 애플리케이션|기술|[상지]식|방안|직업|앱|영역|[내비]용|차원|웹|마음|도메인|요인|타입|점|규정|[단시장지]점|수준|알고리즘|인터넷|군집|대책|층|명칭|토큰|스택|스텝|시스템|패턴|팀|상품|토픽|국민[ ]?평형|모형|힙"
 KW_NTAfl = "채널|모델|모듈|행렬|말|물|[동식]물|동식물|테이블|배열|연관 배열|현실|[이]?메일|파일|스타일|품질|튜플" # ends with letter which has ㄹ(lieul) as final consonant
 KW_NTAf = joinseq(KW_NTAfc, KW_NTAfl)
 KW_NTAv = "근거|[용정]도|메서드|스레드|코드|사용료|시류|메모리|처리|카테고리|리뷰|의사|[요축]소|[난변소인함]수|부동소수점수|분위수|순서|마이크로서비스|서비스|클래스|[단언]어|레이어|소프트웨어|하드웨어|범위|차이|글자|일자|범주|이미지|[시절]차|아키텍처|피처|[고기물신액옥자형]체|가중치|관측치|배치|네트워크|에포크|태스크|데이터|벡터|학습 데이터|형태|세그먼트|이벤트|컴포넌트|크레이트|폰트|전자파|[분세점]포|좌표|번호|비밀번호|변화|기회"
@@ -403,11 +403,6 @@ KW_NTFf = "국|귤|라면|밥|빵"
 KW_NTFv = "국수|망고|바나나|배|사과|오렌지"
 KW_NTF = joinseq(KW_NTFf, KW_NTFv)
 
-### Jeok('적')
-KW_NTJf = "소극|적극|폭발|집중"
-KW_NTJv = "영구|대내|영속|도시|임시|한시|대외|민주|향토"
-KW_NTJ = joinseq(KW_NTJf, KW_NTJv)
-
 ### Guyeok (행정구역명)
 KW_NTGf = "가남|강릉|경남|경북|곡성|광명|군산|김천|남원|논산|단양|대전|마산|만종|밀양|부발|부산|상봉|서울|세종|수원|순천|아산|양평|여천|오송|용산|울산|익산|인천|장호원|전남|전북|정동진|정읍|제천|창원|천안|청량리|충남|충북|포항|풍기|평창|행신|횡성"
 KW_NTGv = "공주|광주|구미|구례|구포|김포|김해|나주|대구|동해|둔내|목포|묵호|영주|원주|전주|진주|충주"
@@ -417,6 +412,15 @@ KW_NTG = joinseq(KW_NTGf, KW_NTGv)
 KW_NTHf = "한결|대궐|당금|불꽃|꿈|[끌놋]날|실낱|득달|댕돌|득돌|찰떡|똑|쥐똥|굴뚝|[다벼]락|벽력|전반|철벽|불|쥐뿔|[쏜]?살|추상|[목철]석|박속|장승|굴왕신|귀신|[개쥐]?좆|[감금깜무]쪽|주옥|악착|억척|왕청|[딴분철]통|바둑판|떡판"
 KW_NTHv = "개코|감태|생때|신청부|생파리|납덩이|옴포동이|뚱딴지|불티|비호|성화"
 KW_NTH = joinseq(KW_NTHf, KW_NTHv)
+
+### derived from adjective in English
+KW_NTIf = "로컬|피지컬|멘털"
+KW_NTI = KW_NTIf
+
+### Jeok('적')
+KW_NTJf = "[비소적희]극|폭발|영속|집중"
+KW_NTJv = "영구|대내|진보|보수|도시|임시|[임한]시|대외|[민자]주|향토"
+KW_NTJ = joinseq(KW_NTJf, KW_NTJv)
 
 ### Language
 
@@ -430,6 +434,11 @@ KW_NTLNv = "독일어|북한어|스페인어|영어|이탈리아어|일본어|�
 KW_NTLf = KW_NTLAf
 KW_NTLv = joinseq(KW_NTLAv, KW_NTLNv)
 KW_NTL = joinseq(KW_NTLf, KW_NTLv)
+
+### Measure(dimension)
+KW_NTMf = "폭" 
+KW_NTMv = "개수|너비|넓이|높이|단위|수|숫자|크기" 
+KW_NTM = joinseq(KW_NTMf, KW_NTMv)
 
 ### Nation
 KW_NTNf = "[미영중한]국|대만|일본|스페인|독일|[남북]한"
@@ -466,15 +475,9 @@ KW_NTVf = "개학|생일|월드컵|올림픽"
 KW_NTVv = "유세|콘퍼런스|대회|운동회"
 KW_NTV = joinseq(KW_NTVf, KW_NTVv)
 
-### Measure(dimension)
-KW_NTMf = "폭" 
-KW_NTMv = "개수|너비|넓이|높이|단위|수|숫자|크기" 
-KW_NTM = joinseq(KW_NTMf, KW_NTMv)
-
-KW_NTf = joinseq(KW_NTAf, KW_NTBf, KW_NTCf, KW_NTDf, KW_NTFf, KW_NTGf, KW_NTHf, KW_NTLf, KW_NTNf, KW_NTMf, KW_NTOf, KW_NTSf, KW_NTTf, KW_NTUf, KW_NTVf)
-KW_NTv = joinseq(KW_NTAv, KW_NTBv, KW_NTCv, KW_NTDv, KW_NTFv, KW_NTGv, KW_NTHv, KW_NTLv, KW_NTNv, KW_NTMv, KW_NTOv, KW_NTSv, KW_NTTv, KW_NTUv, KW_NTVv)
+KW_NTf = joinseq(KW_NTAf, KW_NTBf, KW_NTCf, KW_NTDf, KW_NTFf, KW_NTGf, KW_NTHf, KW_NTIf, KW_NTLf, KW_NTNf, KW_NTMf, KW_NTOf, KW_NTSf, KW_NTTf, KW_NTUf, KW_NTVf)
+KW_NTv = joinseq(KW_NTAv, KW_NTBv, KW_NTCv, KW_NTDv, KW_NTFv, KW_NTGv, KW_NTHv,          KW_NTLv, KW_NTNv, KW_NTMv, KW_NTOv, KW_NTSv, KW_NTTv, KW_NTUv, KW_NTVv)
 KW_NT = joinseq(KW_NTf, KW_NTv)
-
 
 ## Nouns - Activity (can be verb with '-하다/-되다' or used in form of '~을/를 하다')
 ### Original (Korean + Hanja)
@@ -485,7 +488,7 @@ KW_NAOfz = joinseq(KW_NAOf2, KW_NAOf3)
 KW_NAOf = joinseq(KW_NAOf1, KW_NAOfz)
 
 KW_NAOh = '|'.join(conjugate("강|미|융|특", '화') + conjugate(ks.KS_Az, '화') + conjugate(KW_NTB, '화'))
-KW_NAOv2 = "[인증추참평]가|[제탈]거|[공소전]개|설계|[경방]과|붕괴|[복연촉]구|[경대상연제표]기|[연증확]대|[시유]도|계류|[고]려|신뢰|[완치]료|[관격분수]리|처리|연마|구매|소모|근무|방미|[공거기]부|준비|[감공반발수식조퇴]사|[감기축]소|[감준회]수|[감실제출표]시|제어|[기부참]여|[소제]외|[긴소중필]요|[논유정주합회]의|정의|투자|복제|참조|[유의주차폐]지|[기탑]재|대체|[갈성수탈편]취|[납배설위]치|검토|돌파|[부실]패|배포|발표|보호|[저전통]화|[분이]해"
+KW_NAOv2 = "[인증추참평]가|[제탈]거|[공소전]개|설계|[경방]과|붕괴|[복연촉]구|[경대상연제표]기|[연증확]대|[시유]도|계류|[고]려|신뢰|[완종치]료|[관격분수]리|처리|연마|구매|소모|근무|방미|[공거기]부|준비|[감공반발수식조퇴]사|[감기축]소|[감준회]수|[감실제출표]시|제어|[기부참]여|[소제]외|[긴소중필]요|[논유정주합회]의|정의|투자|복제|참조|[유의주차폐]지|[기탑]재|대체|[갈성수탈편]취|[납배설위]치|검토|돌파|[부실]패|배포|발표|보호|[저전통]화|[분이]해"
 KW_NAOv3 = "이야기|[재전후]처리|마무리|재정의|재투자"
 KW_NAOvz = joinseq(KW_NAOv2, KW_NAOv3)
 KW_NAOv = joinseq(KW_NAOvz, KW_NAOh)

@@ -133,10 +133,11 @@
   },
   {
     "kind": "외래어",
-    "name": "0186097_‘formatting’의 표기",
+    "name": "0186097_‘~tting’의 표기",
     "desc": "https://wikidocs.net/186097",
     "cases": [
-      ["포맷팅", "포매팅"]
+      ["\\b포맷팅", "포매팅"],
+      ["\\b(|오버)핏팅", "()피팅"]
     ],
     "exception": [
     ]
@@ -1344,10 +1345,31 @@
   },
   {
     "kind": "외래어",
+    "name": "qa208382_‘edge’의 표기",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=208382",
+    "cases": [
+      ["\\b엣지(?=[(\\b])", "에지"],
+      ["\\b엣지(KJ)\\b", "에지()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
     "name": "qa235435_‘tablet’의 표기",
     "desc": "https://wikidocs.net/181967#tablet",
     "cases": [
       ["\\b[타테]블렛", "태블릿"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
+    "name": "qa236484_‘mental’의 표기",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=236484",
+    "cases": [
+      ["\\b멘탈", "멘털"]
     ],
     "exception": [
     ]

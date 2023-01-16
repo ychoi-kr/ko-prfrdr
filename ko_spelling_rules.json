@@ -1293,6 +1293,15 @@
   },
   {
     "kind": "맞춤법",
+    "name": "kg2171607_찰나",
+    "desc": "https://www.kyeonggi.com/2171607",
+    "cases": [
+      ["\\b찰라", "찰나"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "kn009157_서슴지",
     "desc": "https://news.korean.go.kr/index.jsp?control=page&part=view&idx=9157",
     "cases": [
@@ -1615,6 +1624,16 @@
 	  ["\\b(어디서|언제)던([지]?) (\\w+만) (\\w+면)\\b", "()든() () ()"],
 	  ["\\b(무슨) (\\w+[를을]) (\\w+)던지", "() () ()든지"],
 	  ["\\b(\\w+)던([지]?) (\\w+|안 \\w+)던([지]?)\\b", "()든() ()든()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "맞춤법",
+    "name": "ichb9014_틈틈이",
+    "desc": "https://blog.naver.com/icehongbo/90141304110",
+    "cases": [
+	  ["틈틈히", "틈틈이"]
     ],
     "exception": [
     ]
@@ -2608,6 +2627,15 @@
     "desc": "https://twitter.com/urimal365/status/247516329224069123",
     "cases": [
       [ "잇점", "이점" ]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "tw334200_단춧구멍",
+    "desc": "https://twitter.com/urimal365/status/334200662877417473",
+    "cases": [
+      ["단추구멍", "단춧구멍"]
     ],
     "exception": []
   },
