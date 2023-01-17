@@ -468,6 +468,16 @@
   },
   {
     "kind": "일본어 투",
+    "name": "0186584_일본식 한자어와 국어 단어의 차이",
+    "desc": "https://wikidocs.net/186584",
+    "cases": [
+      ["\\b(KW_NAO)해도 특히 문제는 (없다|없습니다)", "()해도 특별한 문제는 ()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "일본어 투",
     "name": "jako5e0e_서비스 인(サービスイン)",
     "desc": "https://ja.dict.naver.com/#/entry/jako/5e0e5eca83b34b47bd55b78cf748aa5e",
     "cases": [
