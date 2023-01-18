@@ -1041,7 +1041,6 @@
       ["\\b아방가르드", "전위, 선구자"],
       ["\\b아우라", "기품"],
       ["\\b아웃 웨어", "야외복"],
-      ["\\b아웃 포커싱", "배경 흐리기"],
       ["ignored:\\b아웃라이어", "독특한 사례"],
       ["\\b아웃리치", "현장 봉사, 현장 지원 활동"],
       ["\\b아웃바운드", "전화 방문 영업, 외국행, 해외여행"],
@@ -1603,7 +1602,6 @@
       ["\\b트래블러", "여행자"],
       ["\\b트래이딩 플로어", "거래장, 매매장"],
       ["\\b트래킹", "도보 여행, 걷기"],
-      ["\\b트래픽", "소통량, 교통, 통화량"],
       ["\\b트래핑", "사다리 놓기, 공 다루기"],
       ["\\b트랙 레코드", "기록, 실적, 경력"],
       ["\\b트랜스미디어", "매체 융합"],
@@ -1741,7 +1739,6 @@
       ["\\b포메이션", "정보, 안내"],
       ["\\b포스팅", "올리기, 글 올리기"],
       ["\\b포워더", "화물 운송 주선인"],
-      ["\\b포커스", "배경 흐리기"],
       ["\\b포커스 마켓", "주요 시장"],
       ["\\b포커페이스", "무표정"],
       ["\\b포켓 가이드북", "휴대용 안내서"],
@@ -2605,6 +2602,24 @@
   },
   {
     "kind": "쉬운 말",
+    "name": "kpl01649_일반 국민 60%가 이해하지 못하는 낱말",
+    "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=아웃%20포커스",
+    "cases": [
+      ["\\b아웃 포커스", "배경 흐리기"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "쉬운 말",
+    "name": "kpl01649_일반 국민 60%가 이해하지 못하는 낱말",
+    "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=아웃%20포커싱",
+    "cases": [
+      ["\\b아웃 포커싱", "배경 흐리기"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "쉬운 말",
     "name": "kpl01658_일반 국민 60%가 이해하지 못하는 낱말",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=아이덴티티",
     "cases": [
@@ -3082,7 +3097,18 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02735_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02737_일반 국민 60%가 이해하지 못하는 낱말",
+    "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=트래픽",
+    "cases": [
+      ["\\b트래픽 (|수요 )(증가|감소)", "소통량 ()()"],
+      ["\\b(출퇴근)(.*?)트래픽(\\w*)", "()()교통()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "쉬운 말",
+    "name": "kpl02739_일반 국민 60%가 이해하지 못하는 낱말",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=트랙",
     "cases": [
       ["\\b(경주|선수)(.*)트랙 (훈련\\w*)", "()()경주로 ()"],
@@ -3251,6 +3277,16 @@
     "cases": [
       ["\\b포스트 (코로나)(KJ)", "(1) 이후(2)"],
       ["\\b포스트 (코로나) (\\w+)(KJ)", "(1) 이후 (2)(3)"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "쉬운 말",
+    "name": "kpl03016_일반 국민 60%가 이해하지 못하는 낱말",
+    "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=포커스",
+    "cases": [
+      ["\\b포커스", "초점"]
     ],
     "exception": [
     ]
