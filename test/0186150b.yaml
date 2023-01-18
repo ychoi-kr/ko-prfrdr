@@ -2,3 +2,4 @@ true cases:
   - 화면 다시 그리는 도중 클라이언트 사이드에 접근하면
   - express를 API 사용하는 경우가 많았습니다.
 false cases:
+  - 차이를 어느 정도 고려해
