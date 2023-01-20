@@ -1990,7 +1990,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00000_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00000_일반 국민 60%가 이해하지 못하는 낱말(‘가드닝’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=가드닝",
     "cases": [
       ["\\b가드닝 (꾸러미|열풍|프로그램)", "생활 원예 ()"]
@@ -2000,7 +2000,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00001_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00001_일반 국민 60%가 이해하지 못하는 낱말(‘가드 레일’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=가드%20레일",
     "cases": [
       ["\\b가드레일", "보호 난간"]
@@ -2010,7 +2010,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00015_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00015_일반 국민 60%가 이해하지 못하는 낱말(‘개런티’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=개런티",
     "cases": [
       ["\\b(고액|배우들의) 개런티(\\w*)", "() 출연료()"],
@@ -2022,7 +2022,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00020_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00020_일반 국민 60%가 이해하지 못하는 낱말(‘거버넌스’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=거버넌스",
     "cases": [
       ["\\b(민관) 거버넌스를", "() 협력을"],
@@ -2033,7 +2033,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00021_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00021_일반 국민 60%가 이해하지 못하는 낱말(‘게놈’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=게놈",
     "cases": [
       ["\\b게놈", "유전체"]
@@ -2043,7 +2043,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00026_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00026_일반 국민 60%가 이해하지 못하는 낱말(‘게이지’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=게이지",
     "cases": [
       ["\\b(소화기 압력|연료) 게이지(\\w*)", "() 계기()"],
@@ -2054,7 +2054,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00029_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00029_일반 국민 60%가 이해하지 못하는 낱말(‘관문’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=관문",
     "cases": [
       ["\\b(진출|취업|침투)(.*)게이트웨이", "()()관문"]
@@ -2064,7 +2064,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00064_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00064_일반 국민 60%가 이해하지 못하는 낱말(‘그라운드 제로’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=그라운드%20제로",
     "cases": [
       ["\\b(베이루트)(.*)그라운드 제로", "()()대재앙 현장"],
@@ -2076,7 +2076,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00115_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00115_일반 국민 60%가 이해하지 못하는 낱말(‘그립’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=그립",
     "cases": [
       ["\\b(|골프 |탁구 |테니스 )그립 (시장\\w*|잘 잡\\w*)\\b", "()손잡이 ()"],
@@ -2087,7 +2087,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00276_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00276_일반 국민 60%가 이해하지 못하는 낱말(‘대시보드’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=대시보드",
     "cases": [
       ["\\b(차량) 대시보드(|에)\\b", "() 계기판()"],
@@ -2098,7 +2098,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00312_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00312_일반 국민 60%가 이해하지 못하는 낱말(‘델타’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=델타",
     "cases": [
       ["\\b델타 (구조)(\\w*)", "삼각주 ()()"],
@@ -2109,7 +2109,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00322_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00322_일반 국민 60%가 이해하지 못하는 낱말(‘도핑’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=도핑",
     "cases": [
       ["\\b도핑 (조작)", "약물 사용 ()"],
@@ -2121,7 +2121,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00326_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00326_일반 국민 60%가 이해하지 못하는 낱말(‘듀얼’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=듀얼",
     "cases": [
       ["\\b듀얼 (수소 연료 전지 발전소|음료|화면)", "이중 ()"]
@@ -2131,7 +2131,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00341_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00341_일반 국민 60%가 이해하지 못하는 낱말(‘드래그’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=드래그",
     "cases": [
       ["\\b(그대로|화면을) 드래그하면", "() 끌면"],
@@ -2142,7 +2142,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00355_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00355_일반 국민 60%가 이해하지 못하는 낱말(‘디바이스’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=디바이스",
     "cases": [
       ["\\b(게임|동영상|시각 장애인|피부 관리)(.*)디바이스", "()()기기"]
@@ -2152,7 +2152,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00392_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00392_일반 국민 60%가 이해하지 못하는 낱말(‘디폴트’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=디폴트",
     "cases": [
       ["\\b디폴트 (국가)(\\w*)", "채무 불이행 ()()"],
@@ -2164,7 +2164,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00399_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00399_일반 국민 60%가 이해하지 못하는 낱말(‘딜레마’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=딜레마",
     "cases": [
       ["\\b딜레마(에 빠\\w*)", "진퇴양난()"],
@@ -2176,7 +2176,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00416_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00416_일반 국민 60%가 이해하지 못하는 낱말(‘라이닝’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=라이닝",
     "cases": [
       ["\\b라이닝 없는 (구두)", "안감이 없는 ()"],
@@ -2187,7 +2187,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00417_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00417_일반 국민 60%가 이해하지 못하는 낱말(‘라이더’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=라이더",
     "cases": [
       ["\\b(배달|전업)(.*?) 라이더(\\w*)", "()() 배달원()"],
@@ -2198,7 +2198,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00422_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00422_일반 국민 60%가 이해하지 못하는 낱말(‘라이브러리’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=라이브러리",
     "cases": [
       ["\\b(디지털|음악|혁신) 라이브러리를 (구축|제공)", "() 자료관을 ()"],
@@ -2209,7 +2209,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00423_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00423_일반 국민 60%가 이해하지 못하는 낱말(‘라이선스’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=라이선스",
     "cases": [
       ["\\b(표준 특허) 라이선스(\\w*)", "() 사용권()"],
@@ -2221,7 +2221,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00424_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00424_일반 국민 60%가 이해하지 못하는 낱말(‘라이트’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=라이트",
     "cases": [
       ["\\b(자전거) 라이트", "() 조명등"],
@@ -2233,7 +2233,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00443_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00443_일반 국민 60%가 이해하지 못하는 낱말(‘랜’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=랜",
     "cases": [
       ["\\b무선랜 (대역폭|속도)", "무선 통신 ()"],
@@ -2244,7 +2244,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00475_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00475_일반 국민 60%가 이해하지 못하는 낱말(‘레거시’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=레거시",
     "cases": [
       ["\\b(올림픽) 레거시\\b", "() 유산"],
@@ -2256,7 +2256,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00497_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00497_일반 국민 60%가 이해하지 못하는 낱말(‘레이아웃’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=레이아웃",
     "cases": [
       ["\\b(건축|소방|아파트)(.*) 레이아웃이", "()() 배치가"],
@@ -2267,7 +2267,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00549_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00549_일반 국민 60%가 이해하지 못하는 낱말(‘로딩’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=로딩",
     "cases": [
       ["\\b(사진을) 로딩([하한할함합해했]\\w*)", "() 올리기()"],
@@ -2278,7 +2278,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00571_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00571_일반 국민 60%가 이해하지 못하는 낱말(‘로컬’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=로컬",
     "cases": [
       ["\\b로컬에 (밀착한 문화 정책)", "지역에 ()"],
@@ -2289,7 +2289,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00633_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00633_일반 국민 60%가 이해하지 못하는 낱말(‘리뷰어’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=리뷰어",
     "cases": [
       ["\\b(게임|특허|학술지)(.*)리뷰어(\\w*)", "()()검토자()"]
@@ -2299,7 +2299,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00678_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00678_일반 국민 60%가 이해하지 못하는 낱말(‘리퀘스트’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=리퀘스트",
     "cases": [
       ["\\b리퀘스트를 (받은 곡|받아)", "신청을 ()"],
@@ -2310,7 +2310,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00682_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00682_일반 국민 60%가 이해하지 못하는 낱말(‘리턴’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=리턴",
     "cases": [
       ["(['‘].*시절['’])로 리턴한다", "()로 되돌아온다"],
@@ -2322,7 +2322,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00711_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00711_일반 국민 60%가 이해하지 못하는 낱말(‘릴리스’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=릴리스",
     "cases": [
       ["\\b(신작)([을이]) 릴리스([하한할함합해했]\\w*)", "()() 출시()"],
@@ -2333,7 +2333,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00740_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00740_일반 국민 60%가 이해하지 못하는 낱말(‘마이너’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=마이너",
     "cases": [
       ["\\b마이너 (문화|시장)", "비주류 ()"],
@@ -2344,7 +2344,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00797_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00797_일반 국민 60%가 이해하지 못하는 낱말(‘매치’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=매치",
     "cases": [
       ["\\b(레슬링) 매치", "() 경기"],
@@ -2358,7 +2358,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00807_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00807_일반 국민 60%가 이해하지 못하는 낱말(‘매크로’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=매크로",
     "cases": [
       ["\\b(채권)(.*)매크로( 요인)", "()()거시적()"],
@@ -2370,7 +2370,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00877_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00877_일반 국민 60%가 이해하지 못하는 낱말(‘메커니즘’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=메커니즘",
     "cases": [
       ["\\b(경쟁) 메커니즘", "() 구조"],
@@ -2382,7 +2382,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00879_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00879_일반 국민 60%가 이해하지 못하는 낱말(‘메타데이터’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=메타데이터",
     "cases": [
       ["\\b(디지털 파일)(.*)메타데이터(\\w*)", "()()설명 자료()"],
@@ -2394,7 +2394,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00904_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00904_일반 국민 60%가 이해하지 못하는 낱말(‘모델링’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=모델링",
     "cases": [
       ["\\b(3차원|수학적) 모델링", "() 모형화"]
@@ -2404,7 +2404,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl00909_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl00909_일반 국민 60%가 이해하지 못하는 낱말(‘모드’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=모드",
     "cases": [
       ["\\b(\\d+[ ]?가지) 모드로\\b", "() 방식으로"],
@@ -2416,7 +2416,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01077_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01077_일반 국민 60%가 이해하지 못하는 낱말(‘베이스’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=베이스",
     "cases": [
       ["\\b베이스로 (\\w+)([를을])", "기본으로 ()()"],
@@ -2428,7 +2428,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01049_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01049_일반 국민 60%가 이해하지 못하는 낱말(‘밸리’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=밸리",
     "cases": [
       ["\\b(수소|에너지) 밸리(\\w*)", "() 지구()"]
@@ -2438,7 +2438,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01086_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01086_일반 국민 60%가 이해하지 못하는 낱말(‘벤치마크’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=벤치마크",
     "cases": [
       ["\\b벤치마크를 (확대)", "기준을 ()"],
@@ -2450,7 +2450,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01110_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01110_일반 국민 60%가 이해하지 못하는 낱말(‘부스’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=부스",
     "cases": [
       ["\\b(강아지 용품) 부스를", "()관을"],
@@ -2461,7 +2461,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01147_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01147_일반 국민 60%가 이해하지 못하는 낱말(‘브로커’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=브로커",
     "cases": [
       ["\\b(채권|탈북) 브로커", "() 중개인"],
@@ -2472,7 +2472,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01206_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01206_일반 국민 60%가 이해하지 못하는 낱말(‘빅 테크’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=빅%20테크",
     "cases": [
       ["\\b빅[ ]?테크 (기업)", "거대 정보 기술 ()"],
@@ -2483,7 +2483,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01278_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01278_일반 국민 60%가 이해하지 못하는 낱말(‘세션’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=세션",
     "cases": [
       ["\\b(일반 논문|논문 발표) 세션", "() 분과"],
@@ -2495,7 +2495,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01291_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01291_일반 국민 60%가 이해하지 못하는 낱말(‘섹션’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=섹션",
     "cases": [
       ["\\b(.*과정.*) 섹션으로", "() 분야로"],
@@ -2507,7 +2507,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01370_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01370_일반 국민 60%가 이해하지 못하는 낱말(‘스냅’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=스냅",
     "cases": [
       ["\\b스냅 단추(\\w*)", "똑딱단추()"]
@@ -2517,7 +2517,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01423_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01423_일반 국민 60%가 이해하지 못하는 낱말(‘스와프’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=스와프",
     "cases": [
       ["\\b(주식|통화) 스와프", "() 맞교환"],
@@ -2527,7 +2527,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01424_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01424_일반 국민 60%가 이해하지 못하는 낱말(‘스와핑’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=스와핑",
     "cases": [
       ["\\b(주식|통화) 스와핑", "() 맞교환"],
@@ -2537,7 +2537,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01438_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01438_일반 국민 60%가 이해하지 못하는 낱말(‘스케일 업’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=스케일%20업",
     "cases": [
       ["\\b(규제)(.*)스케일 업(\\w*)", "()()규모 확장()"],
@@ -2549,7 +2549,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01453_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01453_일반 국민 60%가 이해하지 못하는 낱말(‘스킬’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=스킬",
     "cases": [
       ["\\b스킬 (개발)", "기술 ()"],
@@ -2559,7 +2559,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01462_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01462_일반 국민 60%가 이해하지 못하는 낱말(‘스타트업’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=스타트업",
     "cases": [
       ["\\b스타트업 (\\d+[ ]?곳)", "새싹 기업 ()"],
@@ -2570,7 +2570,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01520_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01520_일반 국민 60%가 이해하지 못하는 낱말(‘스파크’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=스파크",
     "cases": [
       ["\\b스파크가 (생겨|화재 발생의)", "불꽃이 ()"],
@@ -2580,7 +2580,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01530_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01530_일반 국민 60%가 이해하지 못하는 낱말(‘스페이스’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=스페이스",
     "cases": [
       ["\\b(돌봄|선박|창작) 스페이스", "() 공간"]
@@ -2589,7 +2589,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01533_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01533_일반 국민 60%가 이해하지 못하는 낱말(‘스포일러’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=스포일러",
     "cases": [
       ["\\b(방송)(.*)스포일러(\\w*)", "()()줄거리 폭로자()"],
@@ -2602,7 +2602,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01649_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01649_일반 국민 60%가 이해하지 못하는 낱말(‘아웃 포커스’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=아웃%20포커스",
     "cases": [
       ["\\b아웃 포커스", "배경 흐리기"]
@@ -2611,7 +2611,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01649_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01649_일반 국민 60%가 이해하지 못하는 낱말(‘아웃 포커싱’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=아웃%20포커싱",
     "cases": [
       ["\\b아웃 포커싱", "배경 흐리기"]
@@ -2620,7 +2620,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01658_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01658_일반 국민 60%가 이해하지 못하는 낱말(‘아이덴티티’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=아이덴티티",
     "cases": [
       ["\\b(나만의|문화,|자신만의) 아이덴티티를", "() 정체성을"]
@@ -2629,7 +2629,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01674_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01674_일반 국민 60%가 이해하지 못하는 낱말(‘아키텍처’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=아키텍처",
     "cases": [
       ["\\b(전기차) 아키텍처 (분야)", "() 설계 ()"],
@@ -2639,7 +2639,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01716_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01716_일반 국민 60%가 이해하지 못하는 낱말(‘액세스’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=액세스",
     "cases": [
       ["\\b(안전한|인터넷) 액세스", "() 접속"],
@@ -2649,7 +2649,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01748_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01748_일반 국민 60%가 이해하지 못하는 낱말(‘어뷰징’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=어뷰징",
     "cases": [
       ["\\b(실검) 어뷰징", "실검 조회 수 조작"],
@@ -2659,7 +2659,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01790_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01790_일반 국민 60%가 이해하지 못하는 낱말(‘에디션’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=에디션",
     "cases": [
       ["\\b(크리스마스) 에디션", "() 판"],
@@ -2670,7 +2670,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01791_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01791_일반 국민 60%가 이해하지 못하는 낱말(‘에디터‘)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=에디터",
     "cases": [
       ["\\b(|전문 |잡지사 )에디터( 역할| 육성|로 일[하한할함합해했]\\w*)", "()편집자()"]
@@ -2679,7 +2679,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01793_쉬운 우리말 쓰기",
+    "name": "kpl01793_쉬운 우리말 쓰기(‘에러’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=에러",
     "cases": [
       ["\\b(수비) 에러", "() 실책"],
@@ -2689,7 +2689,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01811_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01811_일반 국민 60%가 이해하지 못하는 낱말(‘에이전트’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=에이전트",
     "cases": [
       ["\\b(|프로스포츠 |수출 저작권 )에이전트", "()대리인"]
@@ -2698,7 +2698,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01839_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01839_일반 국민 60%가 이해하지 못하는 낱말(‘엔지니어링’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=엔지니어링",
     "cases": [
       ["\\b(과학|기술)(.*)엔지니어링(\\w*)", "()()공학()"],
@@ -2708,7 +2708,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01888_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01888_일반 국민 60%가 이해하지 못하는 낱말(‘오브젝트’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=오브젝트",
     "cases": [
       ["\\b오브젝트로 (.*)(공간미|조형미)(\\w+)", "사물로 ()()()"],
@@ -2719,7 +2719,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01899_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01899_일반 국민 60%가 이해하지 못하는 낱말(‘오퍼레이터’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=오퍼레이터",
     "cases": [
       ["\\b(기계|로봇|자막|장비)(.*) 오퍼레이터(\\w*)", "()() 운영자()"]
@@ -2728,7 +2728,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl01927_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl01927_일반 국민 60%가 이해하지 못하는 낱말(‘온 디맨드’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=온%20디맨드",
     "cases": [
       ["\\b온 디맨드 (보험|상담|서비스)", "주문형 ()"]
@@ -2737,7 +2737,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02065_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02065_일반 국민 60%가 이해하지 못하는 낱말(‘유저’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=유저",
     "cases": [
       ["\\b(게임 |신규 |)유저(\\w*)", "() 사용자()"]
@@ -2746,7 +2746,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02115_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02115_일반 국민 60%가 이해하지 못하는 낱말(‘인스톨’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=인스톨",
     "cases": [
       ["\\b인스톨이 (필요 없\\w+)", "설치가 ()"],
@@ -2756,7 +2756,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02143_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02143_일반 국민 60%가 이해하지 못하는 낱말(‘인프라’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=인프라",
     "cases": [
       ["\\b(가동으로) 인프라 (구축|확충)(\\w*)", "() 기반 시설 ()()"],
@@ -2767,7 +2767,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02185_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02185_일반 국민 60%가 이해하지 못하는 낱말(‘제너레이터’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=제너레이터",
     "cases": [
       ["\\b(자동차)(.*)제너레이터(\\w*)", "()()발전기()"],
@@ -2777,7 +2777,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02307_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02307_일반 국민 60%가 이해하지 못하는 낱말(‘캐처’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=캐처",
     "cases": [
       ["\\b캐처", "포수"]
@@ -2786,7 +2786,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02308_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02308_일반 국민 60%가 이해하지 못하는 낱말(‘캐치’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=캐치",
     "cases": [
       ["\\b(단점|약점)(.*)캐치하([고는지]\\w*)", "()()잡()"],
@@ -2797,7 +2797,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02327_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02327_일반 국민 60%가 이해하지 못하는 낱말(‘캡션’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=캡션",
     "cases": [
       ["\\b(미술|사진)(.*)캡션(\\w*)", "()()설명()"],
@@ -2807,7 +2807,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02332_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02332_일반 국민 60%가 이해하지 못하는 낱말(‘커넥티드’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=커넥티드",
     "cases": [
       ["\\b(사물 인터넷|인공 지능|자율 주행|차량)(.*)커넥티드 (기술)(\\w*)", "()()통신 연결 ()()"],
@@ -2817,7 +2817,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02340_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02340_일반 국민 60%가 이해하지 못하는 낱말(‘커리어’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=커리어",
     "cases": [
       ["\\b커리어 (쌓기|형성)", "경력 ()"],
@@ -2827,7 +2827,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02341_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02341_일반 국민 60%가 이해하지 못하는 낱말(‘커머스’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=커머스",
     "cases": [
       ["\\b(다양한|디지털|한국) 커머스 (개념|시장|전문 인력)(\\w*)", "() 상거래 ()()"]
@@ -2836,7 +2836,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02366_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02366_일반 국민 60%가 이해하지 못하는 낱말(‘컨버터’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=컨버터",
     "cases": [
       ["\\b컨버터(가| 등)\\b", "변환기()"],
@@ -2847,7 +2847,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02376_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02376_일반 국민 60%가 이해하지 못하는 낱말(‘컨설턴트’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=컨설턴트",
     "cases": [
       ["\\b(건강|취업 전문|전문) 컨설턴트", "() 상담사"]
@@ -2857,7 +2857,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02463_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02463_일반 국민 60%가 이해하지 못하는 낱말(‘코칭’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=코칭",
     "cases": [
       ["\\b(독서) 코칭으로", "() 지도로"],
@@ -2868,7 +2868,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02465_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02465_일반 국민 60%가 이해하지 못하는 낱말(‘코튼’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=코튼",
     "cases": [
       ["\\b코튼 (속옷)(\\w*)", "면 ()()"],
@@ -2880,7 +2880,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02479_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02479_일반 국민 60%가 이해하지 못하는 낱말(‘콘텍스트’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=콘텍스트",
     "cases": [
       ["\\b콘텍스트를 (그대로|파악)(\\w*)", "맥락을 ()()"],
@@ -2891,7 +2891,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02533_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02533_일반 국민 60%가 이해하지 못하는 낱말(‘크리에이티브’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=크리에이티브",
     "cases": [
       ["\\b크리에이티브 (영역)(\\w*)", "창조적 ()()"],
@@ -2903,7 +2903,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02577_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02577_일반 국민 60%가 이해하지 못하는 낱말(‘키트’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=키트",
     "cases": [
       ["\\b(신속 진단) 키트(\\w*)", "() 도구()"],
@@ -2915,7 +2915,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02578_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02578_일반 국민 60%가 이해하지 못하는 낱말(‘키패드’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=키패드",
     "cases": [
       ["\\b(저소음) 키패드", "() 자판"],
@@ -2927,7 +2927,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02596_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02596_일반 국민 60%가 이해하지 못하는 낱말(‘타이트’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=타이트",
     "cases": [
       ["\\b타이트", "빡빡한, 팽팽한"]
@@ -2937,7 +2937,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02601_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02601_일반 국민 60%가 이해하지 못하는 낱말(‘타이틀전’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=타이틀전",
     "cases": [
       ["\\b타이틀전", "선수권전"]
@@ -2947,7 +2947,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02602_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02602_일반 국민 60%가 이해하지 못하는 낱말(‘타이프 문서’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=타이프%20문서",
     "cases": [
       ["\\b타이프 문서", "타자 문서"]
@@ -2957,7 +2957,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02603_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02603_일반 국민 60%가 이해하지 못하는 낱말(‘타이피스트’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=타이피스트",
     "cases": [
       ["\\b타이피스트", "타자원"]
@@ -2967,7 +2967,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02606_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02606_일반 국민 60%가 이해하지 못하는 낱말(‘타임 레이스’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=타임%20레이스",
     "cases": [
       ["\\b타임 레이스", "기록 경기"]
@@ -2977,7 +2977,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02652_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02652_일반 국민 60%가 이해하지 못하는 낱말(‘테스트 베드’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=테스트%20베드",
     "cases": [
       ["\\b(반도체) 테스트 베드", "() 가늠터"],
@@ -2989,7 +2989,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02665_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02665_일반 국민 60%가 이해하지 못하는 낱말(‘테크’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=테크",
     "cases": [
       ["테크 (기업|업체)(\\w*)", "기술 ()()"]
@@ -2999,7 +2999,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02670_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02670_일반 국민 60%가 이해하지 못하는 낱말(‘테크핀’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=테크핀",
     "cases": [
       ["\\b테크핀 (기업|업체)(\\w*)", "금융 기술 ()()"],
@@ -3010,7 +3010,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02673_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02673_일반 국민 60%가 이해하지 못하는 낱말(‘텍스처’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=텍스처",
     "cases": [
       ["\\b(부드러운) 텍스처가", "() 질감이"],
@@ -3022,7 +3022,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02675_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02675_일반 국민 60%가 이해하지 못하는 낱말(‘텍스트’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=텍스트",
     "cases": [
       ["\\b(음성)(.*)텍스트(.*)(바[꾸꾼꿀꿈꿉꿔꿨]|변환)(\\w*)", "()()글자()()()"],
@@ -3034,7 +3034,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02690_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02690_일반 국민 60%가 이해하지 못하는 낱말(‘토털 패션’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=토털%20패션",
     "cases": [
       ["\\b토털 패션 (기업|업체)(\\w*)", "종합 패션 ()"],
@@ -3045,7 +3045,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02699_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02699_일반 국민 60%가 이해하지 못하는 낱말(‘톱 브랜드’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=톱%20브랜드",
     "cases": [
       ["\\b톱 브랜드", "유명 상표"]
@@ -3055,7 +3055,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02700_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02700_일반 국민 60%가 이해하지 못하는 낱말(‘톱기사’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=톱기사",
     "cases": [
       ["\\b톱기사", "머리기사"]
@@ -3065,7 +3065,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02701_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02701_일반 국민 60%가 이해하지 못하는 낱말(‘톱다운’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=톱다운",
     "cases": [
       ["\\b([톱탑][ ]?다운|[톱탑][ ]?다운 방식)(으로|은|이 아닌)\\b", "하향식(2)"]
@@ -3075,7 +3075,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02716_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02716_일반 국민 60%가 이해하지 못하는 낱말(‘툴바’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=툴바",
     "cases": [
       ["\\b툴바", "도구 막대"]
@@ -3085,7 +3085,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02717_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02717_일반 국민 60%가 이해하지 못하는 낱말(‘툴키트’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=툴키트",
     "cases": [
       ["\\b(교육|청소년|학습)(.*)툴키트가", "()()도구 모음이"],
@@ -3097,7 +3097,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02737_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02737_일반 국민 60%가 이해하지 못하는 낱말(‘트래픽’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=트래픽",
     "cases": [
       ["\\b트래픽 (|수요 )(증가|감소)", "소통량 ()()"],
@@ -3108,7 +3108,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02739_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02739_일반 국민 60%가 이해하지 못하는 낱말(‘트랙’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=트랙",
     "cases": [
       ["\\b(경주|선수)(.*)트랙 (훈련\\w*)", "()()경주로 ()"],
@@ -3120,7 +3120,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02737_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02737_일반 국민 60%가 이해하지 못하는 낱말(‘트랜스’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=트랜스",
     "cases": [
       ["\\b트랜스 (등|차단)", "변압기 ()"],
@@ -3131,7 +3131,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02749_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02749_일반 국민 60%가 이해하지 못하는 낱말(‘트레이드’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=트레이드",
     "cases": [
       ["\\b(선수|이적)(.*)트레이드가", "()()맞교환이"],
@@ -3143,7 +3143,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02761_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02761_일반 국민 60%가 이해하지 못하는 낱말(‘트리거’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=트리거",
     "cases": [
       ["\\b트리거가 ([되된될됨됩돼됐]\\w*)", "방아쇠가 ()"]
@@ -3153,8 +3153,8 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02805_일반 국민 60%가 이해하지 못하는 낱말",
-    "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=트레이드",
+    "name": "kpl02805_일반 국민 60%가 이해하지 못하는 낱말(‘파이프라이’)",
+    "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=파이프라인",
     "cases": [
       ["\\b(제품 노후화|후속)(.*)파이프라인(\\w*)", "()()개발 진행 제품()"],
       ["\\b(화합)(.*)파이프라인이", "()()촉매제가"],
@@ -3165,7 +3165,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02839_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02839_일반 국민 60%가 이해하지 못하는 낱말(‘패널’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=패널",
     "cases": [
       ["\\b패널 (.*)(답했다)", "응답자 ()()"],
@@ -3177,7 +3177,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02879_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02879_일반 국민 60%가 이해하지 못하는 낱말(‘패키지 디자인’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=패키지%20디자인",
     "cases": [
       ["\\b패키지 디자인", "묶음 디자인, 꾸러미 디자인"]
@@ -3187,7 +3187,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02880_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02880_일반 국민 60%가 이해하지 못하는 낱말(‘패키지 딜’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=패키지%20딜",
     "cases": [
       ["\\b패키지 딜", "일괄 타결"]
@@ -3197,7 +3197,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02891_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02891_일반 국민 60%가 이해하지 못하는 낱말(‘팩토리’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=팩토리",
     "cases": [
       ["\\b(문화) 팩토리를", "() 공방을"],
@@ -3209,7 +3209,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02952_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02952_일반 국민 60%가 이해하지 못하는 낱말(‘페어’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=페어",
     "cases": [
       ["\\b(도자|산업기술|출판 저작권) 페어", "() 박람회"]
@@ -3219,7 +3219,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02959_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02959_일반 국민 60%가 이해하지 못하는 낱말(‘페이지 넘버’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=페이지%20넘버",
     "cases": [
       ["\\b페이지 넘버", "쪽 번호"]
@@ -3229,7 +3229,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02961_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02961_일반 국민 60%가 이해하지 못하는 낱말(‘페이징’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=페이징",
     "cases": [
       ["\\b무선 페이징 (기계|시스템)", "무선 호출 ()"],
@@ -3240,7 +3240,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02967_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02967_일반 국민 60%가 이해하지 못하는 낱말(‘페이트 존’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=페인트%20존",
     "cases": [
       ["\\b페인트 존", "3초 제한 구역"]
@@ -3250,7 +3250,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02990_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02990_일반 국민 60%가 이해하지 못하는 낱말(‘포레스트’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=포레스트",
     "cases": [
       ["\\b(청춘) 포레스트", "() 숲"],
@@ -3261,7 +3261,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl02992_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl02992_일반 국민 60%가 이해하지 못하는 낱말(‘포맷’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=포맷",
     "cases": [
       ["\\b(방송|판박이) 포맷(\\w*)", "() 형식()"],
@@ -3272,7 +3272,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03000_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03000_일반 국민 60%가 이해하지 못하는 낱말(‘포스트’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=포스트",
     "cases": [
       ["\\b포스트 (코로나)(KJ)", "(1) 이후(2)"],
@@ -3283,7 +3283,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03016_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03016_일반 국민 60%가 이해하지 못하는 낱말(‘포커스’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=포커스",
     "cases": [
       ["\\b포커스", "초점"]
@@ -3293,7 +3293,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03060_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03060_일반 국민 60%가 이해하지 못하는 낱말(‘풀 시스템’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=풀%20시스템",
     "cases": [
       ["\\b풀 시스템으로 취재([하할함합해했]\\w*)", "공동 취재()"],
@@ -3304,7 +3304,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03091_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03091_일반 국민 60%가 이해하지 못하는 낱말(‘프레스’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=프레스",
     "cases": [
       ["\\b프레스 (수비)", "압박 ()"],
@@ -3318,7 +3318,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03096_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03096_일반 국민 60%가 이해하지 못하는 낱말(‘프레싱’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=프레싱",
     "cases": [
       ["\\b(원단|와이셔츠)([를을]?) 프레싱(|과)\\b", "()() 다림질()"],
@@ -3329,7 +3329,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03097_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03097_일반 국민 60%가 이해하지 못하는 낱말(‘프레임’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=프레임",
     "cases": [
       ["\\b(표현)(.*)프레임을 (정[하한할함합해했]\\w*)", "()()구도를 ()"],
@@ -3342,7 +3342,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03098_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03098_일반 국민 60%가 이해하지 못하는 낱말(‘프레임워크’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=프레임워크",
     "cases": [
       ["\\b(전자 의무 기록) 프레임워크를 (개발|보급)", "() 틀을 ()"],
@@ -3354,7 +3354,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03104_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03104_일반 국민 60%가 이해하지 못하는 낱말(‘프로덕션’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=프로덕션",
     "cases": [
       ["\\b(광고|식품|혐한) 프로덕션을", "() 제작소를"],
@@ -3365,7 +3365,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03108_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03108_일반 국민 60%가 이해하지 못하는 낱말(‘프로세서’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=프로세서",
     "cases": [
       ["\\b(인공 지능)(.*)프로세서", "()()처리기"],
@@ -3376,7 +3376,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03168_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03168_일반 국민 60%가 이해하지 못하는 낱말(‘플랫폼’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=플랫폼",
     "cases": [
       ["\\b플랫폼(.*)(유통)(\\w*)", "온라인 체제 기반()()()"],
@@ -3388,7 +3388,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03172_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03172_일반 국민 60%가 이해하지 못하는 낱말(‘플러그인’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=플러그인",
     "cases": [
       ["\\b(보안) (플러그인|플러그인 프로그램)", "() 기능 확장 프로그램"],
@@ -3400,7 +3400,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03200_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03200_일반 국민 60%가 이해하지 못하는 낱말(‘피크’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=피크",
     "cases": [
       ["\\b(귀경길) 피크(\\w*)", "() 절정()"],
@@ -3412,7 +3412,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03211_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03211_일반 국민 60%가 이해하지 못하는 낱말(‘픽셀’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=픽셀",
     "cases": [
       ["\\b픽셀을 (개발)(\\w*)", "화소를 ()()"],
@@ -3424,7 +3424,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03260_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03260_일반 국민 60%가 이해하지 못하는 낱말(‘하이픈’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=하이픈",
     "cases": [
       ["\\b(영어)(.*)하이픈( 등)", "()()붙임표()"],
@@ -3436,7 +3436,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03439_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03439_일반 국민 60%가 이해하지 못하는 낱말(‘EU’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=EU",
     "cases": [
       ["\\bEU([도에이입]\\w*| 내)(.*)(온실 가스 배출량|화장품|목록)(\\w+)", "유럽 연합()()()()"],
@@ -3448,7 +3448,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03455_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03455_일반 국민 60%가 이해하지 못하는 낱말(‘GDP’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=GDP",
     "cases": [
       ["\\b(세계.*) GDP는", "() 국내 총생산은"],
@@ -3460,7 +3460,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03590_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03590_일반 국민 60%가 이해하지 못하는 낱말(‘SW’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=SW",
     "cases": [
       ["\\b(\\w+[도를을]) SW(로 해결)", "() 소프트웨어()"],
@@ -3472,7 +3472,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03594_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03594_일반 국민 60%가 이해하지 못하는 낱말(‘TF’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=TF",
     "cases": [
       ["\\b(아동 학대)(.*)TF팀을 구성", "()()전담반을 구성"],
@@ -3484,7 +3484,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03614_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03614_일반 국민 60%가 이해하지 못하는 낱말(‘VR’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=VR",
     "cases": [
       ["\\bVR로", "가상 현실로"],
@@ -3495,7 +3495,7 @@
   },
   {
     "kind": "쉬운 말",
-    "name": "kpl03708_일반 국민 60%가 이해하지 못하는 낱말",
+    "name": "kpl03708_일반 국민 60%가 이해하지 못하는 낱말(‘프라이’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=프라이",
     "cases": [
       ["\\b프라이하는", "부치는"],
