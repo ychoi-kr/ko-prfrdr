@@ -2382,17 +2382,19 @@
   },
   {
     "kind": "띄어쓰기",
-    "name": "0152792b_-고 싶어 하다",
-    "desc": "https://wikidocs.net/152792",
+    "name": "0152792a_-어하다",
+    "desc": "https://wikidocs.net/152792#a",
     "cases": [
-      [
-        "dup:-고 싶어하(다)",
-        "-고 싶어 하(다)"
-      ],
-      [
-        "(\\w*고)[ ]?싶어(KC_H)(\\w*)",
-        "() 싶어 ()()"
-      ]
+      ["\\b힘[ ]?들어 ([하한할함합해했]\\w*)", "힘들어()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "0152792b_-고 싶어 하다",
+    "desc": "https://wikidocs.net/152792#b",
+    "cases": [
+      ["(\\w*고)[ ]?싶어(KC_H)(\\w*)", "() 싶어 ()()"]
     ],
     "exception": []
   },
@@ -3823,6 +3825,25 @@
   },
   {
     "kind": "띄어쓰기",
+    "name": "0187243c1_읽을거리",
+    "desc": "https://wikidocs.net/187243#c",
+    "cases": [
+      ["\\b읽을 거리", "읽을거리"]
+    ],
+    "exception": ["더 읽을", "가볍게 읽을"]
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "0187243c2_읽을 거리",
+    "desc": "https://wikidocs.net/187243#c",
+    "cases": [
+      ["\\b(가볍게|더) 읽을거리", "() 읽을 거리"]
+
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
     "name": "bnd0300a_등교 전",
     "desc": "https://bookndebate.tistory.com/300",
     "cases": [
@@ -3913,6 +3934,16 @@
       ["\\b(마주)(앉\\w*|보고 앉\\w*|보면)", "() ()"]
     ],
     "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "kns11308_힘듦",
+    "desc": "https://www.korean.go.kr/news/index.jsp?control=page&part=view&idx=11308",
+    "cases": [
+      ["\\b힘 듦(|[을])\\b", "힘듦()"]
+    ],
+    "exception": [
+    ]
   },
   {
     "kind": "띄어쓰기",
@@ -5237,6 +5268,15 @@
   },
   {
     "kind": "띄어쓰기",
+    "name": "qa224699_멍들다",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=224699",
+    "cases": [
+      ["\\b멍 든 (|내 )가슴", "멍든 ()가슴"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
     "name": "qa224845_빈자리",
     "desc": "https://www.wikidocs.net/181967#224845",
     "cases": [
@@ -5379,7 +5419,18 @@
     "name": "scourt01_띄어쓰기 (법원 맞춤법 자료집)",
     "desc": "https://blog.kakaocdn.net/dn/lr24s/btqGxPXXP3n/sGKLZ7RKK4sOSksoCH14U0/%EB%B2%95%EC%9B%90%20%EB%A7%9E%EC%B6%A4%EB%B2%95%20%EC%9E%90%EB%A3%8C%EC%A7%91%20%EC%B5%9C%EC%A2%85.pdf?attach=1&knm=tfile.pdf",
     "cases": [
-	  ["\\b(앞) ([서선설섰]\\w*)", "()()"]
+      ["\\b(앞) ([서선설섰]\\w*)", "()()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "sd386684_힘들다",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=386684&searchKeywordTo=3",
+    "cases": [
+      ["\\b힘 (드는|드[냐네니]|드시죠|들기만|들[어여][도서]?|들다[고는며면]?|들면|들죠|들지[만]?|듭니다)\\b", "힘()"],
+      ["(\\w+기)[ ]?힘든[ ]?[대데]를\\b", "() 힘든 데를"],
+      ["\\b힘 (드는|[든들])데\\b", "힘()데"]
     ],
     "exception": []
   },
@@ -5388,7 +5439,7 @@
     "name": "sd484058_집수리",
     "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=484058&searchKeywordTo=3",
     "cases": [
-	  ["\\b(?<!낡은 )집 수리", "집수리"]
+      ["\\b(?<!낡은 )집 수리", "집수리"]
     ],
     "exception": []
   },

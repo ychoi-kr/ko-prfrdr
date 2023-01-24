@@ -696,6 +696,30 @@
   },
   {
     "kind": "맞춤법",
+    "name": "0187226b_일부러",
+    "desc": "https://wikidocs.net/187226#b",
+    "cases": [
+      ["\\b(너|네가) 일부로 (그랬[냐어지])", "() 일부러 ()"],
+      ["\\b안 (만나도|해도) 되는데 일부로", "안 () 되는데 일부러"],
+      ["\\b(\\w+지 않아도) 되는데 일부로", "() 되는데 일부러"],
+      ["\\b일부로 (KW_NAO)(당[하한할함합해했]\\w*)", "일부러 ()()"],
+      ["\\b일부로 (그런|모르는|못 들은|못 본|태연한) 척[ ]?([하한할함합해했]\\w*)", "일부러 () 척()"],
+      ["\\b(당신[이]?) 일부로 (그랬어[요]?|그랬[죠지])", "() 일부러 ()"],
+      ["\\b(그래서) 일부로 (말[을]?|얘기) (안 [하한할함합해했]\\w*)", "() 일부러 () ()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "0187231_냄새",
+    "desc": "https://wikidocs.net/187231",
+    "cases": [
+      ["\\b냄세(|가) ([나난날남납]\\w*)", "냄새() ()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "cplus202_자주 헷갈리는 철자",
     "desc": "이것만 알아두면 맞춤법은 끝나(http://cultureplus.com/)",
     "cases": [
@@ -1366,15 +1390,6 @@
   },
   {
     "kind": "맞춤법",
-    "name": "kn010904_십상",
-    "desc": "https://news.korean.go.kr/index.jsp?control=page&part=view&idx=10904",
-    "cases": [
-      [ "\\b쉽상", "십상" ]
-    ],
-    "exception": []
-  },
-  {
-    "kind": "맞춤법",
     "name": "kn008954_개수",
     "desc": "https://news.korean.go.kr/index.jsp?control=page&part=view&idx=8954",
     "cases": [
@@ -1413,10 +1428,29 @@
   },
   {
     "kind": "맞춤법",
+    "name": "kn010904_십상",
+    "desc": "https://news.korean.go.kr/index.jsp?control=page&part=view&idx=10904",
+    "cases": [
+      ["\\b쉽상", "십상"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "kns11264_젓갈",
     "desc": "https://www.korean.go.kr/news/index.jsp?control=page&part=view&idx=11264",
     "cases": [
-	  ["\\b젖갈", "젓갈"]
+      ["\\b젖갈", "젓갈"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "맞춤법",
+    "name": "kns11308_힘듦",
+    "desc": "https://www.korean.go.kr/news/index.jsp?control=page&part=view&idx=11308",
+    "cases": [
+      ["\\b힘[ ]?듬(|[을])\\b", "힘듦()"]
     ],
     "exception": [
     ]
@@ -2796,7 +2830,7 @@
       [ "왠일", "웬일" ],
       ["dup:웬지", "왠지" ],
       [ "오래 삼", "오래 삶" ],
-      [ "힘듬", "힘듦" ],
+      [ "dup:힘듬", "힘듦" ],
       [ "하늘을 남", "하늘을 낢" ],
       [ "\\b(구지|궂이|궃이)", "굳이" ],
       [ "함부러", "함부로" ],
