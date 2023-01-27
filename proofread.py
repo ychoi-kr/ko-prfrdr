@@ -13,6 +13,7 @@ from time import process_time
 from kosound import hasfinalconsonant
 import kostr
 import koletter
+import kostem
 import koeomi
 import kojosa
 import koword
@@ -229,6 +230,9 @@ def check(rules, line, specified_rule, show_all_lines, warnings_counter, profile
                 for x in dir(koletter): 
                     if 'KL' in x:
                         bad = bad.replace(x, getattr(koletter, x))
+                for x in dir(kostem): 
+                    if x.startswith('KS'):
+                        bad = bad.replace(f'({x})', f'({getattr(kostem, x)})')
                 for x in dir(koeomi): 
                     if x.startswith('KE'):
                         bad = bad.replace(f'({x})', f'({getattr(koeomi, x)})')
