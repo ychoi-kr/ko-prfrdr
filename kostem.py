@@ -1,19 +1,27 @@
 from utils import joinseq
 
 
-"""Korean Stems"""
+"""Korean Stems.
+
+These are similar but not same as definition of stem(어간) in Korean grammar.
+In example, we use '나ㅃ' instead of '나쁘-' for '나쁘다'.
+"""
 
 ## A: Adjective (removed final consonant which will be dropped during conjugatation)
 # can be conjugated to                            # VS            AS       ASL     ASN     AVC          AVM     AVN     BH
 KS_Aa = '나ㅃ|바ㅃ'                               # +ㅏ지다       +ㅡ+다   +ㅡ+ㄹ  +ㅡ+ㄴ  +ㅏ서        +ㅡ+게  +ㅡ+지 
-KS_Ab = '가까|귀여|더|무서|쉬|즐거|차가|추|해로'       # +워지다       +ㅂ+다   +울     +운     +워서        +ㅂ+게  +ㅂ+지 
+KS_Ab = '가까|귀여|더|무서|쉬|즐거|차가|추|해로'  # +워지다       +ㅂ+다   +울     +운     +워서        +ㅂ+게  +ㅂ+지 
 KS_Ac = '많|맑|않|작|좁'                          # +아지다       +다      +을     +은     +아서        +게     +지    
 KS_Ad = '다'            # sweet                   # +ㄹ+아지다    +ㄹ+다   +ㄹ     +ㄴ     +ㄹ+아서     +ㄹ+게  +ㄹ+지 
 KS_Ae = '예ㅃ|ㅋ'                                 # +ㅓ지다       +ㅡ+다   +ㅡ+ㄹ  +ㅡ+ㄴ  +ㅓ서        +ㅡ+게  +ㅡ+지 
 KS_Af = '다'            # different               # +ㄹ+라지다    +르+다   +를     +른     +ㄹ+라서     +르+게  +르+지 
-KS_Ag = '비슷|심각|적[정합]|착|불길'              # +해지다       +하다    +할     +한     +해서        +하게   +하지
+
+                                                  # +해지다       +하다    +할     +한     +해서        +하게   +하지
+KS_Ag = '비슷|심각|적[정합]|착|불길|미약|병약|심약|참신|상이|진부'
+
                                                   # +해지다       +하다    +할     +한     +해서        +하게   +하지   +히 
-KS_Ah = '간[결단명략]|깔끔|매끈|못마땅|부지런|원만|적[당절]|지저분'
+KS_Ah = '간[결단명략]|간단|긴요|깔끔|딱딱|멍청|명확|못마땅|부지런|씩씩|원만|장렬|적[당절]|졸렬|지저분|침착|화려'
+
 KS_Ai = '붉'                                      # +어지다       +다      +을     +은     +어서        +게     +지    
 KS_Aj = '괜찮|낮|높|좋|짧'                        # +아지다       +다      +을     +은     +아서        +게     +지    
 KS_Ak = '같|높'                                   # +아지다       +다      +을     +은     +아서        +게     +지     +이
@@ -31,11 +39,14 @@ KS_Az = '간소|첨예'                               # +해지다       +하다
 # '쓰다(bitter)' is not included because it is ambiguous with '쓰다(write)'
 
 
+## stems of verb
 
-## roots of verb
+### stems of '~거리다'
+KS_VGa = "매끈|시들|질척"           # -거리다(verb), -히, -대다, -하다(adjective)
+KS_VGb = "거들먹"                   # -거리다, -이다, -대다
 
 ### Both(intransives can conjugate to transive)
-#                                   # intransive                        transive                             
+#                                   # intransive                         transive                             
 #                                   # no-tense   present    past         no-tense     past         intension
 KS_VCg = "숨"                       # 숨+다      숨+는+다   숨+었+다     숨+ㄱ+ㅣ+다  숨+ㄱ+였+다  숨+ㄱ+ㅣ+ㄹ
 KS_VCi = "먹|죽"                    # 먹+다      먹+는+다   먹+었+다     먹+이+다     먹+여+ㅆ+다  먹+일
