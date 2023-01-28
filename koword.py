@@ -501,22 +501,45 @@ KW_NT = joinseq(KW_NTf, KW_NTv)
 
 ## Nouns - Activity (can be verb with '-하다/-되다' or used in form of '~을/를 하다')
 ### Original (Korean + Hanja)
-KW_NAOf1 = "곱"
-KW_NAOf2 = "생각|보간|[가수증]감|점검|동결|[가제]공|[건입출]국|공격|[연체]결|[구변]경|[총포]괄|집권|[접출]근|송금|[공지취]급|가늠|기능|[차판]단|[도전]달|[담배해]당|[가기운이작]동|[납취획]득|누락|[생중후]략|[노]력|[관마수제훈]련|[기수]록|소멸|[발변설소연작제조증]명|[괄주지]목|함몰|질문|고민|위반|[개선재폭]발|체벌|식별|[반중]복|구분|계산|[손연향]상|[검수탐]색|[발재]생|[분해]석|개선|[건개배연증해]설|[구생작완형]성|[계상접]속|[방소전]송|[기저]술|[연학]습|[발송수통]신|임신|[장파]악|[고보제]안|[계예해]약|선언|[수성영작]업|검역|[구시재]연|[나배사]열|오열|오염|[반운촬투]영|[사응이작적통포허활]용|훈육|[기지]원|[대불]응|[방유]일|통일|[기도수출투]입|[동시조]작|[긴등성저출퇴]장|경쟁|산적|[도발운회]전|조절|근접|[가개걱검결선설수조지추측한확]정|[마방]중|검증|[부승약]진|[결매모수편]집|[도장부집탈]착|칭찬|제창|신청|[구압]축|[누도산수연인제진창추호]출|[계예]측|[강이]탈|[간선채]택|[면유입재]학|국한|방한|분할|포함|[결부취]합|[동미발비서시수운유연진]행|실행|시험|[구실재표]현|[반변]환|[계구기노]획"
-KW_NAOf3 = "불구경|송수신|수출입|재실행"
+
+#### Intransive
+KW_NAOIf1 = "벌|찡|참"
+KW_NAOIf2 = "[입출]국|집권|[접출]근|기능|도달|탈락|[운]동|[중후]략|[노]력|[관]련|소멸|연명|[괄]목|함몰|[재폭]발|체벌|중복|손상|발생|연설|소송|통신|[긴등성출퇴]장|경쟁|산적|[도발회]전|근접|방중|[부승약]진|[면유입재]학|방한|[동비서유]행"
+KW_NAOIf3 = "불구경|수소문|하소연"
+KW_NAOIf = joinseq(KW_NAOIf1, KW_NAOIf2, KW_NAOIf3)
+KW_NAOIv1 = "묘|화"
+KW_NAOIv2 = "[증참]가|[경방]과|붕괴|[경]기|연대|방미|[공식퇴]사|감소|소외|[긴중필]요|합의|주지|[부실]패|저하|[전통]화"
+KW_NAOIv = joinseq(KW_NAOIv1, KW_NAOIv2)
+KW_NAOI = joinseq(KW_NAOIf, KW_NAOIv)
+
+#### Transive
+KW_NAOTf1 = "곱"
+KW_NAOTf2 = "수감|생각|보간|[가증]감|점검|공격|[가동연체]결|[구변]경|[가제]공|[건]국|[총포]괄|송금|[공지취]급|가늠|[차판]단|[배전]달|[담배해]당|[가기이작]동|[납취획]득|누락|[생]략|[마수제훈]련|[기수]록|[발변설소작제조증]명|[주지]목|질문|고민|위반|[개선]발|식별|[반]복|구분|계산|[연향]상|[검수탐]색|[재]생|[분해]석|개선|[건개배증해]설|[구생작완형]성|[계상접]속|[방배전]송|[기저]술|[연학]습|[발송수]신|임신|[장파]악|[고보제]안|[계예해]약|선언|[수성영작]업|검역|[구시재]연|[나배사]열|오열|오염|[반운촬투]영|[사응이작적통포허활]용|[교훈]육|[기지]원|[대불]응|[방유]일|통일|[기도수출투]입|[동시조]작|[저]장|[운]전|조절|[가개걱검결선설수조지추측한확]정|[마]중|검증|[결매모수편]집|[도장부집탈]착|칭찬|제창|신청|[구압]축|[누도산수연인제진창추호]출|[계예]측|[강이]탈|[간선채]택|국한|분할|포함|[결부취]합|[미발시수운연진]행|실행|시험|[구실재표]현|[반변]환|[계구기노]획"
+KW_NAOTf3 = "경원시|동일시|등한시|송수신|수출입|재실행"
+KW_NAOTf = joinseq(KW_NAOTf1, KW_NAOTf2, KW_NAOTf3)
+KW_NAOTv1 = "요"
+KW_NAOTv2 = "[인추평]가|[제탈]거|[공소전]개|설계|[복연촉]구|[대분상연제표]기|[증확]대|[시유주]도|계류|[고]려|신뢰|[완종치]료|[관격분수]리|처리|연마|구매|소모|근무|[공거기]부|준비|[감반발수조]사|[기축]소|[감준회]수|[감실제출표]시|제어|[기부참]여|[제]외|[소]요|[논유정주회]의|투자|복제|참조|[감유의차폐]지|[기탑]재|대체|[갈성수탈편]취|[납배설위]치|검토|돌파|배포|발표|보호|[분이]해"
+KW_NAOTv3 = "이야기|[재전후]처리|마무리|재정의|재투자"
+KW_NAOTv = joinseq(KW_NAOTv1, KW_NAOTv2, KW_NAOTv3)
+KW_NAOT = joinseq(KW_NAOTf, KW_NAOTv)
+
+KW_NAOf1 = joinseq(KW_NAOIf1, KW_NAOTf1)
+KW_NAOf2 = joinseq(KW_NAOIf2, KW_NAOTf2)
+KW_NAOf3 = joinseq(KW_NAOIf3, KW_NAOTf3)
 KW_NAOfz = joinseq(KW_NAOf2, KW_NAOf3)
 KW_NAOf = joinseq(KW_NAOf1, KW_NAOfz)
 
 KW_NAOh = '|'.join(conjugate("강|미|융|특", '화') + conjugate(ks.KS_Az, '화') + conjugate(KW_NTB, '화'))
-KW_NAOv2 = "[인증추참평]가|[제탈]거|[공소전]개|설계|[경방]과|붕괴|[복연촉]구|[경대상연제표]기|[연증확]대|[시유주]도|계류|[고]려|신뢰|[완종치]료|[관격분수]리|처리|연마|구매|소모|근무|방미|[공거기]부|준비|[감공반발수식조퇴]사|[감기축]소|[감준회]수|[감실제출표]시|제어|[기부참]여|[소제]외|[긴소중필]요|[논유정주합회]의|투자|복제|참조|[감유의주차폐]지|[기탑]재|대체|[갈성수탈편]취|[납배설위]치|검토|돌파|[부실]패|배포|발표|보호|[저전통]화|[분이]해"
-KW_NAOv3 = "이야기|[재전후]처리|마무리|재정의|재투자"
+KW_NAOv1 = joinseq(KW_NAOIv1, KW_NAOTv1)
+KW_NAOv2 = joinseq(KW_NAOIv2, KW_NAOTv2)
+KW_NAOv3 = KW_NAOTv3
 KW_NAOvz = joinseq(KW_NAOv2, KW_NAOv3)
-KW_NAOv = joinseq(KW_NAOvz, KW_NAOh)
+KW_NAOv = joinseq(KW_NAOv1, KW_NAOvz, KW_NAOh)
 
 KW_NAOz = joinseq(KW_NAOfz, KW_NAOvz)
 KW_NAO = joinseq(KW_NAOf, KW_NAOv)
 
-## can be Both of active(-하다) and passive(-받다)
+#### can be Both of active(-하다) and passive(-받다)
 KW_NABf = "비난|감동|처단|할당|[입출]력|주목|처방|[처]?벌|축복|상속|전송|제안|교육|환영|구원|[승확]인|위임|대입|연장|판정|강종|칭찬|추천|신청|부탁|선택|심판|반환|시험"
 KW_NABv = "용서|계시|강요|기부|보조|오해"
 KW_NAB = joinseq(KW_NABf, KW_NABv)
@@ -549,22 +572,16 @@ KW_NAHf = joinseq(KW_NABf, KW_NAFf, KW_NAOf)
 KW_NAHv = joinseq(KW_NABv, KW_NAFv, KW_NAOv)
 KW_NAH = joinseq(KW_NAHf, KW_NAHv)
 
-## abstract(like Emotion), can be used with ‘-받다’
+### abstract(like Emotion), can be used with ‘-받다’
 KW_NAEf = "고난|고통|눈총|미움|버림|벌|복|사랑|영향"
 KW_NAEv = "상처|죄"
 KW_NAE = joinseq(KW_NAEf, KW_NAEv)
 
-
-### all
 KW_NAf = joinseq(KW_NAFf, KW_NAOf)
 KW_NAv = joinseq(KW_NAFv, KW_NAOv)
 KW_NAz = joinseq(KW_NAFz, KW_NAOz)
 KW_NA = joinseq(KW_NAf, KW_NAv)
 
-## Nouns (Activity + Status)
-#KW_NASf = joinseq(KW_NAf, KW_NSTf)
-#KW_NASv = joinseq(KW_NAv, KW_NSTv)
-#KW_NAS = joinseq(KW_NASf, KW_NASv)
 
 ## Nouns - Color
 KW_NC = "녹색"
@@ -868,6 +885,65 @@ KW_VIn = '|'.join(
         + conjugate(ks.KS_VIl, 'ㄴ', '다')        # 조 + ㄴ + 다
     )
 )
+
+## Transive(타동)
+### by using Causative(사동)
+
+#### -추
+KW_VTCc = '|'.join(
+    sorted(
+        conjugate(ks.KS_VCc, '추')
+    )
+)
+
+#### -기
+KW_VTCg = '|'.join(
+    sorted(
+        conjugate(ks.KS_VCf, '기')
+        + conjugate(ks.KS_VCg, '기')
+    )
+)
+
+#### -히
+KW_VTCh = '|'.join(
+    sorted(
+        conjugate(ks.KS_VCh, '히')
+    )
+)
+
+#### -이
+KW_VTCi = '|'.join(
+    sorted(
+        conjugate(ks.KS_VCi, '이')
+        + conjugate(ks.KS_VCj, '이')
+        + conjugate(ks.KS_VCe, '이')
+        + conjugate(ks.KS_VCr, 'ㄹ', '이')
+    )
+)
+
+#### -구
+KW_VTCk = '|'.join(
+    sorted(
+        conjugate(ks.KS_VCk, '구')
+    )
+)
+
+#### -리
+KW_VTCl = '|'.join(
+    sorted(
+        conjugate(ks.KS_VCl, 'ㄹ', '리')
+        + conjugate(ks.KS_VCm, 'ㄹ', '리')
+    )
+)
+
+#### -우
+KW_VTCu = '|'.join(
+    sorted(
+        conjugate(ks.KS_VCu, '우')
+    )
+)
+
+KW_VTC = joinseq(KW_VTCc, KW_VTCg, KW_VTCh, KW_VTCi, KW_VTCk, KW_VTCl, KW_VTCu)
 
 #### Verb Transive haO-che
 KW_VTO = '|'.join(
