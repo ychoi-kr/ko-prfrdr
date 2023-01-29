@@ -63,6 +63,26 @@
   },
   {
     "kind": "적확하지 않은 어휘",
+    "name": "nk200302a_벌리다",
+    "desc": "https://www.korean.go.kr/nkview/nknews/200302/55_13.html",
+    "cases": [
+      ["\\b(가랑이|간격|입|자루|팔을)([를을]) 벌이([고는다며면지진]\\w*)", "()() 벌리()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "적확하지 않은 어휘",
+    "name": "nk200302b_벌이다",
+    "desc": "https://www.korean.go.kr/nkview/nknews/200302/55_13.html",
+    "cases": [
+      ["\\b(경쟁|논쟁|바둑판|싸움|입씨름|전쟁)([를을]) 벌리([고는다며면지진]\\w*)", "()() 벌이()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "적확하지 않은 어휘",
     "name": "nm200221_부정확한 단어(어문 규범 준수 실태 조사, 2002)",
     "desc": "https://www.korean.go.kr/attachFile/viewer/202211/9f40126a-2948-43cc-b551-307ec5d94ade.hwp.htm",
     "cases": [
