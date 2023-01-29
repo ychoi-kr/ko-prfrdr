@@ -513,6 +513,7 @@ def display_summary(warnings_counter):
         print(f'{ele} ==> count: {warnings_counter[ele]}')
 
 spell_rules = [
+    ('ko_idioms.json', '한자 성어'),
     ('ko_spelling_rules.json', '맞춤법'),
     ('ko_terms_error.json', '용어 오탈자'),
     ('en_spelling_rules.json', '영문 철자'),
