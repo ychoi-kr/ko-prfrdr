@@ -1,0 +1,4 @@
+true cases:
+  - 비동기 처리를 수행하는 함수라면 그 어떤 함수든
+false cases:
+
