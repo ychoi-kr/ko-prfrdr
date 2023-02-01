@@ -543,13 +543,13 @@ standard_rules = [
 ]
 
 plain_rules = [
+    ('ko_gov_terms.json', '행정용어 순화'),
     ('ko_plain.json', '쉬운 말'),
     ('ko_unbiased.json', '차별적 표현'),
 ]
 
 special_rules = [
     ('ko_culture_guide_2016.json', '문화재 안내문 바로 쓰기'),
-    ('ko_gov_terms.json', '행정용어 순화'),
     ('ko_electric_terms.json', '전력용어 순화'),
     ('ko_fire_terms.json', '소방용어 순화'),
     ('ko_forest_terms.json', '산림용어 순화'),
