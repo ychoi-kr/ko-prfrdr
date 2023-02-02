@@ -293,6 +293,16 @@
   },
   {
     "kind": "국문법",
+    "name": "0167020d_피수식어와 수식어의 호응",
+    "desc": "https://wikidocs.net/167020#d",
+    "cases": [
+      ["(?<=[는은] )([A-Za-z]+) (KW_NT)의 (KW_NT)인 (보인다|볼 수 있다)", "() ()의 ()인 것으로 ()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "국문법",
     "name": "0176361_피습",
     "desc": "https://wikidocs.net/176361",
     "cases": [
