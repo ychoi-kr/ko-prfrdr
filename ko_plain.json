@@ -864,7 +864,6 @@
       ["\\b선베드", "일광욕 의자"],
       ["ignored:\\b섬네일", "영상 소개 화면, 마중 그림"],
       ["ignored:\\b세그먼트", "분할, 칸살"],
-      ["\\b세단", "승용차"],
       ["ignored:\\b세미콜론", "쌍반점"],
       ["\\b세미프로", "준 프로"],
       ["\\b세이프가드", "긴급 수입 제한, 긴급 수입 제한 조치"],
@@ -2494,6 +2493,16 @@
   },
   {
     "kind": "쉬운 말",
+    "name": "kpl01273_일반 국민 60%가 이해하지 못하는 낱말(‘세단’)",
+    "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=세단",
+    "cases": [
+      ["\\b(중형|중대형|품격 있는) 세단", "() 승용차"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "쉬운 말",
     "name": "kpl01278_일반 국민 60%가 이해하지 못하는 낱말(‘세션’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=세션",
     "cases": [
@@ -3521,9 +3530,10 @@
     "name": "mol2011_알기 쉬운 법령 만들기",
     "desc": "https://www.moleg.go.kr/boardDownload.es?bid=0001&list_no=82319&seq=1",
     "cases": [
-      ["\\b부여[ ]?(받[고는다며아았으을지]\\w*)", "()"],
-      ["\\b부여[ ]?하([고는다며지]\\w*)", "주()"],
-      ["\\b부여[ ]?한(|다\\w*)\\b", "준()"]
+      ["\\b(조건)을 부여[ ]?한(|다\\w*)\\b", "()을 붙인()"],
+      ["ignored:\\b부여[ ]?(받[고는다며아았으을지]\\w*)", "()"],
+      ["ignored:\\b부여[ ]?하([고는다며지]\\w*)", "주()"],
+      ["ignored:\\b부여[ ]?한(|다\\w*)\\b", "준()"]
     ],
     "exception": [
     ]
