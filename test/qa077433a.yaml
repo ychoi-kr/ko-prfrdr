@@ -6,4 +6,5 @@ true cases:
 false cases:
   - 실을 감는 중에
   - 약한 참조는 소유권 관계를 표현
+  - 개선은
 
