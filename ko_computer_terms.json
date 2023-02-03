@@ -1,0 +1,12 @@
+[
+  {
+    "kind": "컴퓨터 용어",
+    "name": "cs199712_전산기 순화 용어(1997)",
+    "desc": "https://wiki.kldp.org/KoreanDoc/html/Translation-KLDP/compword.txt",
+    "cases": [
+      ["\\b(?<=[를을] )세팅([하한할함합해했]\\w*)", "설정()"]
+    ],
+    "exception": [
+    ]
+  }
+]
