@@ -536,6 +536,7 @@ fluency_rules = [
     ('ko_foreign_word.json', '외래어 표기'),
     ('en_ko_style_correction.json', '영어 투'),
     ('ja_ko_style_correction.json', '일본어 투'),
+    ('zh_ko_style_correction.json', '중국어 투'),
 ]
 
 standard_rules = [
