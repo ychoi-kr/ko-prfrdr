@@ -272,6 +272,16 @@
   },
   {
     "kind": "외래어",
+    "name": "hk160827_인명(Seymour Papert)",
+    "desc": "https://www.hankookilbo.com/News/Read/201608270461393704",
+    "cases": [
+      ["세이무어 페퍼트", "시모어 페퍼트"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "외래어",
     "name": "gxfo1324_인명",
     "desc": "https://www.korean.go.kr/nkview/foreign/gxfor13_24.html",
     "cases": [
