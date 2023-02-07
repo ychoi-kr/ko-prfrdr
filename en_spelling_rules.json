@@ -4,12 +4,13 @@
     "name": "enspl001",
     "desc": "",
     "cases": [
-	  ["JBoxx", "JBoss"],
-	  ["Java[Ss]crtip", "JavaScript"],
       ["([Oo])verfloew", "()verflow"],
+      ["JBoxx", "JBoss"],
+      ["Java[Ss]crtip", "JavaScript"],
       ["\\b([Mm])odulization", "()odularization"],
-      ["\\braodmap", "roadmap"],
-      ["\\bDMBS", "DBMS"]
+      ["\\bDMBS", "DBMS"],
+      ["\\bparrallel", "parallel"],
+      ["\\braodmap", "roadmap"]
     ],
     "exception": []
   }

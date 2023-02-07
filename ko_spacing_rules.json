@@ -674,7 +674,7 @@
   },
   {
     "kind": "띄어쓰기",
-    "name": "0080784e_사전에 없지만 ‘-값’으로 쓰는 단어",
+    "name": "0080784e_사전에 없지만 ‘-값’을 붙여 쓰는 것",
     "desc": "https://wikidocs.net/80784#e",
     "cases": [
       ["\\b([계상실양음정])[수숫] 값", "()숫값"],
@@ -5476,6 +5476,15 @@
     "desc": "https://wikidocs.net/181967#238217",
     "cases": [
       ["마음 가짐", "마음가짐"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "qa238792_바로 바로",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=238792",
+    "cases": [
+      ["바로바로", "바로 바로"]
     ],
     "exception": []
   },
