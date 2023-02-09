@@ -469,6 +469,26 @@
     ],
     "exception": [
     ]
+  },
+  {
+    "kind": "국문법",
+    "name": "qa211963_계십시오",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=211963",
+    "cases": [
+      ["\\b([들잡]고)[ ]?있으([셔셨세시신실심십]\\w*)", "() 계()"] 
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "국문법",
+    "name": "qa260932_하신 적이 없다",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=260932",
+    "cases": [
+      ["(?<=[를을] )한 적이 없으시다", "하신 적이 없다"]
+    ],
+    "exception": [
+    ]
   }
 ]
   

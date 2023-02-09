@@ -1,6 +1,16 @@
 [
   {
     "kind": "한자어 남용",
+    "name": "hb221727_광경",
+    "desc": "https://blog.naver.com/hbooklove/221727414969",
+    "cases": [
+      ["\\b광경(|[은을에]|이[다야]?|입니다)\\b", "모습()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "한자어 남용",
     "name": "nm200222h_한자어 남용(어문 규범 준수 실태 조사, 2002)",
     "desc": "https://www.korean.go.kr/attachFile/viewer/202211/9f40126a-2948-43cc-b551-307ec5d94ade.hwp.htm",
     "cases": [
