@@ -551,10 +551,11 @@ plain_rules = [
 
 special_rules = [
     ('ko_computer_terms.json', '컴퓨터 용어'),
-    ('ko_culture_guide_2016.json', '문화재 안내문 바로 쓰기'),
-    ('ko_electric_terms.json', '전력용어 순화'),
-    ('ko_fire_terms.json', '소방용어 순화'),
-    ('ko_forest_terms.json', '산림용어 순화'),
+    ('ko_culture_guide_2016.json', '문화재 안내문'),
+    ('ko_electric_terms.json', '전력용어'),
+    ('ko_fire_terms.json', '소방용어'),
+    ('ko_forest_terms.json', '산림용어'),
+    ('ko_telecom_terms.json', '통신 용어'),
 ]
 
 default_rules = spell_rules + spacing_rules + style_rules + fluency_rules + standard_rules + plain_rules + special_rules
