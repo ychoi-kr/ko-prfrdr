@@ -5317,6 +5317,18 @@
   },
   {
     "kind": "띄어쓰기",
+    "name": "qa209890_띄어쓰기",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&qna_seq=209890",
+    "cases": [
+      ["\\b(명령)(없이)", "() ()"],
+      ["\\b(미흡|건의)(사항)", "() ()"],
+      ["\\b(예하|의뢰)(부대)", "() ()"],
+      ["\\b(임무)(수행)", "() ()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
     "name": "qa215319a_‘-ㄴ바’",
     "desc": "https://wikidocs.net/181967#215319",
     "cases": [
