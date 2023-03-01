@@ -148,6 +148,16 @@
   },
   {
     "kind": "맞춤법",
+    "name": "0091621c_대로",
+    "desc": "https://wikidocs.net/91621#c",
+    "cases": [
+      ["\\b(KW_NAOT)되는 데로\\b", "()되는 대로"],
+      ["\\b(익숙해지는) 데로(?= 또 다른)", "() 대로"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "0092100a_-률",
     "desc": "https://wikidocs.net/92100#a",
     "cases": [
@@ -168,7 +178,7 @@
         "()율"
       ],
       [
-        "(\\w*[건견군관권란른문변본분붓산선손안언연온윤원엔인전존준직진탄편환])률",
+        "(\\w*[건견군관권란른문변본분붓산선손안언연온윤원엔인전존준진탄편환])률",
         "()율"
       ]
     ],
@@ -804,6 +814,14 @@
     "desc": "https://esjgum.tistory.com/388",
     "cases": [
       ["\\b(감자|고구마|고기|고무장갑|땅콩|문어|빨래|수육|시래기|야채|양배추|오징어|재료|풋땅콩|행주)([를을]?) 삼([다아았]\\w*)", "()() 삶()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "ewha0451_대로",
+    "desc": "http://eomun.ewha.ac.kr/sub/sub05_01.php?mNum=5&sNum=1&boardid=qna&mode=view&idx=451&goPage=&g_idx=",
+    "cases": [
     ],
     "exception": []
   },
@@ -2514,7 +2532,9 @@
       ["(\\w*[KL_WFC])와\\b", "()과"],
       ["\\b(KW_Ff)와", "()과"],
       ["\\b(KW_Fv)과", "()와"],
-      ["\\b(KW_NTAv)과\\b", "()와"]
+      ["\\b(KW_NLDv)과\\b", "()와"],
+      ["\\b(KW_NTAv)과\\b", "()와"],
+      ["\\b(KW_NTFv)과\\b", "()와"]
     ],
     "exception": []
   },
@@ -2603,6 +2623,15 @@
     "desc": "https://wikidocs.net/181967#103124",
     "cases": [
       [ "\\b갖을 수 ([없있]\\w+)", "가질 수 ()" ]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "qa105111a_격 조사의 이형태",
+    "desc": "https://wikidocs.net/105111#a",
+    "cases": [
+      ["\\b(KW_NAOTv)을 (KW_NAOT)([하한할함합해했]\\w*)", "()를 ()()"]
     ],
     "exception": []
   },

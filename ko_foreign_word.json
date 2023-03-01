@@ -1361,7 +1361,8 @@
     "name": "qa072199_‘Stanford’의 표기",
     "desc": "https://wikidocs.net/181967#stanford",
     "cases": [
-      ["\\b스탠포드[ ]?대학", "스탠퍼드 대학"]
+      ["\\b스탠[파포]드", "스탠퍼드"],
+      ["dup:\\b스탠[파포]드[ ]?대학", "스탠퍼드 대학"]
     ],
     "exception": [
     ]

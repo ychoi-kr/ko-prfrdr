@@ -54,6 +54,16 @@
   },
   {
     "kind": "행정 용어",
+    "name": "arch1993_행정용어 순화(1993)",
+    "desc": "https://theme.archives.go.kr/next/officialDocument/officialOldNew.do?searchFrom=A",
+    "cases": [
+      ["\\b기점(으로|의)\\b", "시작점(1), 출발점(1)"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "행정 용어",
     "name": "kg120380_행정용어 순화(2012)",
     "desc": "https://docs.google.com/spreadsheets/d/1MD2A0fQcbxqeEtCCkCuYaM1fao7RgKx0PKC4Wbp77i0/edit?usp=sharing",
     "cases": [
