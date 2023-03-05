@@ -46,6 +46,15 @@
   },
   {
     "kind": "용어 오탈자",
+    "name": "sd515656_업데이트",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=515656&searchKeywordTo=3",
+    "cases": [
+      ["\\b없데이트", "업데이트"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "용어 오탈자",
     "name": "sd674875_프레임워크",
     "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=674875&searchKeywordTo=3",
     "cases": [
@@ -111,7 +120,8 @@
       ["\\b혼프레미스", "온프레미스"],
       ["\\b코를 (실행|입력|작성|타이핑|타자|컴파일|포매팅)", "코드를 ()"],
       ["\\b크로서 인코더", "크로스 인코더"],
-      ["\\b주파터 노트북", "주피터 노트북"]
+      ["\\b주파터 노트북", "주피터 노트북"],
+      ["\\b인페인팅잉", "인페인팅"]
     ],
     "exception": []
   }
