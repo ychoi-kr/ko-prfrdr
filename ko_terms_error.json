@@ -28,6 +28,24 @@
   },
   {
     "kind": "용어 오탈자",
+    "name": "sd180736_서버",
+    "desc": "https://opendic.korean.go.kr/dictionary/view?sense_no=180736&viewType=confirm",
+    "cases": [
+      ["\\b(IMTP|POP|SMTP|메일) 서서", "() 서버"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "용어 오탈자",
+    "name": "sd290042_전송하다",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=290042&searchKeywordTo=3",
+    "cases": [
+      ["(\\w+)([를을]) 정송([하한할함합해했]\\w*)", "()() 전송()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "용어 오탈자",
     "name": "sd332817_체",
     "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=332817&searchKeywordTo=3",
     "cases": [
