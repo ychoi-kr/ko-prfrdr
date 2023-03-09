@@ -55,6 +55,24 @@
   },
   {
     "kind": "용어 오탈자",
+    "name": "sd344845_타입",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=344845&searchKeywordTo=3",
+    "cases": [
+      ["\\b(\\w+)의 타이이 ([돼됐되된될됨됩]\\w*)", "()의 타입이 ()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "용어 오탈자",
+    "name": "sd351900_페이지",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=351900&searchKeywordTo=3",
+    "cases": [
+      ["\\b페이가 (여럿인)", "페이지가 ()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "용어 오탈자",
     "name": "sd357412_푸리에",
     "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=357412&searchKeywordTo=3",
     "cases": [

@@ -1697,7 +1697,8 @@
       ["\\b(미세[ ]?)번지", "()먼지"],
       ["\\b방력분", "박력분"],
       ["이빈다\\b", "입니다"],
-      ["하빈다\\b", "합니다"]
+      ["하빈다\\b", "합니다"],
+      ["부모 다녀\\b", "부모 자식"]
     ],
     "exception": []
   },
@@ -1721,7 +1722,8 @@
       ["있께", "있게"],
       ["있따", "있다"],
       ["함꼐", "함께"],
-      ["\\b봣([고는다어을지]\\w*)\\b", "봤()"]
+      ["\\b봣([고는다어을지]\\w*)\\b", "봤()"],
+      ["\\b([A-Za-z]+) 도는 ([A-Za-z]+)\\b", "() 또는 ()"]
     ],
     "exception": []
   },
@@ -2973,6 +2975,16 @@
   },
   {
     "kind": "맞춤법",
+    "name": "sd039193_구현되다",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=39193&searchKeywordTo=3",
+    "cases": [
+      ["\\b([A-Za-z]+에) 구형([돼됐되된될됨됩]\\w*)", "() 구현()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "맞춤법",
     "name": "sd098401_때",
     "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=98401&searchKeywordTo=3",
     "cases": [
@@ -2994,10 +3006,49 @@
   },
   {
     "kind": "맞춤법",
+    "name": "sd409379_대상",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=409379&searchKeywordTo=3",
+    "cases": [
+      ["(사용자)([를을]) 대승으로(?= [하한할함합해했])", "()() 대상으로"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "맞춤법",
+    "name": "sd411094_내용",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=411094&searchKeywordTo=3",
+    "cases": [
+      ["\\b(표시) 대용을 (변경)([하한할함합해했]\\w*)", "() 내용을 ()()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "맞춤법",
+    "name": "sd416758_따르다",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=416758&searchKeywordTo=3",
+    "cases": [
+      ["\\b(가이드|지침)에 따라는 (것\\w*)", "()에 따르는 ()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "맞춤법",
     "name": "sd466113_옳다",
     "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=466113&searchKeywordTo=3",
     "cases": [
 	  ["\\b[올옮]은[ ]?(결정|생각|판단|행동)", "옳은 ()"]
+    ],
+    "exception": [
+    ]
+  },  {
+    "kind": "맞춤법",
+    "name": "sd468965_위치",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=468965&searchKeywordTo=3",
+    "cases": [
+      ["\\b장위치(를|에서)\\b", "위치()"]
     ],
     "exception": [
     ]

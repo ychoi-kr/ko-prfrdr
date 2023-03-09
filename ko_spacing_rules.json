@@ -3667,7 +3667,7 @@
       ["\\b한 편(KJ)", "한편()"],
       ["한 편\\b", "한편"]
     ],
-    "exception": ["영화 한 편"]
+    "exception": ["영화 한 편", "한 편의 영화"]
   },
   {
     "kind": "띄어쓰기",
@@ -5694,9 +5694,18 @@
   {
     "kind": "띄어쓰기",
     "name": "sd307099_주어지다",
-    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=307099searchKeywordTo=3",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=307099&searchKeywordTo=3",
     "cases": [
       ["\\b(주어) (져[도서]?|졌\\w*|지[고는다며면지]\\w*|진|진다[고는며면]?|질|질지[는도]?|짐|집니다)\\b", "()()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "sd365913_행수",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=365913&searchKeywordTo=3",
+    "cases": [
+      ["\\b행 수([가는도를와]?)\\b", "행수()"]
     ],
     "exception": []
   },
