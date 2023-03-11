@@ -82,6 +82,15 @@
   },
   {
     "kind": "용어 오탈자",
+    "name": "sd454975_악천후",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=454975&searchKeywordTo=3",
+    "cases": [
+      ["\\b악천우", "악천후"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "용어 오탈자",
     "name": "sd515656_업데이트",
     "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=515656&searchKeywordTo=3",
     "cases": [
