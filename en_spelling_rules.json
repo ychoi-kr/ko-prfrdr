@@ -10,7 +10,10 @@
       ["\\b([Mm])odulization", "()odularization"],
       ["\\bDMBS", "DBMS"],
       ["\\bparrallel", "parallel"],
-      ["\\braodmap", "roadmap"]
+      ["\\braodmap", "roadmap"],
+      ["\\b([Rr]espons)eive", "()ive"],
+      ["([Ss])eveirty", "()everity"],
+      ["Identify Provider", "Identity Provider"]
     ],
     "exception": []
   }

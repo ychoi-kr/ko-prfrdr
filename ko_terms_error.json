@@ -19,6 +19,15 @@
   },
   {
     "kind": "용어 오탈자",
+    "name": "o735008_웹 브라우저",
+    "desc": "https://opendic.korean.go.kr/dictionary/view?sense_no=735008&viewType=confirm",
+    "cases": [
+      ["\\b엡([ ]?브라우저)", "웹()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "용어 오탈자",
     "name": "sd017678_게이트웨이",
     "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=17678&searchKeywordTo=3",
     "cases": [
@@ -31,7 +40,7 @@
     "name": "sd180736_서버",
     "desc": "https://opendic.korean.go.kr/dictionary/view?sense_no=180736&viewType=confirm",
     "cases": [
-      ["\\b(IMTP|POP|SMTP|메일) 서서", "() 서버"]
+      ["\\b(IMTP|POP|SMTP|메일|\\d+[ ]?대의) 서[브서]", "() 서버"]
     ],
     "exception": []
   },

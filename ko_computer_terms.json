@@ -8,5 +8,25 @@
     ],
     "exception": [
     ]
+  },
+  {
+    "kind": "컴퓨터 용어",
+    "name": "tt092842_SSL/TLS",
+    "desc": "http://terms.tta.or.kr/dictionary/dictionaryView.do?word_seq=092842-1",
+    "cases": [
+      ["SLS/TLS", "SSL/TLS"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "컴퓨터 용어",
+    "name": "tt173182_확장성(extensibility)",
+    "desc": "http://terms.tta.or.kr/dictionary/dictionaryView.do?word_seq=173182-1",
+    "cases": [
+      ["\\b(서버|소프트웨어|하드웨어)의 확정성", "()의 확장성"]
+    ],
+    "exception": [
+    ]
   }
 ]
