@@ -19,3 +19,4 @@ Webpack NNP
 태스크	NNG
 파라미터	NNG
 파이토치	NNP
+git	NNG

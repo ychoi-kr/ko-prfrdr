@@ -1,6 +1,15 @@
 [
   {
     "kind": "한자 성어",
+    "name": "gg286809",
+    "desc": "http://www.ggilbo.com/news/articleView.html?idxno=286809",
+    "cases": [
+      ["산수갑산", "삼수갑산"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "한자 성어",
     "name": "m9n221438",
     "desc": "https://blog.naver.com/min9neuf/221438554001",
     "cases": [
