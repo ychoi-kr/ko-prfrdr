@@ -2431,11 +2431,11 @@
     "name": "0152332a2_‘~하다’(형용사)",
     "desc": "https://wikidocs.net/152332#a2",
     "cases": [
-      ["\\b(KS_Ag) ([하한할함해했히]\\w*)", "()()"],
-      ["\\b(KS_Ah) ([하한할함해했히]\\w*)", "()()"],
-      ["\\b(KS_VGa) ([하한할함해했히]\\w*)", "()()"],
-      ["\\b(KW_BA) ([하한할함합해했]\\w*)", "()()"],
-      ["\\b(KW_NS) ([하한할합해했히]\\w*|함[도에은을의이]\\w*)\\b", "()()"]
+      ["\\b(KS_Ag) ([하한합해했히]\\w*|할|할[까지]\\w*|함|함[도에은을의이]\\w*)\\b", "()()"],
+      ["\\b(KS_Ah) ([하한합해했히]\\w*|할|할[까지]\\w*|함|함[도에은을의이]\\w*)\\b", "()()"],
+      ["\\b(KS_VGa) ([하한합해했히]\\w*|할|할[까지]\\w*|함|함[도에은을의이]\\w*)\\b", "()()"],
+      ["\\b(KW_BA) ([하한합해했히]\\w*|할|할[까지]\\w*|함|함[도에은을의이]\\w*)\\b", "()()"],
+      ["\\b(KW_NS) ([하한합해했히]\\w*|할|할[까지]\\w*|함|함[도에은을의이]\\w*)\\b", "()()"]
     ],
     "exception": ["실행 가능 해", "단순 함수군에서"]
   },
@@ -4171,6 +4171,16 @@
   },
   {
     "kind": "띄어쓰기",
+    "name": "faq09289_큰코다치다",
+    "desc": "https://korean.go.kr/front/mcfaq/mcfaqView.do?mn_id=&mcfaq_seq=9289",
+    "cases": [
+      ["(\\w*다가는) 큰[ ]?코 다([쳐치친칠침칩]\\w*)", "() 큰코다()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "띄어쓰기",
     "name": "kns11308_힘듦",
     "desc": "https://www.korean.go.kr/news/index.jsp?control=page&part=view&idx=11308",
     "cases": [
@@ -5840,7 +5850,16 @@
     "name": "sd488873_차세대",
     "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=488873&searchKeywordTo=3",
     "cases": [
-	  ["\\b차 세대 (시스템|전차|전투기)", "차세대 ()"]
+      ["\\b차 세대 (시스템|전차|전투기)", "차세대 ()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "sd499362_파고들다",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=499362&searchKeywordTo=3",
+    "cases": [
+      ["\\b파고 들([어었]\\w*| [것수]\\w*)\\b", "파고들()"]
     ],
     "exception": []
   },
