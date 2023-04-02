@@ -452,8 +452,8 @@ KW_NTMv = "개수|너비|넓이|높이|단위|수|숫자|크기"
 KW_NTM = joinseq(KW_NTMf, KW_NTMv)
 
 ### Nation
-KW_NTNf = "[미영중한]국|대만|대한민국|일본|스페인|독일|[남북]한|프랑스"
-KW_NTNv = "이탈리아|터키|호주"
+KW_NTNf = "[미영중한]국|대만|대한민국|일본|스페인|독일|[남북]한"
+KW_NTNv = "이탈리아|터키|호주|프랑스"
 KW_NTN = joinseq(KW_NTNf, KW_NTNv)
 
 ### Organization
