@@ -573,7 +573,7 @@ KW_NAHv = joinseq(KW_NABv, KW_NAFv, KW_NAOv)
 KW_NAH = joinseq(KW_NAHf, KW_NAHv)
 
 ### abstract(like Emotion), can be used with ‘-받다’
-KW_NAEf = "고난|고통|눈총|미움|버림|벌|복|사랑|영향"
+KW_NAEf = "각광|고난|고통|눈총|미움|버림|벌|복|사랑|영향"
 KW_NAEv = "상처|죄"
 KW_NAE = joinseq(KW_NAEf, KW_NAEv)
 
