@@ -45,6 +45,16 @@
     "exception": []
   },
   {
+    "kind": "맞춤법",
+    "name": "sd217731_아이콘",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=217731&searchKeywordTo=3",
+    "cases": [
+      ["\\b아아이콘", "아이콘"]
+    ],
+    "exception": [
+    ]
+  },
+  {
     "kind": "용어 오탈자",
     "name": "sd290042_전송하다",
     "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=290042&searchKeywordTo=3",
@@ -63,10 +73,11 @@
     "exception": []
   },
   {
-    "kind": "용어 오탈자",
+    "kind": "맞춤법",
     "name": "sd344845_타입",
     "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=344845&searchKeywordTo=3",
     "cases": [
+      ["<Noun> 타임의 운용 형태", "() 타입의 운용 형태"],
       ["\\b(\\w+)의 타이이 ([돼됐되된될됨됩]\\w*)", "()의 타입이 ()"]
     ],
     "exception": []
