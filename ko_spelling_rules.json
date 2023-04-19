@@ -839,7 +839,7 @@
     "desc": "http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788961885416",
     "cases": [
       ["\\b눈꼽", "눈곱"],
-      ["\\b무릅", "무릎"],
+      ["\\b무릅(KJ)\\b", "무릎()"],
       ["\\b팔굼치", "팔꿈치"],
       ["\\b눈꺼플", "눈꺼풀"],
       ["\\b발자욱", "발자국"],
