@@ -46,6 +46,16 @@
   },
   {
     "kind": "맞춤법",
+    "name": "sd209519_신경망",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=209519&searchKeywordTo=3",
+    "cases": [
+      ["\\b신겸망", "신경망"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "맞춤법",
     "name": "sd217731_아이콘",
     "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=217731&searchKeywordTo=3",
     "cases": [
