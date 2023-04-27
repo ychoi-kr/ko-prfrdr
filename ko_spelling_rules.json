@@ -1701,6 +1701,7 @@
       ["부모 다녀\\b", "부모 자식"],
       ["\\b저화를 ([건걸]\\w*)\\b", "전화를 ()"],
       ["(\\w+)ㅣㄴ다", "()니다"],
+      ["(\\w+[를을]) 설께 (함\\w+)", "() 설계()"],
       ["(\\w*)쓴느\\b", "()쓰는"]
     ],
     "exception": []
@@ -2177,6 +2178,7 @@
     "name": "kospl033_탈자(‘ㅇ’)",
     "desc": "",
     "cases": [
+      ["(악영햐)을", "()을"],
       ["영화 사영", "영화 상영"]
     ],
     "exception": []
@@ -2981,6 +2983,15 @@
   },
   {
     "kind": "맞춤법",
+    "name": "qa228011_아무 데",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=228011",
+    "cases": [
+      [ "\\b아무([ ]?대|데)(나|서나)", "아무 데(2)"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "qa229063_웬만하다",
     "desc": "https://wikidocs.net/181967#229063",
     "cases": [
@@ -3003,6 +3014,18 @@
     "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=247354",
     "cases": [
       ["\\b일찌기", "일찍이"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "qa267989a_즈음, 즘",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=267989",
+    "cases": [
+      ["\\b(KW_NAO)([될할])[ ]?쯔음", "()() 즈음"],
+      ["\\b(KW_NAO)([될할])[ ]?쯤", "()() 즘"],
+      ["\\b(걸릴|끝날|내릴|있을|지났을)[ ]?쯔음", "() 즈음"],
+      ["\\b(걸릴|끝날|내릴|있을|지났을)[ ]?쯤", "() 즘"]
     ],
     "exception": []
   },
