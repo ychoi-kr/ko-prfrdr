@@ -34,7 +34,6 @@
       ["\\b롱폼","긴 영상, 긴 형식"],
       ["\\b리미티드 런","기간 한정 공연"],
       ["\\b리브랜딩","상표 새 단장"],
-      ["\\b리커버","새표지"],
       ["\\b리테일 테크","첨단 소매 유통 기술"],
       ["\\b마스터 리스","재임대"],
       ["\\b매직 넘버","승리 수"],
@@ -2302,6 +2301,16 @@
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=리뷰어",
     "cases": [
       ["\\b(게임|특허|학술지)(.*)리뷰어(\\w*)", "()()검토자()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "쉬운 말",
+    "name": "kpl00676_일반 국민 60%가 이해하지 못하는 낱말(‘리커버’)",
+    "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=리커버",
+    "cases": [
+      ["\\b리커버(판| 도서| 책)","새표지()"]
     ],
     "exception": [
     ]
