@@ -3395,6 +3395,15 @@
   },
   {
     "kind": "맞춤법",
+    "name": "tw162070_안 그래도",
+    "desc": "https://twitter.com/urimal365/status/162070616218943488",
+    "cases": [
+      ["\\b않[ ]?그래도", "안 그래도"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "tw220699_눈 덮인",
     "desc": "https://twitter.com/urimal365/status/220699514682613762",
     "cases": [
