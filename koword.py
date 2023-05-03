@@ -437,7 +437,7 @@ KW_NTJ = joinseq(KW_NTJf, KW_NTJv)
 
 #### Artificial
 KW_NTLAf = "파이썬|C#|HTML|Python|SQL|XML"
-KW_NTLAv = "루비|자바|자바스크립트|타입스크립트|C|C[+][+]|Java|Java[Ss]cript|PHP"
+KW_NTLAv = "루비|자바|자바스크립트|타입스크립트|솔리디티|C|C[+][+]|Java|Java[Ss]cript|PHP"
 
 #### Natural
 KW_NTLNv = "독일어|북한어|스페인어|영어|이탈리아어|일본어|자연어|중국어|터키어|한국어"
@@ -457,7 +457,7 @@ KW_NTNv = "이탈리아|터키|호주|프랑스"
 KW_NTN = joinseq(KW_NTNf, KW_NTNv)
 
 ### Organization
-KW_NTOf = "Amazon|Google|공군|구글|기관|삼성|아마존|애플|육군|은행|해군"
+KW_NTOf = "Amazon|Google|공군|구글|기관|삼성|아마존|애플|육군|은행|인스타그램|해군"
 KW_NTOv = "Microsoft|Tesla|군대|마이크로소프트|발행사|업소|엔비디아|위원회|테슬라|해병대|학교|한라|회사"
 KW_NTO = joinseq(KW_NTOf, KW_NTOv)
 
@@ -521,7 +521,8 @@ KW_NAOTf = joinseq(KW_NAOTf1, KW_NAOTf2, KW_NAOTf3)
 KW_NAOTv1 = "요"
 KW_NAOTv2 = "[인추평]가|[공소전]개|[제탈]거|설계|비교|[복연촉]구|[대분상연제표]기|안내|[임증초확]대|[시유주]도|계류|[고]려|신뢰|[완종치]료|[관격분수정처]리|연마|구매|소모|근무|[공거기발]부|준비|[감반발복수조]사|[기축]소|[감준회]수|[감실제출표]시|제어|[기부참]여|[제]외|[소]요|[논유정주회]의|투자|복제|[변참]조|[감유의정중차폐]지|[기탑]재|[교대]체|[갈성수탈편]취|[납배설위]치|검토|돌파|배포|발표|보호|[분이화]해"
 KW_NAOTv3 = "이야기|[재전후]처리|마무리|금기시|당연시|도외시|등한시|문제시|범죄시|신성시|유력시|중요시|확실시|재정의|재투자"
-KW_NAOTv = joinseq(KW_NAOTv1, KW_NAOTv2, KW_NAOTv3)
+KW_NAOTv4 = "반신반의"
+KW_NAOTv = joinseq(KW_NAOTv1, KW_NAOTv2, KW_NAOTv3, KW_NAOTv4)
 KW_NAOT = joinseq(KW_NAOTf, KW_NAOTv)
 
 KW_NAOf1 = joinseq(KW_NAOIf1, KW_NAOTf1)
@@ -534,7 +535,7 @@ KW_NAOh = '|'.join(conjugate("강|미|융|특", '화') + conjugate(ks.KS_Az, '�
 KW_NAOv1 = joinseq(KW_NAOIv1, KW_NAOTv1)
 KW_NAOv2 = joinseq(KW_NAOIv2, KW_NAOTv2)
 KW_NAOv3 = KW_NAOTv3
-KW_NAOv4 = KW_NAOIv4
+KW_NAOv4 = joinseq(KW_NAOIv4, KW_NAOTv4)
 KW_NAOvz = joinseq(KW_NAOv2, KW_NAOv3, KW_NAOv4)
 KW_NAOv = joinseq(KW_NAOv1, KW_NAOvz, KW_NAOh)
 

@@ -2985,6 +2985,15 @@
   },
   {
     "kind": "맞춤법",
+    "name": "qa218589_맞닥뜨리다, 맞닥트리다",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=218589",
+    "cases": [
+      ["\\b맞닥([ ]?드리|[ ]?들이)([고게는다며면지])", "맞닥뜨리(2), 맞닥트리(2)"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "qa220490_‘-의 양’",
     "desc": "https://wikidocs.net/181967#220490",
     "cases": [
@@ -3016,6 +3025,15 @@
     "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=231134",
     "cases": [
       [ "(\\w*해도) 되요", "() 돼요"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "qa239859_꼼꼼히",
+    "desc": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=239859",
+    "cases": [
+      ["\\b꼼꼼이\\b", "꼼꼼히"]
     ],
     "exception": []
   },
@@ -3093,6 +3111,16 @@
     "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=39193&searchKeywordTo=3",
     "cases": [
       ["\\b([A-Za-z]+에) 구형([돼됐되된될됨됩]\\w*)", "() 구현()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "맞춤법",
+    "name": "sd050830_기하급수",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=50830&searchKeywordTo=3",
+    "cases": [
+      ["\\b기아급수([적]?)", "기하급수()"]
     ],
     "exception": [
     ]
