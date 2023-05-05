@@ -19,6 +19,15 @@
   },
   {
     "kind": "용어 오탈자",
+    "name": "o1465412_자바스크립트",
+    "desc": "https://opendic.korean.go.kr/dictionary/view?sense_no=1465412&viewType=confirm",
+    "cases": [
+      ["\\b자바스크림트", "자바스크립트"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "용어 오탈자",
     "name": "o735008_웹 브라우저",
     "desc": "https://opendic.korean.go.kr/dictionary/view?sense_no=735008&viewType=confirm",
     "cases": [

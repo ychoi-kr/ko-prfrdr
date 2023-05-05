@@ -3459,6 +3459,16 @@
   },
   {
     "kind": "맞춤법",
+    "name": "tw301586_어찌 되든/됐든",
+    "desc": "https://twitter.com/urimal365/status/301586113179574272",
+    "cases": [
+      ["\\b어찌[ ]?([되됐])던", "어찌 ()든"],
+      ["\\b어찌[ ]?됬[던든]", "어찌 됐든"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "tw334200_단춧구멍",
     "desc": "https://twitter.com/urimal365/status/334200662877417473",
     "cases": [
