@@ -10,6 +10,15 @@
   },
   {
     "kind": "한자 성어",
+    "name": "gn295191_절체절명",
+    "desc": "http://www.gnnews.co.kr/news/articleView.html?idxno=295191",
+    "cases": [
+      ["절대절명", "절체절명"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "한자 성어",
     "name": "m9n221438",
     "desc": "https://blog.naver.com/min9neuf/221438554001",
     "cases": [

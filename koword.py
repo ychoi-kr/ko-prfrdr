@@ -478,7 +478,7 @@ KW_NTT = joinseq(KW_NTTf, KW_NTTv)
 
 ### Usual stuffs
 KW_NTUf = "잔|컵|현수막|화투짝"
-KW_NTUv = "접시|샴푸"
+KW_NTUv = "장대|접시|샴푸"
 KW_NTU = joinseq(KW_NTUf, KW_NTUv)
 
 ### eVent

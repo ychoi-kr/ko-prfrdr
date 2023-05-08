@@ -19,6 +19,15 @@
   },
   {
     "kind": "국문법",
+    "name": "0067213b_‘-야 하다’",
+    "desc": "https://wikidocs.net/67213#b",
+    "cases": [
+      ["\\b(KW_NAOT)되어할\\b", "(1)되어야 할, (1)돼야 할"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "국문법",
     "name": "0079974d_'받다'와 어울리지 않는 단어",
     "desc": "https://wikidocs.net/79974#d",
     "cases": [
