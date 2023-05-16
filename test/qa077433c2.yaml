@@ -1,7 +1,8 @@
 true cases:
   - ‘UDP(User Datagram Protocol)’을 사용합니다.
+  - jest.setup.js을 작성한다.
+  - .babelrc을 작성하고
 false cases:
   - 나을 것이 없다.
   - 짝 지을 때는
   - 붙잡을 수
-
