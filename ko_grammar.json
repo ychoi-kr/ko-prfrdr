@@ -572,6 +572,16 @@
     ],
     "exception": [
     ]
+  },
+  {
+    "kind": "국문법",
+    "name": "qa242314_‘용도(用途)’ 뒤에 붙는 조사",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=242314&searchKeywordTo=3",
+    "cases": [
+      ["\\b용도를 ([사이활]용)[ ]?([하한할함합해했]\\w*)", "용도로 ()()"]
+    ],
+    "exception": [
+    ]
   }
 ]
   
