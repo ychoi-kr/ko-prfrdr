@@ -11,6 +11,7 @@ Python	NNP
 REST	NNP
 Webpack NNP
 딕셔너리	NNG
+리액트	NNP
 서비스 인	NNG
 에포크	NNG
 인스타그램	NNP
