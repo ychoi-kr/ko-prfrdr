@@ -139,6 +139,15 @@
   },
   {
     "kind": "용어 오탈자",
+    "name": "sd518245_사잇각",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=518245&searchKeywordTo=3",
+    "cases": [
+      ["\\b사이각(|[과만에은을의이]|이라\\w*)\\b", "사잇각()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "용어 오탈자",
     "name": "sd674875_프레임워크",
     "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=674875&searchKeywordTo=3",
     "cases": [
