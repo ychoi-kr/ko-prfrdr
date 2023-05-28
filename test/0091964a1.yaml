@@ -1,4 +1,6 @@
 true cases:
   - 한 번에 하나의 인수 밖에 넣을 수 없다.
+  - 튜플 메서드는 count()와 index() 밖에 없습니다.
+  - 매치되는 문자열이 'abc' 밖에 없기 때문
 false cases:
 
