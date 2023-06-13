@@ -217,6 +217,15 @@
       ["\\b인페인팅잉", "인페인팅"]
     ],
     "exception": []
+  },
+  {
+    "kind": "용어 오탈자",
+    "name": "tt080996_토큰화",
+    "desc": "http://terms.tta.or.kr/dictionary/dictionaryView.do?word_seq=080996-2",
+    "cases": [
+      ["\\b토크나아제이션", "토크나이제이션"]
+    ],
+    "exception": []
   }
 ]
   
