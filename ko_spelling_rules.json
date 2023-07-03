@@ -1566,15 +1566,6 @@
   },
   {
     "kind": "맞춤법",
-    "name": "kn009568_뒤쳐지다",
-    "desc": "https://www.korean.go.kr/news/index.jsp?control=page&part=view&idx=9568",
-    "cases": [
-      ["(KW_NTU)([이가]) 뒤처([져졌지진질짐]\\w*)", "()() 뒤쳐()"]
-    ],
-    "exception": []
-  },
-  {
-    "kind": "맞춤법",
     "name": "kn010904_십상",
     "desc": "https://news.korean.go.kr/index.jsp?control=page&part=view&idx=10904",
     "cases": [
@@ -2865,18 +2856,6 @@
   },
   {
     "kind": "맞춤법",
-    "name": "qa122094b_뒤처지다",
-    "desc": "https://wikidocs.net/181967#122094",
-    "cases": [
-      ["(KW_NP)(에게) 뒤쳐([져졌지진질짐]\\w*)", "()() 뒤처()"],
-      ["(KW_NTA)(에) 뒤쳐([져졌지진질짐]\\w*)", "()() 뒤처()"],
-      ["(\\w+)(보다) (\\w+[이가]) 뒤쳐([져졌지진질짐]\\w*)", "()() () 뒤처()"],
-      ["(\\w+)(보다) 뒤쳐([져졌지진질짐]\\w*)", "()() 뒤처()"]
-    ],
-    "exception": []
-  },
-  {
-    "kind": "맞춤법",
     "name": "qa128005a_로",
     "desc": "https://wikidocs.net/181967#128005",
     "cases": [
@@ -3197,6 +3176,15 @@
   },
   {
     "kind": "맞춤법",
+    "name": "sd094630_뒤쳐지다",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=94630&searchKeywordTo=3",
+    "cases": [
+      ["(KW_NTU)([이가]) 뒤처([져졌지진질짐]\\w*)", "()() 뒤쳐()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "sd095356_등록",
     "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=95356&searchKeywordTo=3",
     "cases": [
@@ -3278,6 +3266,19 @@
     ],
     "exception": [
     ]
+  },
+  {
+    "kind": "맞춤법",
+    "name": "sd417133_뒤처지다",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=417133&searchKeywordTo=3",
+    "cases": [
+      ["\\b(성적이) 뒤쳐진다", "() 뒤처진다"],
+      ["(KW_NP)(에게) 뒤쳐([져졌지진질짐]\\w*)", "()() 뒤처()"],
+      ["(KW_NTA)(에) 뒤쳐([져졌지진질짐]\\w*)", "()() 뒤처()"],
+      ["(\\w+)(보다) (\\w+[이가]) 뒤쳐([져졌지진질짐]\\w*)", "()() () 뒤처()"],
+      ["(\\w+)(보다) 뒤쳐([져졌지진질짐]\\w*)", "()() 뒤처()"]
+    ],
+    "exception": []
   },
   {
     "kind": "맞춤법",
