@@ -5,7 +5,7 @@
    * [stylechk.py](#stylechkpy) : 문체 검사
    * [suggest.py](#suggestpy) : 쉬운 말, 차별적이지 않은 표현 추천
    * [proofread.py](#proofreadpy) : 모든 검사
-   * [proof-gpt.py](#proof-gpt) : OpenAI API를 사용해 검사
+   * [proof-gpt.py](#proof-gptpy) : OpenAI API를 사용해 검사
    * [test_proofread.py](#test_proofreadpy) : 검사 규칙에 대한 단위 테스트
 
 <a name="requirements"></a>
@@ -178,6 +178,18 @@ $ echo "프로그래밍이 뭐냐구요? 소프트웨어를 만드는 것이 프
 
 입력한 텍스트가 규칙에 맞는지를 OpenAI API로 검사합니다.
 
+### 준비
+
+사용하려면 [OpenAI API 키를 발급받고](https://wikidocs.net/196075) `.env` 파일을 만듭니다.
+
+```
+$ cat > .env
+OPENAI_API_KEY=sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+^D⏎
+```
+
+### 사용법
+
 규칙 번호는 [⟪IT 글쓰기와 번역 노트⟫](https://wikidocs.net/book/4103)의 페이지 ID입니다.
 
 사용 예:
@@ -199,6 +211,15 @@ $ python proof-gpt.py "프로그램 오류시 업데이트하세요." -r 94354
   "corrections":
     [
       {"pos": "7", "bad": "오류시", "good": "오류 시", "description": "'시(時)'는 앞말과 띄어 쓴다."}
+    ]
+}
+$ python proof-gpt.py "결혼 유/무" -r 187342
+{
+  "input_text": "결혼 유/무",
+  "checked_rule": "https://wikidocs.net/187342",
+  "corrections":
+    [
+      {"pos": "0~7", "bad": "결혼 유/무", "good": "결혼 여부", "description": "'유/무'는 '있음과 없음'을 뜻하고, '여부'는 '그러함과 그러하지 아니함'을 뜻한다. '결혼'의 경우 '여부'를 사용하는 것이 적절하다."}
     ]
 }
 ```
