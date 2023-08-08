@@ -3,3 +3,5 @@ test/temp.yaml
 __pycache__/
 *.sw?
 .idea/*
+*.sqlite
+.env
