@@ -5,6 +5,7 @@
    * [stylechk.py](#stylechkpy) : 문체 검사
    * [suggest.py](#suggestpy) : 쉬운 말, 차별적이지 않은 표현 추천
    * [proofread.py](#proofreadpy) : 모든 검사
+   * [proof-gpt.py](#proof-gpt) : OpenAI API를 사용해 검사
    * [test_proofread.py](#test_proofreadpy) : 검사 규칙에 대한 단위 테스트
 
 <a name="requirements"></a>
@@ -172,6 +173,35 @@ $ echo "프로그래밍이 뭐냐구요? 소프트웨어를 만드는 것이 프
 - `proofread.py`로 모든 검사를 한 번에 해도 되지만, [spellchk.py](#spellchkpy)로 맞춤법을 검사해서 수정한 후 [stylechk.py](#stylechkpy)로 문체를 검사하면 더 좋습니다.
 - [find 명령으로 여러 개의 파일을 검사](https://wikidocs.net/162133)
 
+
+## proof-gpt.py
+
+입력한 텍스트가 규칙에 맞는지를 OpenAI API로 검사합니다.
+
+규칙 번호는 [⟪IT 글쓰기와 번역 노트⟫](https://wikidocs.net/book/4103)의 페이지 ID입니다.
+
+사용 예:
+
+```
+$ python proof-gpt.py "그 책을 다 읽는데 이틀 걸렸다." -r 67215
+{
+  "input_text": "그 책을 다 읽는데 이틀 걸렸다.",
+  "checked_rule": "https://wikidocs.net/67215",
+  "corrections":
+    [
+      {"pos": "8", "bad": "는데", "good": "는 데", "description": "'데'가 의존 명사로 쓰일 때에는 앞말과 띄어서 씁니다."}
+    ]
+}
+$ python proof-gpt.py "프로그램 오류시 업데이트하세요." -r 94354
+{
+  "input_text": "프로그램 오류시 업데이트하세요.",
+  "checked_rule": "https://wikidocs.net/94354",
+  "corrections":
+    [
+      {"pos": "7", "bad": "오류시", "good": "오류 시", "description": "'시(時)'는 앞말과 띄어 쓴다."}
+    ]
+}
+```
 
 ## spellchk.py
 
