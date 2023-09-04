@@ -225,6 +225,15 @@
   },
   {
     "kind": "용어 오탈자",
+    "name": "tt049415_모놀리식",
+    "desc": "http://terms.tta.or.kr/dictionary/dictionaryView.do?word_seq=049415-3",
+    "cases": [
+      ["\\b모노리식", "모놀리식"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "용어 오탈자",
     "name": "tt080996_토큰화",
     "desc": "http://terms.tta.or.kr/dictionary/dictionaryView.do?word_seq=080996-2",
     "cases": [
