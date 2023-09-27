@@ -2853,6 +2853,15 @@
   },
   {
     "kind": "띄어쓰기",
+    "name": "0153785d_형용사 + ‘하다’",
+    "desc": "https://wikidocs.net/153785#d",
+    "cases": [
+      ["(궁금|급급)해 ([하한할함합해했]\\w*)", "()해()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
     "name": "0156008a_안되다",
     "desc": "https://wikidocs.net/156008#a",
     "cases": [

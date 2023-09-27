@@ -3273,6 +3273,16 @@
   },
   {
     "kind": "맞춤법",
+    "name": "sd323880_채취하다",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=323880&searchKeywordTo=3",
+    "cases": [
+      ["(\\w+[를을]) 체취([하한할함합해했]\\w*)", "() 채취()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "맞춤법",
     "name": "sd326343_초과",
     "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=326343&searchKeywordTo=3",
     "cases": [
