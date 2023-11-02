@@ -6162,6 +6162,15 @@
   },
   {
     "kind": "띄어쓰기",
+    "name": "qa242860_자리 잡다",
+    "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=242860",
+    "cases": [
+      ["\\b(자리)(잡[고는다아았은을지]\\w*)", "() ()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
     "name": "qa243287_~들 하다",
     "desc": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=243287",
     "cases": [
