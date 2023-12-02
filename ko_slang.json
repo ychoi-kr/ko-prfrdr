@@ -1,14 +1,13 @@
 [
   {
     "kind": "은어",
-    "name": "hani8136_야민정음",
+    "name": "hani8136a_야민정음",
     "desc": "https://www.hani.co.kr/arti/society/society_general/813654.html",
     "cases": [
       ["\\b(|박)ㄹ혜", "()근혜"],
       ["\\b(|이)띵박", "()명박"],
       ["\\b옾눞", "폭풍"],
       ["꿁밥", "굴국밥"],
-      ["넨", "빈"],
       ["댕댕이", "멍멍이"],
       ["띵곡", "명곡"],
       ["띵문", "명문"],
@@ -26,6 +25,15 @@
     ],
     "exception": [
     ]
+  },
+  {
+    "kind": "은어",
+    "name": "hani8136b_야민정음",
+    "desc": "https://www.hani.co.kr/arti/society/society_general/813654.html",
+    "cases": [
+      ["ignored:넨", "빈"]
+    ],
+    "exception": ["타넨바움"]
   },
   {
     "kind": "은어",

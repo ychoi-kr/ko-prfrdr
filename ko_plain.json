@@ -1954,7 +1954,6 @@
       ["\\bICBM", "대륙간 탄도 미사일"],
       ["\\bICT", "정보 통신 기술"],
       ["\\bILO", "국제노동기구"],
-      ["\\bIOC", "국제올림픽위원회"],
       ["\\bIP (분쟁)", "지식 재산 ()"],
       ["\\bIP(.*공적 감정 시스템|.*웹소설)", "지식 재산권()"],
       ["\\bIPTV", "인터넷  티브이, 인터넷 텔레비전"],
@@ -3543,6 +3542,15 @@
     ],
     "exception": [
     ]
+  },
+  {
+    "kind": "쉬운 말",
+    "name": "kpl03802_일반 국민 60%가 이해하지 못하는 낱말(‘IOC’)",
+    "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=IOC",
+    "cases": [
+      ["\\bIOC", "국제올림픽위원회"]
+    ],
+    "exception": ["IOCTL"]
   },
   {
     "kind": "쉬운 말",
