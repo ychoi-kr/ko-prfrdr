@@ -1,0 +1,4 @@
+true cases:
+  - 문자 단위의 열 수.
+false cases:
+  - 파일을 열 수 없다.

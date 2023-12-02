@@ -4,3 +4,4 @@ true cases:
   - 수행한 후에 (여기서는 안 보임), 이 함수는
   - 주 스크립트 (ping_ftrace.sh)와 동기화
 false cases:
+  - 그림 3.15의 (a)와 같이
