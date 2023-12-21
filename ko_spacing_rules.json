@@ -1909,7 +1909,7 @@
   },
   {
     "kind": "띄어쓰기",
-    "name": "0105111a1_격조사",
+    "name": "0105111a1_격 조사의 띄어쓰기",
     "desc": "https://wikidocs.net/105111#a",
     "cases": [
       ["(KW_NL)([ ]?들) (KJ_C)\\b", "()()()"],
@@ -1957,6 +1957,7 @@
       ["\\b(KW_NT)(대로) (다|이다|일 것 같\\w*|일 것이다|일 것입니다|일 수[는도]?|일지[는도]?|입니다)\\b", "()()()"],
       ["\\b(KW_NTL) (가|이) (동작|작동)(KC_H)(\\w*)", "()() ()()()"],
       ["\\b(KW_NTf) 이\\b", "()이"],
+      ["(?<=같은 )(.{,10}) ([가이]) (아닌)", "()() ()"],
       ["\\b(KW_NTv) 가\\b", "()가"],
       ["\\b(공격|[비]?공식|방어|악의|인도|즉각|합법)적 인\\b", "()적인"],
       ["\\b각 (사) (|를|에서|은|을|의)\\b", "각 ()()"]
@@ -1965,7 +1966,7 @@
   },
   {
     "kind": "띄어쓰기",
-    "name": "0105111a2_격조사",
+    "name": "0105111a2_격 조사의 띄어쓰기",
     "desc": "https://wikidocs.net/105111#a",
     "cases": [
       ["<Noun> 과 ", "()과 "],
@@ -1977,7 +1978,7 @@
   },
   {
     "kind": "띄어쓰기",
-    "name": "0105111a3_격조사",
+    "name": "0105111a3_격 조사의 띄어쓰기",
     "desc": "https://wikidocs.net/105111#a",
     "cases": [
       ["([{]\\w+[}]) (처럼)\\b", "()()"],
@@ -1987,7 +1988,7 @@
   },
   {
     "kind": "띄어쓰기",
-    "name": "0105111a4_격조사",
+    "name": "0105111a4_격 조사의 띄어쓰기",
     "desc": "https://wikidocs.net/105111#a",
     "cases": [
       ["\\b것 인가(|[이]?다)", "것인가()"],
@@ -1997,16 +1998,16 @@
   },
   {
     "kind": "띄어쓰기",
-    "name": "0105111a5_‘-라고’(직접 인용을 나타내는 격 조사)",
+    "name": "0105111a5_‘라고’(직접 인용을 나타내는 격 조사)의 띄어쓰기",
     "desc": "https://wikidocs.net/105111#a",
     "cases": [
-      ["([“\"‘'])(.*)([”\"’']) (라고)", "()()() 라고"]
+      ["([“\"‘'])(.*)([”\"’']) (라고)", "()()()라고"]
     ],
     "exception": []
   },
   {
     "kind": "띄어쓰기",
-    "name": "0105111a6_‘하고’(격 조사)",
+    "name": "0105111a6_‘하고’(격 조사)의 띄어쓰기",
     "desc": "https://wikidocs.net/105111#a",
     "cases": [
       ["\\b(나|너) (하고)([는도]?)\\b", "()()()"],
@@ -2016,7 +2017,7 @@
   },
   {
     "kind": "띄어쓰기",
-    "name": "0105111b_보조사",
+    "name": "0105111b_보조사의 띄어쓰기",
     "desc": "https://wikidocs.net/105111#b",
     "cases": [
       ["(KW_NL)([ ]?들) (KJ_I)\\b", "()()()"],
@@ -2041,7 +2042,7 @@
   },
   {
     "kind": "띄어쓰기",
-    "name": "0105111c_접속 조사",
+    "name": "0105111c_접속 조사의 띄어쓰기",
     "desc": "https://wikidocs.net/105111#c",
     "cases": [
       ["\\b([A-Z가-힣]+) (이고)\\b", "()()"],
@@ -2082,7 +2083,7 @@
   },
   {
     "kind": "띄어쓰기",
-    "name": "0105111f_어미(라고, 라는)",
+    "name": "0105111f_어미(라고, 라는)의 띄어쓰기",
     "desc": "https://wikidocs.net/105111#f",
     "cases": [
       ["dup:(\\w*[^를을 ]|[가-힣]+[A-Za-z0-9 (]+[)]) ([이]?라[는]?|[이]?라고[도]?)\\b", "()()"],
@@ -2098,7 +2099,7 @@
   },
   {
     "kind": "띄어쓰기",
-    "name": "0105111g_‘중(中)’ + 조사",
+    "name": "0105111g_‘중(中)’과 조사의 띄어쓰기",
     "desc": "https://wikidocs.net/105111",
     "cases": [
       ["\\b(KW_NAF)[ ]?중 (에\\w*|의|이|이란다|이란 말[도을] [거믿]\\w*|이[다라며지진]\\w*|인|인[데지]\\w*|일|일지[가는도를]?|일진)\\b", "() 중()"],
@@ -4519,7 +4520,7 @@
     "name": "0215483_‘사항’의 띄어쓰기",
     "desc": "https://wikidocs.net/215483",
     "cases": [
-      ["\\b(건의|결정|공지|문의|미흡|선택|세부|요청|유의|지시|참고)(사항)", "() ()"]
+      ["\\b(건의|결정|고려|공지|문의|미흡|선택|세부|요청|유의|지시|참고)(사항)", "() ()"]
     ],
     "exception": []
   },
@@ -4970,8 +4971,8 @@
   },
   {
     "kind": "띄어쓰기",
-    "name": "od735010_웹사이트",
-    "desc": "https://opendic.korean.go.kr/dictionary/view?sense_no=735010&viewType=confirm",
+    "name": "od0735010_웹사이트",
+    "desc": "https://opendict.korean.go.kr/dictionary/view?sense_no=735010&viewType=confirm",
     "cases": [
       ["\\b웹 사이트", "웹사이트"]
     ],
@@ -4979,8 +4980,8 @@
   },
   {
     "kind": "띄어쓰기",
-    "name": "od768634_계산식",
-    "desc": "https://opendic.korean.go.kr/dictionary/view?sense_no=768634&viewType=confirm",
+    "name": "od0768634_계산식",
+    "desc": "https://opendict.korean.go.kr/dictionary/view?sense_no=768634&viewType=confirm",
     "cases": [
       ["\\b계산 식", "계산식"]
     ],
@@ -4988,8 +4989,8 @@
   },
   {
     "kind": "띄어쓰기",
-    "name": "od786251_불특정 다수",
-    "desc": "https://opendic.korean.go.kr/dictionary/view?sense_no=786251&viewType=confirm",
+    "name": "od0786251_불특정 다수",
+    "desc": "https://opendict.korean.go.kr/dictionary/view?sense_no=786251&viewType=confirm",
     "cases": [
       ["불특정다수", "불특정 다수"]
     ],
@@ -4997,8 +4998,8 @@
   },
   {
     "kind": "띄어쓰기",
-    "name": "od905061_영화 팬",
-    "desc": "https://opendic.korean.go.kr/dictionary/view?sense_no=905061&viewType=confirm",
+    "name": "od0905061_영화 팬",
+    "desc": "https://opendict.korean.go.kr/dictionary/view?sense_no=905061&viewType=confirm",
     "cases": [
       ["\\b영화팬", "영화 팬"]
     ],
@@ -5006,8 +5007,17 @@
   },
   {
     "kind": "띄어쓰기",
+    "name": "od1144841_명령줄",
+    "desc": "https://opendict.korean.go.kr/dictionary/view?sense_no=1144841&viewType=confirm",
+    "cases": [
+      ["\\b명령 줄 (인자)", "명령줄 ()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
     "name": "o1282889_보조 도구",
-    "desc": "https://opendic.korean.go.kr/dictionary/view?sense_no=1282889&viewType=confirm",
+    "desc": "https://opendict.korean.go.kr/dictionary/view?sense_no=1282889&viewType=confirm",
     "cases": [
       ["\\b(보조)(도구)", "() ()"]
     ],
@@ -6481,6 +6491,15 @@
     "cases": [
       ["\\b(맞|살|없|있|지|지나가)게 끔\\b", "()게끔"],
       ["\\b(KW_NAO)([되하])게 끔\\b", "()()게끔"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "띄어쓰기",
+    "name": "sd394721_‘-고’(접사)",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=394721&searchKeywordTo=3",
+    "cases": [
+      ["(\\w*[를을]) (KW_NAO)하 ([고곤][는도서선요]?)\\b", "() ()하()"]
     ],
     "exception": []
   },

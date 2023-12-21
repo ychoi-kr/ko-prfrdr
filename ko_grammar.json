@@ -41,6 +41,15 @@
   },
   {
     "kind": "국문법",
+    "name": "0105111a3_관형격 조사 ‘의’가 어울리는 경우",
+    "desc": "https://wikidocs.net/105111#a",
+    "cases": [
+      ["\\b([대소중]규모)[를을] (KW_NTA)([를을]?) (KW_NAOT)", "(1)의 (2)(3) (4), (1) (2)(3) (4)"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "국문법",
     "name": "0110000b_‘우려’의 시제",
     "desc": "https://wikidocs.net/110000#b",
     "cases": [

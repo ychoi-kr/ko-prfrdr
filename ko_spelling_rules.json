@@ -796,6 +796,26 @@
   },
   {
     "kind": "맞춤법",
+    "name": "0225253a1_-이어야",
+    "desc": "https://wikidocs.net/225253#a",
+    "cases": [
+      ["(\\w?[KL_WFC])이여야", "()이어야"],
+      ["\\b(KW_NNAf)이여야", "()이어야"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
+    "name": "0225253a2_-여야",
+    "desc": "https://wikidocs.net/225253#a",
+    "cases": [
+      ["(\\w?[KL_NFC])이여야", "()여야"],
+      ["\\b(KW_NNAv)이여야", "()여야"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "cplus202_자주 헷갈리는 철자",
     "desc": "이것만 알아두면 맞춤법은 끝나(http://cultureplus.com/)",
     "cases": [
@@ -3307,6 +3327,16 @@
     "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=180485&searchKeywordTo=3",
     "cases": [
       ["\\b선 (보[여였이인일임입]\\w*)", "선()"]
+    ],
+    "exception": [
+    ]
+  },
+  {
+    "kind": "맞춤법",
+    "name": "sd232251_-여",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=232251&searchKeywordTo=3",
+    "cases": [
+      ["\\b(KW_NAOT)하도 (괜찮|[돼되된]|좋)(\\w*)", "(1)하여도 (2)(3), (1)해도 (2)(3)"]
     ],
     "exception": [
     ]
