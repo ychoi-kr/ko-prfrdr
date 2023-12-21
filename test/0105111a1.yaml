@@ -19,6 +19,7 @@ true cases:
   - 값이 0.5 라면
   - div 인지,
   - canvas 인지에 따라
+  - write 같은 시스템 콜 이 아닌
 
 false cases:
   - 그리고 이 강화학습 환경을 인자로 Agent 클래스의 인스턴스를 생성합니다.
