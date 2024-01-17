@@ -1299,7 +1299,6 @@
       ["\\b인터셉트", "가로채기"],
       ["\\b인터체인지", "나들목"],
       ["\\b인턴십", "실습 사원제, 실습 사원 제도, 직무 실습"],
-      ["\\b인텔리", "지식인, 지식층"],
       ["\\b인트라넷", "내부 전산망"],
       ["\\b인포 이미징", "영상 정보"],
       ["\\b인포그래픽", "정보 그림"],
@@ -2858,6 +2857,16 @@
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=커머스",
     "cases": [
       ["\\b(다양한|디지털|한국) 커머스 (개념|시장|전문 인력)(\\w*)", "() 상거래 ()()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "쉬운 말",
+    "name": "kpl02351_일반 국민 60%가 이해하지 못하는 낱말(‘인텔리’)",
+    "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=인텔리",
+    "cases": [
+      ["\\b인텔리\\b", "지식인, 지식층"],
+      ["\\b인텔리였(\\w+)", "지식인이었(1), 지식층이었(1)"]
     ],
     "exception": []
   },
