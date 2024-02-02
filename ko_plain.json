@@ -2151,7 +2151,7 @@
     "name": "kpl00355_일반 국민 60%가 이해하지 못하는 낱말(‘디바이스’)",
     "desc": "https://www.plainkorean.kr/ko/dictionary/dic_new.do?mode=list&srSearchVal=디바이스",
     "cases": [
-      ["\\b(게임|동영상|시각 장애인|피부 관리)(.*)디바이스", "()()기기"]
+      ["\\b(게임|동영상|모바일|시각 장애인|피부 관리)(.*)디바이스", "()()기기"]
     ],
     "exception": [
     ]

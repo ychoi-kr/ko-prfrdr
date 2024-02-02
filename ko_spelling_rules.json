@@ -3427,6 +3427,15 @@
   },
   {
     "kind": "맞춤법",
+    "name": "sd451697_실재하다(實在하다)",
+    "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=451697&searchKeywordTo=3",
+    "cases": [
+      ["\\b(차별)([은]) 실제(한다)", "()() 실재()"]
+    ],
+    "exception": []
+  },
+  {
+    "kind": "맞춤법",
     "name": "sd459304_오랫동안",
     "desc": "https://stdict.korean.go.kr/search/searchView.do?word_no=459304&searchKeywordTo=3",
     "cases": [
