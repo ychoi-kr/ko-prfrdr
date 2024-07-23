@@ -418,9 +418,8 @@ def POSKomoran(line, bad, bad_root, good):
     # remove errornous characters before using tagger
     line = re.sub(r'[^\w\s!"#$%&\'()*+,-./:;<=>?@\[\\\]^_`{|}~]', '', line)
     #_debug('line', line)
-    #morphs_line = ' '.join([''.join(komoran.morphs(eojeol)) for eojeol in line.split()])
     morphs_line = ''.join(
-        [''.join(komoran.morphs(x) if komoran.morphs(x) else x) for x in re.split('(\W)', line) if x != '']
+        [''.join(komoran.morphs(x) if x.strip() else x) for x in re.split('(\W)', line) if x != '']
     )
     if '<Noun>' in bad_root:
         mode = 'Komoran_Noun'
