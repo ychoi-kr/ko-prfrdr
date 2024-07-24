@@ -385,7 +385,7 @@ KW_F = joinseq(KW_Ff, KW_Fv)
 KW_NTAfc = "값|관측값|물건|[자지]금|학년|게놈|성능|돈|[능출]력|연령|프로그램|걸음|목적|전략|칼럼|입력|기록|블록|그룹|스트림|화면|별명|[품항]목|[구논]문|방법|재산|명산|[세형]상|인생|성|창의성|[속특]성|데이터셋|솔루션|커넥션|애플리케이션|웹 애플리케이션|[공방상지형]식|방안|직업|앱|영역|[내비]용|차원|웹|마음|도메인|디자인|요인|타입|점|규정|[단시장지]점|수준|알고리즘|인터넷|군집|대책|층|명칭|토큰|스택|스텝|시스템|패턴|팀|상품|토픽|국민[ ]?평형|모형|힙|DOM"
 KW_NTAfl = "채널|모델|모듈|행렬|말|물|[동식]물|동식물|테이블|기술|현실|배열|연관 배열|[이]?메일|파일|스타일|품질|튜플" # ends with letter which has ㄹ(lieul) as final consonant
 KW_NTAf = joinseq(KW_NTAfc, KW_NTAfl)
-KW_NTAv = "선전 포고|[과근선]거|결과|[용정]도|가이드|메서드|스레드|코드|사용료|미래|[자재]료|시류|메모리|라이브러리|카테고리|멤버|리뷰|경영비|의사|[요축]소|[난변소인홍함]수|[극]?소수|부동소수점수|분위수|[순질]서|마이크로서비스|서비스|시퀀스|인덱스|클래스|[단언]어|레이어|소프트웨어|아이디어|하드웨어|수요|범위|차이|글자|현재|일자|이미지|[시절]차|아키텍처|피처|[객물신옥형]체|가중치|관측치|배치|네트워크|에포크|태스크|세태|데이터|벡터|학습 데이터|[상형]태|세그먼트|이벤트|컴포넌트|크레이트|폰트|전자파|[분세점]포|[목좌]표|면허|번호|비밀번호|변화|기회"
+KW_NTAv = "선전 포고|[과근선]거|결과|[용정]도|가이드|메서드|스레드|코드|사용료|미래|[자재]료|시류|메모리|라이브러리|카테고리|멤버|리뷰|경영비|의사|[요축]소|[난변소인홍함]수|[극]?소수|부동소수점수|분위수|[순질]서|마이크로서비스|서비스|시퀀스|인덱스|클래스|[단언]어|레이어|소프트웨어|아이디어|하드웨어|수요|범위|차이|글자|일자|이미지|[시절]차|아키텍처|피처|[객물신옥형]체|가중치|관측치|배치|시스템 콜|네트워크|에포크|태스크|세태|데이터|벡터|학습 데이터|[상형]태|세그먼트|이벤트|컴포넌트|크레이트|폰트|전자파|[분세점]포|[목좌]표|면허|번호|비밀번호|변화|기회"
 KW_NTA = joinseq(KW_NTAf, KW_NTAv)
 
 ### can Be(‘-화’)
@@ -432,6 +432,10 @@ KW_NTI = KW_NTIf
 KW_NTJf = "비관|[비소적희]극|저돌|낭만|폭발|[이일추]상|[계부세영종지]속|실용|[대집]중|낙천"
 KW_NTJv = "단계|[선영]구|대내|현대|실리|진보|보수|[도원임한]시|대외|행위|독자|경제|[민자]주|[구실자총]체|향토|사회"
 KW_NTJ = joinseq(KW_NTJf, KW_NTJv)
+
+## Can be used as noun(ex: "현재의 주소") or adverb(ex: "현재 우리 사회는")
+KW_NTKv = "현재"
+KW_NTK = KW_NTKv
 
 ### Language
 
@@ -500,8 +504,8 @@ KW_NTX = joinseq(KW_NTXf, KW_NTXv)
 KW_NTYf = "문자[열]?형|불[린]?형|숫자형|정수형"
 KW_NTY = KW_NTYf
 
-KW_NTf = joinseq(KW_NTAf, KW_NTBf, KW_NTCf, KW_NTDf, KW_NTEf, KW_NTFf, KW_NTGf, KW_NTHf, KW_NTIf, KW_NTJf, KW_NTLf, KW_NTMf, KW_NTNf, KW_NTOf, KW_NTSf, KW_NTTf, KW_NTUf, KW_NTVf, KW_NTWf, KW_NTXf, KW_NTYf)
-KW_NTv = joinseq(KW_NTAv, KW_NTBv, KW_NTCv, KW_NTDv, KW_NTEv, KW_NTFv, KW_NTGv, KW_NTHv,          KW_NTJv, KW_NTLv, KW_NTMv, KW_NTNv, KW_NTOv, KW_NTSv, KW_NTTv, KW_NTUv, KW_NTVv, KW_NTWv, KW_NTXv,         )
+KW_NTf = joinseq(KW_NTAf, KW_NTBf, KW_NTCf, KW_NTDf, KW_NTEf, KW_NTFf, KW_NTGf, KW_NTHf, KW_NTIf, KW_NTJf,          KW_NTLf, KW_NTMf, KW_NTNf, KW_NTOf, KW_NTSf, KW_NTTf, KW_NTUf, KW_NTVf, KW_NTWf, KW_NTXf, KW_NTYf)
+KW_NTv = joinseq(KW_NTAv, KW_NTBv, KW_NTCv, KW_NTDv, KW_NTEv, KW_NTFv, KW_NTGv, KW_NTHv,          KW_NTJv, KW_NTKv, KW_NTLv, KW_NTMv, KW_NTNv, KW_NTOv, KW_NTSv, KW_NTTv, KW_NTUv, KW_NTVv, KW_NTWv, KW_NTXv,         )
 KW_NT = joinseq(KW_NTf, KW_NTv)
 
 ## Nouns - Activity (can be verb with '-하다/-되다' or used in form of '~을/를 하다')
