@@ -1,0 +1,4 @@
+true cases:
+  - datasets 라이브러리를 사용니다.
+false cases:
+  - n_head는 MultiHeadAttention에서 사용될 헤드의 수입니다.
